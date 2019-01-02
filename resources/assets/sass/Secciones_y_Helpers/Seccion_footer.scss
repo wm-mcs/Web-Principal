@@ -1,0 +1,113 @@
+/* estilo cambia footer */
+.footer_social_icon_facebook{
+width: 40px;
+height: 40px;
+background-image: url('../../imagenes/Iconos/social_icon_facebook3.png');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer_social_icon_facebook:hover { 
+ background-image: url('../../imagenes/Iconos/social_icon_facebook4.png');
+}
+
+/* estilo cambia footer */
+.footer_social_icon_instagram{
+width: 40px;
+height: 40px;
+background-image: url('../../imagenes/Iconos/social_icon_instagram3.png');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer_social_icon_instagram:hover { 
+ background-image: url('../../imagenes/Iconos/social_icon_instagram4.png');
+}
+/* estilo cambia footer */
+.footer_social_icon_twitter{
+width: 40px;
+height: 40px;
+background-image: url('../../imagenes/Iconos/social_icon_twitter3.png');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer_social_icon_twitter:hover { 
+ background-image: url('../../imagenes/Iconos/social_icon_twitter4.png');
+}
+
+
+/* P R E L O A D I N G O N - H O V E R I M A G E S to speed up the effect */
+body::after{
+position:absolute; width:0; height:0; overflow:hidden; z-index:-1000;
+content:url('../../imagenes/Iconos/social_icon_facebook4.png')
+        url('../../imagenes/Iconos/social_icon_instagram4.png') 
+        url('../../imagenes/Iconos/social_icon_twitter4.png');
+}
+
+/* contiene-cada-columna-del-footer */
+.contenedor-columna-footer{
+  padding:40px;
+  width:48%;  
+}
+
+/* es-el-logo-del-footer-a-la-derecha */
+.logo-footer{
+  width:130px;
+  height:auto;
+}
+
+/* borde-del-contenedor-de-cobtacto-en-el-footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Primario){
+
+        .contenedor-columna-footer{
+          padding:10px;
+          width:33.33%;
+        }
+
+        .logo-footer{
+          width:150px; 
+        }
+
+       
+
+}
+
+@media (min-width: $BrackPoint-Secundario){
+
+        .contenedor-columna-footer{
+          padding:40px;
+        }
+
+        .logo-footer{
+          width:180px; 
+        }
+
+  
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+
+
+  
+}

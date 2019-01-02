@@ -1,0 +1,103 @@
+.Seccion_precio_plan_ajuste_ancho{
+  width:70%;
+}
+
+.Seccion_precio_contenedor_plan{
+    width: 100%;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 3px $color-3;    
+    padding-top: 43px;
+    padding:40px 10px;    
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.Seccion_precio_icono{  
+  font-size:40px;
+  margin-bottom:20px;
+  width:90%;
+  padding-bottom: 20px;
+  border-bottom:solid 1px $color-gris-lineas;
+}
+
+
+
+.Seccion_precio_precio{
+  margin-bottom:30px;
+}
+  .Seccion_precio_moneda{
+    color:$color-gris-text;
+    
+  }
+
+  .Seccion_precio_importe{
+    color:black;
+    font-weight:bold;
+    font-size:35px;
+  }
+
+
+
+.Seccion-contenedor-items{
+  height:260px;
+  margin-bottom:40px;
+}
+
+.Seccion_precio_lista_item{
+  color: $color-gris-text;
+  font-size:12px;
+  margin-top: 10px;
+  font-family: $font-secondary;
+} 
+
+
+.Seccion_precio_aclaracion{
+  font-size:10px;
+  margin-top:30px;
+  margin-bottom:30px;
+  color: $color-gris-text;
+  padding:0 20px;
+  font-family:$font-secondary;
+}
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Primario){
+
+
+.Seccion_precio_plan_ajuste_ancho{
+  width:60%;
+}
+
+
+
+}
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+.Seccion_precio_plan_ajuste_ancho{
+  width:32%;
+}
+
+.Seccion_precio_aclaracion{
+  font-size:12px;
+  
+  padding:0 40px;
+}
+
+
+}
+
+
+@media (min-width: $BrackPoint-Tercer){
+.Seccion_precio_plan_ajuste_ancho{
+  width:30%;
+}
+}

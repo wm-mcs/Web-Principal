@@ -1,0 +1,33 @@
+/* ajustes de Erni */
+p, h1, h2, h3, h4, h5, h6 {
+ cursor: default;
+ text-decoration: none;
+ } 
+
+a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
+ cursor: pointer; cursor: hand;
+ text-decoration: none;
+ outline:none;
+ 
+}
+
+a:hover, a:focus, a>p:hover, a>p:focus{
+ text-decoration:none;
+ outline:none;
+
+ }
+
+ p{
+  font-family: $font-secondary;
+ }
+
+ a:hover{
+  color: $color-3-primary_hover;
+ }
+
+
+ textarea:focus,input:focus {
+    border:solid 3px $color-3 !important;
+    box-shadow: none !important;
+    outline: 0 none !important;
+}

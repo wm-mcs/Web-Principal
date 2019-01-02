@@ -1,0 +1,29 @@
+
+$color-3:#F9AE3B; /* institucional PRINCIPAL */
+$color-3-primary_hover:#F5911E;
+$color-2:#F5911E; /* institucional OSCURO -  */
+
+
+
+$color-gris-text:#b4b4b4 ;
+$color-gris-background: #ffefef;
+$color-gris-lineas: #ffefef;
+
+
+
+
+/* $font-primary:'Merriweather', 'Helvetica Neue', Arial, sans-serif ; */
+$font-primary:'Roboto', sans-serif ;
+$font-secondary: 'Roboto', sans-serif;
+
+
+
+
+/* fuente sociales */
+
+@font-face {
+font-family: 'Social-Media-Circled'; /* Nombre que va a tener esa font*/
+font-style: normal;
+font-weight: normal;
+src: local('../fonts/Social-Media-Circled'), url('../fonts/Social-Media-Circled.otf') format('truetype');
+}

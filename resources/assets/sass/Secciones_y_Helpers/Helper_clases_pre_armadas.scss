@@ -1,0 +1,107 @@
+.flex-row-center{
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+}
+
+.flex-row-column{
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+}
+
+.flex-justifice-space-around{
+  @include justify-content(space-around);
+}
+
+.flex-wrap{
+  @include flex-wrap(wrap); 
+}
+
+
+
+/* CLASES DE TAMAÑO */
+.get_width_100{
+  width:100%;
+}
+
+.get_height_100{
+  height:100%;
+}
+
+
+
+/* CLASES DE COLOR DE FONDO */
+.BackgroundPrimary{
+  background-color: $color-3; 
+}
+.BackgroundGris{
+  background-color: $color-gris-background; 
+}
+
+
+/* CLASES BOTONES */
+.boton-simple{
+  background-color: $color-3; 
+  color:white;
+  padding: 20px 35px;
+  border-radius: 3px;
+  font-size:1rem; 
+  cursor: pointer;
+  font-weight:bold;
+}
+.boton-simple:hover{
+  background-color: $color-3-primary_hover; 
+}
+
+
+
+
+
+
+
+/* CLASES DE TEXTO */
+.text-color-primary{
+  color: $primary;
+}
+
+.helper-aumenta-texto{
+  font-size:1.2em;
+}
+
+.helper-reduce-texto{
+  font-size:0.7em;
+}
+
+.espacio-letras{
+  letter-spacing: 2px;
+  font-family: arial;
+  margin-bottom: 8px;
+}
+
+/* colores personalizados */
+.color-text-gris{
+  color: $color-gris-text;
+}
+
+/* colores personalizados */
+.color-text-white{
+  color: white;
+}
+
+.font-primary{
+  font-family:$font-primary;
+}
+
+.font-secondary{
+  font-family:$font-secondary;
+}
+
+
+
+
+
+/* clases para mostrar o no */
+.no-mostrar{
+  display:none;
+}
