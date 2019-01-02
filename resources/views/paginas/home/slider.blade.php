@@ -8,8 +8,8 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="img-slider-size Slider_cabecer_img" src="{{url()}}/imagenes/grey-background.jpg"> 
-      <img class="img-slider-size Slider_cabecer_img_responsive" src="{{url()}}/imagenes/grey-background.jpg"alt="First slide">
+      <img class="img-slider-size Slider_cabecer_img" src="{{url()}}/computacion-en-la-niebla-la-alternativa-a-la-nube-1920.jpg"> 
+     
     </div>
    
   </div>
