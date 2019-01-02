@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="img-slider-size Slider_cabecer_img" src="{{url()}}/computacion-en-la-niebla-la-alternativa-a-la-nube-1920.jpg"> 
+      <img class="img-slider-size Slider_cabecer_img" src="{{url()}}/imagenes/computacion-en-la-niebla-la-alternativa-a-la-nube-1920.jpg"> 
      
     </div>
    
