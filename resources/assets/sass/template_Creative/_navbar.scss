@@ -4,8 +4,6 @@
   background-color: $white;
   @include sans-serif-font;
   @include transition-all;
-  z-index:0;
-
   .navbar-brand {
     font-weight: 700;
     text-transform: uppercase;
@@ -51,16 +49,15 @@
       padding: 0.5rem 1rem;
     }
     .navbar-nav > li.nav-item > a.nav-link,
-    .navbar-nav > li.nav-item > a.nav-link:focus { 
-      color: fade-out($color-gris-text, .3);
+    .navbar-nav > li.nav-item > a.nav-link:focus {
+      color: fade-out($white, .3);
       &:hover {
-        color: $color-gris-text;
+        color: $white;
       }
     }
     &.navbar-shrink {
-      border-bottom: 1px solid fade-out($gray-900, .9);      
+      border-bottom: 1px solid fade-out($gray-900, .9);
       background-color: $white;
-      z-index: 1030;
       .navbar-brand {
         color: $primary;
         &:focus,
