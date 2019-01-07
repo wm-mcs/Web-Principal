@@ -12,11 +12,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#precios">PRECIOS</a>
             </li>            
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#clientes">CLIENTES</a>
-            </li>  
+           
              <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">TEAM</a>
+              <a class="nav-link js-scroll-trigger" href="#garantia">GARANTÍA</a>
             </li>            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>

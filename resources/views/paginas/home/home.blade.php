@@ -33,7 +33,7 @@
       @include('paginas.home.home_clientes')
     <span id="app">  
       @include('paginas.home.home_precios')
-      @include('paginas.home.home_team')
+      @include('paginas.home.home_garantia')
       @include('paginas.home.home_contacto')
       @include('paginas.home.home_footer')
       @include('paginas.home.home_modal_contacto')
@@ -43,8 +43,8 @@
     <pre>
       @{{$data}}
     </pre>
-  </div>
-    </span> --}}
+  </div> --}}
+    </span> 
 
 
        
