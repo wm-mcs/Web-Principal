@@ -3,7 +3,7 @@
         <div class="contiene_contacto_img">
           <img src="{{ url() }}/imagenes/team/mauri1.jpg" class="contacto_img"> 
           <div class="contacto_name">Mauricio</div>
-          <div>Estoy encargado de atenderte en lo que necesites..</div>
+          <div class="contacto_aclaracion color-text-gris"> Estoy encargado de atenderte en lo que necesites..</div>
         </div>
        
          {{-- formulario de contacto --}}
