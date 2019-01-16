@@ -10,15 +10,15 @@
                             <hr class="my-4">
                            
 
-               <div class="form-group">
+               <div class="form-group get_width_100">
                     <label class="control-label" for="Nombre">Nombres</label>
                     <input v-model="nombre" type="text" class="form-control" id="Nombre" name="nombre" placeholder="Introduzca su nombre" required  />
                 </div>               
-                <div class="form-group">
+                <div class="form-group get_width_100">
                     <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
                     <input v-model="email" type="email" class="form-control" id="Correo" name="email" placeholder="Introduzca su correo electrónico" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group get_width_100">
                     <label class="control-label" for="Mensaje">Mensaje</label>
                     <textarea v-model="mensaje" rows="5" cols="30" class="form-control" id="Mensaje" name="mensaje" placeholder="Introduzca su mensaje" required ></textarea>
                 </div>
@@ -29,10 +29,10 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="form-group" v-if="nombre !='' && email !='' && mensaje !='' ">                
+                <div class="form-group get_width_100" v-if="nombre !='' && email !='' && mensaje !='' ">                
                     <div v-on:click="enviar_contacto" class="btn btn-primary" value="Enviar"> Enviar </div>
                     {{-- <input type="submit" class="btn btn-primary" value="Enviar Submit">  --}}
-                </div> <div class="form-group" v-else="nombre !='' && email !='' && mensaje !='' ">                
+                </div> <div class="form-group get_width_100" v-else="nombre !='' && email !='' && mensaje !='' ">                
                     <button class="btn btn-primary bg-primary" disabled>Enviar</button>
                     
                 </div> 
