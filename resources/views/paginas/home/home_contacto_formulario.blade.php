@@ -1,7 +1,7 @@
              {!! Form::open( ['route'   => $Route,
                              'method'   => 'Post',
                              'files'    => true,
-                             'class'    => 'col-lg-6 mx-auto text-center get_width_100',
+                             'class'    => 'text-center flex-row-column get_width_100',
                              'v-show'   => "mensaje_enaviado != true"
                            
                             ])               !!}

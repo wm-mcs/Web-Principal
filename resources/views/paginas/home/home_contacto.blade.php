@@ -7,7 +7,10 @@
         </div>
        
          {{-- formulario de contacto --}}
-       @include('paginas.home.home_contacto_formulario')
+         
+           @include('paginas.home.home_contacto_formulario')
+         
+       
 
       
       </div>
