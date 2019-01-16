@@ -1,0 +1,33 @@
+.contiene_contacto_img{
+  width:80%;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.contacto_img{
+  width: 100%;
+  height: auto;
+  border-radius:100%;
+  margin-bottom: 20px;
+}
+
+.contacto_name{
+  font-size: 30px;
+  margin-bottom: 5px;
+
+}
+
+
+
+
+
+ @media (min-width: $BrackPoint-Secundario){
+
+  .contiene_contacto_img{
+  width:70%;
+  }
+  
+}
