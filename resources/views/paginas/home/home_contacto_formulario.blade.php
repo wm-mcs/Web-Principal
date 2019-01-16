@@ -6,7 +6,7 @@
                            
                             ])               !!}
 
-                            <h2 class="section-heading">Contáctanos</h2>
+                            <h2 class="section-heading">¿En qué te puedo ayudar?</h2>
                             <hr class="my-4">
                            
 
