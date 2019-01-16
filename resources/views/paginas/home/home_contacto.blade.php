@@ -8,7 +8,10 @@
        
          {{-- formulario de contacto --}}
          
-           @include('paginas.home.home_contacto_formulario')
+         <div class="flex-row-column" style="max-width: 750px;">
+            @include('paginas.home.home_contacto_formulario')
+         </div>
+          
          
        
 
