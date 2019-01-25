@@ -36,8 +36,21 @@
     font-weight:bold;
     font-size:35px;
   }
+.Seccion_precio_importe_oferta_cartel{
+  padding:20px;
+  font-weight: bold;
+  color:white;
+  border-radius:4px;
+  margin-top: 10px;
+  background-color:$color-3;
+  text-align: center;
 
-
+}
+.Seccion_precio_importe_precio_tachado{
+  font-size: 14px;
+  color: $color-gris-text;
+  text-decoration:line-through;
+}
 
 .Seccion-contenedor-items{
   height:320px;

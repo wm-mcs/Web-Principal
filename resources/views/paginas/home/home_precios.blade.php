@@ -18,6 +18,12 @@
                        <span class="Seccion_precio_moneda">USD</span>
                        <span class="Seccion_precio_importe">300</span>                       
                     </div>
+                     <div class="Seccion_precio_importe_oferta_cartel">
+                      50% OFF
+                    </div>
+                    <div class="Seccion_precio_importe_precio_tachado">
+                      Antes: usd 450
+                    </div>
 
                     <div class="flex-row-column Seccion-contenedor-items">
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 1 Pagina scroll</div>
