@@ -50,7 +50,7 @@
     }
     .navbar-nav > li.nav-item > a.nav-link,
     .navbar-nav > li.nav-item > a.nav-link:focus {
-      color: fade-out($white, .3);
+      color: fade-out($color-gris-text, .3);
       &:hover {
         color: $white;
       }
