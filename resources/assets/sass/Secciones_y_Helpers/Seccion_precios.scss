@@ -28,6 +28,7 @@
   @include flexbox;       
   @include flex-direction(row);
   @include align-items(center); 
+  @include flex-wrap(wrap); 
 }
   .Seccion_precio_moneda{
     color:$color-gris-text;
