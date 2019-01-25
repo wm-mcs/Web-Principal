@@ -52,7 +52,7 @@
     .navbar-nav > li.nav-item > a.nav-link:focus {
       color: fade-out($color-gris-text, .3);
       &:hover {
-        color: $white;
+        color:  $primary;
       }
     }
     &.navbar-shrink {
