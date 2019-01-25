@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">NOSOTROS</a>
+              <a class="nav-link js-scroll-trigger color-text-gris" href="#about">NOSOTROS</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#precios">PRECIOS</a>
+              <a class="nav-link js-scroll-trigger color-text-gris" href="#precios">PRECIOS</a>
             </li>            
            
              <li class="nav-item">

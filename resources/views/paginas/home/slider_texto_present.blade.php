@@ -1,5 +1,5 @@
  <div class="col-lg-10 mx-auto">
-      <h1 class="text-uppercase Slider_cabecera_caption_titulo text-color-black">
+      <h1 class="text-uppercase Slider_cabecera_caption_titulo color-text-gris">
         <strong>¿Buscas una web ecónomica pero bien diseñada?</strong>
       </h1>
       
