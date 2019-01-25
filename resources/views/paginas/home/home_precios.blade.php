@@ -15,15 +15,22 @@
                   <div class="flex-row-column Seccion_precio_contenedor_plan">
                     <div class="Seccion_precio_icono font-secondary">Básico</div>                    
                     <div class="Seccion_precio_precio font-secondary">
-                       <span class="Seccion_precio_moneda">USD</span>
-                       <span class="Seccion_precio_importe">300</span>                       
+                      <div class="flex-row-center">
+                         <span class="Seccion_precio_moneda">USD</span>
+                         <span class="Seccion_precio_importe">300</span>  
+                      </div>
+                      <div class="flex-row-column">
+                      <div class="Seccion_precio_importe_oferta_cartel">
+                        50% OFF
+                      </div>
+                      <div class="Seccion_precio_importe_precio_tachado">
+                        Antes: usd 450
+                      </div>
                     </div>
-                     <div class="Seccion_precio_importe_oferta_cartel">
-                      50% OFF
+                                           
                     </div>
-                    <div class="Seccion_precio_importe_precio_tachado">
-                      Antes: usd 450
-                    </div>
+                  
+                   
 
                     <div class="flex-row-column Seccion-contenedor-items">
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 1 Pagina scroll</div>

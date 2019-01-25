@@ -25,6 +25,9 @@
 
 .Seccion_precio_precio{
   margin-bottom:30px;
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
 }
   .Seccion_precio_moneda{
     color:$color-gris-text;
