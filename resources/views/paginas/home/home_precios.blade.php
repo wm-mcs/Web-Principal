@@ -19,8 +19,7 @@
                         <div class="flex-row-center">
                           <span class="Seccion_precio_moneda">USD</span>
                           <span class="Seccion_precio_importe">300</span>  
-                        </div>
-                         
+                        </div>                         
                       </div>
                       <div class="flex-row-column Seccion-_precio_separacion get_width_100">
                       <div class="Seccion_precio_importe_oferta_cartel">
