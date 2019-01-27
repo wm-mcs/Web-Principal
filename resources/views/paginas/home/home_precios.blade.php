@@ -37,7 +37,7 @@
                     <div class="flex-row-column Seccion-contenedor-items">
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 1 Pagina scroll</div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Multi dispositivos. 
-                        <span class="text-color-primary">Se ve linda en todos lados: Pc, Tablet y Celu</span> 
+                        <span class="text-color-primary text-bold">Se ve linda en todos lados: Pc, Tablet y Celu</span> 
                       </div>                      
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores. Te encontraran en Google <i class="fa fa-laugh-wink"></i>  </div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento. A Google le importa la velocidad de tu web ;).
@@ -47,7 +47,7 @@
                       
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Hasta 5 Emails corporativos (mi_email@midominio.com)</div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-grin-hearts"></i>  Garantía de devolución total. 
-                        <span class="text-color-primary">                          
+                        <span class="text-color-primary text-bold">                          
                           Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;)
                         </span>  
                       </div>
