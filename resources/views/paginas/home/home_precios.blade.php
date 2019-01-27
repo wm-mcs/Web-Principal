@@ -66,20 +66,24 @@
                        <span class="Seccion_precio_moneda">USD</span>
                        <span class="Seccion_precio_importe">400</span>                       
                     </div>
-                    <div class="flex-row-column Seccion-contenedor-items">
+                    <div class="flex-row-column Seccion-contenedor-items"> 
+
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 
+                         <span class="text-color-primary text-bold">                          
+                          incluye todo lo que tra el plan basico y ademas....
+                        </span>
+                      </div>
+                      
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 1 Pagina scroll + varias paginas de otras secciones específicas</div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Multi dispositivos. Se ve linda en todos lados: Pc, Tablet y Celu</div>                      
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores. Te encontraran en Google <i class="fa fa-laugh-wink"></i>  </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento</div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> https integrado - 
                         <span class="color-text-success">Tendras el <strong>candadito verde</strong>  cuando entres al navegador.  Y Google te dará mas relevancia</span>
                       
                       </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Integración redes sociales básico. Facebook, Google Whatzap.</div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i>  Automatizado formlario para que tus cleintes se comuniquen contigo por email.</div>
+                     
+                    
                       
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Hasta hasta 10 Emails corporativos (mi_email@midominio.com)</div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-grin-hearts"></i>  Garantía de devolución total. Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;) </div>                      
+                                           
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 
                         <span class=""></span>
                       Estadísticas del sitio web. Podras analaizar muchas cosas de los usuarios que entran a tu web.</div>
