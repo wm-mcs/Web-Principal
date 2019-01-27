@@ -14,7 +14,7 @@
                 <div class="flex-row-center flex-justifice-space-around Seccion_precio_plan_ajuste_ancho">
                   <div class="flex-row-column Seccion_precio_contenedor_plan">
                     <div class="Seccion_precio_icono font-secondary get_width_100">Básico</div>                    
-                    <div class="Seccion_precio_precio font-secondary">
+                    <div class="Seccion_precio_precio font-secondary get_width_100">
                       <div class="flex-row-center">
                          <span class="Seccion_precio_moneda">USD</span>
                          <span class="Seccion_precio_importe">300</span>  
