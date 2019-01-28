@@ -41,7 +41,7 @@
                       </div>                      
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores. <span class="text-color-primary text-bold" > Te encontraran en Google</span>  
                         <i class="fa fa-laugh-wink"></i>  </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento por 12 Meses. <span class="text-color-primary text-bold">A Google le importa la velocidad de tu web. Cuanto más rápido mejor posicion en el buscador.</span> .
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento por 1 Año. <span class="text-color-primary text-bold">A Google le importa la velocidad de tu web. Cuanto más rápido mejor posicion en el buscador.</span> .
                       </div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Integración redes sociales básico:    <span class="text-color-primary text-bold">   Facebook, Google Whatzap </span>.</div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i>  Automatizado formulario para que tus cleintes se comuniquen contigo por email. <span class="text-color-primary text-bold">Podran comunicarse contigo desde la pagina web.</span> 
