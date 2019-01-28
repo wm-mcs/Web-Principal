@@ -76,8 +76,8 @@
                     </div>
                     <div class="flex-row-column Seccion-contenedor-items"> 
 
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 
-                         <span class="text-color-primary text-bold">                          
+                      <div class="Seccion_precio_lista_item">
+                         <span class="text-color-primary text-bold helper-aumenta-texto">                          
                           incluye todo lo que tra el plan basico y ademas....
                         </span>
                       </div>
