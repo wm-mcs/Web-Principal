@@ -39,13 +39,19 @@
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Multi dispositivos. 
                         <span class="text-color-primary text-bold">Se ve linda en todos lados: Pc, Tablet y Celu</span> 
                       </div>                      
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores. Te encontraran en Google <i class="fa fa-laugh-wink"></i>  </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento. A Google le importa la velocidad de tu web ;).
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores. <span class="text-color-primary text-bold" > Te encontraran en Google</span>  
+                        <i class="fa fa-laugh-wink"></i>  </div>
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento por 12 Meses. <span class="text-color-primary text-bold">A Google le importa la velocidad de tu web. Cuanto más rápido mejor posicion en el buscador.</span> .
                       </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Integración redes sociales básico. Facebook, Google Whatzap.</div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i>  Automatizado formulario para que tus cleintes se comuniquen contigo por email.</div>
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Integración redes sociales básico:    <span class="text-color-primary text-bold">   Facebook, Google Whatzap </span>.</div>
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i>  Automatizado formulario para que tus cleintes se comuniquen contigo por email. <span class="text-color-primary text-bold">Podran comunicarse contigo desde la pagina web.</span> 
+                      </div>
                       
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Hasta 5 Emails corporativos (mi_email@midominio.com)</div>
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Hasta 5 Emails corporativos 
+                        <span class="text-color-primary text-bold">                          
+                          te verás mucho más profesional teniendo un email del tipo mi_email@midominio.com . 
+                        </span>
+                      </div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-grin-hearts"></i>  Garantía de devolución total. 
                         <span class="text-color-primary text-bold">                          
                           Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;)
