@@ -84,7 +84,7 @@
                       
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 1 Pagina scroll + varias paginas de otras secciones específicas</div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> https integrado - 
-                        <span class="color-text-success">Tendras el <strong>candadito verde</strong>  cuando entres al navegador.  Y Google te dará mas relevancia</span>
+                        <span class="color-text-success text-bold">Tendras el <strong>candadito verde</strong> <i class="fa fa-lock"></i>  cuando entres al navegador.  Y Google te dará mas relevancia</span>
                       
                       </div>
                      
