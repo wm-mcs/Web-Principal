@@ -57,6 +57,7 @@
                           Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;)
                         </span>  
                       </div>
+                      @include('paginas.home.home_precios_aclaracion')
                     </div> 
                     <div v-if="mensajes_enviados.includes('básico') != true" class="boton-simple" v-on:click.prevent="abrir_modal_para_contacto('Consultar sobre plan básico','contacto')">Contactar
                     </div>
@@ -127,9 +128,7 @@
                   </div>                  
                 </div> --}}
              </div>
-             <div class="Seccion_precio_aclaracion">
-              Para los tres planes están incluidos en el precio los costos de hosting y mantenimiento del primer año. A partir del segundo año se genera un costo anual de usd 100 para los planes Básico y Estándar; y de usd 200 para el plan Full . Por conceptos de mantenimientos del servidor y alojamiento web.
-             </div>
+             
             
           </div>
       
