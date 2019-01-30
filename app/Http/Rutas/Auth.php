@@ -13,7 +13,7 @@ Route::post('auth_login_post', [
    'as'   => 'auth_login_post'
 
 
-]);
+]);  
 
 //Logout
 Route::get('salir', [

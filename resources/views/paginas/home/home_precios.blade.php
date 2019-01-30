@@ -87,6 +87,10 @@
                         <span class="color-text-success text-bold">Tendras el <strong>candadito verde</strong> <i class="fa fa-lock"></i>  cuando entres al navegador.  Y Google te dará mas relevancia</span>
                       
                       </div>
+
+                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 
+                        <span class=""></span>
+                      Panel admin: podrás autoeditar un monton de cosas de la web. <span class="text-bold">También podras crear posts con fotos,  listado de precios con fotos.</span></div>
                      
                     
                       
