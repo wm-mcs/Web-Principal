@@ -16,43 +16,9 @@
 
       <div class="container">
       <div class="collapse navbar-collapse" id="defaultNavbar1">
-      <!-- Collect the nav links, forms, and other content for toggling -->
-        <ul class="nav navbar-nav">
-          <li><a href="{{route('get_home')}}">HOME</a></li>
-          <li><a href="{{route('get_pagina_empresa')}}">NOSOTROS</a></li>
-          <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
-          <li><a href="{{route('get_pagina_marcas')}}">CLIENTES</a></li>
-          <li><a href="{{route('get_pagina_eventos')}}">GALERÍA</a></li>
-          <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
+  
 
-
-          {{-- contenidos ocultos para mostrar con tooltips --}}
-          <div style="display: none;">
-             <div class="contenido-inicio-de-sesion-navbar">
-              <h3>Inicio de sesión</h3>
-              @include('formularios.auth.login_form')
-             </div>
-             
-             {{-- contenido a mostrar de user desplegado --}}
-              @if(!Auth::guest())
-               <div class="contenido-auth-deplegado-navbar">              
-                 <ul>
-                    @if(Auth::user()->role != 'user')
-                    <li><a href="{{route('get_datos_home_web')}}">Admin</a></li>
-                    @endif
-                    <li><a href="{{route('logout')}}">Salir</a></li>
-                 </ul>
-              </div> 
-             @endif
-             
-
-          </div>
-
-        </ul>
-
-
-        <!-- aqui pongo el tema de inicio de sesion y datos del user -->
-        @include('layouts.user_layout.navbar.auth')       
+  
 
 
       </div>    <!-- /.navbar-collapse -->
