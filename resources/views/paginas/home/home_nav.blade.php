@@ -19,6 +19,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>
             </li>
+            @include('paginas.home.home_nav_auth')
           </ul>
         </div>
       </div>
