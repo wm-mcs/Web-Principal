@@ -25,9 +25,9 @@
     </div> <!-- / container fluid-->
 
     <!-- errores -->
-   {{--  <div class="contendor-contenedor-errores-header">         
+    <div class="contendor-contenedor-errores-header">         
       @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados') 
-    </div>  --}}
+    </div> 
 
     <!-- /.container-fluid -->
   </nav>
