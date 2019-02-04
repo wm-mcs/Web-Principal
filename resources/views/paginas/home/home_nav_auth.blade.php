@@ -15,6 +15,6 @@
 {{--   <li id="icono-user-en-navbar" title="icono user"><a href=""><span class="glyphicon glyphicon-user"></span></a></li> --}}
 @else
    <li class="nav-item">
-              <a class="nav-link " href=""{{route('get_admin_home')}}">{{Auth::user()->first_name}}</a>
+              <a class="nav-link " href="{{route('get_admin_home')}}">{{Auth::user()->first_name}}</a>
    </li>
 @endif
