@@ -12,7 +12,7 @@
 
   <body>
   
-  <div class="admin-content-wrapper">
+  
   <div class="admin-content-background-color"></div>
   
    <div class="admin-contiene-columna-y-content">
@@ -24,7 +24,7 @@
    </div>
 
    
-   </div>
+  
 
       <!-- Scripts -->
       <script src="{{ asset('js/all.js')}}"></script>

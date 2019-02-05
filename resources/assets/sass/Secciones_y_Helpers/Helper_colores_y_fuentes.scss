@@ -4,6 +4,11 @@ $color-3-primary_hover:#ff7377;
 $color-2:#e0494d; /* institucional OSCURO -  */
 
 
+$color-2semilight:#eb6367;
+$color-2light:#ed767a; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
+$color-2superlight:#f07f83;
+
+
 $color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
 /*$color-3light:#e5d8bd;*/ /* para interacciones dinámicas del color-3 como [hover] o [active] */
 $color-3light:$color-3-primary_hover; /* probando uno mas oscurito */
