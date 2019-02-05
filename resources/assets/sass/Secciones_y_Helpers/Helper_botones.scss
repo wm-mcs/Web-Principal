@@ -1,0 +1,29 @@
+
+/*---  B O T Ó N E S  d e   M A U R I  ---*/
+@mixin Boton-Normal($bk: $color-3, $color:white )
+{
+  background-color: $bk;
+  color:$color ;
+  padding: 10px 14px;
+  font-size: 20px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  margin: 15px auto;
+  display: table;
+  cursor:pointer;
+}
+
+
+@mixin Boton-Chico($bk: $color-3, $color:white )
+{
+  background-color: $bk;
+  color:$color ;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: arial;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  margin: 15px auto;
+  display: table;
+  cursor:pointer;  
+}

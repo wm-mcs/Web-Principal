@@ -16,6 +16,7 @@ elixir(function(mix) {
 
      mix.sass('mixer.scss','public/css');
      mix.sass('creative_template_mixer.scss','public/css'); 
+     mix.sass('admin.scss','public/css'); 
 
      
     mix.scripts([
@@ -35,7 +36,7 @@ elixir(function(mix) {
 
 
     elixir(function(mix) {
-            mix.version(['css/mixer.css', 'css/creative_template_mixer.css', 'js/all.js']); 
+            mix.version(['css/mixer.css', 'css/creative_template_mixer.css', 'css/admin.css' ,'js/all.js']); 
     });
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');

@@ -4,15 +4,52 @@ $color-3-primary_hover:#ff7377;
 $color-2:#e0494d; /* institucional OSCURO -  */
 
 
+$color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/*$color-3light:#e5d8bd;*/ /* para interacciones dinámicas del color-3 como [hover] o [active] */
+$color-3light:$color-3-primary_hover; /* probando uno mas oscurito */
+$color-3superlight:#f1e7d2; /* para backgrounds de bloques de texto en instancia de hover) */
+$color-3hyperlight:#f8f1e3;
+
+
 
 $color-gris-text:#b4b4b4 ;
 $color-gris-background: #ffefef;
+
 $color-gris-lineas: #ffefef;
+
+/* COLORES GENERALES */
+
+$color-grey0:#f8f8f8; /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
+$color-grey1:#b3b3b3; /*gris más claro (para párrafos y otras cosas)*/
+$color-grey2:#858585; /*gris medio (para títulos por ejemplo)*/
+$color-grey3:#2a2a2a; /*gris más oscuro (para backgrounds por ejemplo)*/
+
+$color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
+$color-black:black; /*misma razón, pero para el negro */
+
+
+
+$Color-texto-gris-Mercadolibre: $color-gris-text;
+$Color-Gris-Claro-Para-Bordes:  $color-gris-lineas;
+
+$Color-Gris-Claro: #EFEEEE;
+$Color-Gris-CasiBlanco:#FDF9F9;
+
+$Color-Gris-Plata: #c2c2c2 ;
+$Color-Gris-Claro-Para-Bordes: #dfdfdf;
 
 $color-negro-para-textos:#5b5b5b;
 
 /*verdes*/
 $color-verde-texto-success:#4BB543;
+
+
+/*Colores Rojos*/
+$Color-Rojo-Oferta-MercadoLibre: #900;
+$Color-Rojo-Cancelar: #FF0000;
+$Color-Rojo-Texto-Error: #B40404;
+$Color-Errors-BG: #FCB6B6;
+$Color-Rosado-Active-Cancelar-Bg:#FDB6BF ;
 
 
 
