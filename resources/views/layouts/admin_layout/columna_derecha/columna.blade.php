@@ -20,19 +20,14 @@
         <a href="{{route('get_datos_corporativos')}}">
             <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> La Empresa</li>
         </a>        
-        <a href="{{route('get_admin_marcas')}}">
-            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Clientes</li>
-        </a>
-        <a href="{{route('get_admin_eventos')}}">
-            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Eventos</li>
-        </a>
+        
     </div>
 
 </ul>
 
     <div id="admin-col-backtoweb">
         <a href="{{route('get_home')}}">
-            <p><small>globaltarget.com.uy</small></p>
+            <p><small>Nombre</small></p>
         </a>
     </div>
 
