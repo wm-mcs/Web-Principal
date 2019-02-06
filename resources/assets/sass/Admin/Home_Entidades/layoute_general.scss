@@ -26,6 +26,7 @@
   @include align-items(center);
   @include flex-direction(row); 
   border:solid 1px transparent;
+  font-family: $font-primary;
   
 }  
 
@@ -51,6 +52,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  font-family: $font-primary;
  
 }
 
@@ -59,10 +61,11 @@
     @include flexbox;
     @include align-items(center);
     @include flex-direction(column);
-    padding:4px;
+    padding:8px;
     border-radius: 4px;       
     margin: 4px auto;
     margin-left: 215px;
+    background-color:white;
   }
 
 
