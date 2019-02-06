@@ -190,7 +190,7 @@ abstract class BaseRepo
 
 
          $imagen_insert = Image::make(File::get($file));
-         $imagen_insert->save($nombre,70);          
+         $imagen_insert->save('imagenes/'.$nombre,70);          
          
          
        }
@@ -207,7 +207,7 @@ abstract class BaseRepo
          
          //indicamos que queremos guardar un nuevo archivo en el disco local
          $imagen_insert = Image::make(File::get($file));
-         $imagen_insert->save($nombre,70);    
+         $imagen_insert->save('imagenes/'.$nombre,70);    
          $Entidad->save();  
          
        
