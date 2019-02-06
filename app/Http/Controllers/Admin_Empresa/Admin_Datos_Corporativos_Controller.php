@@ -31,7 +31,7 @@ class Admin_Datos_Corporativos_Controller extends Controller
 
   public function set_datos_corporativos(Request $Request)
   {
-    $this->Empresa->setDatos($Request);
+    $this->Empresa->setDatos($Request);    
 
     return redirect()->back()->with('alert', 'has actualizado la información de manera correcta');
   }

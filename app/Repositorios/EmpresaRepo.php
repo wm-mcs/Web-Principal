@@ -27,7 +27,7 @@ class EmpresaRepo extends BaseRepo
   {
     $Empresa = $this->getEmpresaDatos();
 
-    $Propiedades = [/*'name','slogan','vision','mision',*/'telefono','direccion','horarios_dias','celular','email','email_no_reply'];
+    $Propiedades = ['name','slogan','vision','mision','telefono','direccion','horarios_dias','celular','email','email_no_reply'];  
     
     $this->setEntidadDato($Empresa,$request,$Propiedades);
        

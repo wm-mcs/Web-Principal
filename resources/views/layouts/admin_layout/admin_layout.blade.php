@@ -21,9 +21,9 @@
       @include('layouts.admin_layout.columna_derecha.columna')
       <div class="admin-contiene-content">
         
-        <div class="contendor-contenedor-errores-header">         
+
           @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados') 
-        </div> 
+        
 
          <div class="admin-contnedor-navegacion-miga">
           {{-- home --}}
