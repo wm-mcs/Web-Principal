@@ -147,6 +147,7 @@ return [
 
         Styde\Html\HtmlServiceProvider::class,
         GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
