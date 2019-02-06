@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Repositorios\Emails\EmailsRepo;
 use Input;
+use Intervention\Image\ImageManagerStatic as Image;
 
 /**
 * Contiene metodos comunes para todo los repositorios
@@ -184,12 +185,14 @@ abstract class BaseRepo
          
          //nombre del Archico / Carpeta Incluido
          $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
-         $Entidad->$nombreDelCampoForm= $nombre;
+         $Entidad->$nombreDelCampoForm = $nombre;
          $Entidad->save();
+
+
+         $imagen_insert = Image::make(File::get($file));
+         $imagen_insert->save($nombre,70);          
          
          
-         //indicamos que queremos guardar un nuevo archivo en el disco local
-         Storage::disk('local')->put($nombre,  File::get($file));
        }
     }
 
@@ -203,7 +206,8 @@ abstract class BaseRepo
          $Entidad->$nombreDelCampoForm= $nombre;              
          
          //indicamos que queremos guardar un nuevo archivo en el disco local
-         Storage::disk('local')->put($nombre,  File::get($file));
+         $imagen_insert = Image::make(File::get($file));
+         $imagen_insert->save($nombre,70);    
          $Entidad->save();  
          
        
