@@ -15,7 +15,8 @@
           {!! Form::model($Empresa,['route' => 'set_datos_corporativos',
                                     'method'=> 'PATCH',
                                     'files' =>  true,
-                                    'id'    => 'form-admin-empresa-datos'
+                                    'id'    => 'form-admin-empresa-datos',
+                                    'class' => 'Helper-OrdenarHijos-columna'
                                   ])               !!}
            <div class="formulario-contenedor">
               {{-- datos corporativos --}}
