@@ -40,9 +40,10 @@
                 </div>
               </div>      
            </div>
-           <div class="admin-boton-editar">
-             Editar
-           </div>
+
+           
+           <input class="admin-boton-editar" type="button" value="Editar" >
+           
           {!! Form::close() !!}
    </div>
   
