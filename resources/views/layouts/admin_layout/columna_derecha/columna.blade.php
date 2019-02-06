@@ -10,7 +10,7 @@
             <li class="admin-columna-li mi-float-right"><i class="fas fa-igloo"></i> Admin Panel</li>
         </a> 
         <a href="{{route('get_admin_users')}}">
-          <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Usuarios</li>
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-user"></i> Usuarios</li>
         </a>
         
     </div>
@@ -18,7 +18,7 @@
 
    <div id="admin-col-admin">
         <a href="{{route('get_datos_corporativos')}}">
-            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> La Empresa</li>
+            <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> La Empresa</li>
         </a>        
         
     </div>
