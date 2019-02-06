@@ -19,6 +19,7 @@
   
    <div class="admin-contiene-columna-y-content">
       @include('layouts.admin_layout.columna_derecha.columna')
+      <div class="get_width_20"></div>
       <div class="admin-contiene-content">
         
           <div class="admin-contiene-content-wraper"> 
