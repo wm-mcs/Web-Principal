@@ -42,7 +42,7 @@
            </div>
 
            
-           <input class="admin-boton-editar" type="button" value="Editar" >
+           <input class="admin-boton-editar" type="submit" value="Editar" >
            
           {!! Form::close() !!}
    </div>
