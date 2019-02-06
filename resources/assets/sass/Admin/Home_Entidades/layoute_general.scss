@@ -70,7 +70,7 @@
       @include flex-direction(column); 
       padding:8px;
       border-radius:4px;
-      background-color:$color-gris-background;
+      
     }
 
 
@@ -98,8 +98,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * */
  // columna
  .admin-columna-contenedor{
-  width: 20%;
-  padding: 5px 6px;
+  width: 20%;  
   border-right: 1px solid $color-3;  
   @include flexbox;
   @include align-items(center);
