@@ -32,6 +32,7 @@
   @include flexbox; 
   @include flex-direction(column);
   @include align-items(flex-start);
+  width:100%;
 }
 
            .formulario-label-fiel{
