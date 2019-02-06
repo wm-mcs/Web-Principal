@@ -19,6 +19,8 @@ class Empresa extends Model
      */
     protected $fillable = ['name', 'description'];
 
+    
+
 
     
 

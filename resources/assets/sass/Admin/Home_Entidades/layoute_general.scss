@@ -60,13 +60,18 @@
     width: 80%;    
     @include flexbox;
     @include align-items(center);
-    @include flex-direction(column);
-    padding:8px;
-    border-radius: 4px;       
-    margin: 4px auto;
-    margin-left: 215px;
-    background-color:white;
+    @include flex-direction(column);  
   }
+
+    .admin-contiene-content-wraper{
+      width: 80%;    
+      @include flexbox;
+      @include align-items(center);
+      @include flex-direction(column); 
+      padding:8px;
+      border-radius:4px;
+      background-color:$color-gris-background;
+    }
 
 
   .admin-contnedor-navegacion-miga{
@@ -93,13 +98,12 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * */
  // columna
  .admin-columna-contenedor{
-  width: 200px;
+  width: 20%;
   padding: 5px 6px;
   border-right: 1px solid $color-3;  
   @include flexbox;
   @include align-items(center);
-  @include flex-direction(column); 
-  background-color: $color-2;
+  @include flex-direction(column);   
   min-height: 100vh;
   position: fixed;
 }
@@ -188,4 +192,14 @@
 // link que lleva de vuelta al sitio web para ver los cambios
 .admin-columna-contenedor #admin-col-backtoweb a p{
 letter-spacing:3px;
+}
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+
+
 }
