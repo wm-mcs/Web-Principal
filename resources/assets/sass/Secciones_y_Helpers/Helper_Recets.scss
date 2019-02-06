@@ -31,3 +31,8 @@ a:hover, a:focus, a>p:hover, a>p:focus{
     box-shadow: none !important;
     outline: 0 none !important;
 }
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
