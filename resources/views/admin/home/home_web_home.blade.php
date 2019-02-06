@@ -1,22 +1,21 @@
 @extends('layouts.admin_layout.admin_layout')
 
+@section('miga-de-pan')
+ <span>La Home de Mi Web</span>
+@stop
+
+
+
+
+
+
 @section('content')
 
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
 
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
 
-  {{-- lugar donde esta --}}
-  <span>La Home de Mi Web</span>
-</div>
 
-<div class="contenedor-admin-entidad">
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">Mi Home</div>
+
 
   {{-- formulario --}}
   {!! Form::open(['route' => 'set_img_home',
@@ -83,6 +82,6 @@
 
 
   
-</div>
+
   
 @stop

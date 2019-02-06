@@ -20,8 +20,22 @@
    <div class="admin-contiene-columna-y-content">
       @include('layouts.admin_layout.columna_derecha.columna')
       <div class="admin-contiene-content">
-        @include('layouts.admin_layout.header.global')
+
+         <div class="admin-contnedor-navegacion-miga">
+          {{-- home --}}
+          <a href="{{route('get_admin_home')}}"><i class="fas fa-home"></i></a>
+
+          {{-- separador --}}
+          <span class="spam-separador">|</span> 
+
+          {{-- lugar donde esta --}}
+          @yield('miga-de-pan')
+          
+        </div>
+        <div class="contenedor-admin-entidad">
+       
         @yield('content')
+      </div>
       </div>      
    </div>
 

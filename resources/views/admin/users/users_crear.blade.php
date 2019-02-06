@@ -1,13 +1,8 @@
 @extends('layouts.admin_layout.admin_layout')
 
-@section('content')
 
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
+@section('miga-de-pan')
+ 
 
   {{-- lugar atras --}}
   <a href="{{route('get_admin_users')}}"><span>Usuarios</span></a>
@@ -17,13 +12,15 @@
   
   {{-- lugar donde esta --}}
   <span>Crear Usuario</span>
-</div>
+@stop
 
-<div class="contenedor-admin-entidad">
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">Crear Usuario 
- </div>
+
+@section('content')
+
+
+
+
 
  {{-- formulario --}}
   {!! Form::open(['route' => 'set_admin_users_crear',
@@ -62,6 +59,6 @@
 
 
   
-</div>
+
   
 @stop

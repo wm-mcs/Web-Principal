@@ -1,30 +1,26 @@
 @extends('layouts.admin_layout.admin_layout')
 
-@section('content')
 
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
+@section('miga-de-pan')
+ 
 
   {{-- lugar atras --}}
   <a href="{{route('get_admin_users')}}"><span>Usuarios</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
-
+  
   {{-- lugar donde esta --}}
-  <span>Editar Usuario: {{$user->name}}</span>
-</div>
+  <span>Editar a {{$user->name}}</span>
+@stop
 
 
-<div class="contenedor-admin-entidad">
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">Editar Usuario {{$user->name}}
- </div>
+@section('content')
+
+
+
+
 
  {{-- formulario --}}
   {!! Form::model($user,   ['route' => ['set_admin_users_editar',$user->id],
@@ -63,6 +59,6 @@
 
 
   
-</div>
+
   
 @stop

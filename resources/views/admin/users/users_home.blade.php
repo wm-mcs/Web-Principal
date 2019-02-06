@@ -1,20 +1,18 @@
 @extends('layouts.admin_layout.admin_layout')
 
+
+@section('miga-de-pan') 
+  <span>Usuarios</span>
+@stop
+
+
+
 @section('content')
 
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
-
-  {{-- lugar donde esta --}}
-  <span>Usuarios</span>
-</div>
 
 
-<div class="contenedor-admin-entidad">
+
+
 
  {{-- titulo --}}
  <div class="contenedor-admin-entidad-titulo-form-busqueda">
@@ -42,6 +40,6 @@
 
 
   
-</div>
+
   
 @stop
