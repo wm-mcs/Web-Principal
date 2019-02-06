@@ -64,7 +64,7 @@
   }
 
     .admin-contiene-content-wraper{
-      width: 80%;    
+      width: 95%;    
       @include flexbox;
       @include align-items(center);
       @include flex-direction(column); 
