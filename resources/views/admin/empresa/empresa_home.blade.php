@@ -10,7 +10,7 @@
 
 
 
- <div class="get_width_100 Helper-OrdenarHijos-columna"> 
+ <div class="get_width_100 Helper-OrdenarHijos-columna">  
           {{-- formulario --}}
           {!! Form::model($Empresa,['route' => 'set_datos_corporativos',
                                     'method'=> 'PATCH',

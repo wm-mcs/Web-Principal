@@ -21,6 +21,7 @@
 
 
 
+ <div class="get_width_100 Helper-OrdenarHijos-columna"> 
 
  {{-- formulario --}}
   {!! Form::open(['route' => 'set_admin_users_crear',
@@ -57,7 +58,7 @@
 
   {!! Form::close() !!}
 
-
+</div>
   
 
   
