@@ -44,7 +44,7 @@ elixir(function(mix) {
 
 
     elixir(function(mix) {
-            mix.version(['css/mixer.css', 'css/creative_template_mixer.css', 'css/admin.css' ,'js/all.js','js/admin.js'); 
+            mix.version(['css/mixer.css', 'css/creative_template_mixer.css', 'css/admin.css' ,'js/all.js','js/admin.js']); 
     });
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');

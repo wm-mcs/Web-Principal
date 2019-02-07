@@ -19,10 +19,23 @@ class Empresa extends Model
      */
     protected $fillable = ['name', 'description'];
 
-    
+    /**
+     * para verificar si no es null o no es cadena vacia
+     */
+    public function helper_verificar_nulidad($variable)
+    {
+      if(($variable != null) || ($variable != ''))
+      {
+        return $variable;
+      }
+      else
+      {
+        return 'no';
+      }
+    }
 
 
-    
+    //imagenes
     public function getImgLogoCuadradoAttribute()
     {
         
@@ -40,6 +53,13 @@ class Empresa extends Model
         
         return url().'/imagenes/'.$this->logo_vertical;
     }
+
+    //datos
+    public function getTelefonoEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->telefono);
+    }
+
     
 
     

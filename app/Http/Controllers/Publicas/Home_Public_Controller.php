@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Publicas;
 use App\Http\Controllers\Controller;
 use App\Repositorios\ImgHomeRepo;
 use App\Repositorios\EmpresaRepo;
-
 use Illuminate\Http\Request;
 
 
@@ -26,12 +25,10 @@ class Home_Public_Controller extends Controller
     public function get_home(Request $Request)
     {
         
-        $Route                = 'post_contacto_form';        
-        
+        $Route                = 'post_contacto_form';       
+        $Empresa              = $this->EmpresaRepo->getEmpresaDatos(); 
 
-
-
-        return view('paginas.home.home', compact('Route'));
+        return view('paginas.home.home', compact('Route','Empresa'));
     }
 
 
