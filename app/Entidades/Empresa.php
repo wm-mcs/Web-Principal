@@ -23,7 +23,23 @@ class Empresa extends Model
 
 
     
+    public function getImgLogoCuadradoAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->logo_cuadrado;
+    }
 
+    public function getImgLogoHorizontalAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->logo_horizontal;
+    }
+
+    public function getImgLogoVerticalAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->logo_vertical;
+    }
     
 
     
