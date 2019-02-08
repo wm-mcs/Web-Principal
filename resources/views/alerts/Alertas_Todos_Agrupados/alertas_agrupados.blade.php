@@ -1,4 +1,4 @@
-<div class="contenedor-alertas-agrupados">
+<div class="contenedor-alertas-agrupados ocultar_elemento_on_click">
  @include('alerts.errors')
  @include('alerts.alertas')
  @include('alerts.alert_danger')

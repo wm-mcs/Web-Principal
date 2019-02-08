@@ -1,6 +1,6 @@
 
  @if(Session::has('alert-pregunta-enviada'))
-            <div class="Alert_Success-Contenedor ocultar_elemento_on_click">
+            <div class="Alert_Success-Contenedor ">
               
               <div class="Alert_Success-Titulo">
 
