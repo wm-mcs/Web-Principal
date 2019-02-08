@@ -30,8 +30,8 @@ elixir(function(mix) {
         'Template_creative/jquery.easing.compatibility.js',
         'Plugins/Flickity.js',
         'Customs/sliders.js',
-        'Customs/team.js',
-        'Customs/helper_generales'
+        'Customs/team.js'
+
 
        ]);
 
@@ -39,6 +39,7 @@ elixir(function(mix) {
         
         'Template_creative/jquery.js',
         'Template_creative/bootstrap.bundle.js',
+        'Customs/helper_generales'
        
 
        ],'public/js/admin.js');
