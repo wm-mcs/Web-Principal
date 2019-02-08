@@ -5,10 +5,13 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    
+    
 
     <title>{{$Empresa->name}}</title>
+    <meta name="Description" content="{{$Empresa->descripcion_empresa}}">      
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="{{$Empresa->palabras_claves_empresa}}">
 
     {{-- css --}}
     <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/mixer.css') }}"> 

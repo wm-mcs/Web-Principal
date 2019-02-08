@@ -60,6 +60,53 @@ class Empresa extends Model
         return $this->helper_verificar_nulidad($this->telefono);
     }
 
+    public function getCelularEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->celular);
+    }
+
+    public function getDireccionEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->direccion);
+    }
+
+    public function getHorariosEmpresaAttribute()
+    {        
+    }
+        return $this->helper_verificar_nulidad($this->horarios_dias);
+    }
+
+    public function getEmailEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->email);
+    }
+
+    public function getSloganEmpresaAttribute()
+    {        
+    }
+        return $this->helper_verificar_nulidad($this->slogan);
+    }
+
+    public function getMisionEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->mision);
+    }
+
+    public function getVisionEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->vision);
+    }
+
+    public function getPalabrasClavesEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->palabras_claves);
+    }
+
+    public function getDescripcionEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->descripcion_breve);
+    }
+
     
 
     

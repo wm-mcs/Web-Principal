@@ -26,6 +26,12 @@
                   @include('admin.empresa.formularios_partes.datos_basicos')
                 </div>
               </div>
+              <div class="contenedor-grupo-datos">
+                <div class="contenedor-grupo-datos-titulo"> Seo buscadores</div>
+                <div class="contenedor-formulario-label-fiel">                       
+                  @include('admin.empresa.formularios_partes.datos_seo')
+                </div>
+              </div>
               {{-- imagenes corporativos --}}
               <div class="contenedor-grupo-datos">
                 <div class="contenedor-grupo-datos-titulo"> Imagen Corporativa</div>
