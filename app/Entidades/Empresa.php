@@ -71,8 +71,8 @@ class Empresa extends Model
     }
 
     public function getHorariosEmpresaAttribute()
-    {        
-    }
+    {       
+    
         return $this->helper_verificar_nulidad($this->horarios_dias);
     }
 
