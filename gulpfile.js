@@ -39,7 +39,7 @@ elixir(function(mix) {
         
         'Template_creative/jquery.js',
         'Template_creative/bootstrap.bundle.js',
-        'Customs/helper_generales'
+        'Customs/helper_generales.js'
        
 
        ],'public/js/admin.js');
