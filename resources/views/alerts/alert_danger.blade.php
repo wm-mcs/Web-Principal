@@ -6,9 +6,7 @@
               
               </div>
               <div class="Error-iconoCerrar">
-                <span class="icon-highlight_remove">
-                   
-                </span>
+                <i class="fas fa-times"></i>
               </div>
             </div>
 @endif 
