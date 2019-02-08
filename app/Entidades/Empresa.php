@@ -83,7 +83,7 @@ class Empresa extends Model
 
     public function getSloganEmpresaAttribute()
     {        
-    }
+    
         return $this->helper_verificar_nulidad($this->slogan);
     }
 
