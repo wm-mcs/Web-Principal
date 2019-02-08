@@ -45,7 +45,7 @@
   
 
       <!-- Scripts -->
-      <script src="{{ asset('js/all.js')}}"></script>
+      <script src="{{ asset('js/admin.js')}}"></script>
       <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>    
   </body>
 
