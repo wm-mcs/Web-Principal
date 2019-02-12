@@ -51,13 +51,13 @@
    
   <div class="Helper-OrdenarHijos-columna get_width_100" >
       <dir class="Helper-OrdenarHijos-Row">
-         <div class="boton-formato editar-evento-guardar">
+         <div class="admin-boton-editar editar-evento-guardar">
            Crear
          </div> 
 
          <div style="padding: 20px;"></div>
 
-         <div class="boton-formato editar-evento-guardar-y-salir">
+         <div class="admin-boton-editar editar-evento-guardar-y-salir">
            Crear y salir
          </div> 
      </dir>

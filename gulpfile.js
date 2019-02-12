@@ -41,7 +41,8 @@ elixir(function(mix) {
         'Template_creative/bootstrap.bundle.js',
         'Customs/helper_generales.js',
         'Plugins/Plug-bootstrap-fileinput v4.3.7.js',
-        'Customs/mis-file_input.js'
+        'Customs/mis-file_input.js',
+        'Customs/admin_eventos.js'
        
 
        ],'public/js/admin.js');
