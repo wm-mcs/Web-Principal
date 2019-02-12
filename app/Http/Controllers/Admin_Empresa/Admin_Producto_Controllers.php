@@ -45,8 +45,8 @@ class Admin_Producto_Controllers extends Controller
   //get Crear 
   public function get_admin_productos_crear()
   { 
-    $Marcas = $this->MarcaRepo->getEntidadActivas();  
-    return view('admin.productos.productos_crear',compact('Marcas'));
+    
+    return view('admin.productos.productos_crear');
   }
 
 
