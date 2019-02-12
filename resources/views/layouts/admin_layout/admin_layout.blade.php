@@ -35,7 +35,9 @@
                 @yield('miga-de-pan')                
               </div>
               <div class="contenedor-admin-entidad">
+                <div class="get_width_100 Helper-OrdenarHijos-columna"> 
                @yield('content')
+                </div>
               </div>
            </div>
       </div>      
