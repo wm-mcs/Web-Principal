@@ -7,41 +7,35 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Repositorios\EventoRepo;
-use App\Repositorios\ImgEventoRepo;
+use App\Repositorios\ProductoRepo;
+use App\Repositorios\ProductoImgRepo;
 use App\Managers\Evento\crear_evento_admin_manager;
-use App\Repositorios\MarcaRepo;
-use App\Repositorios\Marca_de_eventoRepo;
 use DB;
 
 
 
 
 
-class Admin_Eventos_Controllers extends Controller
+class Admin_Producto_Controllers extends Controller
 {
 
-  protected $EventoRepo;
-  protected $ImgEventoRepo;
-  protected $MarcaRepo;
-  protected $Marca_de_eventoRepo;
+  protected $EntidadDelControladorRepo;
+  protected $ImgEntidadRepo;
 
-  public function __construct(EventoRepo            $EventoRepo, 
-                              ImgEventoRepo         $ImgEventoRepo,
-                              MarcaRepo             $MarcaRepo, 
-                              Marca_de_eventoRepo   $Marca_de_eventoRepo)
+
+  public function __construct(ProductoRepo            $ProductoRepo, 
+                              ProductoImgRepo         $ProductoImgRepo)
 
   {
-    $this->EventoRepo           =  $EventoRepo;
-    $this->ImgEventoRepo        =  $ImgEventoRepo;
-    $this->MarcaRepo            =  $MarcaRepo;
-    $this->Marca_de_eventoRepo  =  $Marca_de_eventoRepo;
+    $this->EntidadDelControladorRepo           =  $ProductoRepo;
+    $this->ImgEventoRepo                       =  $ProductoImgRepo;
+    
   }
 
-  public function get_admin_eventos(Request $Request)
+  public function get_admin_productos(Request $Request)
   {
 
-    $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
+    $Eventos = $this->EntidadDelControladorRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
 
     return view('admin.eventos.eventos_home', compact('Eventos'));
   }
@@ -49,7 +43,7 @@ class Admin_Eventos_Controllers extends Controller
 
 
   //get Crear 
-  public function get_admin_eventos_crear()
+  public function get_admin_productos_crear()
   { 
     $Marcas = $this->MarcaRepo->getEntidadActivas();  
     return view('admin.eventos.eventos_crear',compact('Marcas'));
@@ -58,10 +52,10 @@ class Admin_Eventos_Controllers extends Controller
 
 
   //set 
-  public function set_admin_eventos_crear(Request $Request)
+  public function set_admin_productos(Request $Request)
   {     
       
-      $Evento    = $this->EventoRepo->getEntidad();
+      $Evento    = $this->EntidadDelControladorRepo->getEntidad();
 
       $Evento->estado = 'si';      
 
@@ -81,7 +75,7 @@ class Admin_Eventos_Controllers extends Controller
         {
 
 
-           $Evento = $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
+           $Evento = $this->EntidadDelControladorRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
            /*//utilzo la funciona creada en el controlador para subir la imagen
            $this->set_admin_eventos_img($Evento->id, $Request);  
@@ -102,7 +96,7 @@ class Admin_Eventos_Controllers extends Controller
 
               foreach($files as $file)
               { 
-                $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );
+                $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'evento_id',$Evento->id,$Request,'ProductoImagenes/' );
               }
               
             }
@@ -135,9 +129,9 @@ class Admin_Eventos_Controllers extends Controller
 
 
   //get edit admin 
-  public function get_admin_eventos_editar($id)
+  public function get_admin_productos_editar($id)
   {
-    $Evento = $this->EventoRepo->find($id);
+    $Evento = $this->EntidadDelControladorRepo->find($id);
     $Marcas = $this->MarcaRepo->getEntidadActivas();
 
 
@@ -145,16 +139,16 @@ class Admin_Eventos_Controllers extends Controller
   }
 
   //set edit admin 
-  public function set_admin_eventos_editar($id,Request $Request)
+  public function set_admin_productos_editar($id,Request $Request)
   {
-    $Evento = $this->EventoRepo->find($id);
+    $Evento = $this->EntidadDelControladorRepo->find($id);
 
     $Propiedades = ['name','description','estado','fecha','ubicacion'];
 
     try{
       DB::beginTransaction(); 
       
-    $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);     
+    $this->EntidadDelControladorRepo->setEntidadDato($Evento,$Request,$Propiedades);     
 
       //imagenes
       $files = $Request->file('img');
@@ -165,7 +159,7 @@ class Admin_Eventos_Controllers extends Controller
 
         foreach($files as $file)
         { 
-          $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );
+          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'evento_id',$Evento->id,$Request,'ProductoImagenes/' );
         }
         
       }
@@ -197,7 +191,7 @@ class Admin_Eventos_Controllers extends Controller
   }
 
   //subo img adicional
-  public function set_admin_eventos_img($id_evento,Request $Request)
+  public function set_admin_productos_img($id_evento,Request $Request)
   {   
       //archivos imagenes
       $files = $Request->file('img');
@@ -207,7 +201,7 @@ class Admin_Eventos_Controllers extends Controller
         foreach($files as $file)
         {           
 
-          $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$id_evento,$Request,'EventosImagenes/' );
+          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'evento_id',$id_evento,$Request,'EventosImagenes/' );
                     
         }
         
@@ -219,16 +213,16 @@ class Admin_Eventos_Controllers extends Controller
 
 
   //elimino img adicional
-  public function delete_admin_eventos_img($id_img)
+  public function delete_admin_productos_img($id_img)
   {
-      $imagen = $this->ImgEventoRepo->find($id_img); 
+      $imagen = $this->ImgEntidadRepo->find($id_img); 
 
-      $evento = $this->EventoRepo->find($imagen->evento_id);
+      $evento = $this->EntidadDelControladorRepo->find($imagen->evento_id);
 
       //me fijo si hay mas imagenes
       if($evento->imagenesevento->count() > 1)
       {
-        $this->ImgEventoRepo->destroy_entidad($id_img);
+        $this->ImgEntidadRepo->destroy_entidad($id_img);
 
         return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
       }
@@ -241,80 +235,17 @@ class Admin_Eventos_Controllers extends Controller
   }
 
   //fijo como imagen principal 
-  public function establecer_como_imagen_principal($id_img)
+  public function establecer_como_imagen_principal_producto($id_img)
   {
-      $this->ImgEventoRepo->cambio_a_imagen_principal($id_img);
+      $this->ImgEntidadRepo->cambio_a_imagen_principal($id_img);
 
       return redirect()->back()->with('alert', 'Imagen principal cambiada');
   }
 
-  public function delete_admin_marca_eventos($id)
-  {
-      $this->Marca_de_eventoRepo->destroy_entidad($id);
-
-      return redirect()->back()->with('alert-rojo', 'Marca eliminada');
-  }
 
 
-  public function EliminarUnEvento($evento_id)
-  {
 
-    
-    $Evento = $this->EventoRepo->find($evento_id);
-
-    //eliminar las imagenes
-    $Imagenes = $Evento->imagenesevento;
-
-    if($Imagenes->count() > 0)
-    {
-      foreach($Imagenes as $imgaen)
-      {
-        $this->ImgEventoRepo->destruir_esta_entidad($imgaen);
-      }
-    }
-    
-
-    //eliminar las marcas asociadas
-    $Marcas   = $Evento->marcasevento;
-    if($Marcas->count() > 0)  
-    { 
-      foreach($Marcas as $marca)
-      {
-        $this->Marca_de_eventoRepo->destruir_esta_entidad($marca);
-      }
-    }  
-
-    $Evento   = $this->EventoRepo->find($evento_id);
-    $Imagenes = $Evento->imagenesevento;
-    $Marcas   = $Evento->marcasevento; 
-
-   
-
-
-    if(($Imagenes->count() == 0) && ($Marcas->count() == 0))
-    {
-      $this->EventoRepo->destruir_esta_entidad($Evento); 
-      $validator = true;
-    }
-    else
-    {
-      $validator = false;
-    }
-
-    if($validator == true)
-    {
-       return redirect()->route('get_admin_eventos')->with('alert', 'Evento eliminado');
-    }
-    else
-    {
-      return redirect()->route('get_admin_eventos')->with('alert-rojo', 'No se eliminó correctamente probar de nuevo');
-    }
-
-
-    //eliminar el evento
-
-    //dirigir a atras
-  }
+  
 
   
 }

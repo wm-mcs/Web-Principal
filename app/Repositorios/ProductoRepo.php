@@ -2,19 +2,19 @@
 
 namespace App\Repositorios;
 
-use App\Entidades\Evento;
+use App\Entidades\Producto;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
 /**
 * Repositorio de consultas a la base de datos User
 */
-class EventoRepo extends BaseRepo
+class ProductoRepo extends BaseRepo
 {
   
   public function getEntidad()
   {
-    return new Evento();
+    return new Producto();
   }
 
 
@@ -23,7 +23,7 @@ class EventoRepo extends BaseRepo
   /**
    *  Devuelve el ultimo evento
    */
-  public function getUltimoEvento()
+  public function getUltimo()
   {
     return $this->getEntidad()->active()->orderBy('fecha', 'desc')->get()->first();
   }
@@ -31,18 +31,11 @@ class EventoRepo extends BaseRepo
   /**
     *  Devulve el Penultimo evento
     */  
-  public function getPenultimoEvento()
+  public function getPenultimo()
   {
       return $this->getEntidad()->active()->orderBy('fecha', 'desc')->take(2)->get()->last();
   }
 
-  public function getEventosArrayDeEventosID($array_eventos_id,$pagination)
-  {
-    return $this->getEntidad()
-                ->whereIn('id', $array_eventos_id)  
-                ->active() 
-                ->orderBy('fecha', 'desc')
-                ->paginate($pagination);
-  }
+  
   
 }

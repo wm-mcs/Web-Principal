@@ -1,32 +1,24 @@
 @extends('layouts.admin_layout.admin_layout')
 
-@section('content')
-
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
-
+@section('miga-de-pan') 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_eventos')}}"><span>Proyectos</span></a>
+  <a href="{{route('get_admin_productos')}}"><span>Productos</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
   <span>Crear Evento</span>
-</div>
+@stop
 
-<div class="contenedor-admin-entidad">
+@section('content')
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">Crear Evento 
- </div>
+
+
+
 
  {{-- formulario --}}
-  {!! Form::open(['route' => 'set_admin_eventos_crear',
+  {!! Form::open(['route' => 'set_admin_productos',
                             'method'=> 'post',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
@@ -36,7 +28,7 @@
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"> Datos</div>
         <div class="contenedor-formulario-label-fiel">                       
-          @include('admin.eventos.formularios_partes.datos_basicos')
+          @include('admin.productos.formularios_partes.datos_basicos')
           {{-- fecha del evento --}}
          <div class="formulario-label-fiel">
           {!! Form::label('fecha', 'Fecha', array('class' => 'formulario-label ')) !!}
@@ -45,18 +37,12 @@
         </div>
       </div>
 
-      {{-- datos imagenes --}}
-      <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"> Marcas asociadas</div>
-        <div class="contenedor-formulario-label-fiel">                       
-          @include('admin.eventos.formularios_partes.datos_marcas')
-        </div>
-      </div>
+     
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo">Imagenes</div>
         <div class="contenedor-formulario-label-fiel">                       
-          @include('admin.eventos.formularios_partes.datos_imagenes')
+          @include('admin.productos.formularios_partes.datos_imagenes')
         </div>
       </div>      
    </div>
@@ -84,6 +70,6 @@
 
 
   
-</div>
+
   
 @stop

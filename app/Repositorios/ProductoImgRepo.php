@@ -2,19 +2,19 @@
 
 namespace App\Repositorios;
 
-use App\Entidades\ImgEvento;
+use App\Entidades\ProductoImg;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
 /**
 * Repositorio de consultas a la base de datos User
 */
-class ImgEventoRepo extends BaseRepo
+class ProductoImgRepo extends BaseRepo
 {
   
   public function getEntidad()
   {
-    return new ImgEvento();
+    return new ProductoImg();
   }
 
 
@@ -22,7 +22,7 @@ class ImgEventoRepo extends BaseRepo
   {
     $imagen = $this->find($id_img);
 
-    $imagen_pricipal = $this->get_imagen_principal_de_entidad_especifica('evento_id',$imagen->evento_id) ;  
+    $imagen_pricipal = $this->get_imagen_principal_de_entidad_especifica('producto_id',$imagen->evento_id) ;  
 
     $this->cambio_a_imagen_principal_desde_base_repo($imagen_pricipal,$imagen);
   }

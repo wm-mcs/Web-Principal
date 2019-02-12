@@ -1,4 +1,4 @@
-{!! Form::model(Request::all(),['route'   => 'get_admin_eventos', 
+{!! Form::model(Request::all(),['route'   => 'get_admin_productos', 
                 'method'  => 'GET',
                 'class'   => 'navbar-form',
                 'role'    => 'search' ])                             !!}

@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
-class ImgEvento extends Model
+class ProductoImg extends Model
 {
 
-    protected $table ='imgs_eventos';
+    protected $table ='producto_imagenes';
 
     /**
      * The attributes that are mass assignable.

@@ -4,16 +4,16 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Entidades\ImgHome;
-use App\Entidades\ImgEvento;
-use App\Entidades\Marca_de_evento;
+use App\Entidades\ProductoImg;
 
 
 
 
-class Evento extends Model
+
+class Producto extends Model
 {
 
-    protected $table ='eventos';
+    protected $table ='productos';
 
     /**
      * The attributes that are mass assignable.
@@ -24,15 +24,12 @@ class Evento extends Model
 
 
 
-    public function imagenesevento()
+    public function imagenes()
     {
       return $this->hasMany(ImgEvento::class,'evento_id','id')->where('estado','si');
     }
 
-    public function marcasevento()
-    {
-      return $this->hasMany(Marca_de_evento::class,'evento_id','id');
-    }
+  
 
     
     /**
@@ -62,22 +59,22 @@ class Evento extends Model
     public function getUrlImgAttribute()
     {
         //imagenes asoiadas al proyecto
-        $imagenesProyectos = $this->imagenesevento;
+        $imagenes = $this->imagenes;
 
         //veo si hay alguna que tenga el atributo
-        $cantidad_imagenes = $imagenesProyectos->where('foto_principal','si')->count();
+        $cantidad_imagenes = $imagenes->where('foto_principal','si')->count();
         
 
         if($cantidad_imagenes === 1)
         {
-            $imagen_principal = $imagenesProyectos->where('foto_principal','si')->first();
+            $imagen_principal = $imagenes->where('foto_principal','si')->first();
             
 
             return $imagen_principal->url_img;
         }
         elseif($cantidad_imagenes === 0)
         {
-            $imagen = $imagenesProyectos->first();
+            $imagen = $imagenes->first();
             if($imagen == null)
             {
                return 'null';
