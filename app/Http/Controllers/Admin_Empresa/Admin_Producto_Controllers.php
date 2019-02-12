@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
 use App\Repositorios\ProductoImgRepo;
-use App\Managers\Evento\crear_evento_admin_manager;
+use App\Managers\Producto\crear_producto_admin_manager;
 use DB;
 
 
@@ -35,9 +35,9 @@ class Admin_Producto_Controllers extends Controller
   public function get_admin_productos(Request $Request)
   {
 
-    $Eventos = $this->EntidadDelControladorRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
+    $Productos = $this->EntidadDelControladorRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
 
-    return view('admin.eventos.eventos_home', compact('Eventos'));
+    return view('admin.productos.productos_home', compact('Productos'));
   }
 
 
@@ -46,7 +46,7 @@ class Admin_Producto_Controllers extends Controller
   public function get_admin_productos_crear()
   { 
     $Marcas = $this->MarcaRepo->getEntidadActivas();  
-    return view('admin.eventos.eventos_crear',compact('Marcas'));
+    return view('admin.productos.productos_crear',compact('Marcas'));
   }
 
 
@@ -55,13 +55,13 @@ class Admin_Producto_Controllers extends Controller
   public function set_admin_productos(Request $Request)
   {     
       
-      $Evento    = $this->EntidadDelControladorRepo->getEntidad();
+      $Entidad    = $this->EntidadDelControladorRepo->getEntidad();
 
-      $Evento->estado = 'si';      
+      $Entidad->estado = 'si';      
 
       $Propiedades = ['name','description','fecha','ubicacion'];  
       
-      $manager = new crear_evento_admin_manager(null, $Request->all());
+      $manager = new crear_producto_admin_manager(null, $Request->all());
 
       //imagenes
       $files = $Request->file('img');
@@ -75,7 +75,7 @@ class Admin_Producto_Controllers extends Controller
         {
 
 
-           $Evento = $this->EntidadDelControladorRepo->setEntidadDato($Evento,$Request,$Propiedades);
+           $Entidad = $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
            /*//utilzo la funciona creada en el controlador para subir la imagen
            $this->set_admin_eventos_img($Evento->id, $Request);  
@@ -96,7 +96,7 @@ class Admin_Producto_Controllers extends Controller
 
               foreach($files as $file)
               { 
-                $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'evento_id',$Evento->id,$Request,'ProductoImagenes/' );
+                $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'producto_id',$Entidad->id,$Request,'ProductoImagenes/' );
               }
               
             }
@@ -106,18 +106,18 @@ class Admin_Producto_Controllers extends Controller
            {
              foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
              {
-               $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+               $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Entidad->id, $marca_asociada_id);
              }
            } 
 
  //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
            if($Request->get('tipo_de_boton') == 'guardar')
            {
-             return redirect()->route('get_admin_eventos_editar',$Evento->id)->with('alert', 'Evento creado correctamente');  
+             return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Entidad creado correctamente');  
            }
            else
            {
-             return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');  
+             return redirect()->route('get_admin_productos')->with('alert', 'Entidad creado correctamente');  
            }
                 
         } 
@@ -131,24 +131,24 @@ class Admin_Producto_Controllers extends Controller
   //get edit admin 
   public function get_admin_productos_editar($id)
   {
-    $Evento = $this->EntidadDelControladorRepo->find($id);
+    $Entidad = $this->EntidadDelControladorRepo->find($id);
     $Marcas = $this->MarcaRepo->getEntidadActivas();
 
 
-    return view('admin.eventos.eventos_editar',compact('Evento','Marcas'));
+    return view('admin.productos.eventos_editar',compact('Entidad','Marcas'));
   }
 
   //set edit admin 
   public function set_admin_productos_editar($id,Request $Request)
   {
-    $Evento = $this->EntidadDelControladorRepo->find($id);
+    $Entidad = $this->EntidadDelControladorRepo->find($id);
 
     $Propiedades = ['name','description','estado','fecha','ubicacion'];
 
     try{
       DB::beginTransaction(); 
       
-    $this->EntidadDelControladorRepo->setEntidadDato($Evento,$Request,$Propiedades);     
+    $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);     
 
       //imagenes
       $files = $Request->file('img');
@@ -159,19 +159,19 @@ class Admin_Producto_Controllers extends Controller
 
         foreach($files as $file)
         { 
-          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'evento_id',$Evento->id,$Request,'ProductoImagenes/' );
+          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'producto_id',$Entidad->id,$Request,'ProductoImagenes/' );
         }
         
       }
       
      //creo las marcas asociadas a este evento
-     if($Request->input('marca_asociado_id') != '')
+    /* if($Request->input('marca_asociado_id') != '')
      {
        foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
        {
-         $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+         $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Entidad->id, $marca_asociada_id);
        }
-     }
+     }*/
 
     DB::commit(); 
     }catch(\Exception $e){            
@@ -181,17 +181,17 @@ class Admin_Producto_Controllers extends Controller
      
      if($Request->get('tipo_de_boton') == 'guardar')
      {
-       return redirect()->route('get_admin_eventos_editar',$Evento->id)->with('alert', 'Evento editado correctamente');  
+       return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Entidad editado correctamente');  
      }
      else
      {
-       return redirect()->route('get_admin_eventos')->with('alert', 'Evento editado correctamente');  
+       return redirect()->route('get_admin_productos')->with('alert', 'Entidad editado correctamente');  
      }
     
   }
 
   //subo img adicional
-  public function set_admin_productos_img($id_evento,Request $Request)
+  public function set_admin_productos_img($id,Request $Request)
   {   
       //archivos imagenes
       $files = $Request->file('img');
@@ -201,7 +201,7 @@ class Admin_Producto_Controllers extends Controller
         foreach($files as $file)
         {           
 
-          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'evento_id',$id_evento,$Request,'EventosImagenes/' );
+          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'producto_id',$id,$Request,'EventosImagenes/' );
                     
         }
         
@@ -217,10 +217,10 @@ class Admin_Producto_Controllers extends Controller
   {
       $imagen = $this->ImgEntidadRepo->find($id_img); 
 
-      $evento = $this->EntidadDelControladorRepo->find($imagen->evento_id);
+      $Entidad = $this->EntidadDelControladorRepo->find($imagen->producto_id);
 
       //me fijo si hay mas imagenes
-      if($evento->imagenesevento->count() > 1)
+      if($Entidad->imagenesevento->count() > 1)
       {
         $this->ImgEntidadRepo->destroy_entidad($id_img);
 
