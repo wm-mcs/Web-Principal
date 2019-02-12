@@ -49,8 +49,8 @@
 
     {!! Form::hidden('tipo_de_boton','hola') !!}
    
-  <div class="Helper-OrdenarHijos-columna get_width_100" >
-      <dir class="Helper-OrdenarHijos-Row">
+  <div class="flex-row-column get_width_100" >
+      <dir class="flex-row-center">
          <div class="admin-boton-editar editar-evento-guardar">
            Crear
          </div> 
