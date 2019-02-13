@@ -70,7 +70,7 @@
         
         this.modal_titulo = tipo_de_mensaje;
         //abro el modal
-        $('#modal-contacto').modal('show');
+        $('#modal-contacto').modal('show');   
 
         
           this.tipo_de_mensaje     = tipo_de_mensaje;
