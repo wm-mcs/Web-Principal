@@ -8,7 +8,7 @@ Para hacer esto tienes 30 días a partir de la fecha que la web queda en producc
 
 ¿Que te vamos a devolver? , 
 
-todo, tanto lo que abonaste por concepto de diseño como por concepto de mantenimiento. Asi de simple asi <i class="fa fa-smile-wink"></i> 
+todo, tanto lo que abonaste por concepto de diseño como por concepto de mantenimiento. Asi de simple asi <i class="fa fa-smile"></i> 
 
 
 
