@@ -31,7 +31,20 @@ class Admin_Datos_Corporativos_Controller extends Controller
 
   public function set_datos_corporativos(Request $Request)
   {
-    $this->Empresa->setDatos($Request);    
+     
+
+    $Empresa = $this->Empresa>getEmpresaDatos();
+
+      $Propiedades = ['name','slogan','vision','mision','telefono','direccion','horarios_dias','celular','email','email_no_reply','palabras_claves','descripcion_breve','facebook_url','instagram_url','twitter_url','linkedin_url','youtube_url','Whatsapp_cel'];  
+    
+      $this->Empresa->setEntidadDato($Empresa,$Request,$Propiedades);
+       
+
+      $this->Empresa->setImagen($Empresa,$Request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
+      $this->Empresa->setImagen($Empresa,$Request,'logo_horizontal','Empresa/','logo_horizontal','.png');
+      $this->Empresa->setImagen($Empresa,$Request,'logo_vertical','Empresa/','logo_vertical','.png');
+
+      $Empresa->save();  
 
     return redirect()->back()->with('alert', 'has actualizado la información de manera correcta');
   }

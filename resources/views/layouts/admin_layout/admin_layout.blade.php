@@ -47,7 +47,7 @@
   
 
       <!-- Scripts -->
-      <script src="{{ asset('js/admin.js')}}"></script>
+      <script src="{{url()}}{{ elixir('js/admin.js')}} " ></script>  
       <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>    
   </body>
 

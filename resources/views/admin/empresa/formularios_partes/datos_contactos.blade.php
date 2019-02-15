@@ -32,5 +32,47 @@
                                                                         ]) !!}
 </div>
 
+<div class="formulario-label-fiel">
+  {!! Form::label('facebook_url', 'Facebook', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('facebook_url', null ,['class' => 'formulario-field'
+
+                                                                        ]) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('instagram_url', 'Instagram', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('instagram_url', null ,['class' => 'formulario-field'
+
+                                                                        ]) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('twitter_url', 'Twitter', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('twitter_url', null ,['class' => 'formulario-field'
+
+                                                                        ]) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('linkedin_url', 'Linkedin', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('linkedin_url', null ,['class' => 'formulario-field'
+
+                                                                        ]) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('youtube_url', 'Youtube', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('youtube_url', null ,['class' => 'formulario-field'
+
+                                                                        ]) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('Whatsapp_cel', 'Whatsapp', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('Whatsapp_cel', null ,['class' => 'formulario-field'
+
+                                                                        ]) !!}
+</div>
+
 
 

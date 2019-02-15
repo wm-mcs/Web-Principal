@@ -102,10 +102,39 @@ class Empresa extends Model
         return $this->helper_verificar_nulidad($this->palabras_claves);
     }
 
-    public function getDescripcionEmpresaAttribute()
+    //Socilaes
+
+    public function getFacebookEmpresaAttribute()
     {        
-        return $this->helper_verificar_nulidad($this->descripcion_breve);
+        return $this->helper_verificar_nulidad($this->facebook_url);
     }
+
+    public function getInstagramEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->instagram_url);
+    }
+
+    public function getTwitterEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->twitter_url);
+    }
+
+    public function getLinkedinEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->linkedin_url);
+    }
+
+    public function getYoutubeEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->youtube_url);
+    }
+
+    public function getwhatsappEmpresaAttribute()
+    {        
+        return $this->helper_verificar_nulidad($this->Whatsapp_cel);
+    }
+
+
 
     
 
