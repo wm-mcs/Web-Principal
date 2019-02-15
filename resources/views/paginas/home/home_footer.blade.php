@@ -7,6 +7,19 @@
               </div>
               
             </div>
+
+             {{-- parte de politicas --}}  
+             <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
+              <div class="get_width_100 flex-row-column">
+
+                 <p class="color-text-gris espacio-letras small" data-toggle="modal" data-target="#modal-garantia">  
+                    Política de devolución
+                 </p>
+               
+              </div>
+            </div> 
+
+
             <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
               <div class="get_width_100 flex-row-column">
 
