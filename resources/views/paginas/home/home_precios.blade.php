@@ -56,7 +56,7 @@
                         <span class="text-color-primary text-bold">                          
                           Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;) 
                             <span class="simula_link" data-toggle="modal" data-target="#modal-garantia" title="clic para ver política">
-                              <i class="far fa-info-circle"></i>                              
+                              <i class="fa fa-info-circle"></i>                              
                             </span> 
                         </span>  
                       </div>
