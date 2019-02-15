@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body text-center">
 
-              @include('paginas.politicas.garantia_modal')
+              @include('paginas.politicas.garantia_contenido')
 
                
       </div>
