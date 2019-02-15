@@ -129,3 +129,14 @@
 .no-mostrar{
   display:none;
 }
+
+
+/*simula un link*/
+.simula_link{
+  cursor:pointer;
+  color:  $color-3;
+}
+
+.simula_link:hover{
+  color:$color-3-primary_hover;
+}

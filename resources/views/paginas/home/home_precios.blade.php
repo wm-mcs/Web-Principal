@@ -54,7 +54,10 @@
                       </div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-grin-hearts"></i>  Garantía de devolución total. 
                         <span class="text-color-primary text-bold">                          
-                          Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;)
+                          Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;) 
+                            <span class="simula_link" data-toggle="modal" data-target="#modal-garantia" title="clic para ver política">
+                              <i class="far fa-question-circle"></i>                              
+                            </span> 
                         </span>  
                       </div>
                       
