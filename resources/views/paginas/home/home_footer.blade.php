@@ -12,7 +12,7 @@
              <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
               <div class="get_width_100 flex-row-column">
 
-                 <p class="color-text-gris espacio-letras small" data-toggle="modal" data-target="#modal-garantia">  
+                 <p class="color-text-gris espacio-letras small helper_cursor_pointer" data-toggle="modal" data-target="#modal-garantia">  
                     Política de devolución
                  </p>
                
