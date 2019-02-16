@@ -129,7 +129,7 @@ class Empresa extends Model
         return $this->helper_verificar_nulidad($this->youtube_url);
     }
 
-    public function getwhatsappEmpresaAttribute()
+    public function getWhatsappEmpresaAttribute()
     {        
         return $this->helper_verificar_nulidad($this->Whatsapp_cel);
     }
