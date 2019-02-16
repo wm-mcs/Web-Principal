@@ -21,43 +21,43 @@
 
                  @if($Empresa->facebook_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->facebook_empresa}}"> 
-                    <i class="fa fa-facebook-square"></i>
+                    <i class="fas fa-facebook-square"></i>
                   </a>
                  @endif 
 
                  @if($Empresa->instagram_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->instagram_empresa}}"> 
-                    <i class="fa fa-instagram"></i>
+                    <i class="fas fa-instagram"></i>
                   </a>
                  @endif 
 
                  @if($Empresa->twitter_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->twitter_empresa}}"> 
-                    <i class="fa fa-twitter-square"></i>
+                    <i class="fas fa-twitter-square"></i>
                   </a>
                  @endif 
 
                   @if($Empresa->linkedin_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->linkedin_empresa}}"> 
-                    <i class="fa fa-linkedin"></i>
+                    <i class="fas fa-linkedin"></i>
                   </a>
                  @endif
 
                   @if($Empresa->youtube_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->youtube_empresa}}"> 
-                    <i class="fa fa-youtube"></i>
+                    <i class="fas fa-youtube"></i>
                   </a>
                  @endif
 
                   @if($Empresa->whatsapp_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->link_whatsapp_send}}"> 
-                    <i class="fa whatsapp-square"></i>
+                    <i class="fas whatsapp-square"></i>
                   </a>
                  @endif
 
                 
                   <a class="footer-icono-social js-scroll-trigger" href="#contact"> 
-                    <i class="fa fa-envelope"></i>
+                    <i class="fas fa-envelope"></i>
                   </a>
                  
 
@@ -70,25 +70,25 @@
 
                @if($Empresa->telefono_empresa != 'no')
                  <p class="color-text-gris  espacio-letras-chico small">  
-                  <span class="helper-aumenta-texto"><i class="fa fa-phone"></i></span> {{$Empresa->telefono_empresa}}
+                  <span class="helper-aumenta-texto"><i class="fas fa-phone"></i></span> {{$Empresa->telefono_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->celular_empresa != 'no')
                  <p class="color-text-gris  espacio-letras-chico small">  
-                  <span class="helper-aumenta-texto"><i class="fa fa-mobile"></i></span> {{$Empresa->celular_empresa}}
+                  <span class="helper-aumenta-texto"><i class="fas fa-mobile"></i></span> {{$Empresa->celular_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->direccion_empresa != 'no')
                  <p class="color-text-gris  espacio-letras-chico small">  
-                  <span class="helper-aumenta-texto"><i class="fa fa-map-marker-alt"></i></span> {{$Empresa->direccion_empresa}}
+                  <span class="helper-aumenta-texto"><i class="fas fa-map-marker-alt"></i></span> {{$Empresa->direccion_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->horarios_empresa != 'no')
                  <p class="color-text-gris  espacio-letras-chico  small">  
-                  <span class="helper-aumenta-texto"><i class="fa fa-clock"></i></span> {{$Empresa->horarios_empresa}}
+                  <span class="helper-aumenta-texto"><i class="fas fa-clock"></i></span> {{$Empresa->horarios_empresa}}
                  </p> 
                @endif
 
