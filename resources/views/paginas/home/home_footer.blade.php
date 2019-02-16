@@ -51,7 +51,7 @@
 
                   @if($Empresa->whatsapp_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->link_whatsapp_send}}"> 
-                    <i class="fa fa-whatsapp"></i>
+                    <i class="fa whatsapp-square"></i>
                   </a>
                  @endif
 

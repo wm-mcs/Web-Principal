@@ -141,6 +141,8 @@ class Empresa extends Model
         $numero  = '598'. substr(trim($this->whatsapp_empresa),1);
         $mensaje = 'Hola!%20,%20quiero%20consultar%20por%20los%20planes%20de%20webs%20que%20tienen!';
         $url = 'https://api.whatsapp.com/send?phone='. $numero .'&text='. $mensaje;
+
+        return $url;
     }
 
 
