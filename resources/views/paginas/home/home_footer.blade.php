@@ -69,25 +69,25 @@
               <div class="get_width_100 flex-row-column">
 
                @if($Empresa->telefono_empresa != 'no')
-                 <p class="color-text-gris espacio-letras small">  
+                 <p class="color-text-gris  small">  
                   <span class="helper-aumenta-texto"><i class="fa fa-phone"></i></span> {{$Empresa->telefono_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->celular_empresa != 'no')
-                 <p class="color-text-gris espacio-letras small">  
+                 <p class="color-text-gris  small">  
                   <span class="helper-aumenta-texto"><i class="fa fa-mobile"></i></span> {{$Empresa->celular_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->direccion_empresa != 'no')
-                 <p class="color-text-gris espacio-letras small">  
+                 <p class="color-text-gris  small">  
                   <span class="helper-aumenta-texto"><i class="fa fa-map-marker-alt"></i></span> {{$Empresa->direccion_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->horarios_empresa != 'no')
-                 <p class="color-text-gris espacio-letras small">  
+                 <p class="color-text-gris  small">  
                   <span class="helper-aumenta-texto"><i class="fa fa-clock"></i></span> {{$Empresa->horarios_empresa}}
                  </p> 
                @endif
