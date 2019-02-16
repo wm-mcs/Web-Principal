@@ -45,7 +45,7 @@
       @include('paginas.home.home_contacto')
       @include('paginas.home.home_footer')
       @include('paginas.home.home_modal_contacto')
-      @include('paginas.politicas.garantia_modal')
+      @include('paginas.politicas.mantenimiento_garantia_modals')
 
           {{-- <div class="col-sm-10"> 
     <h1>JSON</h1>

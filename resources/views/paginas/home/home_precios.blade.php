@@ -63,6 +63,8 @@
                       
                     </div> 
                     @include('paginas.home.home_precios_aclaracion')
+
+                    
                     <div v-if="mensajes_enviados.includes('básico') != true" class="boton-simple" v-on:click.prevent="abrir_modal_para_contacto('Consultar sobre plan básico','contacto')">Contactar
                     </div>
                     <div v-else class="mensaje-luego-de-envio">

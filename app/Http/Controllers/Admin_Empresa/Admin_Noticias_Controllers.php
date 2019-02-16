@@ -8,7 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use App\Repositorios\NoticiasRepo;
 use Illuminate\Http\Request;
-use App\Managers\Users\user_admin_crear;
+use App\Managers\noticia_manager;
 
 
 
@@ -44,11 +44,22 @@ class Admin_Noticias_Controllers extends Controller
 
     $Propiedades = ['name','description','estado','header_text','url_video'];
 
-    $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
+    $manager = new noticia_manager(     null, $Request->all()  );
 
-    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Img_Principal_Noticias/', $noticia->name ,'.png');
+
+    if ($manager->isValid())
+    {
+
+      $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
+
+      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Img_Principal_Noticias/', $noticia->name ,'.png');
+      
+      return redirect()->route('get_admin_noticias')->with('alert', 'Noticia Creado Correctamente');
+    }
+
    
-    return redirect()->route('get_admin_noticias')->with('alert', 'Marca Creado Correctamente');
+    return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
+    
     
   }
 
@@ -71,7 +82,7 @@ class Admin_Noticias_Controllers extends Controller
 
     $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Img_Principal_Noticias/', $noticia->name ,'.png');
 
-    return redirect()->route('get_admin_noticias')->with('alert', 'Marca Editado Correctamente');  
+    return redirect()->route('get_admin_noticias')->with('alert', 'Noticia Editado Correctamente');  
   }
 
   

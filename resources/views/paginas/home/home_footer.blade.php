@@ -13,7 +13,11 @@
               <div class="get_width_100 flex-row-column">
                  <p class="color-text-gris espacio-letras small helper_cursor_pointer" data-toggle="modal" data-target="#modal-garantia">  
                     Política de devolución
-                 </p>               
+                 </p>   
+
+                  <p class="color-text-gris espacio-letras small helper_cursor_pointer" data-toggle="modal" data-target="#modal-mantenimiento">  
+                    Política de mantenimiento
+                 </p>            
               </div>
 
 
