@@ -33,7 +33,7 @@ class Admin_Datos_Corporativos_Controller extends Controller
   {
      
 
-    $Empresa = $this->Empresa>getEmpresaDatos();
+    $Empresa = $this->Empresa->getEmpresaDatos();
 
       $Propiedades = ['name','slogan','vision','mision','telefono','direccion','horarios_dias','celular','email','email_no_reply','palabras_claves','descripcion_breve','facebook_url','instagram_url','twitter_url','linkedin_url','youtube_url','Whatsapp_cel'];  
     
