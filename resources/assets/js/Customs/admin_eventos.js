@@ -8,6 +8,15 @@
   });
 
 
+  $('body').on('click','.admin-boton-editar',function(e)
+  {
+   e.preventDefault();   
+
+   var form  = $(this).parents() ;  
+   form.submit();
+  });
+
+
 
   // buscador de eventos por marca
   $('body').on('click','.editar-evento-guardar',function(e)

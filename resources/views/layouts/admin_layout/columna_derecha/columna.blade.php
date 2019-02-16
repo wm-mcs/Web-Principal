@@ -13,7 +13,11 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-user"></i> Usuarios</li>
         </a>
         <a href="{{route('get_admin_productos')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-user"></i> Productos</li>
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-product-hunt"></i> Productos</li>
+        </a>
+
+         <a href="{{route('get_admin_noticias')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Productos</li>
         </a>
         
     </div>

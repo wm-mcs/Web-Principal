@@ -1,14 +1,8 @@
 @extends('layouts.admin_layout.admin_layout')
 
-@section('content')
 
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
-
+@section('miga-de-pan')
+ 
   {{-- lugar atras --}}
   <a href="{{route('get_admin_noticias')}}"><span>Noticias</span></a>
 
@@ -17,13 +11,11 @@
 
   {{-- lugar donde esta --}}
   <span>Crear Noticia</span>
-</div>
+@stop
 
-<div class="contenedor-admin-entidad">
+@section('content')
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">Crear Noticia 
- </div>
+
 
  {{-- formulario --}}
   {!! Form::open(['route' => 'set_admin_noticias_crear',
@@ -62,6 +54,6 @@
 
 
   
-</div>
+
   
 @stop

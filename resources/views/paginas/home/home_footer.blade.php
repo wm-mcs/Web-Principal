@@ -21,31 +21,31 @@
 
                  @if($Empresa->facebook_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->facebook_empresa}}"> 
-                    <i class="fas fa-facebook-square"></i>
+                    <i class="fab fa-facebook-square"></i>
                   </a>
                  @endif 
 
                  @if($Empresa->instagram_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->instagram_empresa}}"> 
-                    <i class="fas fa-instagram"></i>
+                    <i class="fab fa-instagram"></i>
                   </a>
                  @endif 
 
                  @if($Empresa->twitter_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->twitter_empresa}}"> 
-                    <i class="fas fa-twitter-square"></i>
+                    <i class="fab fa-twitter-square"></i>
                   </a>
                  @endif 
 
                   @if($Empresa->linkedin_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->linkedin_empresa}}"> 
-                    <i class="fas fa-linkedin"></i>
+                    <i class="fab fa-linkedin"></i>
                   </a>
                  @endif
 
                   @if($Empresa->youtube_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->youtube_empresa}}"> 
-                    <i class="fas fa-youtube"></i>
+                    <i class="fab fa-youtube"></i>
                   </a>
                  @endif
 
