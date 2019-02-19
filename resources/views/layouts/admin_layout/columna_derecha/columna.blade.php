@@ -19,6 +19,10 @@
          <a href="{{route('get_admin_noticias')}}">
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Noticias</li>
         </a>
+
+        <a href="{{route('get_admin_marcas')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fab fa-apple"></i> Marcas</li>
+        </a>  
         
     </div>
    @endif
