@@ -1,33 +1,21 @@
 @extends('layouts.admin_layout.admin_layout')
 
-@section('content')
-
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
-
+@section('miga-de-pan') 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_marcas')}}"><span>Clientes</span></a>
+  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Editar Cliente: {{$marca->name}}</span>
-</div>
+  <span>Editar Marca</span>
+@stop
 
-<div class="contenedor-admin-entidad">
+@section('content')
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">
- <img class="admin-entidad-img" src="{{$marca->url_img}}">
- Editar Cliente {{$marca->name}}
- </div>
 
- {{-- formulario --}}
+
+  {{-- formulario --}}
   {!! Form::model($marca,   ['route' => ['set_admin_marcas_editar',$marca->id],
                             'method'=> 'patch',
                             'files' =>  true,
@@ -59,11 +47,6 @@
      Guardar
    </div> 
 
-
   {!! Form::close() !!}
-
-
-  
-</div>
   
 @stop
