@@ -1,7 +1,8 @@
 {
-  "css/admin.css": "css/admin-c619b62a65.css",
-  "css/creative_template_mixer.css": "css/creative_template_mixer-ff58336d3a.css",
+  "css/admin.css": "css/admin-dcbe54a806.css",
+  "css/creative_template_mixer.css": "css/creative_template_mixer-3c70d2baca.css",
   "css/mixer.css": "css/mixer-d41d8cd98f.css",
   "js/admin.js": "js/admin-133e32b8b2.js",
-  "js/all.js": "js/all-e28109eee5.js"
+  "js/all.js": "js/all-e28109eee5.js",
+  "js/vue.js": "js/vue-7ee7ae9275.js"
 }
