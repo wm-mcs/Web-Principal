@@ -24,7 +24,7 @@
               </div>
 
 
-              <div class="get_width_100 flex-row-center flex-justifice-space-around">
+              <div class="get_width_100 flex-row-center flex-justifice-space-around flex-wrap">
 
                  @if($Empresa->facebook_empresa != 'no')
                   <a class="footer-icono-social" href="{{$Empresa->facebook_empresa}}"> 
@@ -76,25 +76,25 @@
               <div class="get_width_100 flex-row-column">
 
                @if($Empresa->telefono_empresa != 'no')
-                 <p class="color-text-gris  espacio-letras-chico small">  
+                 <p class="color-text-gris  get_width_100 espacio-letras-chico small">  
                   <span class="helper-aumenta-texto"><i class="fas fa-phone"></i></span> {{$Empresa->telefono_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->celular_empresa != 'no')
-                 <p class="color-text-gris  espacio-letras-chico small">  
+                 <p class="color-text-gris  get_width_100 espacio-letras-chico small">  
                   <span class="helper-aumenta-texto"><i class="fas fa-mobile"></i></span> {{$Empresa->celular_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->direccion_empresa != 'no')
-                 <p class="color-text-gris  espacio-letras-chico small">  
+                 <p class="color-text-gris  get_width_100 espacio-letras-chico small">  
                   <span class="helper-aumenta-texto"><i class="fas fa-map-marker-alt"></i></span> {{$Empresa->direccion_empresa}}
                  </p> 
                @endif
 
                @if($Empresa->horarios_empresa != 'no')
-                 <p class="color-text-gris  espacio-letras-chico  small">  
+                 <p class="color-text-gris get_width_100  espacio-letras-chico  small">  
                   <span class="helper-aumenta-texto"><i class="fas fa-clock"></i></span> {{$Empresa->horarios_empresa}}
                  </p> 
                @endif
