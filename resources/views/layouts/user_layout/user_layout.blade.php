@@ -21,6 +21,7 @@
       <title> @yield('title') | {{$Empresa->name}} </title>
       <meta name="Description" CONTENT="@yield('MetaContent')">      
       <META name="robots" content="@yield('MetaRobot')">
+      <meta name="Keywords"  content="@yield('palabras-claves')">
 
 
   </head>
