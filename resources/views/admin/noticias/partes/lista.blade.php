@@ -10,7 +10,7 @@
      <div class="admin-user-lista-contenedor-acciones">
         <a href="{{route('get_admin_noticias_editar', $marca->id)}}">
           <span class="boton-acciones-editar">
-            <span class="icon-create"> </span> 
+            <i class="fas fa-edit"></i> 
           </span>
         </a>
      </div>
