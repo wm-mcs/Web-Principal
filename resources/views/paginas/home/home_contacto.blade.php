@@ -4,6 +4,11 @@
           <img src="{{ url() }}/imagenes/team/mauri1.jpg" class="contacto_img"> 
           <div class="contacto_name">Mauricio</div>
           <div class="contacto_aclaracion color-text-gris"> Estoy encargado de atenderte en lo que necesites..</div>
+          @if($Empresa->whatsapp_empresa != 'no')
+                  <a class="footer-icono-social" href="{{$Empresa->link_whatsapp_send}}"> 
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+          @endif
         </div>
        
          {{-- formulario de contacto --}}
