@@ -42,10 +42,9 @@
       @include('paginas.home.home_pasos_para_concretar')  
       @include('paginas.home.home_precios')
       @include('paginas.home.home_garantia')
-      @include('paginas.home.home_contacto')
+      
       @include('paginas.home.home_footer')
-      @include('paginas.home.home_modal_contacto')
-      @include('paginas.politicas.mantenimiento_garantia_modals')
+      
 
           {{-- <div class="col-sm-10"> 
     <h1>JSON</h1>
@@ -66,7 +65,7 @@
     <!-- Scripts -->
     <script src="{{url()}}{{ elixir('js/all.js')}} " ></script>  
     @include('paginas.home.home_vue_script')
-    </script> 
+    
 
    
 

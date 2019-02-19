@@ -1,3 +1,6 @@
+ @include('paginas.home.home_contacto')
+
+
  <section class="padding-xl" style="background-color:#30302f;">
        
           <div class="get_width_100 flex-row-center flex-justifice-space-around flex-wrap">
@@ -106,3 +109,7 @@
         
          
 </section>
+
+
+@include('paginas.home.home_modal_contacto')
+@include('paginas.politicas.mantenimiento_garantia_modals')

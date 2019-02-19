@@ -1,37 +1,22 @@
- 
-  <!--navigation bar-->
-  <nav class="navbar navbar-default navbar-fixed-top" id="mynavbar">
-    
+<nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="height:35px; " alt="{{$Empresa->name}}" src="{{$Empresa->img_logo_cuadrado}}"></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
 
 
-    <div class="container">
-      <div class="navbar-header navbar-nav">
-        <div class="text-center"><!-- para centrar el navbar toggle button -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        </div>
-        <a class="navbar-brand" href="{{route('get_home')}}"><img class="navbar-logo" src="{{url()}}/imagenes/Empresa/navbar-logo-Global-Target2.png"></a>
-        </div>
-      </div> <!-- / container fluid-->
+      <ul class="navbar-nav ml-auto"> 
 
-
-      <div class="container">
-      <div class="collapse navbar-collapse" id="defaultNavbar1">
-  
-
-  
-
-
-      </div>    <!-- /.navbar-collapse -->
-    </div> <!-- / container fluid-->
-
-    <!-- errores -->
-    <div class="contendor-contenedor-errores-header">         
-      @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados') 
-    </div> 
-
-    <!-- /.container-fluid -->
-  </nav>
-  <!-- /nav -->
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">CONTACTO</a>
+        </li>           
+        @include('paginas.home.home_nav_auth')
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
 
