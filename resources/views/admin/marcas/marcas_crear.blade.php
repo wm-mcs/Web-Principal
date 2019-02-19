@@ -1,29 +1,22 @@
 @extends('layouts.admin_layout.admin_layout')
 
-@section('content')
 
-<div class="admin-contnedor-navegacion-miga">
-  {{-- home --}}
-  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span></span> 
-
+@section('miga-de-pan') 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_marcas')}}"><span>Clientes</span></a>
+  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Crear Cliente</span>
-</div>
+  <span>Crear Marca</span>
+@stop
 
-<div class="contenedor-admin-entidad">
+@section('content')
 
- {{-- titulo --}}
- <div class="admin-entidad-titulo">Crear Cliente 
- </div>
+
+
+
 
  {{-- formulario --}}
   {!! Form::open(['route' => 'set_admin_marcas_crear',
@@ -57,11 +50,10 @@
      Crear
    </div> 
 
-
   {!! Form::close() !!}
 
 
   
-</div>
+
   
 @stop
