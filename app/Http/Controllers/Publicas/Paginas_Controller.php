@@ -116,8 +116,9 @@ class Paginas_Controller extends Controller
     {
         $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request,2);
         $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
+        $Route                = 'post_contacto_form';   
 
-        return view('paginas.noticias.noticias',compact('Noticias','Empresa'));
+        return view('paginas.noticias.noticias',compact('Noticias','Empresa','Route'));
     }
 
 
