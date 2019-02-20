@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\EmpresaRepo;
 use App\Repositorios\MarcaRepo;
-use App\Repositorios\EventoRepo;
+
 use App\Repositorios\Marca_de_eventoRepo;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
@@ -30,15 +30,13 @@ class Paginas_Controller extends Controller
                                 NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo, 
                                 MarcaRepo           $MarcaRepo,
-                                EventoRepo          $EventoRepo,
                                 Marca_de_eventoRepo $Marca_de_eventoRepo   )
     {
         $this->ProyectoRepo        = $ProyectoRepo;
         $this->ImgHomeRepo         = $ImgHomeRepo;
         $this->NoticiasRepo        = $NoticiasRepo;
         $this->EmpresaRepo         = $EmpresaRepo;
-        $this->MarcaRepo           = $MarcaRepo;
-        $this->EventoRepo          = $EventoRepo;
+        $this->MarcaRepo           = $MarcaRepo;       
         $this->Marca_de_eventoRepo = $Marca_de_eventoRepo;
     }
 
