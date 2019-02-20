@@ -23,7 +23,10 @@
       <META name="robots" content="@yield('MetaRobot')">
       <meta name="Keywords"  content="@yield('palabras-claves')">
 
+      {{-- css --}}   
+      @include('layouts.user_layout.css_fonts')
 
+  
   </head>
   
   <body > 
