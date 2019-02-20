@@ -95,48 +95,7 @@ class Paginas_Controller extends Controller
         }
 
 
-    //pagina donde estan los eventos de esa
-    public function get_pagina_eventos(Request $Request)
-    {
-        if($Request->get('select_marcas_en_evento') != '' && ($Request->get('select_marcas_en_evento') != null))
-        {
-            $EventosIds = [];
- 
-            //traigo los eventos de esta marca
-            $MarcaEventos = $this->Marca_de_eventoRepo->getMarca_de_eventoDeEstaMarca($Request->get('select_marcas_en_evento'));
-            
-            //busco los eventos y los cargo al array
-            foreach($MarcaEventos as $MarcaEvento)
-            {
-                array_push($EventosIds,$MarcaEvento->evento_id);
-            }
-
-            $Eventos = $this->EventoRepo->getEventosArrayDeEventosID($EventosIds,10);
-            
-
-            $Marca_seleccionada = $this->MarcaRepo->find($Request->get('select_marcas_en_evento'));
-        }
-        else
-        {
-            $Eventos            = $this->EventoRepo->getEntidadActivasYOrdenadasSegunPaginadas($Request,'fecha','desc',10);
-            $Marca_seleccionada = '';
-        }
-        
-        
-        $Marcas  = $this->MarcaRepo->getEntidadActivas();
-
-        
-
-
-        return view('paginas.eventos.eventos', compact('Eventos','Marcas','Marca_seleccionada'));
-    }
-        //pagina de evento individual
-        public function get_pagina_evento_individual($name,$id,Request $Request)
-        {
-            $Evento = $this->EventoRepo->find($id);
-            $Empresa = $this->EmpresaRepo->getEmpresaDatos(); 
-            return view('paginas.eventos.evento_individual', compact('Evento','Empresa'));
-        }
+    
 
 
     //Empresa
