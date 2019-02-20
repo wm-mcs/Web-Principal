@@ -158,8 +158,9 @@ class Paginas_Controller extends Controller
     public function get_pagina_noticias_listado(Request $Request)
     {
         $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request,2);
+        $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
 
-        return view('paginas.noticias.noticias_listado',compact('Noticias'));
+        return view('paginas.noticias.noticias',compact('Noticias','Empresa'));
     }
 
 
