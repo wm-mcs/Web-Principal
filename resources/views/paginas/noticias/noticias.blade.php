@@ -1,4 +1,4 @@
-@extends('layouts.admin_layout.user_layout')
+@extends('layouts.user_layout.user_layout')
 
 
 
