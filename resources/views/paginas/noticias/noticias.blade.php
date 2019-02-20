@@ -31,6 +31,7 @@
 
 @section('content')
 
+  <div>Hola</div>
 
 
 @stop
