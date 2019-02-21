@@ -25,7 +25,7 @@ class Admin_Categoria_Controllers extends Controller
   //home admin User
   public function get_admin_categorias(Request $Request)
   { 
-    $Categorias = $this->CategoriaRepo->getMarcasParaAdminOrdenadasAlfabeticamente($Request,30);
+    $Categorias = $this->CategoriaRepo->getEntidadesAllPaginadas($Request,20);
 
     //mostrar marcas de la a a la z (orden)
 
