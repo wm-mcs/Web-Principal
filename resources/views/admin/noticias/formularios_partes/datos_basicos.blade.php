@@ -1,15 +1,17 @@
 <div class="formulario-label-fiel">
-  {!! Form::label('name', 'Nombre', array('class' => 'formulario-label ')) !!}
+  {!! Form::label('name', 'Título', array('class' => 'formulario-label ')) !!}
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>
 
 <div class="formulario-label-fiel">
-  {!! Form::label('header_text', 'Header Texto', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('header_text', null ,['class' => 'formulario-field']) !!}
+  {!! Form::label('sub_name', 'Sub título', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('sub_name', null ,['class' => 'formulario-field']) !!}
 </div>
 
+
+
 <div class="formulario-label-fiel">
-  {!! Form::label('description', 'Descripción', array('class' => 'formulario-label ')) !!}
+  {!! Form::label('description', 'Contenido', array('class' => 'formulario-label ')) !!}
   {!! Form::textarea('description', null ,['class' => 'formulario-field']) !!}
 </div>
 

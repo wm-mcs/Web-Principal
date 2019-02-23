@@ -11,7 +11,7 @@
   <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
 
   {{-- lugar donde esta --}}
-  <span>Editar Noticia: {{$noticia->name}}</span>
+  <span>Editar Noticia: {{$Entidad->name}}</span>
 @stop
 
 @section('content')
@@ -19,7 +19,7 @@
 
 
  {{-- formulario --}}
-  {!! Form::model($noticia,   ['route' => ['set_admin_noticias_editar',$noticia->id],
+  {!! Form::model($Entidad,   ['route' => ['set_admin_noticias_editar',$Entidad->id],
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'

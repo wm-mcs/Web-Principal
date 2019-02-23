@@ -40,7 +40,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="post-img-slider-size Slider_cabecer_img" src="{{url()}}/imagenes/computacion-en-la-niebla-la-alternativa-a-la-nube-1920.jpg"> 
+      <img class="post-img-slider-size Slider_cabecer_img" src="{{$Noticia->url_img_portada}}"> 
      
     </div>
    
@@ -52,7 +52,7 @@
           <div class="get_width_100">
               <div class="col-lg-10 mx-auto">
                 <h1 class="text-uppercase Slider_cabecera_caption_titulo text-color-black">
-                  <strong>{Titulo del post}</strong>
+                  <strong>{{$Noticia->name}}</strong>
                 </h1>
                </div>  
           </div>
@@ -64,8 +64,7 @@
 </div>
 </div>
 
-  <div class="contenedor-listado-noticias">
-    
+  <div class="contenedor-listado-noticias">  
     
 
     <p class="post-individual-p">
@@ -83,6 +82,13 @@
      <p class="post-individual-p">
       There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.   
      </p>
+
+  </div>
+
+
+   <div class="contenedor-listado-noticias">  
+    
+       {{$Noticia->contenido_render}}
 
   </div>
 

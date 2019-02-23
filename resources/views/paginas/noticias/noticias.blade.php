@@ -32,9 +32,12 @@
 @section('content')
 
   <div class="contenedor-listado-noticias">
+
+    @foreach($Noticias as $Noticia)
     
-    @include('paginas.noticias.noticias_lista_individual')
-    @include('paginas.noticias.noticias_lista_individual')
+      @include('paginas.noticias.noticias_lista_individual')   
+
+    @endforeach
 
   </div>
 

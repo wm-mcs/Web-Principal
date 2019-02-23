@@ -51,17 +51,52 @@ class Noticia extends Model
     }
 
 
-    public function getUrlImgAttribute()
+    public function getUrlImgPortadaAttribute()
     {
         
-        return url().'/imagenes/'.$this->img;
+        return url().'/imagenes/'.$this->img.'-portada.jpg';
+    }
+
+    public function getUrlImgPortadaChicaAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->img.'-portada-chica.jpg';
+    }
+
+    public function getUrlImgAdicionalAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->img.'-adicional.jpg';
+    }
+
+    public function getUrlImgAdicionalChicaAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->img.'-adicional-chica.jpg';
     }
 
 
     public function getRouteAttribute()
     {
         
-        return route('get_pagina_noticia_individual', [str_replace(" ", "_", $this->name), $this->id]);
+        return route('get_pagina_noticia_individual', [$this->name_slug, $this->id]);
+    }
+
+    public function getRouteAdminAttribute()
+    {
+        
+        return route('get_admin_noticias_editar', $this->id);
+    }
+
+    public function getNameSlugAttribute()
+    {
+        return $this->helper_convertir_cadena_para_url($this->name);
+    }
+
+
+    public function getContenidoRenderAttribute()
+    {
+        return $this->description;
     }
 
     

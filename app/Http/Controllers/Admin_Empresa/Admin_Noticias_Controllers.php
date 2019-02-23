@@ -22,6 +22,12 @@ class Admin_Noticias_Controllers extends Controller
     $this->NoticiasRepo = $NoticiasRepo;
   }
 
+
+  public function getPorpiedades()
+  {
+    return ['name','sub_name','description','estado','url_video'];
+  }
+
   //home admin User
   public function get_admin_noticias(Request $Request)
   { 
@@ -42,7 +48,7 @@ class Admin_Noticias_Controllers extends Controller
 
     $noticia = $this->NoticiasRepo->getEntidad();
 
-    $Propiedades = ['name','description','estado','header_text','url_video'];
+    $Propiedades = $this->getPorpiedades();
 
     $manager = new noticia_manager(     null, $Request->all()  );
 
@@ -52,7 +58,8 @@ class Admin_Noticias_Controllers extends Controller
 
       $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 
-      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Img_Principal_Noticias/', $noticia->name ,'.png');
+      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/', $noticia->name_slug .'-portada','.jpg');
+      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img2', 'Noticias/', $noticia->name_slug .'-adicional' ,'.jpg');
       
       return redirect()->route('get_admin_noticias')->with('alert', 'Noticia Creado Correctamente');
     }
@@ -66,9 +73,9 @@ class Admin_Noticias_Controllers extends Controller
   //get edit admin noticia
   public function get_admin_noticias_editar($id)
   {
-    $noticia = $this->NoticiasRepo->find($id);
+    $Entidad = $this->NoticiasRepo->find($id);
 
-    return view('admin.noticias.noticias_editar',compact('noticia'));
+    return view('admin.noticias.noticias_editar',compact('Entidad'));
   }
 
   //set edit admin marca
@@ -76,11 +83,12 @@ class Admin_Noticias_Controllers extends Controller
   {
     $noticia = $this->NoticiasRepo->find($id);
 
-    $Propiedades = ['name','description','estado','header_text','url_video'];
+    $Propiedades = $this->getPorpiedades();
 
     $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 
-    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Img_Principal_Noticias/', $noticia->name ,'.png');
+    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/', $noticia->name_slug .'-portada','.jpg');
+    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img2', 'Noticias/', $noticia->name_slug .'-adicional' ,'.jpg');
 
     return redirect()->route('get_admin_noticias')->with('alert', 'Noticia Editado Correctamente');  
   }
