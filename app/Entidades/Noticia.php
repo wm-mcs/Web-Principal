@@ -95,7 +95,14 @@ class Noticia extends Model
 
     public function getContenidoRenderAttribute()
     {
-        return $this->description;
+        $cadena = $this->description;
+        $cadena = str_replace('(P)' ,'<p class="post-individual-p">', $cadena);
+        $cadena = str_replace('(/P)' ,'</p>', $cadena);
+
+        $cadena = str_replace('(T)' ,'<h2 class="post-individual-section-titulo">', $cadena);
+        $cadena = str_replace('(/T)' ,'</h2>', $cadena);
+
+        return  $cadena;
     }
 
     //funciones personalizadas para reciclar
