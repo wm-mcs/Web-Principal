@@ -58,8 +58,8 @@ class Admin_Noticias_Controllers extends Controller
 
       $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 
-      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/', $noticia->name_slug .'-portada','.jpg');
-      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img2', 'Noticias/', $noticia->name_slug .'-adicional' ,'.jpg');
+         $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/',  $noticia->name_slug .'-portada/'   .$noticia->id,'.jpg');
+    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img2', 'Noticias/', $noticia->name_slug .'-adicional/' .$noticia->id,'.jpg');
       
       return redirect()->route('get_admin_noticias')->with('alert', 'Noticia Creado Correctamente');
     }
@@ -87,8 +87,8 @@ class Admin_Noticias_Controllers extends Controller
 
     $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 
-    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/',  $noticia->name_slug .'-portada'   .$noticia->id,'.jpg');
-    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img2', 'Noticias/', $noticia->name_slug .'-adicional' .$noticia->id,'.jpg');
+    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/',  $noticia->name_slug .'-portada/'   .$noticia->id,'.jpg');
+    $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img2', 'Noticias/', $noticia->name_slug .'-adicional/' .$noticia->id,'.jpg');
 
     return redirect()->route('get_admin_noticias')->with('alert', 'Noticia Editado Correctamente');  
   }
