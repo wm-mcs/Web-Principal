@@ -280,6 +280,20 @@ abstract class BaseRepo
         $imagen->save();
       }
     }
+
+
+     /**
+     * grabar entidad atributo especifico
+     */
+    public function setAtributoEspecifico($Entidad,$atributo,$valor)
+    {
+      if($valor != '')
+      {
+        $Entidad->$atributo = $valor;
+        $Entidad->save();
+      }
+      
+    }
     
 
 }   
