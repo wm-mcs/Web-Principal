@@ -88,7 +88,7 @@
 
    <div class="contenedor-listado-noticias">  
     
-       {{$Noticia->contenido_render}}
+       {{html_entity_decode($Noticia->contenido_render)}}
 
   </div>
 
