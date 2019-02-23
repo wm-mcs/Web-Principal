@@ -62,6 +62,7 @@
   
 
 </div>
+</div>
 
   <div class="contenedor-listado-noticias">
     

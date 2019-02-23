@@ -36,7 +36,7 @@
 
            <span id="app">
              @include('layouts.user_layout.navbar.navbar')
-             <div class="wraper-content-principal-con-nav">
+             <div class="{{-- wraper-content-principal-con-nav --}}">
                   @yield('content')  
              </div>           
              @include('paginas.home.home_footer')
