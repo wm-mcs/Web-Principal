@@ -15,6 +15,7 @@ class noticia_manager extends ManagerBase
   {
     $rules = [
       'name'            => 'required',
+      'sub_name'        => 'required',
       'description'     => 'required',
       'img'             => 'required'
              ];
