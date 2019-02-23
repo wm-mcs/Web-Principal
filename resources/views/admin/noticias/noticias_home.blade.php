@@ -20,7 +20,7 @@
  </div>
  <div class="admin-contiene-entidades-y-pagination">
    <div class="admin-entidad-contenedor-entidades">
-     @foreach($noticias as $marca)
+     @foreach($Entidades as $Entidad)
           @include('admin.noticias.partes.lista')
      @endforeach
    </div>

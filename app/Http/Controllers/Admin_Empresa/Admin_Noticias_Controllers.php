@@ -31,9 +31,9 @@ class Admin_Noticias_Controllers extends Controller
   //home admin User
   public function get_admin_noticias(Request $Request)
   { 
-    $Noticias = $this->NoticiasRepo->getEntidadesAllPaginadas($Request,3);
+    $Entidades = $this->NoticiasRepo->getEntidadesAllPaginadas($Request,3);
 
-    return view('admin.noticias.noticias_home', compact('Noticias'));
+    return view('admin.noticias.noticias_home', compact('Entidades'));
   }
 
   //get Crear admin User
