@@ -196,7 +196,7 @@ abstract class BaseRepo
 
          $imagen = $imagen_insert->resize(200, null, function ($constraint) {
                                                                            $constraint->aspectRatio();
-                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, ,70);    
+                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    
 
          //guardo_el_img
          $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
