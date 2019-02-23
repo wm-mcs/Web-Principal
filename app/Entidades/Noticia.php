@@ -54,25 +54,24 @@ class Noticia extends Model
     public function getUrlImgPortadaAttribute()
     {
         
-        return url().'/imagenes/Noticias/'.$this->img.'-portada/'.$this->id.'.jpg';
+        return url().'/imagenes/Noticias/'.$this->img.$this->id.'-portada/'..'.jpg';
     }
 
     public function getUrlImgPortadaChicaAttribute()
     {
         
-        return url().'/imagenes/Noticias/'.$this->img.'-portada-chica/'.$this->id.'.jpg';
+        return url().'/imagenes/Noticias/'.$this->img.$this->id.'-portada-chica/'..'.jpg';
     }
 
     public function getUrlImgAdicionalAttribute()
     {
         
-        return url().'/imagenes/Noticias/'.$this->img.'-adicional/'.$this->id.'.jpg';
+        return url().'/imagenes/Noticias/'.$this->img.$this->id.'-adicional/'..'.jpg';
     }
 
     public function getUrlImgAdicionalChicaAttribute()
-    {
-        
-        return url().'/imagenes/Noticias/'.$this->img.'-adicional-chica/'.$this->id.'.jpg';
+    {        
+        return url().'/imagenes/Noticias/'.$this->img.$this->id.'-adicional-chica/'..'.jpg';
     }
 
 
