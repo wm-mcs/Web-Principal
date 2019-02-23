@@ -1,0 +1,73 @@
+
+
+
+
+
+
+//listado individual asociado noticias_lista_individual.blade.php
+.contenedor-listado-noticias{
+  width: 100%;
+  padding: 0px 15px;
+}
+
+.post-preview{
+ 
+
+}
+
+.post-title{
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+}
+
+.post-subtitle{
+  font-weight: 300;
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+
+.post-meta{
+
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0px;
+  line-height: 1.5;
+  margin: 30px 0px;
+
+}
+
+
+.post-hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+
+
+@media (min-width: $BrackPoint-Primario){}
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+  .contenedor-listado-noticias{
+    width: 80%;
+  }
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){
+
+
+  .contenedor-listado-noticias{
+    width: 65%;
+  }
+}

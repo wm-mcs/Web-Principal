@@ -31,7 +31,14 @@
 
 @section('content')
 
-  <div>Hola</div>
+  <div class="contenedor-listado-noticias">
+    
+    @include('paginas.noticias.noticias_lista_individual')
+    @include('paginas.noticias.noticias_lista_individual')
+
+  </div>
+
+  
 
 
 @stop
