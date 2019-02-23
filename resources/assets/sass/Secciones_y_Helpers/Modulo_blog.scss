@@ -50,6 +50,17 @@
 }
 
 
+//pagina-de-post-individual
+
+//clase que ajuste el tamañao de la imagen
+.post-img-slider-size{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+ }
+
+
 
 
 @media (min-width: $BrackPoint-Primario){}
@@ -60,6 +71,10 @@
 
   .contenedor-listado-noticias{
     width: 80%;
+  }
+
+  .post-img-slider-size {
+    height: 80vh;
   }
 }
 
