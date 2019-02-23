@@ -25,7 +25,7 @@
      @endforeach
    </div>
    <div>
-     {!! $noticias->appends(Request::all())->render() !!}
+     {!! $Entidades->appends(Request::all())->render() !!}
    </div>
  </div>
   
