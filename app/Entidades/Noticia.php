@@ -102,7 +102,7 @@ class Noticia extends Model
         $cadena = str_replace('(T)' ,'<h2 class="post-individual-section-titulo">', $cadena);
         $cadena = str_replace('(/T)' ,'</h2>', $cadena);
 
-        return  htmlspecialchars_decode($cadena,ENT_NOQUOTES);
+        return  htmlspecialchars_decode(htmlentities($cadena));
     }
 
     //funciones personalizadas para reciclar
