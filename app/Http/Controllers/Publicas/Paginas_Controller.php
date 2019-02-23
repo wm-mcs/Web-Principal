@@ -126,9 +126,11 @@ class Paginas_Controller extends Controller
     //Noticias Individual
     public function get_pagina_noticia_individual($name,$id)
     {
-       /* $Noticia = $this->NoticiasRepo->find($id);*/
+        $Noticia = $this->NoticiasRepo->find($id);
+        $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
+        $Route                = 'post_contacto_form';  
         
-        return view('paginas.noticias.noticia_individual'/*,compact('Noticia')*/);
+        return view('paginas.noticias.noticia_individual',compact('Noticia','Empresa','Route'));
     }
 
     //Proyectos
