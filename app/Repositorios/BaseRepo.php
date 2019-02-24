@@ -186,8 +186,7 @@ abstract class BaseRepo
          
          //nombre del Archico / Carpeta Incluido
          $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
-         $Entidad->$nombreDelCampoForm = $nombre;
-         $Entidad->save();
+         
 
 
          $imagen_insert = Image::make(File::get($file));
