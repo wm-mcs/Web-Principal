@@ -96,11 +96,29 @@ class Noticia extends Model
     public function getContenidoRenderAttribute()
     {
         $cadena = $this->description;
+
+        //parrafos
         $cadena = str_replace('(P)' ,'<p class="post-individual-p">', $cadena);
         $cadena = str_replace('(/P)' ,'</p>', $cadena);
 
+        //titulos
         $cadena = str_replace('(T)' ,'<h2 class="post-individual-section-titulo">', $cadena);
         $cadena = str_replace('(/T)' ,'</h2>', $cadena);
+
+        //links
+        $cadena = str_replace('(A)' ,'<a href="', $cadena);
+        $cadena = str_replace('(/A)' ,'">', $cadena);
+        $cadena = str_replace('(AT)' ,'', $cadena);
+        $cadena = str_replace('(/AT)' ,'</a>', $cadena);
+
+        //img
+        $cadena = str_replace('(IMG)' ,'<img class="post-img-secundarias" src="', $cadena);
+        $cadena = str_replace('(/IMG)' ,'">', $cadena);
+
+        $cadena = str_replace('(IMGT)' ,'<span class="post-img-texto" >', $cadena);
+        $cadena = str_replace('(/IMGT)' ,'</span>', $cadena);
+
+        
 
         return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8"); 
     }
