@@ -1,65 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.creative.layout_creative')
 
-  <head>
+@section('titulo') {{$Empresa->name}} @stop
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
+@section('descripcion') {{$Empresa->descripcion_empresa}} @stop
 
-    <title>{{$Empresa->name}}</title>
-    <meta name="Description" content="{{$Empresa->descripcion_empresa}}">      
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="{{$Empresa->palabras_claves_empresa}}">
+@section('robot') index, follow @stop
 
-    {{-- css --}}   
-    @include('layouts.user_layout.css_fonts')
+@section('palabras_claves') {{$Empresa->palabras_claves_empresa}} @stop
 
- 
 
-  </head>
 
-  <body id="page-top">
+@section('nav') @include('paginas.home.home_nav') @stop
 
-    <!-- Navigation -->
-    @include('paginas.home.home_nav')
-    @include('paginas.home.slider')
-    
-   
+@section('slider')  @include('paginas.home.slider') @stop
+
+@section('contenido')
       @include('paginas.home.home_about') 
       @include('paginas.home.home_clientes')
-    <span id="app">
+    
       @include('paginas.home.home_pasos_para_concretar')  
       @include('paginas.home.home_precios')
       @include('paginas.home.home_garantia')
-      
-      @include('paginas.home.home_footer')
-      
-
-          {{-- <div class="col-sm-10"> 
-    <h1>JSON</h1>
-    <pre>
-      @{{$data}}
-    </pre>
-  </div> --}}
-    </span> 
-
-
-       
- 
-
-    
+@stop      
 
 
 
-    <!-- Scripts -->
-    <script src="{{url()}}{{ elixir('js/all.js')}} " ></script>  
-    @include('paginas.home.home_vue_script')
-    
 
-   
 
-  </body>
 
-</html>
+
+
+
