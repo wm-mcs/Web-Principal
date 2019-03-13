@@ -193,6 +193,8 @@ abstract class BaseRepo
         $archivo = File::get($file);
 
         $validator = $request->hasFile($nombreDelCampoForm);
+
+        dd($validator,$nombreDelCampoForm);
       }
       else
       {
