@@ -29,7 +29,7 @@
  
 
  {{-- formulario --}}
-  {!! Form::model($Entidad,   ['route' => ['set_admin_eventos_editar',$Entidad->id],
+  {!! Form::model($Entidad,   ['route' => ['set_admin_productos_editar',$Entidad->id],
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
