@@ -102,9 +102,10 @@ class Admin_Producto_Controllers extends Controller
                 $Img              = $this->ImgEntidadRepo->getEntidad();
                 $Img->producto_id = $Entidad->id;
                 $Img->img         = $Entidad->name_slug;
+                $Img->estado      = 'si';
                 $Img->save();
 
-               
+
 
                 $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg');
                 $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250);

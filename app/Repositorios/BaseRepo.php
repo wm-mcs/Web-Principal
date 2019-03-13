@@ -179,7 +179,18 @@ abstract class BaseRepo
 
    public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = false)
     {
-      if($request->hasFile($nombreDelCampoForm))
+
+     
+
+      if(  is_array($File_request) )
+      {
+        
+      }
+      else
+      {
+         $File_request =  $request->hasFile($nombreDelCampoForm);
+      }
+      if($File_request)
        {
          //obtenemos el campo file definido en el formulario
          $file = $request->file($nombreDelCampoForm);
@@ -202,9 +213,7 @@ abstract class BaseRepo
            
 
 
-         $imagen = $imagen_insert->resize(200, null, function ($constraint) {
-                                                                           $constraint->aspectRatio();
-                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    
+        
 
          //guardo_el_img
          if($Entidad != null)
