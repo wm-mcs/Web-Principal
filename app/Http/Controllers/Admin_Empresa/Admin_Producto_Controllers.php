@@ -229,7 +229,7 @@ class Admin_Producto_Controllers extends Controller
       $Entidad = $this->EntidadDelControladorRepo->find($imagen->producto_id);
 
       //me fijo si hay mas imagenes
-      if($Entidad->imagenesevento->count() > 1)
+      if($Entidad->imagenes->count() > 1)
       {
         $this->ImgEntidadRepo->destroy_entidad($id_img); 
 
