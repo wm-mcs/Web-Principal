@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
 use App\Repositorios\ProductoImgRepo;
 use App\Managers\Producto\crear_producto_admin_manager;
+use App\Repositorios\MarcaRepo;
 use DB;
 
 
@@ -21,14 +22,17 @@ class Admin_Producto_Controllers extends Controller
 
   protected $EntidadDelControladorRepo;
   protected $ImgEntidadRepo;
+  protected $MarcaRepo;
 
 
   public function __construct(ProductoRepo            $ProductoRepo, 
-                              ProductoImgRepo         $ProductoImgRepo)
+                              ProductoImgRepo         $ProductoImgRepo, 
+                              MarcaRepo               $MarcaRepo)
 
   {
-    $this->EntidadDelControladorRepo           =  $ProductoRepo;
+    $this->EntidadDelControladorRepo            =  $ProductoRepo;
     $this->ImgEntidadRepo                       =  $ProductoImgRepo;
+    $this->MarcaRepo                            =  $MarcaRepo;
     
   }
 
