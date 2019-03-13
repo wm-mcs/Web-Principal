@@ -7,7 +7,7 @@ use App\Managers\ManagerBase;
 /**
 * 
 */
-class crear_evento_admin_manager extends ManagerBase 
+class crear_producto_admin_manager extends ManagerBase 
 {
 
 
