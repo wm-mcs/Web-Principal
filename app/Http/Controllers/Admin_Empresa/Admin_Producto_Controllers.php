@@ -94,6 +94,7 @@ class Admin_Producto_Controllers extends Controller
             if($files[0] != null )
             {        
 
+              dd($files);
               foreach($files as $file) 
               { 
                 $Img              = $this->ImgEntidadRepo->getEntidad();
