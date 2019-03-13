@@ -144,7 +144,7 @@ class Admin_Producto_Controllers extends Controller
     $Marcas = $this->MarcaRepo->getEntidadActivas();
 
 
-    return view('admin.productos.eventos_editar',compact('Entidad','Marcas'));
+    return view('admin.productos.productos_editar',compact('Entidad','Marcas'));
   }
 
   //set edit admin 
