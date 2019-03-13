@@ -17,7 +17,7 @@
 
 
  <div class="contenedor-img-titulo">
-   <img class="admin-entidad-img" src="{{$Evento->url_img}}">
+   <img class="admin-entidad-img" src="{{$Entidad->url_img}}">
    {{-- titulo --}}
    {{-- <div class="admin-entidad-titulo">Editar Evento {{$Evento->name}}</div> --}}
  </div>
