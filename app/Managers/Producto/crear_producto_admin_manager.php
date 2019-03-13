@@ -1,5 +1,5 @@
 <?php  
-namespace App\Managers\Evento;
+namespace App\Managers\Producto;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Managers\ManagerBase;
