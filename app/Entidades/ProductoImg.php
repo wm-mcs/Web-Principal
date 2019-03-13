@@ -23,7 +23,13 @@ class ProductoImg extends Model
     public function getUrlImgAttribute()
     {
         
-        return url().'/imagenes/'.$this->img;
+        return url().'/imagenes/Productos/'.$this->img.'-'.$this->id.'.jpg';
+    }
+
+    public function getUrlImgChicaAttribute()
+    {
+        
+        return url().'/imagenes/Productos/'.$this->img.'-'.$this->id.'-chica.jpg';
     }
     
 }

@@ -177,7 +177,7 @@ abstract class BaseRepo
     }
 
 
-    public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo)
+   public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = false)
     {
       if($request->hasFile($nombreDelCampoForm))
        {
@@ -188,9 +188,18 @@ abstract class BaseRepo
          $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
          
 
-
-         $imagen_insert = Image::make(File::get($file));
-         $imagen_insert->save('imagenes/'.$nombre,70);      
+        if($redimencionar_a != null)
+        {
+            $imagen_insert = Image::make(File::get($file))->resize($redimencionar_a, null, function ($constraint) {
+                                                                           $constraint->aspectRatio();
+                                                                       })->save('imagenes/'.$nombre,70);
+        }
+        else
+        {
+           $imagen_insert = Image::make(File::get($file)); 
+           $imagen_insert->save('imagenes/'.$nombre,70);   
+        }
+           
 
 
          $imagen = $imagen_insert->resize(200, null, function ($constraint) {
@@ -198,7 +207,17 @@ abstract class BaseRepo
                                                                        })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    
 
          //guardo_el_img
-         $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
+         if($Entidad != null)
+         {
+           try
+           {
+            $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
+           }
+           catch (Exception $e){}
+           
+         }
+         
+         
          
          
        }

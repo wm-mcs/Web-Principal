@@ -5,6 +5,7 @@ namespace App\Entidades;
 use Illuminate\Database\Eloquent\Model;
 use App\Entidades\ImgHome;
 use App\Entidades\ProductoImg;
+use Illuminate\Support\Facades\Cache;
 
 
 
@@ -26,7 +27,15 @@ class Producto extends Model
 
     public function imagenes()
     {
-      return $this->hasMany(ImgEvento::class,'evento_id','id')->where('estado','si');
+      return $this->hasMany(ProductoImg::class,'evento_id','id')->where('estado','si');
+    }
+
+
+    public function getImagenesProductoAttribute()
+    {
+        return Cache::remember('ImagenesProducto'.$this->id, 600, function() {
+                              return $this->imagenes; 
+                          }); 
     }
 
   
@@ -97,7 +106,7 @@ class Producto extends Model
     public function getRouteAttribute()
     {
         
-        return route('get_pagina_evento_individual', [str_replace(" ", "_", $this->name), $this->id]);
+        return route('get_pagina_evento_individual', [$this->helper_convertir_cadena_para_url($this->name), $this->id]);
     }
 
     public function getDescriptionParrafoAttribute()
@@ -115,6 +124,28 @@ class Producto extends Model
     public function getRouteAdminAttribute()
     {
         return route('get_admin_eventos_editar',$this->id);
+    }
+
+
+    public function getNameSlugAttribute()
+    {
+        return $this->helper_convertir_cadena_para_url($this->name);
+    }
+
+    //funciones personalizadas para reciclar
+    public function helper_convertir_cadena_para_url($cadena)
+    {
+        $cadena = trim($cadena);
+        //quito caracteres - 
+        $cadena = str_replace('-' ,' ', $cadena);
+        $cadena = str_replace('_' ,' ', $cadena);
+        $cadena = str_replace('/' ,' ', $cadena);
+        $cadena = str_replace('"' ,' ', $cadena);
+        $cadena = str_replace(' ' ,'-', $cadena);
+        $cadena = str_replace('?' ,'', $cadena);
+        $cadena = str_replace('¿' ,'', $cadena);
+
+        return $cadena;
     }
      
     

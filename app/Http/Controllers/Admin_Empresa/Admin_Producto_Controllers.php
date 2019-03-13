@@ -28,7 +28,7 @@ class Admin_Producto_Controllers extends Controller
 
   {
     $this->EntidadDelControladorRepo           =  $ProductoRepo;
-    $this->ImgEventoRepo                       =  $ProductoImgRepo;
+    $this->ImgEntidadRepo                       =  $ProductoImgRepo;
     
   }
 
@@ -94,21 +94,20 @@ class Admin_Producto_Controllers extends Controller
             if($files[0] != null )
             {        
 
-              foreach($files as $file)
+              foreach($files as $file) 
               { 
-                $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'producto_id',$Entidad->id,$Request,'ProductoImagenes/' );
+                $Img              = $this->ImgEntidadRepo->getEntidad();
+                $Img->producto_id = $Entidad->id;
+                $Img->img         = $Entidad->name_slug;
+                $Img->save();
+
+                $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg');
+                $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250);
               }
               
             }
             
-           //creo las marcas asociadas a este evento
-           if($Request->input('marca_asociado_id') != '')
-           {
-             foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
-             {
-               $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Entidad->id, $marca_asociada_id);
-             }
-           } 
+           
 
  //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
            if($Request->get('tipo_de_boton') == 'guardar')
