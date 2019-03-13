@@ -177,43 +177,45 @@ abstract class BaseRepo
     }
 
 
-   public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = false)
+   public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = false,$file = null)
     {
 
-     
 
-      if(  is_array($File_request) )
+      //nombre del Archico / Carpeta Incluido
+      $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
+
+      if($file == null)
       {
-        
+
+        //obtenemos el campo file definido en el formulario
+        $file    = $request->file($nombreDelCampoForm);
+
+        $archivo = File::get($file);
+
+        $validator = $request->hasFile($nombreDelCampoForm);
       }
       else
       {
-         $File_request =  $request->hasFile($nombreDelCampoForm);
+        $archivo   = $file;
+        $validator = true;
       }
-      if($File_request)
+      
+       if($validator)
        {
-         //obtenemos el campo file definido en el formulario
-         $file = $request->file($nombreDelCampoForm);
-         
-         //nombre del Archico / Carpeta Incluido
-         $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
-         
 
         if($redimencionar_a != null)
         {
-            $imagen_insert = Image::make(File::get($file))->resize($redimencionar_a, null, function ($constraint) {
+            $imagen_insert = Image::make($archivo)->resize($redimencionar_a, null, function ($constraint) {
                                                                            $constraint->aspectRatio();
                                                                        })->save('imagenes/'.$nombre,70);
         }
         else
         {
-           $imagen_insert = Image::make(File::get($file)); 
+           $imagen_insert = Image::make($archivo); 
            $imagen_insert->save('imagenes/'.$nombre,70);   
         }
            
 
-
-        
 
          //guardo_el_img
          if($Entidad != null)
@@ -225,9 +227,7 @@ abstract class BaseRepo
            catch (Exception $e){}
            
          }
-         
-         
-         
+
          
        }
     }

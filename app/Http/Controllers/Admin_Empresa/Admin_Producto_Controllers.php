@@ -107,8 +107,8 @@ class Admin_Producto_Controllers extends Controller
 
 
 
-                $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg');
-                $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250);
+                $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg',false,$file);
+                $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250,$file);
               }
               
             }
