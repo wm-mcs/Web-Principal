@@ -16,10 +16,8 @@ class crear_producto_admin_manager extends ManagerBase
     $rules = [
       'img'               => 'required',
       'name'              => 'required',
-      'description'       => 'required',
-      'fecha'             => 'required',
-      'ubicacion'         => 'required',
-      'marca_asociado_id' => 'required'      
+      'description'       => 'required'
+          
              ];
 
     return $rules;
