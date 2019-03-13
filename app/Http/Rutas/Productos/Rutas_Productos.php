@@ -45,3 +45,11 @@ Route::get('establecer_como_imagen_principal_producto/{id_img}',
   'uses'  => 'Admin_Empresa\Admin_Producto_Controllers@establecer_como_imagen_principal_producto',
   'as'    => 'establecer_como_imagen_principal_producto'
 ]); 
+
+Route::get('delete_admin_productos_img/{id_img}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Producto_Controllers@delete_admin_productos_img',
+  'as'    => 'delete_admin_productos_img'
+]);  
+
+
