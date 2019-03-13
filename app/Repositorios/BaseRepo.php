@@ -188,9 +188,7 @@ abstract class BaseRepo
       {
 
         //obtenemos el campo file definido en el formulario
-        $file    = $request->file($nombreDelCampoForm);
-
-        $archivo = File::get($file);
+        $file    = $request->file($nombreDelCampoForm);        
 
         $validator = $request->hasFile($nombreDelCampoForm);
 
@@ -204,6 +202,8 @@ abstract class BaseRepo
       
        if($validator != null)
        {
+
+        $archivo = File::get($file);
 
         if($redimencionar_a != null)
         {
