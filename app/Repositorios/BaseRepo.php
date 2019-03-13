@@ -194,7 +194,7 @@ abstract class BaseRepo
 
         $validator = $request->hasFile($nombreDelCampoForm);
 
-        dd($validator,$nombreDelCampoForm);
+
       }
       else
       {
@@ -214,6 +214,7 @@ abstract class BaseRepo
         else
         {
            $imagen_insert = Image::make($archivo); 
+           dd($validator,$nombre,$imagen_insert);
            $imagen_insert->save('imagenes/'.$nombre,70);   
         }
            
