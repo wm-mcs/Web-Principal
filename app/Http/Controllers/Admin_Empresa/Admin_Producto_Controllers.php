@@ -98,11 +98,13 @@ class Admin_Producto_Controllers extends Controller
               foreach($files as $file) 
               { 
 
-                dd($file);
+
                 $Img              = $this->ImgEntidadRepo->getEntidad();
                 $Img->producto_id = $Entidad->id;
                 $Img->img         = $Entidad->name_slug;
                 $Img->save();
+
+                dd($Img);
 
                 $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg');
                 $this->ImgEntidadRepo->setImagen(null,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250);
