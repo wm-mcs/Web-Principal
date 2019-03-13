@@ -101,15 +101,11 @@ class Admin_Producto_Controllers extends Controller
 
               foreach($files as $file) 
               { 
-
-
                 $Img              = $this->ImgEntidadRepo->getEntidad();
                 $Img->producto_id = $Entidad->id;
                 $Img->img         = $Entidad->name_slug;
                 $Img->estado      = 'si';
                 $Img->save();
-
-
 
                 $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg',false,$file);
                 $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250,$file);
@@ -166,9 +162,16 @@ class Admin_Producto_Controllers extends Controller
       if($files[0] != null )
       {        
 
-        foreach($files as $file)
+        foreach($files as $file) 
         { 
-          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'producto_id',$Entidad->id,$Request,'ProductoImagenes/' );
+          $Img              = $this->ImgEntidadRepo->getEntidad();
+          $Img->producto_id = $Entidad->id;
+          $Img->img         = $Entidad->name_slug;
+          $Img->estado      = 'si';
+          $Img->save();
+
+          $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id,'.jpg',false,$file);
+          $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg',250,$file);
         }
         
       }
