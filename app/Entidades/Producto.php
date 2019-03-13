@@ -27,7 +27,7 @@ class Producto extends Model
 
     public function imagenes()
     {
-      return $this->hasMany(ProductoImg::class,'evento_id','id')->where('estado','si');
+      return $this->hasMany(ProductoImg::class,'producto_id','id')->where('estado','si');
     }
 
 
