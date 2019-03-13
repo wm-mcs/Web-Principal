@@ -31,5 +31,18 @@ class ProductoImg extends Model
         
         return url().'/imagenes/Productos/'.$this->img.'-'.$this->id.'-chica.jpg';
     }
+
+
+    public function getPathImgAttribute()
+    {
+        
+        return  public_path().'/imagenes/Productos/'.$this->img.'-'.$this->id.'.jpg';
+    }
+
+    public function getPathImgChicaAttribute()
+    {
+        
+        return  public_path().'/imagenes/Productos/'.$this->img.'-'.$this->id.'-chica.jpg';
+    }
     
 }

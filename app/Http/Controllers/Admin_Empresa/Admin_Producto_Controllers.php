@@ -231,7 +231,10 @@ class Admin_Producto_Controllers extends Controller
       //me fijo si hay mas imagenes
       if($Entidad->imagenesevento->count() > 1)
       {
-        $this->ImgEntidadRepo->destroy_entidad($id_img);
+        $this->ImgEntidadRepo->destroy_entidad($id_img); 
+
+        unlink($imagen->path_img);
+        unlink($imagen->path_img_chica);
 
         return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
       }

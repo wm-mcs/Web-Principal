@@ -33,7 +33,7 @@ class Producto extends Model
 
     public function getImagenesProductoAttribute()
     {
-        return Cache::remember('ImagenesProducto'.$this->id, 600, function() {
+        return Cache::remember('ImagenesProducto'.$this->id, 15, function() {
                               return $this->imagenes; 
                           }); 
     }
