@@ -190,10 +190,12 @@ abstract class BaseRepo
         //obtenemos el campo file definido en el formulario
         $file    = $request->file($nombreDelCampoForm);
 
+        dd( $file,$nombreDelCampoForm );
+
         $archivo = File::get($file);
 
         $validator = $request->hasFile($nombreDelCampoForm);
-        dd( $file,$archivo );
+
 
       }
       else
