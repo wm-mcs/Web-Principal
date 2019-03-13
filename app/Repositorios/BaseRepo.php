@@ -214,8 +214,10 @@ abstract class BaseRepo
         else
         {
            $imagen_insert = Image::make($archivo); 
-           dd($validator,$nombre,$imagen_insert);
+
            $imagen_insert->save('imagenes/'.$nombre,70);   
+
+           dd($validator,$nombre,$imagen_insert);
         }
            
 
