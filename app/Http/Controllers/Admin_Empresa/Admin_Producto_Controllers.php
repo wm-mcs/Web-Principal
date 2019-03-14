@@ -39,9 +39,9 @@ class Admin_Producto_Controllers extends Controller
   public function get_admin_productos(Request $Request)
   {
 
-    $Productos = $this->EntidadDelControladorRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
+    $Entidades = $this->EntidadDelControladorRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
 
-    return view('admin.productos.productos_home', compact('Productos'));
+    return view('admin.productos.productos_home', compact('Entidades'));
   }
 
 
