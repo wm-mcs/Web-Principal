@@ -49,20 +49,9 @@
 
     {!! Form::hidden('tipo_de_boton','hola') !!}
    
-  <div class="flex-row-column get_width_100" >
-      <dir class="flex-row-center">
-         <div class="admin-boton-editar editar-evento-guardar">
-           Crear
-         </div> 
-
-         <div style="padding: 20px;"></div>
-
-         <div class="admin-boton-editar editar-evento-guardar-y-salir">
-           Crear y salir
-         </div> 
-     </dir>
-   </div>
-
+   <div class="admin-boton-editar">
+     Crear 
+   </div> 
    
 
 

@@ -24,12 +24,12 @@
  </div>
  <div class="admin-contiene-entidades-y-pagination">
    <div class="admin-entidad-contenedor-entidades">
-     @foreach($Productos as $Evento)
+     @foreach($Entidades as $Entidad)
           @include('admin.productos.partes.lista')
      @endforeach
    </div>
    <div>
-     {!! $Productos->appends(Request::all())->render() !!}
+     {!! $Entidades->appends(Request::all())->render() !!}
    </div>
  </div>
 
