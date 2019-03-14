@@ -123,7 +123,7 @@ class Producto extends Model
 
     public function getRouteAdminAttribute()
     {
-        return route('get_admin_eventos_editar',$this->id);
+        return route('get_admin_productos_editar',$this->id);
     }
 
 
