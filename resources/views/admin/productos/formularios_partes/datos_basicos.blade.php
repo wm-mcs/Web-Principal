@@ -10,7 +10,7 @@
        Selecciona
         </OPTION>
       @foreach($Categorias as $Categoria)
-        <OPTION @if(isset($Entidad)) @if($Entidad->categoria_id == $Categoria->id ) selected @endif@endif
+        <OPTION @if(isset($Entidad)) @if($Entidad->categoria_id == $Categoria->id ) selected @endif @endif
                       VALUE="{{$Categoria->id}}"
                       >
         {{$Categoria->name}} 
