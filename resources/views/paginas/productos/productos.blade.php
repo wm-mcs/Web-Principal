@@ -11,7 +11,7 @@
 
 
 @section('title')
-      | {{$Empresa->name}}
+   Productos   | {{$Empresa->name}}
 @stop
 
 
@@ -30,6 +30,11 @@
 
 
 @section('content')
+
+
+ <h1 class="text-uppercase text-color-black">
+        <strong>Productos</strong>
+      </h1>
 
   <div class="contenedor-listado-noticias">
 
