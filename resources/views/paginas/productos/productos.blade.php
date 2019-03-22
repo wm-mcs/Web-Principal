@@ -32,9 +32,9 @@
 @section('content')
 
 
- <h1 class="text-uppercase text-color-black">
+  <h1 class="text-uppercase text-color-black" style="margin-top:78px;">
         <strong>Productos</strong>
-      </h1>
+  </h1>
 
   <div class="contenedor-listado-noticias">
 
