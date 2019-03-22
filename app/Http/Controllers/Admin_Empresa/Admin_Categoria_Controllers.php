@@ -22,6 +22,12 @@ class Admin_Categoria_Controllers extends Controller
     $this->CategoriaRepo = $CategoriaRepo;
   }
 
+
+  public function getPropiedades()
+  {
+    return  ['name','description','estado'];
+  }
+
   //home admin User
   public function get_admin_categorias(Request $Request)
   { 
@@ -43,7 +49,7 @@ class Admin_Categoria_Controllers extends Controller
   {     
 
       //propiedades para crear
-      $Propiedades = ['name','description','estado','rank'];
+      $Propiedades = $this->getPropiedades();
 
       //traigo la entidad
       $Categoria = $this->CategoriaRepo->getEntidad();
@@ -69,10 +75,10 @@ class Admin_Categoria_Controllers extends Controller
   //set edit admin marca
   public function set_admin_categorias_editar($id,Request $Request)
   {
-    $Categoria = $this->CategoriaRepo->find($id);    
+    $Categoria   = $this->CategoriaRepo->find($id);    
 
     //propiedades para crear
-    $Propiedades = ['name','description','estado','rank'];    
+    $Propiedades = $this->getPropiedades();     
 
     //grabo todo las propiedades
     $this->CategoriaRepo->setEntidadDato($Categoria,$Request,$Propiedades);
