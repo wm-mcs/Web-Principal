@@ -143,7 +143,7 @@ class Paginas_Controller extends Controller
     {
        $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
 
-       $Entidades = '':
+       $Entidades = '';
        
        return view('paginas.productos.productos',compact('Entidades','Empresa'));
     }    
