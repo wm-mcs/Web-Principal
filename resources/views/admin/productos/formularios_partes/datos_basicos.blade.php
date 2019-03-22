@@ -9,11 +9,11 @@
                       >
        Selecciona
         </OPTION>
-      @foreach($Categorias as $Entidad)
-        <OPTION 
-                      VALUE="{{$Entidad->id}}"
+      @foreach($Categorias as $Categoria)
+        <OPTION @if(isset($Entidad)) @if($Entidad->categoria_id == $Categoria->id ) selected @endif@endif
+                      VALUE="{{$Categoria->id}}"
                       >
-        {{$Entidad->name}} 
+        {{$Categoria->name}} 
         </OPTION>
       @endforeach 
 </select>
