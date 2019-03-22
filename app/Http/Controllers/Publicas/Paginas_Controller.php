@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\EmpresaRepo;
 use App\Repositorios\MarcaRepo;
-
 use App\Repositorios\Marca_de_eventoRepo;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
+use App\Repositorios\ProductoRepo;
 
 
 class Paginas_Controller extends Controller
@@ -24,13 +24,15 @@ class Paginas_Controller extends Controller
     protected $MarcaRepo;
     protected $EventoRepo;
     protected $Marca_de_eventoRepo;
+    protected $ProductoRepo;
 
     public function __construct(ImgHomeRepo         $ImgHomeRepo,
                                 ProyectoRepo        $ProyectoRepo, 
                                 NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo, 
                                 MarcaRepo           $MarcaRepo,
-                                Marca_de_eventoRepo $Marca_de_eventoRepo   )
+                                Marca_de_eventoRepo $Marca_de_eventoRepo,
+                                ProductoRepo        $ProductoRepo   )
     {
         $this->ProyectoRepo        = $ProyectoRepo;
         $this->ImgHomeRepo         = $ImgHomeRepo;
@@ -38,6 +40,7 @@ class Paginas_Controller extends Controller
         $this->EmpresaRepo         = $EmpresaRepo;
         $this->MarcaRepo           = $MarcaRepo;       
         $this->Marca_de_eventoRepo = $Marca_de_eventoRepo;
+        $this->ProductoRepo        = $ProductoRepo; 
     }
 
     //Contacto
@@ -116,22 +119,49 @@ class Paginas_Controller extends Controller
     {
         $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request,2);
         $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
-        $Route                = 'post_contacto_form';   
+        $Route    = 'post_contacto_form';   
 
         return view('paginas.noticias.noticias',compact('Noticias','Empresa','Route'));
     }
 
 
 
-    //Noticias Individual
-    public function get_pagina_noticia_individual($name,$id)
+            //Noticias Individual
+            public function get_pagina_noticia_individual($name,$id)
+            {
+                $Noticia = $this->NoticiasRepo->find($id);
+                $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
+                $Route                = 'post_contacto_form';  
+                
+                return view('paginas.noticias.noticia_individual',compact('Noticia','Empresa','Route'));
+            }
+
+
+    // P r o d u c t o s 
+
+    public function get_pagina_productos_listado()
     {
-        $Noticia = $this->NoticiasRepo->find($id);
-        $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
-        $Route                = 'post_contacto_form';  
-        
-        return view('paginas.noticias.noticia_individual',compact('Noticia','Empresa','Route'));
-    }
+       $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+
+       $Entidades = '':
+       
+       return view('paginas.productos.productos',compact('Entidades','Empresa'));
+    }    
+  
+            //Noticias Individual
+            public function get_pagina_producto_individual($name,$id)
+            {
+                $Entidad   = $this->ProductoRepo->find($id);
+                $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+                
+                
+                return view('paginas.noticias.noticia_individual',compact('Entidad','Empresa'));
+            }
+
+
+
+
+
 
     //Proyectos
     public function get_pagina_proyecto_listado(Request $Request)

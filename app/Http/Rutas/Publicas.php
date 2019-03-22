@@ -5,8 +5,9 @@
 
 require __DIR__ . '/Formularios/Rutas_Formularios_Publicas.php';
 
-require __DIR__ . '/Noticias/Rutas_Noticias_Publicas.php';
+require __DIR__ . '/Noticias/Rutas_Noticias_Publicas.php'; 
 
+require __DIR__ . '/Productos/Rutas_Productos_publicas.php';
 
 //Ruta de Home
 Route::get('/' , [                    

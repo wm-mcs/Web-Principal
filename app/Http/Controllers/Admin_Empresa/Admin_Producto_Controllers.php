@@ -12,6 +12,7 @@ use App\Repositorios\ProductoImgRepo;
 use App\Managers\Producto\crear_producto_admin_manager;
 use App\Repositorios\MarcaRepo;
 use DB;
+use App\Repositorios\CategoriaRepo;
 
 
 
@@ -23,17 +24,27 @@ class Admin_Producto_Controllers extends Controller
   protected $EntidadDelControladorRepo;
   protected $ImgEntidadRepo;
   protected $MarcaRepo;
+  protected $CategoriaRepo;
 
 
   public function __construct(ProductoRepo            $ProductoRepo, 
                               ProductoImgRepo         $ProductoImgRepo, 
-                              MarcaRepo               $MarcaRepo)
+                              MarcaRepo               $MarcaRepo, 
+                              CategoriaRepo           $CategoriaRepo)
 
   {
     $this->EntidadDelControladorRepo            =  $ProductoRepo;
     $this->ImgEntidadRepo                       =  $ProductoImgRepo;
     $this->MarcaRepo                            =  $MarcaRepo;
+    $this->CategoriaRepo                        =  $CategoriaRepo;
     
+  }
+
+
+
+  public function getPropiedades()
+  {
+    return  ['name','description','categoria_id','ubicacion'];
   }
 
   public function get_admin_productos(Request $Request)
@@ -49,8 +60,10 @@ class Admin_Producto_Controllers extends Controller
   //get Crear 
   public function get_admin_productos_crear()
   { 
+
+    $Categorias = $this->CategoriaRepo->getEntidadActivas();
     
-    return view('admin.productos.productos_crear');
+    return view('admin.productos.productos_crear',compact('Categorias'));
   }
 
 
@@ -59,13 +72,13 @@ class Admin_Producto_Controllers extends Controller
   public function set_admin_productos(Request $Request)
   {     
       
-      $Entidad    = $this->EntidadDelControladorRepo->getEntidad();
+      $Entidad         = $this->EntidadDelControladorRepo->getEntidad();
 
       $Entidad->estado = 'si';      
 
-      $Propiedades = ['name','description','fecha','ubicacion'];  
+      $Propiedades     = $this->getPropiedades();  
       
-      $manager = new crear_producto_admin_manager(null, $Request->all());
+      $manager         = new crear_producto_admin_manager(null, $Request->all());
 
       //imagenes
       $files = $Request->file('img');
@@ -146,9 +159,9 @@ class Admin_Producto_Controllers extends Controller
   //set edit admin 
   public function set_admin_productos_editar($id,Request $Request)
   {
-    $Entidad = $this->EntidadDelControladorRepo->find($id);
+    $Entidad         = $this->EntidadDelControladorRepo->find($id);
 
-    $Propiedades = ['name','description','estado','fecha','ubicacion'];
+    $Propiedades     = $this->getPropiedades(); 
 
     try{
       DB::beginTransaction(); 
