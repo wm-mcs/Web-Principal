@@ -4,6 +4,11 @@
 
 <select style="margin: 15px 0;" value="{{ Input::old('categoria_id') }}" name="categoria_id">
                    
+       <OPTION 
+                      VALUE="0"
+                      >
+       Selecciona
+        </OPTION>
       @foreach($Categorias as $Entidad)
         <OPTION 
                       VALUE="{{$Entidad->id}}"
