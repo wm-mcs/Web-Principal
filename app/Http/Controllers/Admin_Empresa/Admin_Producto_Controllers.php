@@ -149,11 +149,11 @@ class Admin_Producto_Controllers extends Controller
   //get edit admin 
   public function get_admin_productos_editar($id)
   {
-    $Entidad = $this->EntidadDelControladorRepo->find($id);
-    $Marcas = $this->MarcaRepo->getEntidadActivas();
+    $Entidad     = $this->EntidadDelControladorRepo->find($id);
+    $Categorias  = $this->CategoriaRepo->getEntidadActivas();
 
 
-    return view('admin.productos.productos_editar',compact('Entidad','Marcas'));
+    return view('admin.productos.productos_editar',compact('Entidad','Categorias'));
   }
 
   //set edit admin 
