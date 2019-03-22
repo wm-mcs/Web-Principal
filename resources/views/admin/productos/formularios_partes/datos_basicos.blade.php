@@ -2,7 +2,7 @@
   
 {!! Form::label('categoria_id', 'Categoria', ['class' => 'control-label']) !!}
 
-<select multiple  style="margin: 15px 0;" value="{{ Input::old('categoria_id') }}" name="categoria_id">
+<select style="margin: 15px 0;" value="{{ Input::old('categoria_id') }}" name="categoria_id">
                    
       @foreach($Categorias as $Entidad)
         <OPTION 
