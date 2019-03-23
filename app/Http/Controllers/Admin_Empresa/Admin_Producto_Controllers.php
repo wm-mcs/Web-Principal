@@ -44,7 +44,7 @@ class Admin_Producto_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return  ['name','description','categoria_id','moneda','precio','stock'];
+    return  ['name','description','categoria_id','moneda','precio','stock','estado'];
   }
 
   public function get_admin_productos(Request $Request)
