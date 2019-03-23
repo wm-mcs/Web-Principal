@@ -42,7 +42,7 @@
 
     @foreach($Categorias as $Categoria)
 
-     <h2>{{$Categoria->name}}</h2>   
+     <h2 class="producto-lista-categoria-name">{{$Categoria->name}}</h2>   
 
      @foreach($Categoria->productos_categoria as $Productos)
     
