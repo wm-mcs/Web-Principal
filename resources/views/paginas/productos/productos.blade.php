@@ -34,7 +34,7 @@
   
   <div class="col-lg-12 text-center">
      <h1 class="text-uppercase text-color-black" style="margin-top:78px;">
-        <strong>Productos</strong>
+        <strong>Lista de precios</strong>
      </h1>
      <hr class="my-4">
      <h4 class="text-muted mb-4">Nos adaptamos a tus preferencias.</h4>
@@ -56,7 +56,7 @@
 
      @endforeach
 
-
+     <hr class="my-8">
     @endforeach 
 
   </div>
