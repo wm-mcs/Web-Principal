@@ -13,7 +13,7 @@
 
     
         <a href="{{$Entidad->route_admin}}">
-           <div class="boton-simple">
+           <div class="boton-simple-chico">
             <i class="fas fa-edit"></i> 
            </div>
         </a>
