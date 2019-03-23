@@ -35,6 +35,7 @@
   <h1 class="text-uppercase text-color-black" style="margin-top:78px;">
         <strong>Productos</strong>
   </h1>
+   <hr class="my-4">
 
   <div class="contenedor-listado-noticias">
 
