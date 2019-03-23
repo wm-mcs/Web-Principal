@@ -13,6 +13,7 @@ use App\Repositorios\Marca_de_eventoRepo;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use App\Repositorios\ProductoRepo;
+use App\Repositorios\CategoriaRepo;
 
 
 class Paginas_Controller extends Controller
@@ -25,6 +26,7 @@ class Paginas_Controller extends Controller
     protected $EventoRepo;
     protected $Marca_de_eventoRepo;
     protected $ProductoRepo;
+    protected $CategoriaRepo;
 
     public function __construct(ImgHomeRepo         $ImgHomeRepo,
                                 ProyectoRepo        $ProyectoRepo, 
@@ -32,7 +34,8 @@ class Paginas_Controller extends Controller
                                 EmpresaRepo         $EmpresaRepo, 
                                 MarcaRepo           $MarcaRepo,
                                 Marca_de_eventoRepo $Marca_de_eventoRepo,
-                                ProductoRepo        $ProductoRepo   )
+                                ProductoRepo        $ProductoRepo,
+                                CategoriaRepo       $CategoriaRepo   )
     {
         $this->ProyectoRepo        = $ProyectoRepo;
         $this->ImgHomeRepo         = $ImgHomeRepo;
@@ -41,6 +44,7 @@ class Paginas_Controller extends Controller
         $this->MarcaRepo           = $MarcaRepo;       
         $this->Marca_de_eventoRepo = $Marca_de_eventoRepo;
         $this->ProductoRepo        = $ProductoRepo; 
+        $this->CategoriaRepo       = $CategoriaRepo;
     }
 
     //Contacto
@@ -141,11 +145,11 @@ class Paginas_Controller extends Controller
 
     public function get_pagina_productos_listado()
     {
-       $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+       $Empresa    = $this->EmpresaRepo->getEmpresaDatos();
 
-       $Entidades = '';
+       $Categorias = $this->CategoriaRepo->getEntidadActivas();
        
-       return view('paginas.productos.productos',compact('Entidades','Empresa'));
+       return view('paginas.productos.productos',compact('Categorias','Empresa'));
     }    
   
             //Noticias Individual

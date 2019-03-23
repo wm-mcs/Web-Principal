@@ -38,11 +38,19 @@
 
   <div class="contenedor-listado-noticias">
 
-    
+
+    @foreach($Categorias as $Categoria)
+
+     <h2>{{$Categoria->name}}</h2>   
+
+     @foreach($Categorias->productos_categoria as $Productos)
     
       @include('paginas.productos.producto_individual_tipo_lista')   
 
-    
+     @endforeach
+
+
+    @endforeach 
 
   </div>
 
