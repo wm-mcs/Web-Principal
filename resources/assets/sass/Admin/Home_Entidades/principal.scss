@@ -151,3 +151,35 @@
       @include flex-wrap(wrap);
       padding: 4px;
      }
+
+
+
+
+
+
+
+
+     /*  E n t i d a d e s   l i s t a d a s  */
+
+     .Entidades-listada-contenedor{
+      @include flexbox;
+      @include align-items(center);
+      @include flex-direction(row);
+      padding:8px;
+      border-radius:4px;
+     }
+
+
+
+        .Entidades-listada-img{
+          width: 60px;
+          margin-right: 8px;
+          height:auto;
+        }
+
+        .Entidad-listada-name{
+          width:130px;
+          font-size: 10px;
+          color: $color-grey2;
+        }
+

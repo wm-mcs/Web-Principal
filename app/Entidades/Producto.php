@@ -65,7 +65,7 @@ class Producto extends Model
     }
 
 
-    public function getUrlImgAttribute()
+    public function getUrlImgMasterAttribute()
     {
         //imagenes asoiadas al proyecto
         $imagenes = $this->imagenes;
@@ -100,6 +100,13 @@ class Producto extends Model
         }    
         
         
+    }
+
+    public function getUrlImgAttribute()
+    {
+        return Cache::remember('ImagenProducto'.$this->id, 15, function() {
+                              return $this->url_img_master; 
+                          }); 
     }
 
 

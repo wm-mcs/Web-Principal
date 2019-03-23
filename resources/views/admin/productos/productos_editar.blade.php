@@ -47,18 +47,9 @@
         <div class="contenedor-formulario-label-fiel">                       
          @include('admin.productos.formularios_partes.datos_basicos')
 
-         {{-- fecha del evento --}}
-         <div class="formulario-label-fiel">
-          {!! Form::label('fecha', 'Fecha', array('class' => 'formulario-label ')) !!}
-          {!! Form::date('fecha',\Carbon\Carbon::parse($Entidad->fecha)) !!}
-          
-        </div>
+        
 
-         <div class="formulario-label-fiel">
-            {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
-            {!! Form::select('estado',['si' => 'Activo',
-                                       'no' => 'Inactivo'] , null )          !!}
-         </div>
+        
         </div>
       </div>
 
