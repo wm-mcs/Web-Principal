@@ -45,6 +45,11 @@
   {!! Form::number('precio', null ,['class' => 'formulario-field']) !!}
 </div>
 
+<div class="formulario-label-fiel">
+  {!! Form::label('stock', 'Stock', array('class' => 'formulario-label ')) !!}
+  {!! Form::number('stock', null ,['class' => 'formulario-field']) !!}
+</div>
+
 
 
 
