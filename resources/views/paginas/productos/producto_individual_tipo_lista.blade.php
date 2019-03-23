@@ -1,21 +1,21 @@
 <div class="producto-lista-contenedor">
 
 <div class="producto-lista-contiene-img">
-  <a href="">
-    <img src="">
+  <a href="{{$Productos->route}}">
+    <img src="{{$Productos->url_img}}" class="producto-lista-img">
   </a>
 </div>
 
 <div class="producto-lista-contiene-name">
 
-  <div> Titulo Proudcto</div>
+  <div class="producto-lista-name color-text-gris"> {{$Productos->name}} </div>
   
   
 </div>
 
 
-<div>
-  <div> Moneda y precio del articulo</div>
+<div class="producto-lista-contiene-precio">
+  <div class="producto-lista-precio">  {{$Productos->moneda}}  {{$Productos->precio}}</div>
 </div>
   
 
