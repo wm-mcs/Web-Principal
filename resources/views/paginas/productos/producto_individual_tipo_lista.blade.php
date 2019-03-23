@@ -1,7 +1,7 @@
 <div class="producto-lista-contenedor">
 
 <div class="producto-lista-contiene-img">
-  <a href="{{$Productos->route}}">
+  <a href="">
     <img src="{{$Productos->url_img}}" class="producto-lista-img">
   </a>
 </div>
