@@ -1,9 +1,10 @@
+<a href="">
 <div class="producto-lista-contenedor">
 
 <div class="producto-lista-contiene-img">
-  <a href="">
+  
     <img src="{{$Productos->url_img}}" class="producto-lista-img">
-  </a>
+  
 </div>
 
 <div class="producto-lista-contiene-name">
@@ -22,3 +23,4 @@
 
   
 </div>
+</a>
