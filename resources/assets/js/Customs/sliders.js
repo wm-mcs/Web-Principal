@@ -21,6 +21,6 @@ $('.producto-individual-contenedor-imgs').flickity({
   // disable previous & next buttons and dots
   prevNextButtons: true,
   pageDots: true,
-  groupCells: false,
+  groupCells: true,
   lazyLoad: 2
 });
