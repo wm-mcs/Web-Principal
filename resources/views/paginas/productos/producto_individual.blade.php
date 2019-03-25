@@ -50,6 +50,11 @@
   </div>
 
 
+  <div class="producto-individual-descripcion">
+    {{$Entidad->description}}
+  </div>
+
+
   
 
 
