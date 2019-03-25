@@ -34,14 +34,21 @@
   
   <div class="col-lg-12 text-center">
      <h1 class="text-uppercase text-color-black" style="margin-top:78px;">
-        <strong>Lista de precios</strong>
+        <strong> {{$Entidad->name}}</strong>
      </h1>
-     <hr class="my-4">
-     <h4 class="text-muted mb-4">Nos adaptamos a tus preferencias.</h4>
+     <hr class="my-4"> 
+  </div>  
+  
 
+
+  <div class="producto-individual-contenedor-imgs" >
+    @foreach($Entidad->imagenes_producto as $Img)
+     <div class="producto-individual-img-contendor">
+       <img src="{{$Img->url_img}}" class="producto-individual-img">
+     </div>    
+    @endforeach
   </div>
-  
-  
+
 
   <div class="contenedor-listado-noticias">
 

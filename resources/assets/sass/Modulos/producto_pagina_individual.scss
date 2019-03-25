@@ -1,0 +1,24 @@
+.producto-individual-contenedor-imgs{
+  width: 100%;
+  padding: 8px;
+  border-radius:4px;
+  background-color: $color-grey0;  
+}
+
+
+ .producto-individual-img-contendor{ 
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+  width: 100%;
+  @include justify-content(space-around); 
+
+ }
+
+  .producto-individual-img{
+
+    width: 100%;
+    height: auto;
+
+  }
+

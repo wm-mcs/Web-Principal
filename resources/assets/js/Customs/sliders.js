@@ -11,3 +11,16 @@ $('.Seccion_clientes_slider').flickity({
   groupCells: true,
   lazyLoad: 2
 });
+
+
+
+$('.producto-individual-contenedor-imgs').flickity({
+  // options
+  cellSelector: '.producto-individual-img-contendor',
+  contain: true,
+  // disable previous & next buttons and dots
+  prevNextButtons: true,
+  pageDots: true,
+  groupCells: false,
+  lazyLoad: 2
+});
