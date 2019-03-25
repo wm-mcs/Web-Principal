@@ -30,3 +30,19 @@
 
 }
 
+
+.producto-individual-aclaracion-stock{
+  margin: 20px 0;
+  border:solid 1px $color-3;
+  padding: 20px;
+  width: 80%;
+  color:$color-3;
+  font-size: 16px;
+}
+
+
+.producto-individual-aclaracion-no-stock{
+  border:solid 1px$color-gris-text;
+  color:$color-gris-text;
+}
+
