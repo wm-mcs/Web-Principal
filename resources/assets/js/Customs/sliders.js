@@ -1,4 +1,6 @@
 
+$(document).ready(function(){
+ 
 
 
 $('.Seccion_clientes_slider').flickity({
@@ -24,3 +26,18 @@ $('.producto-individual-contenedor-imgs').flickity({
   groupCells: true,
   lazyLoad: 2
 });
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+});
+
