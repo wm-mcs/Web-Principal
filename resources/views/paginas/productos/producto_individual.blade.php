@@ -31,7 +31,7 @@
 
 @section('content')
 
-  
+ <div class="contenedor-listado-noticias">  
   <div class="col-lg-12 text-center">
      <h1 class="text-uppercase text-color-black" style="margin-top:78px;">
         <strong> {{$Entidad->name}}</strong>
@@ -50,7 +50,7 @@
   </div>
 
 
-  <div class="contenedor-listado-noticias">
+  
 
 
 
