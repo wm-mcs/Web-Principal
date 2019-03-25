@@ -7,11 +7,9 @@
 
 
  .producto-individual-img-contendor{ 
-  @include flexbox;       
-  @include flex-direction(row);
-  @include align-items(center); 
+  
   width: 100%;
-  @include justify-content(space-around); 
+  
 
  }
 

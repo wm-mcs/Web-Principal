@@ -126,17 +126,35 @@ https://flickity.metafizzy.co
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
 
+
+
+
 .flickity-page-dots .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin: 0 8px;
-  background: $color-3;
+  background: #333;
   border-radius: 50%;
   opacity: 0.25;
   cursor: pointer;
+  border:solid  $color-3;
 }
 
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
+  background: $color-3;
+}
+
+
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
 }
