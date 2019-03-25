@@ -56,7 +56,7 @@
 
   @if($Entidad->stock > 0)
     <div class="producto-individual-aclaracion-stock">
-        En stock: listo para entrega o envio imediato <i class="far fa-grin"></i>
+        En stock: listo para entrega o envio inmediato <i class="far fa-grin"></i>
     </div>
 
   @else

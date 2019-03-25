@@ -33,10 +33,10 @@
 
 .producto-individual-aclaracion-stock{
   margin: 20px auto;
-  border:solid 1px $color-3;
+  border:solid 1px $color-verde-texto-success;
   padding: 20px;
   width: 80%;
-  color:$color-3;
+  color:$color-verde-texto-success;
   font-size: 16px;
   text-align: center;
   font-weight: bold;
@@ -46,6 +46,6 @@
 
 .producto-individual-aclaracion-no-stock{
   border:solid 1px$color-gris-text;
-  color:$color-gris-text;
+  color:$color-gris-text;  
 }
 

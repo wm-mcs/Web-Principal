@@ -50,7 +50,7 @@
 
      <h2 class="producto-lista-categoria-name">{{$Categoria->name}}</h2>   
 
-     @foreach($Categoria->productos_categoria as $Productos)
+     @foreach($Categoria->productos_categoria as $Entidad)
     
       @include('paginas.productos.producto_individual_tipo_lista')   
 
