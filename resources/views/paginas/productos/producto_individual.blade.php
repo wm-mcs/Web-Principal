@@ -44,7 +44,7 @@
   <div class="producto-individual-contenedor-imgs" >
     @foreach($Entidad->imagenes_producto as $Img)
      <div class="producto-individual-img-contendor">
-       <img src="{{$Img->url_img}}" class="producto-individual-img">
+       <img data-flickity-lazyload="{{$Img->url_img}}" class="producto-individual-img">
      </div>    
     @endforeach
   </div>
