@@ -1,4 +1,4 @@
-<a href="">
+<a href="{{$Productos->route}}">
 <div class="producto-lista-contenedor">
 
 <div class="producto-lista-contiene-img">

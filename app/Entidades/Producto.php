@@ -113,7 +113,7 @@ class Producto extends Model
     public function getRouteAttribute()
     {
         
-        return route('get_pagina_evento_individual', [$this->helper_convertir_cadena_para_url($this->name), $this->id]);
+        return route('get_pagina_producto_individual', [$this->helper_convertir_cadena_para_url($this->name), $this->id]);
     }
 
     public function getDescriptionParrafoAttribute()

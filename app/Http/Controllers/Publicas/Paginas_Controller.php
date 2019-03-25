@@ -159,7 +159,7 @@ class Paginas_Controller extends Controller
                 $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
                 
                 
-                return view('paginas.noticias.noticia_individual',compact('Entidad','Empresa'));
+                return view('paginas.productos.producto_individual.blade.php',compact('Entidad','Empresa'));
             }
 
 
