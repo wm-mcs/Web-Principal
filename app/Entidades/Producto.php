@@ -154,6 +154,11 @@ class Producto extends Model
 
         return $cadena;
     }
+
+    public function getPrecioProductoAttribute()
+    {
+        return round($this->precio, 0);
+    }
      
     
 }

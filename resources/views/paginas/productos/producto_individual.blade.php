@@ -60,7 +60,7 @@
       <div class="flex-row-center ">
         <div class="flex-row-center" >
           <span class="producto-individual-moneda">{{$Entidad->moneda}}</span> 
-          <span class="producto-individual-precio-valor">{{$Entidad->precio}}</span>         
+          <span class="producto-individual-precio-valor">{{$Entidad->precio_producto}}</span>         
         </div>   
       </div>
   </div>
