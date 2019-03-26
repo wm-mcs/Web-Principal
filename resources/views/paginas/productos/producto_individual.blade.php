@@ -71,14 +71,14 @@
       
     
       <div class="flex-row-center" >
-        <span class="">{{$Entidad->moneda}}</span> 
-        <span class="">{{$Entidad->precio}}</span>         
+        <span class="producto-individual-moneda">{{$Entidad->moneda}}</span> 
+        <span class="producto-individual-precio-valor">{{$Entidad->precio}}</span>         
       </div>
       <div class="flex-row-center">
-        <div>¿Te interesa?</div>        
+        <div class="producto-individual-pregunta">¿Te interesa?</div>        
       </div>
       <div class="flex-row-center">
-        <a href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!%20tengo%20interes%20en%20{{$Entidad->route}}"> Contactame ahora <i class="fab fa-whatsapp"></i> </a>        
+        <a class="boton-simple-chico" href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!%20tengo%20interes%20en%20{{$Entidad->route}}"> Contactame ahora <i class="fab fa-whatsapp"></i> </a>        
       </div>
 
     </div>

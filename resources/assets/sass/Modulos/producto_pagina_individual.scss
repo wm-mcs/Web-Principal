@@ -59,7 +59,23 @@
   width: 100%;
   margin-top: 10px;
   padding:10px;
+}
 
+.producto-individual-moneda{
+  font-size: 12px;
+  margin-right: 5px;
+}
 
+.producto-individual-precio-valor{
+  font-size: 22px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.producto-individual-pregunta{
+  padding:8px;
+  color: $color-gris-text;
+  font-size:20px;
+  margin-right: 5px;
 }
 
