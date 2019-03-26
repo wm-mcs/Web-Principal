@@ -81,12 +81,6 @@
   <div class="producto-individual-precio">
 
     <div class="flex-row-center  flex-wrap">
-      
-    
-      <div class="flex-row-center" >
-        <span class="producto-individual-moneda">{{$Entidad->moneda}}</span> 
-        <span class="producto-individual-precio-valor">{{$Entidad->precio}}</span>         
-      </div>
       <div class="flex-row-center">
         <div class="producto-individual-pregunta">¿Te interesa?</div>        
       </div>
