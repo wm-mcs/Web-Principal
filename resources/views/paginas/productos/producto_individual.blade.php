@@ -67,7 +67,7 @@
 
   <div class="producto-individual-precio">
 
-    <div class="flex-row-center flex-justifice-space-around flex-wrap">
+    <div class="flex-row-center  flex-wrap">
       
     
       <div class="flex-row-center" >
