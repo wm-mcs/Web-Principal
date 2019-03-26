@@ -50,10 +50,22 @@
   </div>
 
 
+  {{-- description --}}
   <div class="producto-individual-descripcion">
     {{$Entidad->description}}
   </div>
 
+  {{-- precio --}}
+   <div class="producto-individual-precio">
+      <div class="flex-row-center ">
+        <div class="flex-row-center" >
+          <span class="producto-individual-moneda">{{$Entidad->moneda}}</span> 
+          <span class="producto-individual-precio-valor">{{$Entidad->precio}}</span>         
+        </div>   
+      </div>
+  </div>
+
+ {{-- aclaro que tengo o no --}}
   @if($Entidad->stock > 0)
     <div class="producto-individual-aclaracion-stock">
         En stock: listo para entrega o envio inmediato <i class="far fa-grin"></i>
@@ -65,6 +77,7 @@
     </div>
   @endif 
 
+  {{-- llamada a la accion --}}
   <div class="producto-individual-precio">
 
     <div class="flex-row-center  flex-wrap">
@@ -78,7 +91,9 @@
         <div class="producto-individual-pregunta">¿Te interesa?</div>        
       </div>
       <div class="flex-row-center">
-        <a class="boton-simple-chico" href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!%20tengo%20interes%20en%20{{$Entidad->route}}"> Contactame ahora <i class="fab fa-whatsapp"></i> </a>        
+         <a href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!%20tengo%20interes%20en%20{{$Entidad->route}}"> 
+           <div class="boton-simple-chico"> Contáctame ahora <i class="fab fa-whatsapp"></i> </div>
+         </a>        
       </div>
 
     </div>
