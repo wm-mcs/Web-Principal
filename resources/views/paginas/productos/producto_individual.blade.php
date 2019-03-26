@@ -63,7 +63,27 @@
     <div class="producto-individual-aclaracion-no-stock producto-individual-aclaracion-stock">
         Fuera de stock pero por llegar <i class="far fa-grin"></i>
     </div>
-  @endif
+  @endif 
+
+  <div class="producto-individual-precio">
+
+    <div class="flex-row-center flex-justifice-space-around flex-wrap">
+      
+    
+      <div class="flex-row-center" >
+        <span class="">{{$Entidad->moneda}}</span> 
+        <span class="">{{$Entidad->precio}}</span>         
+      </div>
+      <div class="flex-row-center">
+        <div>¿Te interesa?</div>        
+      </div>
+      <div class="flex-row-center">
+        <a href="https://api.whatsapp.com/send?phone={{$Empresa->numero_whatsapp_ya_arreglado}}&text=Hola!%20tengo%20interes%20en%20{{$Entidad->route}}"> Contactame ahora <i class="fab fa-whatsapp"></i> </a>        
+      </div>
+
+    </div>
+    
+  </div>
 
 
   
