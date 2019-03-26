@@ -11,12 +11,12 @@
 
 
 @section('title')
-   Productos   | {{$Empresa->name}}
+   {{$Entidad->name}}   | {{$Empresa->name}}
 @stop
 
 
 @section('MetaContent')
-
+   {{$Entidad->description}}  | {{$Empresa->name}}
 @stop
 
 @section('MetaRobot')
@@ -24,7 +24,7 @@
 @stop
 
 @section('palabras-claves')
-
+  
 @stop
 
 
