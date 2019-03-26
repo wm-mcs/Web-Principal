@@ -3,10 +3,10 @@
 
 
 @section('og-tags')
-{{-- <meta property="og:title" content="Global Target">
-     <meta property="og:description" content="Agencia de modelos, eventos y promociones.">
-     <meta property="og:image" content="https://www.globaltarget.com.uy/thumbnail.jpg">
-     <meta property="og:url" content="https://www.globaltarget.com.uy/"> --}}
+<meta property="og:title" content="{{$Entidad->name}}">
+     <meta property="og:description" content=" {{$Entidad->description}}">
+     <meta property="og:image" content=" {{$Entidad->url_img}}">
+     <meta property="og:url" content=" {{$Entidad->route}}">
 @stop
 
 
