@@ -9,11 +9,12 @@
 {!! Form::file('img2',['class' => 'formulario-field']) !!}   
 </div> 
 
+@if(isset($Entidad))
 <div class="flex-row-column get_width_100" >
   <img class="admin-img-section-img" src="{{$Entidad->url_img_portada}}">
   <img class="admin-img-section-img" src="{{$Entidad->url_img_adicional}}">  
 </div>
-
+@endif
 
 
 
