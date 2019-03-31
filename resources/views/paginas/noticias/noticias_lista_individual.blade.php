@@ -7,9 +7,9 @@
                 {{$Noticia->sub_name}} 
             </h3>
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on September 24, 2019
+          <p class="post-meta">Publicado por
+            <a href="#">{{$Empresa->name}}</a> el
+             {{$Noticia->created_at->format('d,m,y')}} 
           </p>
         </div>
         <hr class="post-hr">
