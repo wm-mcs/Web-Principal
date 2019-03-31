@@ -8,10 +8,10 @@
   <a href="{{route('get_admin_noticias')}}"><span>Noticias</span></a>
 
   {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+  <span class="spam-separador"> | </span> 
 
   {{-- lugar donde esta --}}
-  <span>Editar Noticia: {{$Entidad->name}}</span>
+  <span><a href="{{$Entidad->route}}">{{$Entidad->name}}</a></span>
 @stop
 
 @section('content')
