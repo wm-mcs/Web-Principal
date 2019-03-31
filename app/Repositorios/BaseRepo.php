@@ -146,6 +146,30 @@ abstract class BaseRepo
   
     }
 
+
+    public function getEntidadesActivasYOrdenadas($Cantidad,$Orden)
+    {
+      $cantidad_de_entidades =  $this->entidad->active()->get()->count();
+
+      if($cantidad_de_entidades >= $Cantidad)
+      {
+        $entidades = $this->entidad               
+                          ->active()
+                          ->orderBy('id',$Orden)
+                          ->take($Cantidad)
+                          ->get();
+      }
+      else
+      {
+        $entidades = $this->entidad              
+                          ->active()
+                          ->orderBy('id',$Orden)
+                          ->get();
+      }  
+
+    return $entidades;
+    }
+
      
 
     /**
@@ -177,49 +201,34 @@ abstract class BaseRepo
     }
 
 
-   public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null,$file = null)
+    public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null)
     {
-
-
-      //nombre del Archico / Carpeta Incluido
-      $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
-
-      if($file == null)
-      {
-
-        //obtenemos el campo file definido en el formulario
-        $file    = $request->file($nombreDelCampoForm);        
-
-        $validator = $request->hasFile($nombreDelCampoForm);
-
-
-      }
-      else
-      {
-        $archivo   = $file;
-        $validator = true;
-      }
-      
-       if($validator != null)
+      if($request->hasFile($nombreDelCampoForm))
        {
-
-        $archivo = File::get($file);
+         //obtenemos el campo file definido en el formulario
+         $file = $request->file($nombreDelCampoForm);
+         
+         //nombre del Archico / Carpeta Incluido
+         $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
+         
 
         if($redimencionar_a != null)
         {
-            $imagen_insert = Image::make($archivo)->resize($redimencionar_a, null, function ($constraint) {
+            $imagen_insert = Image::make(File::get($file))->resize($redimencionar_a, null, function ($constraint) {
                                                                            $constraint->aspectRatio();
                                                                        })->save('imagenes/'.$nombre,70);
         }
         else
         {
-           $imagen_insert = Image::make($archivo); 
-
+           $imagen_insert = Image::make(File::get($file)); 
            $imagen_insert->save('imagenes/'.$nombre,70);   
-
         }
            
 
+
+        /* $imagen = $imagen_insert->resize(200, null, function ($constraint) {
+                                                                           $constraint->aspectRatio();
+                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    */
 
          //guardo_el_img
          if($Entidad != null)
@@ -231,7 +240,9 @@ abstract class BaseRepo
            catch (Exception $e){}
            
          }
-
+         
+         
+         
          
        }
     }
