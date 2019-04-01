@@ -11,8 +11,8 @@
     
      
 
-    
-        <a href="{{$Entidad->route_admin}}">
+     
+        <a href="{{$Entidad->route_admin}}" class="get_width_100">
            <div class="boton-simple-chico">
             <i class="fas fa-edit"></i> 
            </div>
