@@ -1,4 +1,4 @@
-<a href="{{$Entidad->route}}" class="class="get_width_100">
+<a href="{{$Entidad->route}}" class="get_width_100">
 <div class="producto-lista-contenedor">
 
 <div class="producto-lista-contiene-img">
