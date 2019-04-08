@@ -6,7 +6,7 @@
           <div class="get_width_100 flex-row-center flex-justifice-space-around flex-wrap">
              <div class=" text-center contenedor-columna-footer Helper-OrdenarHijos-Row">
               <div class="get_width_100 flex-row-center flex-justifice-space-around">
-                <img src="{{$Empresa->img_logo_cuadrado}}" class="logo-footer">
+                <img data-src="{{$Empresa->img_logo_cuadrado}}" class="logo-footer">
               </div>
               
             </div>
