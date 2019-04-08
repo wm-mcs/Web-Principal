@@ -112,7 +112,7 @@ class Noticia extends Model
         $cadena = str_replace('(/AT)' ,'</a>', $cadena);
 
         //img
-        $cadena = str_replace('(IMG)' ,'<img class="post-img-secundarias" src="', $cadena);
+        $cadena = str_replace('(IMG)' ,'<img class="post-img-secundarias" data-src="', $cadena);
         $cadena = str_replace('(/IMG)' ,'">', $cadena);
 
         $cadena = str_replace('(IMGT)' ,'<span class="post-img-texto" >', $cadena);

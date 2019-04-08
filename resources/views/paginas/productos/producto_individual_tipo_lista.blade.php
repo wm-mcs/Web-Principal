@@ -3,7 +3,7 @@
 
 <div class="producto-lista-contiene-img">
   
-    <img src="{{$Entidad->url_img}}" class="producto-lista-img">
+    <img data-src="{{$Entidad->url_img}}" class="producto-lista-img">
   
 </div>
 

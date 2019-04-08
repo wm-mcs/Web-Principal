@@ -40,7 +40,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="post-img-slider-size Slider_cabecer_img" src="{{url()}}/imagenes/Empresa/Portada/principal-noticias.jpg"> 
+      <img class="post-img-slider-size Slider_cabecer_img" data-src="{{url()}}/imagenes/Empresa/Portada/principal-noticias.jpg"> 
      
     </div>
    

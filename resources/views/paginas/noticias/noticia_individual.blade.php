@@ -82,7 +82,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="post-img-slider-size Slider_cabecer_img" src="{{$Noticia->url_img_portada}}"> 
+      <img class="post-img-slider-size Slider_cabecer_img" data-src="{{$Noticia->url_img_portada}}"> 
      
     </div>
    
