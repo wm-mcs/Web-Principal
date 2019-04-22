@@ -16,7 +16,7 @@
 
 @section('contenido')
       @include('paginas.home.home_about') 
-      @include('paginas.home.home_clientes')
+      @include('paginas.home.home_tener_pagina_web')
     
       @include('paginas.home.home_pasos_para_concretar')  
       @include('paginas.home.home_precios')
