@@ -14,7 +14,7 @@
                 <div class="flex-row-center flex-justifice-space-around Seccion_precio_plan_ajuste_ancho">
                   <div class="flex-row-column Seccion_precio_contenedor_plan">
                     <div class="Seccion_precio_icono font-secondary get_width_100">Básico</div>                    
-                    <div class="Seccion_precio_precio font-secondary get_width_100">
+                    <div class="Seccion_precio_precio font-secondary ">
                       <div class="flex-row-center get_width_100">
                         <div class="flex-row-center Seccion_precio_contenedor_precio">
                           <span class="Seccion_precio_moneda">USD</span>
@@ -23,7 +23,7 @@
 
                           <div class="flex-row-column">
                             <div class="Seccion_precio_importe_oferta_cartel">
-                              33.33% OFF
+                              -150 OFF
                             </div>
                             <div class="Seccion_precio_importe_precio_tachado">
                               Antes: usd 450
@@ -79,21 +79,23 @@
                     <div class="Seccion_precio_icono font-secondary">Estándar</div>   
 
 
-                    <div class="Seccion_precio_precio font-secondary get_width_100">
-                      <div class="flex-row-column get_width_100">
+                    <div class="Seccion_precio_precio font-secondary ">
+                      <div class="flex-row-center Seccion_precio_contenedor_precio">
                         <div class="flex-row-center">
                           <span class="Seccion_precio_moneda">USD</span>
                           <span class="Seccion_precio_importe">450</span>  
-                        </div>                         
+                        </div> 
+
+                        <div class="flex-row-column get_width_100">
+                          <div class="Seccion_precio_importe_oferta_cartel">
+                            -200 OFF
+                          </div>
+                          <div class="Seccion_precio_importe_precio_tachado">
+                            Antes: usd 650
+                          </div>
+                        </div>                        
                       </div>
-                      <div class="flex-row-column get_width_100">
-                      <div class="Seccion_precio_importe_oferta_cartel">
-                        30.7% OFF
-                      </div>
-                      <div class="Seccion_precio_importe_precio_tachado">
-                        Antes: usd 650
-                      </div>
-                    </div>
+                    
                                            
                     </div>
 
