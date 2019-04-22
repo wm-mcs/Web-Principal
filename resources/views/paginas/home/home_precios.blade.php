@@ -15,13 +15,13 @@
                   <div class="flex-row-column Seccion_precio_contenedor_plan">
                     <div class="Seccion_precio_icono font-secondary get_width_100">Básico</div>                    
                     <div class="Seccion_precio_precio font-secondary get_width_100">
-                      <div class="flex-row-column get_width_100">
+                      <div class="flex-row-center get_width_100">
                         <div class="flex-row-center">
                           <span class="Seccion_precio_moneda">USD</span>
                           <span class="Seccion_precio_importe">300</span>  
                         </div>                         
                       </div>
-                      <div class="flex-row-column get_width_100">
+                      <div class="flex-row-column">
                       <div class="Seccion_precio_importe_oferta_cartel">
                         33.33% OFF
                       </div>
@@ -36,14 +36,14 @@
 
                     <div class="flex-row-column Seccion-contenedor-items">
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 1 Pagina scroll</div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Multi dispositivos. 
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Multi dispositivos 
                         <span class="text-color-primary text-bold">Se ve linda en todos lados: Pc, Tablet y Celu</span> 
                       </div>                      
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores. <span class="text-color-primary text-bold" > Te encontraran en Google</span>  
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Optimizada para buscadores<span class="text-color-primary text-bold" > Te encontraran en Google</span>  
                         <i class="fa fa-laugh-wink"></i>  </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento por 1 Año. <span class="text-color-primary text-bold">A Google le importa la velocidad de tu web. Cuanto más rápido mejor posicion en el buscador.</span> .
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Servidor y alojamiento web de alto rendimiento por 1 Año. <span class="text-color-primary text-bold">A Google le importa la velocidad de tu web. Cuanto más rápido mejor posición en el buscador </span> 
                       </div>
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Integración redes sociales básico:    <span class="text-color-primary text-bold">   Facebook, Google Whatzap </span>.</div>
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Integración redes sociales básico:    <span class="text-color-primary text-bold">   Facebook, Google WhatsAap </span>.</div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i>  Automatizado formulario para que tus cleintes se comuniquen contigo por email. <span class="text-color-primary text-bold">Podran comunicarse contigo desde la pagina web.</span> 
                       </div>
                       
@@ -54,7 +54,7 @@
                       </div>
                       <div class="Seccion_precio_lista_item"><i class="fa fa-grin-hearts"></i>  Garantía de devolución total. 
                         <span class="text-color-primary text-bold">                          
-                          Si no estas conformes te devolvemos todo lo que abonastes. Asi de simple ;) 
+                          Si no estás conforme te devolvemos todo lo que abonaste. Así de simple ;) 
                             <span class="simula_link" data-toggle="modal" data-target="#modal-garantia" title="clic para ver política">
                               <i class="fa fa-info-circle"></i>                              
                             </span> 
