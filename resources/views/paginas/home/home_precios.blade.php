@@ -81,7 +81,7 @@
 
                     <div class="Seccion_precio_precio font-secondary ">
                       <div class="flex-row-center Seccion_precio_contenedor_precio">
-                        <div class="flex-row-center">
+                        <div class="flex-row-center Seccion_precio_contenedor_precio">
                           <span class="Seccion_precio_moneda">USD</span>
                           <span class="Seccion_precio_importe">450</span>  
                         </div> 
