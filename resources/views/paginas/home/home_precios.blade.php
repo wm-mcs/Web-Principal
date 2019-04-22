@@ -19,16 +19,18 @@
                         <div class="flex-row-center">
                           <span class="Seccion_precio_moneda">USD</span>
                           <span class="Seccion_precio_importe">300</span>  
-                        </div>                         
+                        </div> 
+
+                          <div class="flex-row-column">
+                            <div class="Seccion_precio_importe_oferta_cartel">
+                              33.33% OFF
+                            </div>
+                            <div class="Seccion_precio_importe_precio_tachado">
+                              Antes: usd 450
+                            </div>
+                          </div>                        
                       </div>
-                      <div class="flex-row-column">
-                      <div class="Seccion_precio_importe_oferta_cartel">
-                        33.33% OFF
-                      </div>
-                      <div class="Seccion_precio_importe_precio_tachado">
-                        Antes: usd 450
-                      </div>
-                    </div>
+                    
                                            
                     </div>
                   
