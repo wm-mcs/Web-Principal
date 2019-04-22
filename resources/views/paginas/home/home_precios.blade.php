@@ -16,7 +16,7 @@
                     <div class="Seccion_precio_icono font-secondary get_width_100">Básico</div>                    
                     <div class="Seccion_precio_precio font-secondary get_width_100">
                       <div class="flex-row-center get_width_100">
-                        <div class="flex-row-center">
+                        <div class="flex-row-center Seccion_precio_contenedor_precio">
                           <span class="Seccion_precio_moneda">USD</span>
                           <span class="Seccion_precio_importe">300</span>  
                         </div> 
