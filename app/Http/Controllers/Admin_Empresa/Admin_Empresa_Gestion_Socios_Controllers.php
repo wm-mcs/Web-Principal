@@ -25,7 +25,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   //home admin User
   public function get_admin_empresas_gestion_socios(Request $Request)
   { 
-    $marcas = $this->EmpresaConSociosoRepo->getMarcasParaAdminOrdenadasAlfabeticamente($Request,30);
+    $marcas = $this->EmpresaConSociosoRepo->getEntidadActivasPaginadas();
 
     //mostrar marcas de la a a la z (orden)
 
