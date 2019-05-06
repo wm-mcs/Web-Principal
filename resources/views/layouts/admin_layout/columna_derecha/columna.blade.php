@@ -27,6 +27,9 @@
         <a href="{{route('get_admin_categorias')}}">
           <li class="admin-columna-li mi-float-right"><i class="fas fa-bars"></i> Categorias</li>
         </a>  
+        <a href="{{route('get_admin_empresas_gestion_socios')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-bars"></i> Empresas Gestión Socios</li>
+        </a>
 
         
         
