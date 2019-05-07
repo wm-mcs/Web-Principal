@@ -29,13 +29,13 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
     //mostrar marcas de la a a la z (orden)
 
-    return view('admin.marcas.marcas_home', compact('marcas'));
+    return view('admin.Empresa_Gestion_Socios.empresa_gestion_socios_home', compact('marcas'));
   }
 
   //get Crear admin User
   public function get_admin_empresas_gestion_socios_crear()
   {  
-    return view('admin.marcas.marcas_crear');
+    return view('admin.Empresa_Gestion_Socios.empresa_gestion_socios_home_crear');
   }
 
   //set Crear admin User
@@ -63,7 +63,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   {
     $marca = $this->EmpresaConSociosoRepo->find($id);
 
-    return view('admin.marcas.marcas_editar',compact('marca'));
+    return view('admin.Empresa_Gestion_Socios.empresa_gestion_socios_home_editar',compact('marca'));
   }
 
   //set edit admin marca
