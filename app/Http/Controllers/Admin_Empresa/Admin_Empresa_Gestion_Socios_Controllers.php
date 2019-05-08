@@ -22,6 +22,11 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
     $this->EmpresaConSociosoRepo = $EmpresaConSociosoRepo;
   }
 
+  public function getPropiedades()
+  {
+    return ['name','user_id','rut','razon_social','email','celular','direccion','factura_con_iva','estado'];
+  }
+
   //home admin User
   public function get_admin_empresas_gestion_socios(Request $Request)
   { 
@@ -43,7 +48,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   {     
 
       //propiedades para crear
-      $Propiedades = ['name','description','estado','rank'];
+      $Propiedades = $this->getPropiedades();
 
       //traigo la entidad
       $marca = $this->EmpresaConSociosoRepo->getEntidad();
@@ -72,7 +77,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
     $marca = $this->EmpresaConSociosoRepo->find($id);    
 
     //propiedades para crear
-    $Propiedades = ['name','description','estado','rank'];    
+    $Propiedades = $this->getPropiedades();    
 
     //grabo todo las propiedades
     $this->EmpresaConSociosoRepo->setEntidadDato($marca,$Request,$Propiedades);
