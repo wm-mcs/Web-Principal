@@ -3,13 +3,13 @@
 
 @section('miga-de-pan') 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
+  <a href="{{route('get_admin_empresas_gestion_socios')}}"><span>Empresas</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Crear Marca</span>
+  <span>Crear</span>
 @stop
 
 @section('content')
@@ -19,7 +19,7 @@
 
 
  {{-- formulario --}}
-  {!! Form::open(['route' => 'set_admin_marcas_crear',
+  {!! Form::open(['route' => 'set_admin_empresas_socios_crear',
                             'method'=> 'post',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'

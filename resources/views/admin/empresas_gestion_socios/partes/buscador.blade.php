@@ -1,4 +1,4 @@
-{!! Form::model(Request::all(),['route'   => 'get_admin_marcas', 
+{!! Form::model(Request::all(),['route'   => 'get_admin_empresas_gestion_socios', 
                 'method'  => 'GET',
                 'class'   => 'navbar-form',
                 'role'    => 'search' ])                             !!}

@@ -51,6 +51,34 @@ class EmpresaConSocios extends Model
                 
     }
 
+    public function getUrlImgAttribute()
+    {
+        
+        return url().'/imagenes/Empresa/'.$this->id.'-logo_empresa_socios'.'.jpg';
+    }
+
+
+    public function getNameSlugAttribute()
+    {
+        return $this->helper_convertir_cadena_para_url($this->name);
+    }
+
+    //funciones personalizadas para reciclar
+    public function helper_convertir_cadena_para_url($cadena)
+    {
+        $cadena = trim($cadena);
+        //quito caracteres - 
+        $cadena = str_replace('-' ,' ', $cadena);
+        $cadena = str_replace('_' ,' ', $cadena);
+        $cadena = str_replace('/' ,' ', $cadena);
+        $cadena = str_replace('"' ,' ', $cadena);
+        $cadena = str_replace(' ' ,'-', $cadena);
+        $cadena = str_replace('?' ,'', $cadena);
+        $cadena = str_replace('¿' ,'', $cadena);
+
+        return $cadena;
+    }
+
 
 
     

@@ -2,13 +2,13 @@
 
 @section('miga-de-pan') 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
+  <a href="{{route('get_admin_empresas_gestion_socios')}}"><span>Empresas</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Editar Marca</span>
+  <span>Editar</span>
 @stop
 
 @section('content')
@@ -16,7 +16,7 @@
 
 
   {{-- formulario --}}
-  {!! Form::model($marca,   ['route' => ['set_admin_marcas_editar',$marca->id],
+  {!! Form::model($Entidad,   ['route' => ['set_admin_marcas_editar',$Entidad->id],
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'

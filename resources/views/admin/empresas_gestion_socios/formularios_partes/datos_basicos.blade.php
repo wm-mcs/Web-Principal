@@ -22,8 +22,8 @@
 
 <div class="formulario-label-fiel">
   {!! Form::label('factura_con_iva', '¿Factura con IVA?', array('class' => 'formulario-label ')) !!}
-  {!! Form::select('factura_con_iva',['si' => 'Activo',
-                             'no' => 'Inactivo'] , null )          !!}
+  {!! Form::select('factura_con_iva',['si' => 'Si',
+                             'no' => 'No'] , null )          !!}
 </div>
 
 <div class="formulario-label-fiel">
@@ -34,5 +34,11 @@
 <div class="formulario-label-fiel">
   {!! Form::label('rut', 'Rut', array('class' => 'formulario-label ')) !!}
   {!! Form::text('rut', null ,['class' => 'formulario-field']) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('estado',['si' => 'Si',
+                             'no' => 'No'] , null )          !!}
 </div>
 

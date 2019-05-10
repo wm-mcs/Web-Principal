@@ -8,7 +8,11 @@
 
 
 
-
+@if(isset($Entidad))
+<div class="flex-row-column get_width_100" >
+  <img class="admin-img-section-img" src="{{$Entidad->url_img}}"> 
+</div>
+@endif
 
 
 
