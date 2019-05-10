@@ -19,7 +19,7 @@
 
 
  {{-- formulario --}}
-  {!! Form::open(['route' => 'set_admin_empresas_socios_crear',
+  {!! Form::open(['route' => 'get_admin_empresas_gestion_socios_crear',
                             'method'=> 'post',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
