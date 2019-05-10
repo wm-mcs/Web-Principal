@@ -54,12 +54,12 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
       $Empresa     = $this->EmpresaConSociosoRepo->getEntidad();
 
       //grabo todo las propiedades
-      $this->EmpresaConSociosoRepo->setEntidadDato($marca,$Request,$Propiedades);     
+      $this->EmpresaConSociosoRepo->setEntidadDato($Empresa,$Request,$Propiedades);     
 
       //para la imagen
       $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Empresa->id.'-logo_empresa_socios'   ,'.jpg',250);
 
-     return redirect()->route('get_admin_marcas')->with('alert', 'Marca Creado Correctamente');
+     return redirect()->route('get_admin_marcas')->with('alert', 'Creado Correctamente');
     
   }
 
