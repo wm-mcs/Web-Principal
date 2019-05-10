@@ -4,7 +4,7 @@
 </div>
 
 <div class="formulario-label-fiel">
-  {!! Form::label('email', 'Email', array('class' => 'formulario-label ')) !!}
+  {!! Form::label('email', 'Email para enviar facturas', array('class' => 'formulario-label ')) !!}
   {!! Form::text('email', null ,['class' => 'formulario-field']) !!}
 </div>
 

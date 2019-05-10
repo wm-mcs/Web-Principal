@@ -18,8 +18,8 @@ Route::get('get_admin_empresas_gestion_socios_crear',
 
 Route::post('set_admin_empresas_gestion_socios_crear',
 [
-  'uses'  => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@set_admin_empresas_socios_crear',
-  'as'    => 'set_admin_empresas_socios_crear'
+  'uses'  => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@set_admin_empresas_gestion_socios_crear',
+  'as'    => 'set_admin_empresas_gestion_socios_crear'
 ]);
 
 
