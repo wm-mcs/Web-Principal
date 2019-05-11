@@ -29,6 +29,11 @@ class UserRepo extends BaseRepo
                 ->paginate(30);
   }
 
+  public function getPropiedades()
+  {
+    return ['name','email','telefono','estado','role','contrato_pagina_web','contrato_sistema_gestion','empresa_gestion_id'];
+  }
+
 
   //setters//////////////////////////////////////////////////////////////////////
 
@@ -39,7 +44,7 @@ class UserRepo extends BaseRepo
     $user->password = bcrypt($user->password);
 
     //propiedades para crear
-    $Propiedades = ['name','email','telefono','estado','role'];
+    $Propiedades = $this->getPropiedades();
 
     $this->setEntidadDato($user,$request,$Propiedades);
 
@@ -51,7 +56,7 @@ class UserRepo extends BaseRepo
   {
     
     //propiedades para crear
-    $Propiedades = ['name','email','telefono','estado','role'];
+    $Propiedades = $this->getPropiedades();
 
     $this->setEntidadDato($user,$request,$Propiedades);
 

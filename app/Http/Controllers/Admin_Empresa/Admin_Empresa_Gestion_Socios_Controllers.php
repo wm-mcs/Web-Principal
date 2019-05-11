@@ -59,12 +59,12 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
       //para la imagen
       $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Empresa->id.'-logo_empresa_socios'   ,'.jpg',250);
 
-     return redirect()->route('get_admin_marcas')->with('alert', 'Creado Correctamente');
+     return redirect()->route('get_admin_empresas_gestion_socios')->with('alert', 'Creado Correctamente');
     
   }
 
   //get edit admin marca
-  public function get_admin_marcas_editar($id)
+  public function get_admin_empresas_gestion_socios_editar($id)
   {
     $Entidad = $this->EmpresaConSociosoRepo->find($id);
 
@@ -72,7 +72,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   }
 
   //set edit admin marca
-  public function set_admin_marcas_editar($id,Request $Request)
+  public function set_admin_empresas_gestion_socios_editar($id,Request $Request)
   {
     $marca = $this->EmpresaConSociosoRepo->find($id);    
 
