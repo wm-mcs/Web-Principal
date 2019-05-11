@@ -16,7 +16,7 @@ Route::group(['middleware' => 'SistemaPaginaWeb'],function()
     require __DIR__ . '/Noticias/Rutas_Noticias.php';
 
     require __DIR__ . '/Categorias/Rutas_Categorias.php';
-}  
+}); 
 
 
 
