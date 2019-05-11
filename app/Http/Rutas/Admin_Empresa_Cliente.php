@@ -25,7 +25,7 @@ Route::group(['middleware' => 'SistemaPaginaWeb'],function()
 Route::group(['middleware' => 'SistemaGestionSocios'],function()
 {
     require __DIR__ . '/Empresa_Gestion_Socios/Rutas_Empresa_Gestion.php';
-}  
+});
 
 
 
