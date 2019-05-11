@@ -23,7 +23,7 @@ class SistemaPaginaWeb
 
                            //le paso como 3º parametre
                            //lo que viene de la Ruta 
-    public function handle($request, Closure $next, $role)
+    public function handle($request, Closure $next)
     {
         /**
          * obtengo el usuario conectado con el helper auth();
