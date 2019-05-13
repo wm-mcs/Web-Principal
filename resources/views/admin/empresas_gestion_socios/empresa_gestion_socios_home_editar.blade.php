@@ -17,7 +17,7 @@
 
   {{-- formulario --}}
   {!! Form::model($Entidad,   ['route' => ['set_admin_empresas_gestion_socios_editar',$Entidad->id],
-                            'method'=> 'patch',
+                            'method'=> 'PATCH',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
                           ])               !!}

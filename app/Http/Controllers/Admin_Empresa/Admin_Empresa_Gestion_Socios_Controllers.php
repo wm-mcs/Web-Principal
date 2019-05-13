@@ -74,17 +74,18 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   //set edit admin marca
   public function set_admin_empresas_gestion_socios_editar($id,Request $Request)
   {
-    $marca = $this->EmpresaConSociosoRepo->find($id);    
+    $Entidad = $this->EmpresaConSociosoRepo->find($id);    
 
     //propiedades para crear
     $Propiedades = $this->getPropiedades();    
 
     //grabo todo las propiedades
-    $this->EmpresaConSociosoRepo->setEntidadDato($marca,$Request,$Propiedades);
+    $this->EmpresaConSociosoRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
-    $this->EmpresaConSociosoRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png');
+    //para la imagen
+    $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Empresa->id.'-logo_empresa_socios'   ,'.jpg',250);
 
-    return redirect()->route('get_admin_marcas')->with('alert', 'Marca Editado Correctamente');  
+    return redirect()->route('get_admin_empresas_gestion_socios')->with('alert', 'Editado Correctamente');  
   }
 
   
