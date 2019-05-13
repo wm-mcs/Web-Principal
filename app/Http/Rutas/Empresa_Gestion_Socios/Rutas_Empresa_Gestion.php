@@ -39,8 +39,8 @@ Route::get('get_admin_empresas_gestion_socios_editar_{id}',
 ]); 
 
 
-//POST Editar
-Route::post('set_admin_empresas_gestion_socios_editar_{id}',
+//Patch Editar
+Route::patch('set_admin_empresas_gestion_socios_editar_{id}',
 [
   'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@set_admin_empresas_gestion_socios_editar',
   'as'         => 'set_admin_empresas_gestion_socios_editar',
