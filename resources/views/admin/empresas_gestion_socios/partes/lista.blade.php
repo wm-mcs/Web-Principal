@@ -6,7 +6,7 @@
 
 
    
-   <img class="admin-marca-img" src="{{url()}}/imagenes/{{$marca->img}}">
+   <img class="admin-marca-img" src="{{$marca->url_img}}">
   
    <div class="admin-marca-contnedor-datos">
      <div>
@@ -15,7 +15,7 @@
         <div class="admin-marca-titulo"> {{$marca->name}}      </div>
      </div>
      <div class="admin-user-lista-contenedor-acciones">
-        <a href="{{route('get_admin_empresas_gestion_socios_editar_', $marca->id)}}">
+        <a href="{{$marca->route_admin}}">
           <span class="boton-acciones-editar">
            <i class="fas fa-edit"></i> 
           </span>
