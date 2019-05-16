@@ -48,3 +48,14 @@ Route::patch('set_admin_empresas_gestion_socios_editar_{id}',
 ]); 
 
 
+
+
+//Para ir al panel de la empresa vista del cliente
+Route::get('get_empresa_panel_de_gestion{id}',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_empresa_panel_de_gestion',
+  'as'         => 'get_empresa_panel_de_gestion']); 
+
+
+
+

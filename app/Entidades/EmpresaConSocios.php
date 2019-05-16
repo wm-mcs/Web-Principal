@@ -80,10 +80,16 @@ class EmpresaConSocios extends Model
     }
 
 
-       public function getRouteAdminAttribute()
+    public function getRouteAdminAttribute()
     {
         
         return route('get_admin_empresas_gestion_socios_editar', $this->id);
+    }
+
+
+    public function getRoutePanelEmpresaAttribute()
+    {
+        return route('get_empresa_panel_de_gestion',$this->id);
     }
 
 

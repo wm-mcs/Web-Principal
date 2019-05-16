@@ -13,6 +13,16 @@
 
 @section('content')
 
+ {{-- titulo --}}
+ <div class="contenedor-admin-entidad-titulo-form-busqueda">
+    <div class="admin-entidad-titulo"> 
+     <a href="{{$Entidad->route_panel_empresa}}">
+       <span class="admin-user-boton-Crear">Vista de cliente</span>
+     </a>  
+    </div>
+    
+ </div>
+
 
 
   {{-- formulario --}}

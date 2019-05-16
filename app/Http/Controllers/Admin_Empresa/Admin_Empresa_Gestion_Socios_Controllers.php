@@ -8,6 +8,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use App\Repositorios\EmpresaConSociosoRepo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Guardianes\Guardian;
 
 
 
@@ -16,10 +18,13 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 {
 
   protected $EmpresaConSociosoRepo;
+  protected $Guardian;
 
-  public function __construct(EmpresaConSociosoRepo $EmpresaConSociosoRepo)
+  public function __construct(EmpresaConSociosoRepo $EmpresaConSociosoRepo, 
+                              Guardian              $Guardian)
   {
     $this->EmpresaConSociosoRepo = $EmpresaConSociosoRepo;
+    $this->Guardian              = $Guardian;
   }
 
   public function getPropiedades()
@@ -86,6 +91,30 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
     $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Entidad->id.'-logo_empresa_socios'   ,'.jpg',250);
 
     return redirect()->route('get_admin_empresas_gestion_socios')->with('alert', 'Editado Correctamente');  
+  }
+
+
+
+  public function get_empresa_panel_de_gestion($id)
+  {
+      $User            = Auth::user();  
+      $Empresa_gestion = $this->EmpresaConSociosoRepo->find($id);
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
+     {
+       return view('empresa_gestion_paginas.home', compact('Empresa_gestion'));   
+     }
+     else
+     {
+       return redirect()->back()->with('alert-danger', 'hay algo raro aquí :( ');
+     } 
+
+
+
+
+
+
+      
   }
 
   
