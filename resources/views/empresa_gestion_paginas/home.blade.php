@@ -1,5 +1,29 @@
 @extends('layouts.gestion_socios_layout.admin_layout')
 
+
+@section('miga-de-pan') 
+  <span>Panel general de {{$Empresa_gestion->name}}</span>
+@stop
+
 @section('content')
-  Worldmaster Tienda On Line en Uruguay Montevideo. Hola 
+  
+  
+  {{-- Buscar Socio --}}
+  <div>
+    
+  </div>  
+
+  {{-- visor de socios --}}
+  <div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
 @stop
