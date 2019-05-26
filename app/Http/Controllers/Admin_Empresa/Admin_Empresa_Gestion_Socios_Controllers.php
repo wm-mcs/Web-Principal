@@ -108,7 +108,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        $Empresa_gestion = $this->EmpresaConSociosoRepo->find($id); 
        $Socios          = $this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30);
-       dd($Socios);
+       /*dd($Socios);*/
        return view('empresa_gestion_paginas.home', compact('Empresa_gestion','Socios'));   
      }
      else
