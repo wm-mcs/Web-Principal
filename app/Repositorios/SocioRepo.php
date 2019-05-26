@@ -46,12 +46,12 @@ class SocioRepo extends BaseRepo
 
        $array_de_ids          = array_unique($array_de_ids); 
 
-       $Socios                = $this->getEntidad()->whereIn('id',$array_de_ids)->orderBy('updated_at','desc');
+       $Socios                = $this->getEntidad()->whereIn('id',$array_de_ids)->orderBy('updated_at','desc')->get();
 
       }
       else
       {
-        $Socios               = $socios_base->orderBy('updated_at','desc');
+        $Socios               = $socios_base->orderBy('updated_at','desc')->get();
       }
 
 
