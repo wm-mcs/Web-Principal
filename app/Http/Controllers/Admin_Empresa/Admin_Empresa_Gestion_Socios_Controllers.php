@@ -10,6 +10,7 @@ use App\Repositorios\EmpresaConSociosoRepo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Guardianes\Guardian;
+use App\Repositorios\SocioRepo;
 
 
 
@@ -19,12 +20,15 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
   protected $EmpresaConSociosoRepo;
   protected $Guardian;
+  protected $SocioRepo;
 
   public function __construct(EmpresaConSociosoRepo $EmpresaConSociosoRepo, 
-                              Guardian              $Guardian)
+                              Guardian              $Guardian,
+                              SocioRepo             $SocioRepo )
   {
     $this->EmpresaConSociosoRepo = $EmpresaConSociosoRepo;
     $this->Guardian              = $Guardian;
+    $this->SocioRepo             = $SocioRepo;
   }
 
   public function getPropiedades()
@@ -97,12 +101,14 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
   public function get_empresa_panel_de_gestion($id)
   {
-      $User            = Auth::user();  
-      $Empresa_gestion = $this->EmpresaConSociosoRepo->find($id);
+     $User            = Auth::user();  
+      
 
      if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
      {
-       return view('empresa_gestion_paginas.home', compact('Empresa_gestion'));   
+       $Empresa_gestion = $this->EmpresaConSociosoRepo->find($id); 
+       $Socios          = $this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30);
+       return view('empresa_gestion_paginas.home', compact('Empresa_gestion','Socios'));   
      }
      else
      {
@@ -112,7 +118,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
 
 
-
+  
 
       
   }

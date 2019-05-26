@@ -64,6 +64,7 @@
 
 
 
+        
         @yield('vue-logica')   
 
 
