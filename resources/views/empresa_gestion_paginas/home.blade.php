@@ -13,7 +13,7 @@
   {{-- Buscar Socio --}}
   <div class="empresa-gestion-barra-top-boton-y-forma-busqueda">
 
-      <div class="gempresa-gestion-contiene-input-busqueda">
+      <div class="empresa-gestion-contiene-input-busqueda">
         <input class="form-control" type="text" placeholder="Buscar socio por: nombre, email, cedula, celular" aria-label="Search">
       </div>
       
