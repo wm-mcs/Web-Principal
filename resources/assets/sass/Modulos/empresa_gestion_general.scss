@@ -1,2 +1,17 @@
+.empresa-gestion-barra-top-boton-y-forma-busqueda{
+
+  width: 100%;
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+  padding: 10px;
+  border-radius: 4px;
+  @include justify-content(space-between);
+
+}
 
 
+
+.empresa-gestion-contiene-input-busqueda{
+  width: 70%;
+}
