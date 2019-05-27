@@ -35,6 +35,13 @@
   width:100%;
 }
 
+
+#form-admin-empresa-datos{
+  @include flexbox; 
+  @include flex-direction(column);
+  @include align-items(center);
+}
+
            .formulario-label-fiel{
              @include flexbox; 
              @include flex-direction(column);
