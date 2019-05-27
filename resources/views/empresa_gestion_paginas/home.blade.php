@@ -14,13 +14,11 @@
   <div class="empresa-gestion-barra-top-boton-y-forma-busqueda">
 
       <div class="empresa-gestion-contiene-input-busqueda">
-        <input class="empresa-gestion-input-busqueda form-control" type="text" placeholder="Buscar socio por: nombre, email, cedula, celular" aria-label="Search">
+        <input class="empresa-gestion-input-busqueda form-control" type="text" placeholder="Buscar socio" aria-label="Search">
       </div>
       
 
-      <span class="admin-user-boton-Crear">
-         Nuevo Socio <i class="fas fa-user-plus"></i>
-      </span>
+      <socios-crear> </socios-crear>
    
   </div>  
 
@@ -58,6 +56,7 @@
 
 
 
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio_crear_editar_componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socio_general_componente')
      @include('empresa_gestion_paginas.Vue_logica.instancia_vue')
 
