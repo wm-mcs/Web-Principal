@@ -18,7 +18,7 @@
       </div>
       
 
-      <socios-crear-editar accion_name="Crear" > </socios-crear-editar>
+      <socios-crear-boton accion_name="Crear" > </socios-crear-boton>
    
   </div>  
 
@@ -56,7 +56,7 @@
 
 
 
-     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio_crear_editar_componente')
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.socios-crear-boton_componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socio_general_componente')
      @include('empresa_gestion_paginas.Vue_logica.instancia_vue')
 

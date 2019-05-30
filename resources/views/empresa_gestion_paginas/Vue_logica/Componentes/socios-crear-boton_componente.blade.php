@@ -1,4 +1,4 @@
-Vue.component('socios-crear-editar' ,
+Vue.component('socios-crear-boton' ,
 {
 props:{
 
