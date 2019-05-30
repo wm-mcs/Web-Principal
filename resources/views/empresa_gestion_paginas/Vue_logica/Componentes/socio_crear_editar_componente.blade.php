@@ -15,7 +15,7 @@ Vue.component('socios-crear-editar' ,
   template:'
 
   <span class="admin-user-boton-Crear">
-        @{{accion_name}} socio <i class="fas fa-user-plus"></i>
+        @{{ accion_name}} socio <i class="fas fa-user-plus"></i>
   </span>
 
   '
