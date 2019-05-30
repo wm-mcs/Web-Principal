@@ -16,7 +16,9 @@ methods:{
 
  abrir_modal:function(){
 
-   $('#modal-crear-socio').modal('show');   
+   $('#modal-crear-socio').appendTo("body").modal('show');
+
+   
 
  },
 
