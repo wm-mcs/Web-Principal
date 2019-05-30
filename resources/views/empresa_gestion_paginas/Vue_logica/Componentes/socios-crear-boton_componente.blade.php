@@ -1,6 +1,6 @@
 Vue.component('socios-crear-boton' ,
 {
-props:  ['accion_name','value'],
+props:{'accion_name','value'},
 
 data:function(){
     return {
@@ -17,16 +17,16 @@ methods:{
  abrir_modal:function(){
 
    $('#modal-crear-socio').modal('open');   
-   
+
  },
  updateValue: function (value) {
       var formattedValue = value
         // Remueve espacios en blanco de ambos lados
-        .trim()
+        .trim();
       // Si el valor no estaba normalizado aún,
       // lo sobrescribimos manualmente
       if (formattedValue !== value) {
-        this.$refs.input.value = formattedValue
+        this.$refs.input.value = formattedValue;
       }
       // Emite el valor numérico a través del evento 'input'
       this.$emit('input', formattedValue)
