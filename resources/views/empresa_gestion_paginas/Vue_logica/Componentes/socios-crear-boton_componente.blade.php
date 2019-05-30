@@ -1,6 +1,15 @@
 Vue.component('socios-crear-boton' ,
 {
-props:['accion_name','value'],
+props: {
+    // Basic type check (`null` and `undefined` values will pass any type validation)
+    accion_name: Number,
+    // Multiple possible types
+    value: [String, Number],
+
+}
+
+
+,
 data:function(){
     return {
       name:'',
