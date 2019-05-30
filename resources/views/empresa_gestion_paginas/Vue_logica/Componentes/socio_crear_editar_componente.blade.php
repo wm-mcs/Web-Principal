@@ -15,8 +15,7 @@ Vue.component('socios-crear-editar' ,
          Nuevo Socio <i class="fas fa-user-plus"></i>
   </span>
 
-  ',
-  methods:
+  '
 
 }
 
