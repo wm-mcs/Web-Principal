@@ -22,12 +22,18 @@ methods:{
 
 
 },
-template:'<div id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click="abrir_modal">
-        @{{ accion_name }} socio <i class="fas fa-user-plus"></i> i>
+template:'<span>
+   <div id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click="abrir_modal">
+        @{{ accion_name }} socio <i class="fas fa-user-plus"></i>
 
 
 
-         <div class="modal fade" id="modal-crear-socio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+
+       
+  </div>
+
+         <div class="modal fade" id="modal-crear-socio" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -53,8 +59,18 @@ template:'<div id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click=
   </div>
 
 
-       
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+</span> 
    '
 
 }
