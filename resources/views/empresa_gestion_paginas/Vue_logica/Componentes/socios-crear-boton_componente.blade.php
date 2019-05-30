@@ -22,7 +22,7 @@ methods:{
 
 
 },
-template:'<span id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click="hola">
+template:'<span id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click="abrir_modal">
         @{{ accion_name }} socio <i class="fas fa-user-plus"></i>
 
 
