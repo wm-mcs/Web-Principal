@@ -27,18 +27,7 @@ methods:{
    $('#modal-crear-socio').modal('open');   
 
  },
- updateValue: function (value) {
-      var formattedValue = value
-        // Remueve espacios en blanco de ambos lados
-        .trim();
-      // Si el valor no estaba normalizado aún,
-      // lo sobrescribimos manualmente
-      if (formattedValue !== value) {
-        this.$refs.input.value = formattedValue;
-      }
-      // Emite el valor numérico a través del evento 'input'
-      this.$emit('input', formattedValue)
-    }
+
 
 },
 template:'
