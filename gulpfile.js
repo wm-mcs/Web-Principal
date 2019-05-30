@@ -41,13 +41,13 @@ elixir(function(mix) {
         
         'Template_creative/jquery.js',
         'Template_creative/bootstrap.bundle.js',
-         'Template_creative/jquery.easing.js',        
-        'Template_creative/scrollreveal.js',
-        'Template_creative/jquery.magnific-popup.js',
+
+
+
+
+        
         'Customs/helper_generales.js',
         'Plugins/Plug-bootstrap-fileinput v4.3.7.js',
-        'Template_creative/creative.js',
-        'Template_creative/jquery.easing.compatibility.js',
         'Customs/mis-file_input.js',
         'Customs/admin_eventos.js'
        
