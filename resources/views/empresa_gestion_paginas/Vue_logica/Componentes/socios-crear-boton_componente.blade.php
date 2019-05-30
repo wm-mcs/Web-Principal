@@ -51,7 +51,7 @@ template:'
 
                   <div class="form-group">
                       <label class="control-label" for="Nombre">Nombres</label>
-                      <input v-bind:value="value" v-on:input="updateValue($event.target.value)" type="text" class="form-control"  placeholder="Introduzca su nombre" required  />
+                      <input v-bind:value="name" v-on:input="updateValue($event.target.value)" type="text" class="form-control"  placeholder="Introduzca su nombre" required  />
                   </div> 
                
 
