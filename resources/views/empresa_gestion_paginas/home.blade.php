@@ -18,7 +18,7 @@
       </div>
       
 
-      <socios-crear> </socios-crear>
+      <socios-crear-editar> </socios-crear-editar>
    
   </div>  
 
