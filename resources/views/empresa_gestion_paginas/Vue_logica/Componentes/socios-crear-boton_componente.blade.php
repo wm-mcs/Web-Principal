@@ -1,6 +1,6 @@
 Vue.component('socios-crear-boton' ,
 {
-props:{'accion_name','value'},
+props:['accion_name','value'],
 data:function(){
     return {
       name:'',
