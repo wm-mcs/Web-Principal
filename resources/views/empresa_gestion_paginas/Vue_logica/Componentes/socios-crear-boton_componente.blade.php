@@ -30,9 +30,7 @@ methods:{
 
 
 },
-template:'
-
-  <span id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click="hola">
+template:'<span id="socio-boton-crear" class="admin-user-boton-Crear" v-on:click="hola">
         @{{ accion_name }} socio <i class="fas fa-user-plus"></i>
 
 
@@ -48,7 +46,7 @@ template:'
 
                   <div class="form-group">
                       <label class="control-label" for="Nombre">Nombres</label>
-                      <input v-bind:value="name" v-on:input="updateValue($event.target.value)" type="text" class="form-control"  placeholder="Introduzca su nombre" required  />
+                      <input type="text" class="form-control"  placeholder="Introduzca su nombre" required  />
                   </div> 
                
 
@@ -60,10 +58,7 @@ template:'
       </div>
     </div>
   </div>
-  </span> 
-
-   
-  '
+  </span>'
 
 }
 
