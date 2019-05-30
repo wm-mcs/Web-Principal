@@ -18,7 +18,7 @@
       </div>
       
 
-      <socios-crear-editar accion_name="Crear" v-on:click:hola> </socios-crear-editar>
+      <socios-crear-editar accion_name="Crear" > </socios-crear-editar>
    
   </div>  
 
