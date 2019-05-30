@@ -1,7 +1,6 @@
 Vue.component('socios-crear-boton' ,
 {
 props:{'accion_name','value'},
-
 data:function(){
     return {
       name:'',
@@ -44,7 +43,7 @@ template:'
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">@{{accion_name}} nuevo socio</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-user-plus"></i></span></button>
           
         </div>
         <div class="modal-body text-center">
@@ -63,7 +62,6 @@ template:'
       </div>
     </div>
   </div>
-
   '
 
 }
