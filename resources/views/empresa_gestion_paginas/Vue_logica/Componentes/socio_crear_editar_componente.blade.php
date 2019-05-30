@@ -1,18 +1,26 @@
 Vue.component('socios-crear-editar' ,
 {
-  props:{
+props:{
 
    accion_name:{type: String},
 },
 
-  data:function(){
+data:function(){
     return {
       socios:[],
 
 
     }
   },
-  template:'
+
+methods:{
+
+ hola:function(){
+   alert('hola');
+ }
+
+},
+template:'
 
   <span class="admin-user-boton-Crear">
         @{{ accion_name }} socio <i class="fas fa-user-plus"></i>
