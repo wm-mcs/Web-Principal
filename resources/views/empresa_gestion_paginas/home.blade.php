@@ -18,7 +18,7 @@
       </div>
       
 
-      <socios-crear-editar> </socios-crear-editar>
+      <socios-crear-editar :accion_name="Crear"> </socios-crear-editar>
    
   </div>  
 

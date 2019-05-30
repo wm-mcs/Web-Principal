@@ -1,6 +1,9 @@
 Vue.component('socios-crear-editar' ,
 {
-  props:[],
+  props:{
+
+   accion_name:string,
+},
 
   data:function(){
     return {
@@ -12,7 +15,7 @@ Vue.component('socios-crear-editar' ,
   template:'
 
   <span class="admin-user-boton-Crear">
-         Nuevo Socio <i class="fas fa-user-plus"></i>
+        {{accion_name}} Nuevo Socio <i class="fas fa-user-plus"></i>
   </span>
 
   '
