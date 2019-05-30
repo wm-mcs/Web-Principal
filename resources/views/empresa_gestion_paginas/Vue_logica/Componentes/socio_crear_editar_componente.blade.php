@@ -1,6 +1,6 @@
 Vue.component('socios-crear-editar' ,
 {
-  props:
+  props:[],
 
   data:function(){
     return {
