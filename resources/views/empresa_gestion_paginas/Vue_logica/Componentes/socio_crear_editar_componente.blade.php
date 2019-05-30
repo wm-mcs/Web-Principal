@@ -2,7 +2,7 @@ Vue.component('socios-crear-editar' ,
 {
   props:{
 
-   accion_name:string,
+   accion_name:String,
 },
 
   data:function(){
