@@ -7,7 +7,10 @@
     el: '#app',    
     data:{
 
-      socios:{{$Socios}}
+      socios:{{$Socios}},
+
+
+      
 
     },
     methods:{

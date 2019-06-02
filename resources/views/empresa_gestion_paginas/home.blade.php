@@ -18,7 +18,7 @@
       </div>
       
 
-      <socios-crear-boton accion_name="Crear" > </socios-crear-boton>
+      <socios-crear-boton accion_name="Crear" v-model="searchText" > </socios-crear-boton>
    
   </div>  
 

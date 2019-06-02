@@ -1,14 +1,21 @@
 Vue.component('socios-crear-boton' ,
 {
 props: {   
-    accion_name: Number
+    accion_name: Number,
+    form_socio_name:String,
+    form_socio_email:String,
+    form_socio_celular:Number,
+    form_socio_cedula:Number
 }
 
 
 ,
 data:function(){
     return {
-      name:''
+      form_socio_name:'',
+      form_socio_email:'',
+      form_socio_celular:'',
+      form_socio_cedula:'' ,
     }
   },
 
@@ -47,7 +54,11 @@ template:'<span >
 
                   <div class="form-group">
                       <label class="control-label" for="Nombre">Nombres</label>
-                      <input type="text" class="form-control"  placeholder="Introduzca su nombre" required  />
+                      <input type="text" class="form-control"  v-model="form_socio_name" placeholder="Introduzca su nombre" required  />
+                  </div> 
+                  <div class="form-group">
+                      <label class="control-label" for="Nombre">Cedula</label>
+                      <input type="text" class="form-control"  v-model="form_socio_cedula" placeholder="Introduzca su nombre" required  />
                   </div> 
                
 
