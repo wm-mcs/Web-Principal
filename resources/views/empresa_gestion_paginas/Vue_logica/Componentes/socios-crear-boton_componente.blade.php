@@ -1,11 +1,8 @@
 Vue.component('socios-crear-boton' ,
 {
 props: {   
-    accion_name: Number,
-    form_socio_name:String,
-    form_socio_email:String,
-    form_socio_celular:Number,
-    form_socio_cedula:Number
+    accion_name: String
+    
 }
 
 
