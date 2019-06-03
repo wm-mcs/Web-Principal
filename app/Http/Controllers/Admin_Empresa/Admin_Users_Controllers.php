@@ -39,9 +39,9 @@ class Admin_Users_Controllers extends Controller
   //get Crear admin User
   public function get_admin_users_crear()
   {  
-    $EmpresasDeGestion = $this->EmpresaConSociosoRepo->getEntidadActivas();
+    
 
-    return view('admin.users.users_crear', compact('EmpresasDeGestion'));
+    return view('admin.users.users_crear');
   }
 
   //set Crear admin User
