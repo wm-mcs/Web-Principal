@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Repositorios\UserRepo;
 use Illuminate\Http\Request;
 use App\Managers\Users\user_admin_crear;
+use App\Repositorios\EmpresaConSociosoRepo;
 
 
 
@@ -16,10 +17,13 @@ class Admin_Users_Controllers extends Controller
 {
 
   protected $UserRepo;
+  protected $EmpresaConSociosoRepo;
 
-  public function __construct(UserRepo $UserRepo)
+  public function __construct(UserRepo              $UserRepo,
+                              EmpresaConSociosoRepo $EmpresaConSociosoRepo )
   {
-    $this->UserRepo = $UserRepo;
+    $this->UserRepo               = $UserRepo;
+    $this->EmpresaConSociosoRepo  = $EmpresaConSociosoRepo;
   }
 
   //home admin User
@@ -35,7 +39,9 @@ class Admin_Users_Controllers extends Controller
   //get Crear admin User
   public function get_admin_users_crear()
   {  
-    return view('admin.users.users_crear');
+    $EmpresasDeGestion = $this->EmpresaConSociosoRepo->getEntidadActivas();
+
+    return view('admin.users.users_crear', compact('EmpresasDeGestion'));
   }
 
   //set Crear admin User
@@ -61,8 +67,9 @@ class Admin_Users_Controllers extends Controller
   public function get_admin_users_editar($id)
   {
     $user = $this->UserRepo->find($id);
+     $EmpresasDeGestion = $this->EmpresaConSociosoRepo->getEntidadActivas();
 
-    return view('admin.users.users_editar',compact('user'));
+    return view('admin.users.users_editar',compact('user','EmpresasDeGestion'));
   }
 
   //set edit admin user

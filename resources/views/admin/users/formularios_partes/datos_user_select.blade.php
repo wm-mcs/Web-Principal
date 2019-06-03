@@ -24,3 +24,24 @@
   {!! Form::select('contrato_sistema_gestion',['si' => 'Activo',
                              'no' => 'Desactivar'] , null )          !!}
 </div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('empresa_gestion_id', 'Empresa de gestion id', array('class' => 'formulario-label ')) !!}
+  <select class="selectpicker"   data-live-search="true" multiple data-width="100%"  value="{{ Input::old('empresa_gestion_id') }}" name="empresa_gestion_id">
+                        <OPTION VALUE="">
+                        Elige una empresa
+                        </OPTION>               
+                        @foreach($EmpresasDeGestion as $Empresa)
+                         <option  
+                                                value="{{$Empresa->id}}"                                              
+                                                data-tokens="{{$Empresa->id}} {{$Empresa->name}} ">
+                                               
+
+                                {{$Empresa->name}}
+                                </option>
+                        @endforeach 
+                  </select>
+</div>
+
+
+

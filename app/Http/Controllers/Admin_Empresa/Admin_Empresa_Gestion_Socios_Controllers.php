@@ -99,6 +99,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
 
 
+  //Panel de gestio de empresa
   public function get_empresa_panel_de_gestion($id)
   {
      $User            = Auth::user();  
@@ -114,15 +115,34 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      else
      {
        return redirect()->back()->with('alert-danger', 'hay algo raro aquí :( ');
-     } 
-
-
-
-
-  
+     }   
 
       
   }
+
+  
+  //Post para crear socio desde modal
+  public function post_crear_socio_desde_modal(Request $Request)
+  { 
+    $User            = Auth::user();  
+
+    if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
+     {
+       $Socio              = $this->SocioRepo
+                                  ->getEntidad();
+       $Socio->empresa_id  = $User->empresa_gestion_id ;
+
+
+
+
+     }
+     else
+     {
+       return redirect()->back()->with('alert-danger', 'hay algo raro aquí :( ');
+     }   
+  }
+
+
 
   
 }

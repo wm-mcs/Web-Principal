@@ -54,7 +54,16 @@ Route::patch('set_admin_empresas_gestion_socios_editar_{id}',
 Route::get('get_empresa_panel_de_gestion{id}',
 [
   'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_empresa_panel_de_gestion',
-  'as'         => 'get_empresa_panel_de_gestion']); 
+  'as'         => 'get_empresa_panel_de_gestion']);  
+
+
+//Desde Panel creo socio
+Route::post('post_crear_socio_desde_modal',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@post_crear_socio_desde_modal',
+  'as'         => 'post_crear_socio_desde_modal']);  
+
+
 
 
 

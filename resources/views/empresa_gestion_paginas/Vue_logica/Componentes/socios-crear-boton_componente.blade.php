@@ -20,11 +20,43 @@ methods:{
 
  abrir_modal:function(){
 
-   $('#modal-crear-socio').appendTo("body").modal('show');
+   $('#modal-crear-socio').appendTo("body").modal('show');  
 
-   
+ }
+ crear_socio_post:function(){
 
- },
+  var url = '/post_crear_socio_desde_modal';
+
+      var data = {    name:this.form_socio_name,
+                     email:this.form_socio_email, 
+                   celular:this.form_socio_celular,
+                    cedula:this.form_socio_cedula        
+                 }; 
+
+     axios.post(url,data).then(function (response){           
+
+
+            var data = response.data;  
+
+            console.log(data);
+
+            if(data.Validacion == true)
+            {
+              
+            }
+            else
+            {
+              
+            }
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+
+ }
+ ,
 
 
 },
@@ -51,11 +83,19 @@ template:'<span >
 
                   <div class="form-group">
                       <label class="control-label" for="Nombre">Nombres</label>
-                      <input type="text" class="form-control"  v-model="form_socio_name" placeholder="Introduzca su nombre" required  />
+                      <input type="text" class="form-control"  v-model="form_socio_name" placeholder="Nombre" required  />
                   </div> 
                   <div class="form-group">
                       <label class="control-label" for="Nombre">Cedula</label>
-                      <input type="text" class="form-control"  v-model="form_socio_cedula" placeholder="Introduzca su nombre" required  />
+                      <input type="text" class="form-control"  v-model="form_socio_cedula" placeholder="Cedula" required  />
+                  </div> 
+                  <div class="form-group">
+                      <label class="control-label" for="Nombre">Email</label>
+                      <input type="text" class="form-control"  v-model="form_socio_email" placeholder="Email" required  />
+                  </div> 
+                   <div class="form-group">
+                      <label class="control-label" for="Nombre">Celular</label>
+                      <input type="text" class="form-control"  v-model="form_socio_celular" placeholder="Celular" required  />
                   </div> 
                
 
