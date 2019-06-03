@@ -27,7 +27,7 @@
 
 <div class="formulario-label-fiel">
   {!! Form::label('empresa_gestion_id', 'Empresa de gestion id', array('class' => 'formulario-label ')) !!}
-  <select class="selectpicker"   data-live-search="true" multiple data-width="100%"  value="{{ Input::old('empresa_gestion_id') }}" name="empresa_gestion_id">
+  <select class=""     value="{{ Input::old('empresa_gestion_id') }}" name="empresa_gestion_id">
                         <OPTION VALUE="">
                         Elige una empresa
                         </OPTION>               
