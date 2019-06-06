@@ -60,7 +60,7 @@ methods:{
 },
 computed:{
  boton_crear_validation:function(){
- if(this.form_socio_name != '' && this.form_socio_email != '' && this.form_socio_celular != '' && this.form_socio_cedula != ''  ){
+ if(this.form_socio_name != '' & this.form_socio_email != '' & this.form_socio_celular != '' && this.form_socio_cedula != ''  ){
   return true;
  }
  else{
