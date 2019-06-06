@@ -22,10 +22,10 @@ methods:{
 
    $('#modal-crear-socio').appendTo("body").modal('show');  
 
- }
+ },
  crear_socio_post:function(){
 
-  var url = '/post_crear_socio_desde_modal';
+       var url = '/post_crear_socio_desde_modal';
 
       var data = {    name:this.form_socio_name,
                      email:this.form_socio_email, 
@@ -33,11 +33,8 @@ methods:{
                     cedula:this.form_socio_cedula        
                  }; 
 
-     axios.post(url,data).then(function (response){           
-
-
+     axios.post(url,data).then(function (response){  
             var data = response.data;  
-
             console.log(data);
 
             if(data.Validacion == true)
