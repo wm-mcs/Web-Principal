@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Guardianes\Guardian;
 use App\Repositorios\SocioRepo;
+use App\Managers\EmpresaGestion\CrearSocioModalManager;
 
 
 
@@ -126,20 +127,52 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   { 
     $User            = Auth::user();  
 
-    if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
-     {
-       $Socio              = $this->SocioRepo
-                                  ->getEntidad();
-       $Socio->empresa_id  = $User->empresa_gestion_id ;
+        $entidad = '';
+        $manager = new CrearSocioModalManager($entidad,$Request->all());
+        $Validacion = false;
 
+
+    if ($manager->isValid())
+    {
+     if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
+     { 
+       $Socio                   = $this->SocioRepo
+                                       ->getEntidad();
+       $Socio->empresa_id       = $User->empresa_gestion_id;
+       $Socio->factura_con_iva  = 'no';
+       $Socio->name             = $Request->get('name');
+       $Socio->email            = $Request->get('email');
+       $Socio->celular          = $Request->get('celular');
+       $Socio->cedula           = $Request->get('cedula');
+       $Socio->save();
+
+
+
+       $Validacion = true;
+
+
+
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se creo correctamente '. $Socio->name,
+               'Socio'               => $this->SocioRepo->find($Socio->id),
+               'Socios'              => $this->SocioRepo->getEntidadActivas()];
 
 
 
      }
      else
      {
-       return redirect()->back()->with('alert-danger', 'hay algo raro aquí :( ');
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'No se puede crear el socio en este momento'];
      }   
+    }
+    else
+    {
+      return  ['Validacion'          => $Validacion,
+                     'Validacion_mensaje'  => 'No se puede crear el socio en este momento'];
+    }
+
+    
   }
 
 
