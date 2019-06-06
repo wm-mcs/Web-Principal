@@ -17,7 +17,7 @@
 
     },
 
-    mounted: function () {        
+    created: function () {        
 
        var url = '/get_socios_activos';
 
