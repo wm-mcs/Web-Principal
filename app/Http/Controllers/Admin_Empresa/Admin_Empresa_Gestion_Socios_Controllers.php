@@ -125,9 +125,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   public function get_socios_activos()
   {
 
-       $User            = Auth::user();  
-
-     
+       $User            = Auth::user();       
       
        $Socios          = json_encode($this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30));
       
