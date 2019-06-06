@@ -13,7 +13,7 @@
       
 
     },
-    mounted:(){  
+    mounted:{  
       
       this.getSociosActivos();
 
