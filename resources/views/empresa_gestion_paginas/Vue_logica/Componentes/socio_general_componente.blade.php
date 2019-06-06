@@ -3,7 +3,7 @@ Vue.component('socios-lista' ,
 
 data:function(){
     return {
-      socios:[]
+      socios:'hola'
 
     }
 },
@@ -21,7 +21,13 @@ methods:{
 
        axios.get(url).then(function (response){  
           
-           this.$el.socios = response.data.socios;
+            console.log(socios);
+            console.log(this.socios);
+           socios = response.data.socios;
+
+            console.log(socios);
+            console.log(this.socios);
+
            
            
            }).catch(function (error){
