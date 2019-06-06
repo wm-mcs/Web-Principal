@@ -19,14 +19,16 @@ methods:{
      {
        var url = '/get_socios_activos';
 
-       let self = this;
+       var vue = this;
+
+       console.log(vue);
 
        axios.get(url).then(function(response){  
           
             console.log(that);
             console.log(this.socios);
 
-           self.socios = response.data.socios;
+           vue.socios = response.data.socios;
 
             console.log(that);
             console.log(that);
