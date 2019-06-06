@@ -15,7 +15,7 @@
     },
      mounted: function () {        
 
-       getSociosActivos();
+       this.getSociosActivos();
 
 
     },
