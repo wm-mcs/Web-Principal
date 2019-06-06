@@ -108,7 +108,7 @@ template:'<span >
                   </div> 
                
 
-                  <div v-if="boton_crear_validation" class="boton-simple">Crear</div>
+                  <div v-if="boton_crear_validation" v-on:click="crear_socio_post" class="boton-simple">Crear</div>
                   <div v-else class="recuadro-validacion-pendiente">Debes completar todos los campos para crear</div>
                  
         </div>
