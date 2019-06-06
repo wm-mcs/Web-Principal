@@ -21,11 +21,12 @@ methods:{
 
        axios.get(url).then(function(response){  
           
-            console.log(socios);
             console.log(this.socios);
-           socios = response.data.socios;
+            console.log(this.socios);
 
-            console.log(socios);
+           this.socios = response.data.socios;
+
+            console.log(this.socios);
             console.log(this.socios);
 
            
