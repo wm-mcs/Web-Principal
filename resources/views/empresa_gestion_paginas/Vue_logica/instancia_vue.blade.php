@@ -15,10 +15,8 @@
     },
     methods:{
 
-    },
-
-    created: function () {        
-
+     getSociosActivos:fucntion()
+     {
        var url = '/get_socios_activos';
 
        axios.get(url).then(function (response){  
@@ -30,7 +28,14 @@
                      
             
            });
+     }
 
+    },
+
+    created: function () {        
+
+      
+      this.getSociosActivos();
 
     }
 
