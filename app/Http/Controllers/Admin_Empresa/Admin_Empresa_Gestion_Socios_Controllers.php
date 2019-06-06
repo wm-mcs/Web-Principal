@@ -127,7 +127,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        $User            = Auth::user();       
       
-       $Socios          = json_encode($this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30));
+       $Socios          = $this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30);
       
        return ['socios' => $Socios];
      
