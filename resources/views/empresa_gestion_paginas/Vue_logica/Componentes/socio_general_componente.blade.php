@@ -1,13 +1,13 @@
 Vue.component('socios-lista' ,
 {
 
-  data:function(){
+data:function(){
     return {
       socios:[]
 
     }
-  },
-  created: function () {        
+},
+created: function () {        
 
        this.getSociosActivos();
 
@@ -30,36 +30,15 @@ methods:{
            });
      }
 
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  template:'<span>
+},
+template:'<span>
 
   <div v-if="socios.length > 0">
     <div v-for="socio in socios" :key="socio">
       @{{socio.name}}      
     </div>
   </div>
-  
+
 </span>'
 
 }
