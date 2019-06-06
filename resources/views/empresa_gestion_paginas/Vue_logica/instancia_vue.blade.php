@@ -7,7 +7,7 @@ console.log({{$Socios}});
     el: '#app',    
     data:{
 
-      socios:{{$Socios}},
+      socios:JSON.parse({{$Socios}}),
 
 
       
