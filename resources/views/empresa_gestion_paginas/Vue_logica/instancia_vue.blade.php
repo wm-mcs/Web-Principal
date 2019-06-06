@@ -13,6 +13,12 @@
       
 
     },
+     mounted: function () {        
+
+       this.getSociosActivos();
+
+
+    },
     methods:{
 
      getSociosActivos:function()
@@ -30,14 +36,9 @@
            });
      }
 
-    },
-
-    mounted: function () {        
-
-       this.getSociosActivos();
-
-
     }
+
+   
 
    });
 
