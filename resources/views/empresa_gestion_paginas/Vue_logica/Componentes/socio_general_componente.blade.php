@@ -7,7 +7,7 @@ data:function(){
 
     }
 },
-mounted: function () {        
+created: function () {        
 
        this.getSociosActivos();
 
@@ -19,7 +19,7 @@ methods:{
      {
        var url = '/get_socios_activos';
 
-       axios.get(url).then(function (response){  
+       axios.get(url).then(function(response){  
           
             console.log(socios);
             console.log(this.socios);
