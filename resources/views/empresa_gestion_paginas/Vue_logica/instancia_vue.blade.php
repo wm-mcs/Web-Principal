@@ -1,6 +1,6 @@
 
   
-
+console.log({{$Socios}});
    
 
     var app = new Vue({
