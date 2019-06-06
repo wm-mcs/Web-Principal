@@ -15,16 +15,9 @@
     },
     methods:{
 
-     getSociosActivos:fucntion()
+     getSociosActivos:function()
      {
-
-     }
-
-    },
-
-    mounted: function () {        
-
-       var url = '/get_socios_activos';
+        var url = '/get_socios_activos';
 
        axios.get(url).then(function (response){  
            this.socios = response.data.socios;
@@ -35,6 +28,13 @@
                      
             
            });
+     }
+
+    },
+
+    mounted: function () {        
+
+       this.getSociosActivos();
 
 
     }
