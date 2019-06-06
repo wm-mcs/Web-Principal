@@ -7,7 +7,7 @@
     el: '#app',    
     data:{
 
-      socios:getSociosActivos()
+      socios:[]
 
 
       
@@ -15,7 +15,7 @@
     },
      mounted: function () {        
 
-       this.getSociosActivos();
+       getSociosActivos();
 
 
     },
