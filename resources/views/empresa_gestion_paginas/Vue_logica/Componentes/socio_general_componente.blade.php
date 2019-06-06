@@ -7,7 +7,7 @@ data:function(){
 
     }
 },
-created: function () {        
+mounted: function () {        
 
        this.getSociosActivos();
 
