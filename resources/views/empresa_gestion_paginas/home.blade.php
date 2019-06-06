@@ -23,9 +23,7 @@
   </div>  
 
   {{-- visor de socios --}}
-  <div>
-    
-  </div>
+  <socios-lista></socios-lista>
 
 
 
