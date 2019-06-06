@@ -134,7 +134,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
     if ($manager->isValid())
     {
-     if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
+     if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
      { 
        $Socio                   = $this->SocioRepo
                                        ->getEntidad();
