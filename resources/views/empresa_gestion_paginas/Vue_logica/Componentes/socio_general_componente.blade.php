@@ -19,14 +19,14 @@ methods:{
      {
        var url = '/get_socios_activos';
 
-       var that = this.socios;
+       let self = this;
 
        axios.get(url).then(function(response){  
           
             console.log(that);
             console.log(this.socios);
 
-           that = response.data.socios;
+           self.socios = response.data.socios;
 
             console.log(that);
             console.log(that);
