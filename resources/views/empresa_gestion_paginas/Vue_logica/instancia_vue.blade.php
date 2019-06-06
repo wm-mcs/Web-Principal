@@ -7,7 +7,7 @@
     el: '#app',    
     data:{
 
-      socios:JSON.parse({{$Socios}}),
+      socios:{{$Socios}},
 
 
       
