@@ -32,7 +32,7 @@
 
     },
 
-    created: function () {        
+    mounted: function () {        
 
       
       this.getSociosActivos();
