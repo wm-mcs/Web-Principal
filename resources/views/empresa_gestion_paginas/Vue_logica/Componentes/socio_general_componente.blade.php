@@ -52,23 +52,15 @@ methods:{
 
 
 
-  template:'
-
+  template:'<span>
 
   <div v-if="socios.length > 0">
     <div v-for="socio in socios" :key="socio">
       @{{socio.name}}      
     </div>
-
-
-
   </div>
-
-
-
-
-
-  '
+  
+</span>'
 
 }
 
