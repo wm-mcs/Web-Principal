@@ -7,7 +7,7 @@
     el: '#app',    
     data:{
 
-      socios:[]
+      socios:getSociosActivos()
 
 
       
