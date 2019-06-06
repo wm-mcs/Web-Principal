@@ -66,5 +66,9 @@ Route::post('post_crear_socio_desde_modal',
 
 
 
-
+//Para ir al panel de la empresa vista del cliente
+Route::get('get_socios_activos',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_socios_activos',
+  'as'         => 'get_socios_activos']);  
 

@@ -109,9 +109,9 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      if($this->Guardian->son_iguales($User->empresa_gestion_id,$id) || $User->role == 'adminMcos522' )
      {
        $Empresa_gestion = $this->EmpresaConSociosoRepo->find($id); 
-       $Socios          = json_encode($this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30));
+       
        /*dd($Socios);*/
-       return view('empresa_gestion_paginas.home', compact('Empresa_gestion','Socios'));   
+       return view('empresa_gestion_paginas.home', compact('Empresa_gestion'));   
      }
      else
      {
@@ -119,6 +119,20 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      }   
 
       
+  }
+
+
+  public function get_socios_activos()
+  {
+
+       $User            = Auth::user();  
+
+     
+      
+       $Socios          = json_encode($this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30));
+      
+       return ['socios' => $Socios];
+     
   }
 
   
