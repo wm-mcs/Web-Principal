@@ -57,6 +57,18 @@ methods:{
 
 
 },
+computed:{
+ boton_crear_validation:function(){
+ if($this.form_socio_name != '' && $this.form_socio_email != '' && $this.form_socio_celular != '' && $this.form_socio_cedula != ''  ){
+  return true;
+ }
+ else{
+ return false;
+}
+
+ }
+  
+},
 template:'<span >
    <div id="socio-boton-crear" style="position:relative;" class="admin-user-boton-Crear" v-on:click="abrir_modal">
         @{{ accion_name }} socio <i class="fas fa-user-plus"></i>
@@ -96,6 +108,8 @@ template:'<span >
                   </div> 
                
 
+                  <div v-if="boton_crear_validation" class="boton-simple">Crear</div>
+                  <div v-else class="recuadro-validacion-pendiente">Debes completar todos los campos para crear</div>
                  
         </div>
         <div class="modal-footer">
