@@ -3,7 +3,7 @@ Vue.component('socio-entidad-listado' ,
 
 props:{
    socios: {
-      type: Object
+      type: Array
     }
 }
 ,  
