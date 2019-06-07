@@ -55,7 +55,8 @@
 
 
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socios-crear-boton_componente')
-     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio_general_componente')
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.socios_lista_componente')
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio_entidad_listado_componente')
      @include('empresa_gestion_paginas.Vue_logica.instancia_vue')
 
 
