@@ -23,7 +23,7 @@ methods:{
 template:'<span>
 
   
-    <div v-for="socio in listado_de_socios" :key="socio.id">
+    <div v-for="socio in socios" :key="socio.id">
       @{{socio.name}}      
     </div>
   
