@@ -13,14 +13,16 @@
    width: 100%;
    padding: 4px;
    border-radius: 4px;
-   background-color:$Color-Gris-Claro;
+   background-color:$Color-Gris-CasiBlanco ;
    margin-top: 2px;
    @include flexbox;       
    @include flex-direction(column);
    @include align-items(flex-start); 
+   border:solid 2px transparent;
  }
  .listado-socios-contenedor-individual:hover{
   background-color: white;
+  border-color:$color-3;
  }
 
 
@@ -30,6 +32,8 @@
     @include align-items(center); 
     width: 100%;
     @include justify-content(space-between); 
+    margin-bottom: 3px;
+    border-bottom:solid 1px $Color-Gris-Claro;
   }
 
 
@@ -40,7 +44,21 @@
     }
 
 
+  .listado-socios-sub-contenedor-datos{
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(flex-start); 
+    padding: 3px;
+    border-radius: 4px;
+    background-color: $Color-Gris-Claro;
+    font-size: 10px;
+    color: $Color-texto-gris-Mercadolibre;
+  }
 
+   .listado-socios-datos{
+    margin-top: 1px;
+
+   }
 
 
 
