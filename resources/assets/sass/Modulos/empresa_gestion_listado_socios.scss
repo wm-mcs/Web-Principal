@@ -13,10 +13,31 @@
    width: 100%;
    padding: 4px;
    border-radius: 4px;
-   background-color:$color-grey1 ;
+   background-color:$Color-Gris-Claro;
    margin-top: 2px;
+   @include flexbox;       
+   @include flex-direction(column);
+   @include align-items(flex-start); 
+ }
+ .listado-socios-contenedor-individual:hover{
+  background-color: white;
  }
 
+
+  .listado-socios-sub-contenedor-name-estado{
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(center); 
+    width: 100%;
+    @include justify-content(space-between); 
+  }
+
+
+    .listado-socios-name{
+      font-weight: bold;
+      font-size: 16px;
+      width: 70%;
+    }
 
 
 
