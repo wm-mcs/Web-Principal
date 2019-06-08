@@ -1,0 +1,71 @@
+//contiene listado de socios de resultados de busqueda
+.listado-socios-contenedor-lista{
+    width: 100%;
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(center); 
+    @include flex-wrap(wrap); 
+    @include justify-content(space-around); 
+}
+
+
+ .listado-socios-contenedor-individual{
+   width: 100%;
+   padding: 4px;
+   border-radius: 4px;
+   background-color:$color-grey1 ;
+   margin-top: 2px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (min-width: $BrackPoint-Secundario){
+
+   .listado-socios-contenedor-individual{
+    width: 50%;
+   }
+
+
+
+ }
+
+
+
+  @media (min-width: $BrackPoint-Tercer){
+
+   .listado-socios-contenedor-individual{
+    width: 33%;
+    padding: 8px;
+   }
+
+
+  
+ }
+
+
+
+  @media (min-width: $BrackPoint-Cuarto){
+
+
+   .listado-socios-contenedor-individual{
+    width: 25%;
+   }
+
+  
+ }
