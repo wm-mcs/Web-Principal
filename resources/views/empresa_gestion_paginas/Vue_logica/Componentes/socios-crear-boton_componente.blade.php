@@ -96,7 +96,7 @@ template:'<span >
                       <input type="text" class="form-control"  v-model="form_socio_name" placeholder="Nombre" required  />
                   </div> 
                   <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Cedula  <span class="formulario-label-aclaracion"><i class="fas fa-info"></i> sin puntos ni guiones</span> </label>
+                      <label class="formulario-label" for="Nombre">Cedula  <span class="formulario-label-aclaracion"> (sin puntos ni guiones)</span> </label>
                       <input type="text" class="form-control"  v-model="form_socio_cedula" placeholder="Cedula" required  />
                   </div> 
                   <div class="form-group">
