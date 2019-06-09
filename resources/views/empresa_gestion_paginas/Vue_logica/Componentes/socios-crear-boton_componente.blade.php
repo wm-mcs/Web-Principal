@@ -86,25 +86,25 @@ template:'<span >
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">@{{accion_name}} nuevo socio</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-user-plus"></i></span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
           
         </div>
-        <div class="modal-body text-center">
+        <div class="modal-body text-center"> 
 
                   <div class="form-group">
-                      <label class="control-label" for="Nombre">Nombres</label>
+                      <label class="formulario-label" for="Nombre">Nombres  </label>
                       <input type="text" class="form-control"  v-model="form_socio_name" placeholder="Nombre" required  />
                   </div> 
                   <div class="form-group">
-                      <label class="control-label" for="Nombre">Cedula</label>
+                      <label class="formulario-label" for="Nombre">Cedula  <span class="formulario-label-aclaracion"><i class="fas fa-info"></i> sin puntos ni guiones</span> </label>
                       <input type="text" class="form-control"  v-model="form_socio_cedula" placeholder="Cedula" required  />
                   </div> 
                   <div class="form-group">
-                      <label class="control-label" for="Nombre">Email</label>
+                      <label class="formulario-label" for="Nombre">Email</label>
                       <input type="text" class="form-control"  v-model="form_socio_email" placeholder="Email" required  />
                   </div> 
                    <div class="form-group">
-                      <label class="control-label" for="Nombre">Celular</label>
+                      <label class="formulario-label" for="Nombre">Celular</label>
                       <input type="text" class="form-control"  v-model="form_socio_celular" placeholder="Celular" required  />
                   </div> 
                
