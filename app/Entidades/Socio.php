@@ -22,7 +22,7 @@ class Socio extends Model
 
 
 
-
+    protected $appends = ['route'];
     
 
     
@@ -49,6 +49,13 @@ class Socio extends Model
                                
            $query->where('estado', "si"); 
                 
+    }
+
+
+
+    public function getRouteAttribute()
+    {
+        return route('get_socio_panel',$this->id);
     }
 
 

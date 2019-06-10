@@ -72,3 +72,11 @@ Route::get('get_socios_activos',
   'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_socios_activos',
   'as'         => 'get_socios_activos']);  
 
+
+
+//Para ir al panel del socio
+Route::get('get_socio_panel{id}',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_socio_panel',
+  'as'         => 'get_socio_panel']);  
+

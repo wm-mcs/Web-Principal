@@ -22,7 +22,7 @@ template:'<span>
      
 
       <div class="listado-socios-sub-contenedor-name-estado">
-        <div class="listado-socios-name">@{{socio.name}}</div>
+        <div class="listado-socios-name">  <a :href="socio.route">@{{socio.name}}</a> </div>
         <div>@{{socio.estado}}</div>
       </div>
 

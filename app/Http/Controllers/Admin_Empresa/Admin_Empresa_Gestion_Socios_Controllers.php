@@ -133,6 +133,27 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      
   }
 
+  //es el panel del socio para editar
+  public function get_socio_panel($id)
+  {
+
+       $User            = Auth::user();       
+      
+       $Socio           = $this->SocioRepo->find($id);
+      
+       //verifico que el socio sea de esa empresa y no de otra
+       if($this->Guardian->son_iguales($User->empresa_gestion_id,$Socio->empresa_id ) || $User->role == 'adminMcos522' )
+       {           
+         return view('empresa_gestion_paginas.socio_panel', compact('Socio'));   
+       }
+       else
+       {
+         return redirect()->back()->with('alert-danger', 'hay algo raro aquí :( ');
+       }   
+     
+  }
+
+
   
   //Post para crear socio desde modal
   public function post_crear_socio_desde_modal(Request $Request)
