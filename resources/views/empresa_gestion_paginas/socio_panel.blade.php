@@ -10,7 +10,7 @@
  <span id="app">
     
   
- holallalalala
+ <socio-panel-componente></socio-panel-componente>
 
 
 
