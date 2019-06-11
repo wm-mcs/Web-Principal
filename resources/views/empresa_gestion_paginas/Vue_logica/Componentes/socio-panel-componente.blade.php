@@ -6,7 +6,7 @@ Vue.component('socio-panel-componente' ,
 data:function(){
     return {
       socio:'hola',
-      socio_id:{{$Socio->id}}
+      socio_id: {{$Socio->id}} ,
 
     }
 }, 

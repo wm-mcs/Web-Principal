@@ -15,7 +15,7 @@ data:function(){
       form_socio_cedula:'' ,
       empresa_id: {{$Empresa_gestion->id}},
     }
-  },
+},
 
 methods:{
 
