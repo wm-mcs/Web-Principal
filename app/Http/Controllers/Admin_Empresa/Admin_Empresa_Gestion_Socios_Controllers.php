@@ -155,12 +155,34 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      
   }
 
+  //devulve el socio
+  public function get_socio($id)
+  {
+       $User            = Auth::user();       
+      
+       $Socio           = $this->SocioRepo->find($id);
+
+       if($this->Guardian->son_iguales($User->empresa_gestion_id,$Socio->empresa_id ) || $User->role == 'adminMcos522' )
+       { 
+          return ['Validacion'           => true,
+                  'Validacion_mensaje'   => 'Socio agregado correctamente',
+                  'Socio'                => $Socio 
+                 ];
+       }
+       else
+       {
+          return ['Validacion'           => false,
+                  'Validacion_mensaje'   => 'No se puede acceder a el socio en este momento'
+                 ];
+       }
+  }
+
 
   
   //Post para crear socio desde modal
   public function post_crear_socio_desde_modal(Request $Request)
   { 
-    $User            = Auth::user();  
+        $User            = Auth::user();  
 
         $entidad = '';
         $manager = new CrearSocioModalManager($entidad,$Request->all());

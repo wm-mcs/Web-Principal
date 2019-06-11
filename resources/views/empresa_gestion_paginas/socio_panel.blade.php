@@ -2,7 +2,7 @@
 
 
 @section('miga-de-pan') 
-  <span>Panel de socio{{$Socio->name}}</span>
+  <span>Panel de socio {{$Socio->name}}</span>
 @stop
 
 @section('content')
