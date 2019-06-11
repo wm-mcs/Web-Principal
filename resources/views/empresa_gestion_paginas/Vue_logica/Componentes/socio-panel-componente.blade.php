@@ -30,7 +30,7 @@ methods:{
           }
           else
           {
-            //notificacion de que algo esta mal
+            
           }
 
            
