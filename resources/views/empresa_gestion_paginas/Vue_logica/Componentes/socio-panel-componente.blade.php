@@ -1,6 +1,4 @@
-
-
-Vue.component('socio-panel-componente' ,
+Vue.component('socio-panel-componente',
 {
 
 data:function(){
@@ -23,7 +21,6 @@ methods:{
        var url = '/get_socio?id=' + this.socio_id;
 
        var vue = this;
-       
 
        axios.get(url).then(function(response){  
           
