@@ -12,7 +12,12 @@
   
   <socio-panel-componente></socio-panel-componente>
 
-
+   <div class="col-sm-10"> 
+    <h1>JSON</h1>
+    <pre>
+      @{{$data}}
+    </pre>
+  </div>
 
 </span>
 @stop
