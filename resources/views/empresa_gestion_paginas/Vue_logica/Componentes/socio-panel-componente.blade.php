@@ -9,16 +9,13 @@ data:function(){
       socio_id:{{$Socio->id}}
 
     }
-}
-,  
-
+}, 
 mounted: function mounted () {        
 
        this.getSocio();
 
 
 },
-
 methods:{
 
      getSocio:function()

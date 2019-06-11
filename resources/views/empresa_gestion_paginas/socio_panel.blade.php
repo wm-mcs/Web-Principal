@@ -10,7 +10,7 @@
  <span id="app">
     
   
- <socio-panel-componente></socio-panel-componente>
+  <socio-panel-componente> </socio-panel-componente>
 
 
 
@@ -24,10 +24,10 @@
 
 
 
-     
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel-componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socios-lista-componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-entidad-listado-componente')
-     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel-componente')
+
      @include('empresa_gestion_paginas.Vue_logica.instancia_vue')
 
 
