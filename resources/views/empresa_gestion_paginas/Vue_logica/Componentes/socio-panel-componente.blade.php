@@ -18,7 +18,7 @@ methods:{
 
      getSocio:function()
      {
-       var url = '/get_socio?id=' + this.socio_id;
+       var url = '/get_socio' + this.socio_id;
 
        var vue = this;
 
