@@ -54,7 +54,7 @@ methods:{
 },
 template:'<span>
 
- <i class="fas fa-envelope"></i> @{{socio.name}}
+ <i class="fas fa-envelope"></i> estoy bien
 
 </span>'
 
