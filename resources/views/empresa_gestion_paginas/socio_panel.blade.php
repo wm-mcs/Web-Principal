@@ -10,7 +10,7 @@
  <span id="app">
     
   
-  <socio-panel-componente></socio-panel-componente>
+{{--   <socio-panel-componente></socio-panel-componente> --}}
 
    <div class="col-sm-10"> 
     <h1>JSON</h1>
