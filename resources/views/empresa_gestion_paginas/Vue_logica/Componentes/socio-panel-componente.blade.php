@@ -58,9 +58,4 @@ template:'<span>
 
 </span>'
 
-}
-
-
-
-
-);
+});
