@@ -1,3 +1,5 @@
+
+
 Vue.component('socio-panel-componente' ,
 {
 
@@ -31,8 +33,13 @@ methods:{
           }
           else
           {
-            
+            //notificacion de que algo esta mal
           }
+
+           
+
+            
+
            
            
            }).catch(function (error){
@@ -47,7 +54,7 @@ methods:{
 },
 template:'<span>
 
- <i class="fas fa-envelope"></i> estoy bien
+ <i class="fas fa-envelope"></i> @{{socio.name}}
 
 </span>'
 
