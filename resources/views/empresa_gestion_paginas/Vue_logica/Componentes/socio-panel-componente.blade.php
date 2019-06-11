@@ -51,11 +51,9 @@ methods:{
 },
 template:'<span>
 
-<<<<<<< HEAD
+
  <i class="fas fa-envelope"></i> kk
-=======
- <i class="fas fa-envelope"></i> @{{socio.name}}
->>>>>>> parent of 1c2b023... fg
+
 
 </span>'
 
