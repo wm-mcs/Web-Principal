@@ -50,11 +50,6 @@ methods:{
 
 },
 template:'<span>
-
-
  <i class="fas fa-envelope"></i> kk
-
-
 </span>'
-
 });
