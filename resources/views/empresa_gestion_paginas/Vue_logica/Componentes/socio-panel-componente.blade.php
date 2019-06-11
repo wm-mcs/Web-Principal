@@ -54,7 +54,7 @@ methods:{
 },
 template:'<span>
 
-  <span><i class="fas fa-envelope"></i> @{{socio.name}}</span>
+ <i class="fas fa-envelope"></i> @{{socio.name}}
 
 </span>'
 
