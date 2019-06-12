@@ -56,8 +56,8 @@
 
                  <div class="form-group">
                       <label class="formulario-label" for="Nombre">Estado <span class="formulario-label-aclaracion"> ¿está activo?</span></label>
-                     <select v-model="socio.estado">
-                        <option disabled value="">Please select one</option>
+                     <select v-model="socio.estado" class="form-control">
+                        
                         <option>si</option>
                         <option>no</option>
                         
