@@ -53,6 +53,19 @@
                       <label class="formulario-label" for="Nombre">Notas <span class="formulario-label-aclaracion"> </span></label>
                       <input type="text" class="form-control"  v-model="socio.nota" placeholder="Escribe algo para tener en cuenta con este socio" required  />
                   </div> 
+
+                 <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Estado <span class="formulario-label-aclaracion"> ¿está activo?</span></label>
+                     <select v-model="socio.estado">
+                        <option disabled value="">Please select one</option>
+                        <option>si</option>
+                        <option>no</option>
+                        
+                      </select>
+                  </div> 
+
+
+
                
 
                   <div v-on:click="editSocioPost" class="boton-simple">Editar</div>
