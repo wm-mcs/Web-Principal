@@ -80,6 +80,7 @@ methods:{
             if(data.Validacion == true)
             {
               $.notify(data.Validacion_mensaje, "success");
+              
               vue.socio = response.data.Socio;
               
             }
