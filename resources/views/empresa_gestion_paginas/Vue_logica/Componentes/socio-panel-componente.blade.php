@@ -51,7 +51,15 @@ methods:{
 },
 template:'<span>
 
- <i class="fas fa-envelope"></i> @{{socio.name}}
+
+  <div class="panel-socio-header-contenedor">
+    <div class="panel-socio-name"><i class="fas fa-user"></i> @{{socio.name}}</div>
+    <div class="panel-socio-contiene-acciones"> Acciones</div>
+
+
+  </div>
+
+  
 
 </span>'
 
