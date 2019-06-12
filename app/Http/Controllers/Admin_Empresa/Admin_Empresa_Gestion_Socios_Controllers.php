@@ -270,7 +270,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se editó correctamente a '. $Socio->name,
-               'Socio'               => $this->SocioRepo->find($Socio->id);
+               'Socio'               => $this->SocioRepo->find($Socio->id)];
 
 
 
