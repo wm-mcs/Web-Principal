@@ -44,6 +44,14 @@ methods:{
                      
             
            });
+     },
+     editSocioShow:function()
+     {
+      $('#modal-editar-socio').appendTo("body").modal('show');
+     }, 
+     editSocioPost:function()
+     {
+
      }
 
          
@@ -53,7 +61,11 @@ template:'<span>
 
 
   <div class="panel-socio-header-contenedor">
-    <div class="panel-socio-name"><i class="fas fa-user"></i> @{{socio.name}}</div>
+    <div class="panel-socio-name"><i class="fas fa-user"></i> @{{socio.name}} 
+
+    @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel-componente-modal-editar-socio')    
+
+    </div>
     <div class="panel-socio-contiene-acciones"> Acciones</div>
 
 
