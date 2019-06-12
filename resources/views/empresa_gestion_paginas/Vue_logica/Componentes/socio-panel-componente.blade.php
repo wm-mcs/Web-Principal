@@ -79,9 +79,9 @@ methods:{
 
             if(data.Validacion == true)
             {
-              alert('hola');
-              vue.socio = response.data.Socio;
               $.notify(data.Validacion_mensaje, "success");
+              vue.socio = response.data.Socio;
+              
             }
             else
             {
