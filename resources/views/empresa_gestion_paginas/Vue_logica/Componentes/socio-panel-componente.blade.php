@@ -52,7 +52,7 @@ methods:{
      editSocioPost:function()
      {
 
-      alert('hola');
+
       var url  = '/post_editar_socio_desde_modal';
 
       var data = {
@@ -79,6 +79,7 @@ methods:{
 
             if(data.Validacion == true)
             {
+              alert('hola');
               vue.socio = response.data.Socio;
               $.notify(data.Validacion_mensaje, "success");
             }
