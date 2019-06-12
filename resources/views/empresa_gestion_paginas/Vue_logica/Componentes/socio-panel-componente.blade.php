@@ -52,6 +52,46 @@ methods:{
      editSocioPost:function()
      {
 
+      var url  = '/post_editar_socio_desde_modal';
+
+      var data = {
+
+
+           id: this.socio.id,
+         name: this.socio.name,
+         cedula:this.socio.cedula,
+         email:this.socio.email,
+         celular:this.socio.celular,
+         direccion:this.socio.direccion,
+         rut:this.socio.rut,
+         razon_social:this.socio.razon_social,
+         mutualista:this.socio.mutualista,
+         nota:this.socio.nota ,
+
+      };
+
+      var vue = this;
+
+      axios.post(url,data).then(function (response){  
+            var data = response.data;  
+            
+
+            if(data.Validacion == true)
+            {
+              vue.socio = response.data.Socio;
+              $.notify(data.Validacion_mensaje, "success");
+            }
+            else
+            {
+              
+            }
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+
      }
 
          

@@ -36,7 +36,7 @@ methods:{
 
      axios.post(url,data).then(function (response){  
             var data = response.data;  
-            console.log(data);
+            
 
             if(data.Validacion == true)
             {

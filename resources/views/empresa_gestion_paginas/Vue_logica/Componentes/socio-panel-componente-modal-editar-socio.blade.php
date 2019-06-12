@@ -32,17 +32,26 @@
 
                   <div class="form-group">
                       <label class="formulario-label" for="Nombre">Dirección</label>
-                      <input type="text" class="form-control"  v-model="socio.direccion" placeholder="Celular" required  />
+                      <input type="text" class="form-control"  v-model="socio.direccion" placeholder="Dirección" required  />
                   </div> 
 
                   <div class="form-group">
                       <label class="formulario-label" for="Nombre">Rut  <span class="formulario-label-aclaracion"> (solo si aplica)</span></label>
-                      <input type="text" class="form-control"  v-model="socio.rut" placeholder="Celular" required  />
+                      <input type="text" class="form-control"  v-model="socio.rut" placeholder="Rut" required  />
                   </div> 
 
                   <div class="form-group">
                       <label class="formulario-label" for="Nombre">Razon social  <span class="formulario-label-aclaracion"> (solo si aplica)</span></label>
-                      <input type="text" class="form-control"  v-model="socio.razon_social" placeholder="Celular" required  />
+                      <input type="text" class="form-control"  v-model="socio.razon_social" placeholder="Razon social" required  />
+                  </div> 
+                  <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Mutualista  <span class="formulario-label-aclaracion"> (solo si aplica)</span></label>
+                      <input type="text" class="form-control"  v-model="socio.mutualista" placeholder="Mutualista" required  />
+                  </div> 
+
+                  <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Notas <span class="formulario-label-aclaracion"> </span></label>
+                      <input type="text" class="form-control"  v-model="socio.nota" placeholder="Escribe algo para tener en cuenta con este socio" required  />
                   </div> 
                
 

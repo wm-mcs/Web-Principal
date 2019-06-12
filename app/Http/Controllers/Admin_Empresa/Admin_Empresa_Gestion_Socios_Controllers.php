@@ -197,7 +197,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
                                        ->getEntidad();
        $Socio->empresa_id       = $User->empresa_gestion_id;
        $Socio->factura_con_iva  = 'no';
-       $Socio->factura_con_iva  = 'si';
+       $Socio->estado           = 'si';
        $Socio->name             = $Request->get('name');
        $Socio->email            = $Request->get('email');
        $Socio->celular          = $Request->get('celular');
@@ -231,6 +231,57 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
     }
 
     
+  }
+
+  //para editar al socio desde el modal
+  public function post_editar_socio_desde_modal(Request $Request)
+  {
+        $User    = Auth::user();  
+
+        $entidad = '';
+        $manager = new CrearSocioModalManager($entidad,$Request->all());
+        $Validacion = false;
+
+        $Socio   = $this->SocioRepo->find($Request->get('id'));
+
+
+   
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
+     { 
+       
+       
+       $Socio->estado           = $Request->get('estado');
+       $Socio->name             = $Request->get('name');
+       $Socio->email            = $Request->get('email');
+       $Socio->celular          = $Request->get('celular');
+       $Socio->cedula           = $Request->get('cedula');
+       $Socio->direccion        = $Request->get('direccion');
+       $Socio->rut              = $Request->get('rut');
+       $Socio->razon_social     = $Request->get('razon_social');
+       $Socio->mutualista       = $Request->get('mutualista');
+       $Socio->nota             = $Request->get('nota');
+       $Socio->save();
+
+
+
+       $Validacion = true;
+
+
+
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se editó correctamente a '. $Socio->name,
+               'Socio'               => $this->SocioRepo->find($Socio->id);
+
+
+
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'No se puede crear el socio en este momento'];
+     }   
+    
+   
   }
 
 
