@@ -122,14 +122,18 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   }
 
 
-  public function get_socios_activos()
+  public function get_socios_activos($empresa_id)
   {
 
-       $User            = Auth::user();       
+       $User            = Auth::user();  
+
+       if($this->Guardian->son_iguales($User->empresa_gestion_id,$empresa_id ) || $User->role == 'adminMcos522' )
+       {      
       
-       $Socios          = $this->SocioRepo->getSociosBusqueda($User->empresa_gestion_id,null,30);
+       $Socios          = $this->SocioRepo->getSociosBusqueda($empresa_id,null,30);
       
        return ['socios' => $Socios];
+       }
      
   }
 

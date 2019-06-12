@@ -3,7 +3,8 @@ Vue.component('socios-lista' ,
 
 data:function(){
     return {
-      socios:'hola'
+      socios:'hola',
+      empresa_id: {{$Empresa_gestion->id}}
 
     }
 },
@@ -17,7 +18,7 @@ methods:{
 
      getSociosActivos:function()
      {
-       var url = '/get_socios_activos';
+       var url = '/get_socios_activos'+ this.empresa_id;
 
        var vue = this;
 
@@ -33,7 +34,7 @@ methods:{
 
            
            
-           }).catch(function (error){
+           }).catch(function (error){ 
 
                      
             
