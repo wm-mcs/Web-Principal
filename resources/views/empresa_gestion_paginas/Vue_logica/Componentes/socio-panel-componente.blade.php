@@ -68,6 +68,7 @@ methods:{
          razon_social:this.socio.razon_social,
          mutualista:this.socio.mutualista,
          nota:this.socio.nota ,
+         estado:this.socio.estado,
 
       };
 
