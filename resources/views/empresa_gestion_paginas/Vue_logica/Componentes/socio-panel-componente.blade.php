@@ -52,6 +52,7 @@ methods:{
      editSocioPost:function()
      {
 
+      alert('hola');
       var url  = '/post_editar_socio_desde_modal';
 
       var data = {
