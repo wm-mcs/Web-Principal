@@ -30,13 +30,8 @@ methods:{
           }
           else
           {
-            
-          }
-
-           
-
-            
-
+            $.notify(response.data.Validacion_mensaje, "warn");
+          }    
            
            
            }).catch(function (error){
@@ -49,6 +44,7 @@ methods:{
      {
       $('#modal-editar-socio').appendTo("body").modal('show');
      }, 
+
      editSocioPost:function()
      {
 
@@ -87,7 +83,7 @@ methods:{
             }
             else
             {
-              
+              $.notify(response.data.Validacion_mensaje, "warn");
             }
            
            }).catch(function (error){
@@ -96,6 +92,9 @@ methods:{
             
            });
 
+     },
+     agregarServicioShoww:function(){
+       $('#modal-agregar-servicio').appendTo("body").modal('show');
      }
 
          
@@ -105,12 +104,15 @@ template:'<span>
 
 
   <div class="panel-socio-header-contenedor">
-    <div class="panel-socio-name"><i class="fas fa-user"></i> @{{socio.name}} 
+    <div class="panel-socio-name"> @{{socio.name}} 
 
-    @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel-componente-modal-editar-socio')    
+    @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel.modal-editar-socio')    
 
     </div>
-    <div class="panel-socio-contiene-acciones"> Acciones</div>
+    <div class="panel-socio-contiene-acciones"> Acciones
+      @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel.modal-agregar-servicio')  
+
+    </div>
 
 
   </div>

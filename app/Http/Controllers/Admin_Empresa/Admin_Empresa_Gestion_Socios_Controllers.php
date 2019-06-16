@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Guardianes\Guardian;
 use App\Repositorios\SocioRepo;
 use App\Managers\EmpresaGestion\CrearSocioModalManager;
+use App\Repositorios\TipoDeServicioRepo;
 
 
 
@@ -22,14 +23,17 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   protected $EmpresaConSociosoRepo;
   protected $Guardian;
   protected $SocioRepo;
+  protected $TipoDeServicioRepo;
 
   public function __construct(EmpresaConSociosoRepo $EmpresaConSociosoRepo, 
                               Guardian              $Guardian,
-                              SocioRepo             $SocioRepo )
+                              SocioRepo             $SocioRepo, 
+                              TipoDeServicioRepo    $TipoDeServicioRepo )
   {
     $this->EmpresaConSociosoRepo = $EmpresaConSociosoRepo;
     $this->Guardian              = $Guardian;
     $this->SocioRepo             = $SocioRepo;
+    $this->TipoDeServicioRepo    = $TipoDeServicioRepo;
   }
 
   public function getPropiedades()
@@ -122,6 +126,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   }
 
 
+  //me devulve los oscios activos
   public function get_socios_activos($empresa_id)
   {
 
@@ -286,6 +291,15 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      }   
     
    
+  }
+
+
+  //agrega un nuevo tipo de servicio ( Tipo Clase o Tipo Mensual )
+  public function set_nuevo_servicio(Request $Request)
+  {
+    $Entidad = $this->TipoDeServicioRepo->getEntidad(); 
+
+    
   }
 
 
