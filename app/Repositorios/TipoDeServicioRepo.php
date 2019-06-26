@@ -20,7 +20,10 @@ class TipoDeServicioRepo extends BaseRepo
   //guetters/////////////////////////////////////////////////////////////////////
 
   
-
+  public function getServiciosActivosDeEmpresa($Empresa_id)
+  {
+    return $this->getEntidad()->where('empresa_id',$Empresa_id)->active()->get();
+  }
 
   //setters//////////////////////////////////////////////////////////////////////
 

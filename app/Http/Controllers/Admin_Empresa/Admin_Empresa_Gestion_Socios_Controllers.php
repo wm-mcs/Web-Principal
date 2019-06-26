@@ -281,11 +281,79 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
    
   }
 
+  public function get_tipo_servicios($empresa_id)
+  {
+    $Validacion  = false;
+    $User        = Auth::user();  
+    $Socio       = $this->SocioRepo->find($Request->get('empresa_id'));
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
+     { 
+        
+
+
+       $Validacion = true;
+
+
+
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se cargó correctamente',
+               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($empresa_id);
+
+
+
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Algo anda mal'];
+     }   
+  }
+
 
   //agrega un nuevo tipo de servicio ( Tipo Clase o Tipo Mensual )
   public function set_nuevo_servicio(Request $Request)
   {
-    $Entidad = $this->TipoDeServicioRepo->getEntidad(); 
+   
+
+    $Validacion  = false;
+    $User        = Auth::user();  
+    $Socio       = $this->SocioRepo->find($Request->get('empresa_id'));
+
+   
+
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
+     { 
+       $Entidad     = $this->TipoDeServicioRepo->getEntidad(); 
+
+       $Propiedades = ['name','tipo','empresa_id'];
+
+       $Entidad->estado = 'si';
+
+       $this->TipoDeServicioRepo->setEntidadDato($Entidad,$Request,$Propiedades); 
+
+
+       $Validacion = true;
+
+
+
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se creo correctamente ',
+               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($Socio->empresa_id);
+
+
+
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'No se puede crear el tipo de servicio en este momento'];
+     }   
+
+    
+
+
 
     
   }

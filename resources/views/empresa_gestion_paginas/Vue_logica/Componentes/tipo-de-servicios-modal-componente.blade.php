@@ -5,7 +5,8 @@ Vue.component('tipo-de-servicios-modal',
 
 data:function(){
     return {
-      servicios:'hola', 
+      servicios:[], 
+      empresa_id: {{$Empresa_gestion->id}},
       crear_service_name:'',
       crear_service_tipo:''
 
@@ -13,12 +14,70 @@ data:function(){
 },
 methods:{
 
+     getServicios:function(){
+
+
+       var url = '/get_tipo_servicios' + this.empresa_id;
+
+       var vue = this;
+
+       axios.get(url).then(function(response){  
+          
+          if(response.data.Validacion == true)
+          {
+            vue.servicios = response.data.servicios;
+          }
+          else
+          {
+            $.notify(response.data.Validacion_mensaje, "warn");
+          }    
+           
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+     
+
+     },
+
      agregarServicioShoww:function(){
+
+       this.getServicios();
+
        $('#modal-agregar-servicio').appendTo("body").modal('show');
      },
      agregarServicioCreat:function(){
 
-     
+       var url = '/set_nuevo_servicio';
+
+       var vue = this;
+
+       var data = {    name:this.crear_service_name,
+                       tipo:this.crear_service_tipo ,
+                 empresa_id:this.empresa_id
+                   }; 
+
+              axios.post(url,data).then(function (response){  
+              
+              
+
+              if(data.Validacion == true)
+              {
+                 vue.servicios = response.data.servicios;
+                 $.notify(response.data.Validacion_mensaje, "success");
+              }
+              else
+              {
+                $.notify(response.data.Validacion_mensaje, "error");
+              }
+             
+             }).catch(function (error){
+
+                       
+              
+             });      
 
      }
 
@@ -41,6 +100,17 @@ template:'
           
         </div>
         <div class="modal-body text-center"> 
+
+
+             <div v-if="servicios.length > 0">
+               <div v-for="servicio in servicios">
+                 @{{servicio.name}}
+               </div>
+
+             </div>
+             <div v-else>
+               Aun no hay servicios creados. Crea uno ;) 
+             </div>
 
                   <div class="form-group">
                       <label class="formulario-label" for="Nombre">Nombres  </label>

@@ -99,4 +99,16 @@ Route::get('get_socio{id}',
 
 
 
+Route::get('get_tipo_servicios{empresa_id}',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_tipo_servicios',
+  'as'         => 'get_tipo_servicios']);  
+
+
+
+
+Route::post('set_nuevo_servicio',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@set_nuevo_servicio',
+  'as'         => 'set_nuevo_servicio']);  
 
