@@ -1,3 +1,34 @@
+ Vue.component('agregar-tipo-de-servicio' ,
+{
+
+data:function(){
+    return {
+      servicios:'hola', 
+      crear_service_name:'',
+      crear_service_tipo:'',
+
+    }
+}
+,  
+
+
+
+methods:{
+
+     agregarServicioShoww:function(){
+       $('#modal-agregar-servicio').appendTo("body").modal('show');
+     },
+     agregarServicioCreat:fucntion(){
+
+     
+
+     }
+
+         
+
+},
+template:'<span>
+
  <div id="boton-editar-socio" style="position:relative;" class="admin-user-boton-Crear" title="Agregar nuevo servicio" v-on:click="agregarServicioShoww">
        <i class="fas fa-plus"></i> Servicio 
        
@@ -15,25 +46,25 @@
 
                   <div class="form-group">
                       <label class="formulario-label" for="Nombre">Nombres  </label>
-                      <input type="text" class="form-control"  v-model="socio.name" placeholder="Nombre" required  />
+                      <input type="text" class="form-control"  v-model="crear_service_name" placeholder="Nombre" required  />
                   </div> 
                  
 
                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Estado <span class="formulario-label-aclaracion"> ¿está activo?</span></label>
-                     <select v-model="socio.estado" class="form-control">
+                      <label class="formulario-label" for="Nombre">Tipo <span class="formulario-label-aclaracion">¿por clase o mensual?</span></label>
+                     <select v-model="crear_service_tipo" class="form-control">
                         
-                        <option>si</option>
-                        <option>no</option>
+                        <option>clase</option>
+                        <option>mensual</option>
                         
                       </select>
-                  </div> 
+                  </div>   
 
 
 
                
 
-                  <div v-on:click="editSocioPost" class="boton-simple">Editar</div>
+                  <div v-on:click="agregarServicioCreat" class="boton-simple">Crear nuevo</div>
                   
                  
         </div>
@@ -43,3 +74,30 @@
       </div>
     </div>
   </div>
+
+</span>'
+
+}
+
+
+
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

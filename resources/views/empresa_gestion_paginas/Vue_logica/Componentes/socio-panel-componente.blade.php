@@ -93,9 +93,7 @@ methods:{
            });
 
      },
-     agregarServicioShoww:function(){
-       $('#modal-agregar-servicio').appendTo("body").modal('show');
-     }
+    
 
          
 
@@ -111,6 +109,9 @@ template:'<span>
     </div>
     <div class="panel-socio-contiene-acciones"> Acciones
       @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel.modal-agregar-servicio')  
+      
+      <agregar-tipo-de-servicio></agregar-tipo-de-servicio>  
+     
 
     </div>
 

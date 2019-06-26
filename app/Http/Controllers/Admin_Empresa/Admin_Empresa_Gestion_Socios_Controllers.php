@@ -204,16 +204,15 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      { 
        $Socio                   = $this->SocioRepo
                                        ->getEntidad();
+
+
        $Socio->empresa_id       = $User->empresa_gestion_id;
        $Socio->factura_con_iva  = 'no';
        $Socio->estado           = 'si';
-       $Socio->name             = $Request->get('name');
-       $Socio->email            = $Request->get('email');
-       $Socio->celular          = $Request->get('celular');
-       $Socio->cedula           = $Request->get('cedula');
-       $Socio->save();
 
+       $Propiedades = ['name','email','celular','cedula'];
 
+       $this->SocioRepo->setEntidadDato($Socio,$Request,$Propiedades);  
 
        $Validacion = true;
 
@@ -257,21 +256,10 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
    
      if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
      { 
-       
-       
-       $Socio->estado           = $Request->get('estado');
-       $Socio->name             = $Request->get('name');
-       $Socio->email            = $Request->get('email');
-       $Socio->celular          = $Request->get('celular');
-       $Socio->cedula           = $Request->get('cedula');
-       $Socio->direccion        = $Request->get('direccion');
-       $Socio->rut              = $Request->get('rut');
-       $Socio->razon_social     = $Request->get('razon_social');
-       $Socio->mutualista       = $Request->get('mutualista');
-       $Socio->nota             = $Request->get('nota');
-       $Socio->save();
 
+       $Propiedades = ['estado','name','email','celular','cedula','direccion','rut','razon_social','mutualista','nota'];
 
+       $this->SocioRepo->setEntidadDato($Socio,$Request,$Propiedades);  
 
        $Validacion = true;
 
