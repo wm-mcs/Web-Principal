@@ -29,9 +29,9 @@
 <script type="text/javascript">
 
 
-
-     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel-componente')  
      @include('empresa_gestion_paginas.Vue_logica.Componentes.tipo-de-servicios-modal-componente')
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel-componente')  
+     
      @include('empresa_gestion_paginas.Vue_logica.instancia_vue')
 
 
