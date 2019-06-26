@@ -1,17 +1,16 @@
 
 Vue.component('tipo-de-servicios-modal' ,
-{data:function(){
+{
+
+
+data:function(){
     return {
       servicios:'hola', 
       crear_service_name:'',
       crear_service_tipo:'',
 
-    }
-}
-,  
-
-
-
+      }
+},
 methods:{
 
      agregarServicioShoww:function(){
