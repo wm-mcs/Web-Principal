@@ -63,7 +63,7 @@ methods:{
               
               
 
-              if(data.Validacion == true)
+              if(response.data.Validacion == true)
               {
                  vue.servicios = response.data.servicios;
                  $.notify(response.data.Validacion_mensaje, "success");
