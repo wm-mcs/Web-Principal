@@ -298,7 +298,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se cargó correctamente',
-               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($empresa_id);
+               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($empresa_id)];
 
 
 
