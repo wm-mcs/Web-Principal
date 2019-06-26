@@ -1,5 +1,5 @@
 
-Vue.component('tipo-de-servicios-modal' ,
+Vue.component('tipo-de-servicios-modal',
 {
 
 
@@ -7,7 +7,7 @@ data:function(){
     return {
       servicios:'hola', 
       crear_service_name:'',
-      crear_service_tipo:'',
+      crear_service_tipo:''
 
       }
 },
@@ -16,7 +16,7 @@ methods:{
      agregarServicioShoww:function(){
        $('#modal-agregar-servicio').appendTo("body").modal('show');
      },
-     agregarServicioCreat:fucntion(){
+     agregarServicioCreat:function(){
 
      
 
@@ -25,8 +25,8 @@ methods:{
          
 
 },
-template:'<span>
-
+template:'
+<span>
  <div id="boton-editar-socio" style="position:relative;" class="admin-user-boton-Crear" title="Agregar nuevo servicio" v-on:click="agregarServicioShoww">
        <i class="fas fa-plus"></i> Servicio 
        
@@ -73,9 +73,6 @@ template:'<span>
     </div>
   </div>
 
-</span>'
+</span>',
 
-}
-
-
-);
+});
