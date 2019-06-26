@@ -1,34 +1,35 @@
 
 Vue.component('tipo-de-servicios-modal' ,
-{
-
-data:function(){
+{data:function(){
     return {
-      servicios:[]
+      servicios:'hola', 
+      crear_service_name:'',
+      crear_service_tipo:'',
 
     }
-},
-mounted: function mounted () {        
-
-       
+}
+,  
 
 
-},
+
 methods:{
 
-  editTipoDeServicio:function(servicio){
-
-
-    
-  }
+     agregarServicioShoww:function(){
+       $('#modal-agregar-servicio').appendTo("body").modal('show');
+     },
+     agregarServicioCreat:fucntion(){
 
      
+
+     }
+
+         
 
 },
 template:'<span>
 
-   <div id="boton-editar-socio" style="position:relative;" class="admin-user-boton-Crear" title="Agregar nuevo servicio" v-on:click="agregarServicioShoww">
-       <i class="fas fa-plus"></i> Tipo de servicio 
+ <div id="boton-editar-socio" style="position:relative;" class="admin-user-boton-Crear" title="Agregar nuevo servicio" v-on:click="agregarServicioShoww">
+       <i class="fas fa-plus"></i> Servicio 
        
  </div>
 
@@ -42,48 +43,27 @@ template:'<span>
         </div>
         <div class="modal-body text-center"> 
 
-          <div v-for="servicio in servicios">
-            <div class="form-group get_width_30">
-                      <label class="formulario-label" >Nombre  </label>
-                      <input type="text" class="form-control"  v-model="servicio.name" placeholder="Nombre" required  />
-            </div> 
+                  <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Nombres  </label>
+                      <input type="text" class="form-control"  v-model="crear_service_name" placeholder="Nombre" required  />
+                  </div> 
+                 
 
-            <div class="form-group">
-                      <label class="formulario-label" >Tipo <span class="formulario-label-aclaracion"> ¿mensual o por clase?</span></label>
-                     <select v-model="servicio.tipo" class="form-control">
+                 <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Tipo <span class="formulario-label-aclaracion">¿por clase o mensual?</span></label>
+                     <select v-model="crear_service_tipo" class="form-control">
                         
                         <option>clase</option>
                         <option>mensual</option>
                         
                       </select>
-            </div> 
-
-
-            <div class="form-group">
-                      <label class="formulario-label">Estado <span class="formulario-label-aclaracion"> ¿está activo?</span></label>
-                     <select v-model="servicio.estado" class="form-control">
-                        
-                        <option>si</option>
-                        <option>no</option>
-                        
-                      </select>
-            </div> 
-
-
-            <div class="admin-user-boton-Crear" v-on:click="editTipoDeServicio(servicio)">
-              <i class="fas fa-edit"></i>
-            </div>
+                  </div>   
 
 
 
-          </div>
+               
 
-                 
-                 
-
-               <div>                 
-                 Crear aqui la parte para crear un servicio nuevo si es que no hay nada
-               </div>
+                  <div v-on:click="agregarServicioCreat" class="boton-simple">Crear nuevo</div>
                   
                  
         </div>
@@ -93,14 +73,10 @@ template:'<span>
       </div>
     </div>
   </div>
-   
-  
 
 </span>'
 
 }
-
-
 
 
 );
