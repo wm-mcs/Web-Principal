@@ -12,6 +12,12 @@ data:function(){
 
       }
 },
+mounted: function mounted () {        
+
+       this.getServicios();
+
+
+},
 methods:{
 
      getServicios:function(){
@@ -44,7 +50,7 @@ methods:{
 
      agregarServicioShoww:function(){
 
-       this.getServicios();
+       this.servicios = this.getServicios();
 
        $('#modal-agregar-servicio').appendTo("body").modal('show');
      },
@@ -67,6 +73,9 @@ methods:{
               {
                  vue.servicios = response.data.servicios;
                  $.notify(response.data.Validacion_mensaje, "success");
+
+                 vue.crear_service_name = '';
+                 vue.crear_service_tipo = '';
               }
               else
               {
@@ -79,6 +88,37 @@ methods:{
               
              });      
 
+     }
+     deletServicio:function(servicio)
+     {
+        var url = '/delet_servicio';
+
+        var vue = this;
+
+        var data = {   id:servicio.id,
+                       
+                   }; 
+
+              axios.post(url,data).then(function (response){  
+              
+              
+
+              if(response.data.Validacion == true)
+              {
+                 vue.servicios = response.data.servicios;
+                 $.notify(response.data.Validacion_mensaje, "warn");
+                 
+              }
+              else
+              {
+                $.notify(response.data.Validacion_mensaje, "error");
+              }
+             
+             }).catch(function (error){
+
+                       
+              
+             });      
      }
 
          
@@ -103,8 +143,17 @@ template:'
 
 
              <div v-if="servicios.length > 0">
-               <div v-for="servicio in servicios">
-                 @{{servicio.name}}
+               <div v-for="servicio in servicios" class="empresa-gestion-listado-contenedor">
+                 <div class="get_width_30">
+                   <input type="text" class="form-control" v-model="servicio.name">
+                 </div> 
+                 <div>
+                   <div class="get_width_30 flex-row-center flex-justifice-space-around">
+                     <div v-on:click="deletServicio(servicio)" title="Eliminar este servicio" class="boton-simple-chico">
+                        <i class="fas fa-trash-alt"></i>
+                     </div>
+                   </div>
+                 </div>
                </div>
 
              </div>

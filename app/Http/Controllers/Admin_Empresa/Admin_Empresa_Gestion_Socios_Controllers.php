@@ -316,12 +316,9 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   {
    
 
-    $Validacion  = false;
-    $User        = Auth::user();  
-    $Socio       = $this->SocioRepo->find($Request->get('empresa_id'));
-
-   
-
+     $Validacion  = false;
+     $User        = Auth::user();  
+     $Socio       = $this->SocioRepo->find($Request->get('empresa_id'));
 
      if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
      { 
@@ -333,16 +330,11 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        $this->TipoDeServicioRepo->setEntidadDato($Entidad,$Request,$Propiedades); 
 
-
        $Validacion = true;
-
-
 
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se creo correctamente ',
                'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($Socio->empresa_id)];
-
-
 
      }
      else
@@ -350,12 +342,35 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'No se puede crear el tipo de servicio en este momento'];
      }   
-
     
+  }
 
 
+  //borrar un servicio
+  public function delet_servicio(Request $Request)
+  {
+     $Validacion  = false;
+     $User        = Auth::user();  
+     $Socio       = $this->SocioRepo->find($Request->get('empresa_id'));
 
-    
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
+     { 
+       $Entidad     = $this->TipoDeServicioRepo->find($Request->get('id')); 
+
+       $this->TipoDeServicioRepo->destruir_esta_entidad($Entidad);
+
+       $Validacion = true;
+
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se borró correctamente ',
+               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($Socio->empresa_id)];
+
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'No se puede borrar el tipo de servicio en este momento'];
+     }   
   }
 
 
