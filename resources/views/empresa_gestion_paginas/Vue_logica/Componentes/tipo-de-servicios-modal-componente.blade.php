@@ -88,7 +88,7 @@ methods:{
               
              });      
 
-     }
+     },
      deletServicio:function(servicio)
      {
         var url = '/delet_servicio';
