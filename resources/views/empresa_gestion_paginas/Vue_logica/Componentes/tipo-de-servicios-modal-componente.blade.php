@@ -96,6 +96,7 @@ methods:{
         var vue = this;
 
         var data = {   id:servicio.id,
+               empresa_id:this.empresa_id
                        
                    }; 
 
