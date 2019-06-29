@@ -109,7 +109,7 @@ template:'<span>
     </div>
     <div class="panel-socio-contiene-acciones"> Acciones
       
-      
+     <agregar-al-socio-un-servicio socio:socio ></agregar-al-socio-un-servicio>  
       
      
 
@@ -117,6 +117,15 @@ template:'<span>
 
 
   </div>
+
+  
+    
+     
+
+
+
+
+  
 
   
 
