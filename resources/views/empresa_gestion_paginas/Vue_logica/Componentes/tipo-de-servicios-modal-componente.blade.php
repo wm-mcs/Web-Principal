@@ -91,6 +91,11 @@ methods:{
      },
      deletServicio:function(servicio)
      {
+
+        var result = confirm("¿Seguro que quieres hacer esto?");
+
+        if(result){            
+        
         var url = '/delet_servicio';
 
         var vue = this;
@@ -119,8 +124,10 @@ methods:{
 
                        
               
-             });      
+             });   
+        }   
      }
+
 
          
 
@@ -148,6 +155,14 @@ template:'
                  <div class="get_width_30">
                    <input type="text" class="form-control" v-model="servicio.name">
                  </div> 
+                 <div class="get_width_30">
+                   <select v-model="servicio.tipo" class="form-control">
+                        
+                        <option>clase</option>
+                        <option>mensual</option>
+                        
+                    </select>
+                 </div>
                  <div>
                    <div class="get_width_30 flex-row-center flex-justifice-space-around">
                      <div v-on:click="deletServicio(servicio)" title="Eliminar este servicio" class="boton-simple-chico">
