@@ -9,7 +9,7 @@ data:function(){
     }
 },
 
-props:['socio'],
+props:['socio']
 ,
 
 
