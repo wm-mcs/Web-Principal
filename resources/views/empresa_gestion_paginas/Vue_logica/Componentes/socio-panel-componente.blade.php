@@ -110,7 +110,7 @@ template:'<span>
     <div class="panel-socio-contiene-acciones"> Acciones
       
       
-      <tipo-de-servicios-modal></tipo-de-servicios-modal>  
+      
      
 
     </div>

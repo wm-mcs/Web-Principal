@@ -19,6 +19,7 @@
       
 
       <socios-crear-boton accion_name="Crear"  > </socios-crear-boton>
+      <tipo-de-servicios-modal></tipo-de-servicios-modal>  
    
   </div>  
 
@@ -44,10 +45,11 @@
 <script type="text/javascript">
 
 
-
+     @include('empresa_gestion_paginas.Vue_logica.Componentes.tipo-de-servicios-modal-componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socios-crear-boton_componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socios-lista-componente')
      @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-entidad-listado-componente')
+
      
      @include('empresa_gestion_paginas.Vue_logica.instancia_vue')
 
