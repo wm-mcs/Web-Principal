@@ -285,22 +285,16 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   {
     $Validacion  = false;
     $User        = Auth::user();  
-    $Socio       = $this->SocioRepo->find($Request->get('empresa_id'));
+    $Socio       = $this->SocioRepo->find($empresa_id);
 
      if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->empresa_id) || $User->role == 'adminMcos522' )
      { 
-        
-
 
        $Validacion = true;
-
-
 
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se cargó correctamente',
                'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($empresa_id)];
-
-
 
      }
      else
