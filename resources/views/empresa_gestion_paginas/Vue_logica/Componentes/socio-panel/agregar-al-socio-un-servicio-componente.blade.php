@@ -10,7 +10,7 @@ data:function(){
 },
 
 props:['socio'],
-},
+,
 
 
 mounted: function mounted () {        
