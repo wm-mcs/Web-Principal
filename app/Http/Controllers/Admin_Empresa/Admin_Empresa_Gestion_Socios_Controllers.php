@@ -383,20 +383,20 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        $Validacion  = true;
        $Servicio    = $Request->get('servicio');
 
-       return $Servicio['id'];
-      /* $Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); */
+       
+       $Entidad     = $this->TipoDeServicioRepo->find( $Servicio['id']); 
 
 
        
        //las porpiedades que se van a editar
        $Propiedades = ['name','tipo','valor','moneda'];
 
-       /*foreach($Propiedades as $Propiedad)
+       foreach($Propiedades as $Propiedad)
        {
-        $Entidad->$Propiedad = $Servicio->$Propiedad;
+        $Entidad->$Propiedad = $Servicio->[$Propiedad];
        }
 
-       $Entidad->save();*/
+       $Entidad->save();
 
        
 
