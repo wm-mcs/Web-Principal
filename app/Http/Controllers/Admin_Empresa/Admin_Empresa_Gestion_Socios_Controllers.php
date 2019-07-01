@@ -381,7 +381,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      { 
 
        $Servicio    = $Request->get('servicio');
-       $Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); 
+       /*$Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); */
 
        return $Servicio;
 
