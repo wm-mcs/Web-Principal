@@ -381,9 +381,9 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      { 
 
        $Validacion  = true;
-       $Servicio    = json_decode($Request->get('servicio'));
+       $Servicio    = $Request->get('servicio');
 
-       return $Servicio;
+       return $Servicio['id'];
       /* $Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); */
 
 
