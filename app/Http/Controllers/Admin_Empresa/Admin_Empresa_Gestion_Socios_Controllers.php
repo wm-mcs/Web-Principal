@@ -321,6 +321,8 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        $Propiedades = ['name','tipo','empresa_id'];
 
        $Entidad->estado = 'si';
+       $Entidad->moneda = '$';
+       $Entidad->valor  = 0;
 
        $this->TipoDeServicioRepo->setEntidadDato($Entidad,$Request,$Propiedades); 
 
@@ -382,7 +384,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        $Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); 
 
        //las porpiedades que se van a editar
-       $Propiedades = [];
+       $Propiedades = ['name','tipo','valor','moneda'];
 
        foreach($Propiedades as $Propiedad)
        {
