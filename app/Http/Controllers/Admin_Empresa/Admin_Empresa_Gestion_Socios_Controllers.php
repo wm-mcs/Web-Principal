@@ -380,11 +380,14 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
      { 
 
+       $Validacion  = true;
        $Servicio    = $Request->get('servicio');
+
+       return $Entidad;
        $Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); 
 
 
-       return $Entidad;
+       
        //las porpiedades que se van a editar
        $Propiedades = ['name','tipo','valor','moneda'];
 
@@ -395,7 +398,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        $Entidad->save();*/
 
-       $Validacion = true;
+       
 
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se editó correctamente ',
