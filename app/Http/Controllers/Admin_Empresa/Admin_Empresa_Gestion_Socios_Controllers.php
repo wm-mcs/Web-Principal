@@ -383,7 +383,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        $Validacion  = true;
        $Servicio    = $Request->get('servicio');
 
-       return $Entidad;
+       return $Servicio;
        $Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); 
 
 
