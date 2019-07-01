@@ -380,7 +380,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
      { 
 
-       $Servicio    = $Request->get('servicio');
+       $Servicio  =  $Request->get('servicio');
        /*$Entidad     = $this->TipoDeServicioRepo->find($Servicio->id); */
 
        return $Servicio;
