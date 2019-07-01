@@ -126,6 +126,39 @@ methods:{
               
              });   
         }   
+     },
+     editarServicio:function(servicio){
+
+        var url = '/editar_servicio';
+
+        var vue = this;
+
+        var data = {   servicio:servicio,
+                     empresa_id:this.empresa_id
+                       
+                   }; 
+
+              axios.post(url,data).then(function (response){  
+              
+              
+
+              if(response.data.Validacion == true)
+              {
+                 vue.servicios = response.data.servicios;
+                 $.notify(response.data.Validacion_mensaje, "warn");
+                 
+              }
+              else
+              {
+                $.notify(response.data.Validacion_mensaje, "error");
+              }
+             
+             }).catch(function (error){
+
+                       
+              
+             });   
+
      }
 
 
@@ -165,9 +198,12 @@ template:'
                  </div>
                  <div>
                    <div class="get_width_30 flex-row-center flex-justifice-space-around">
-                     <div v-on:click="deletServicio(servicio)" title="Eliminar este servicio" class="boton-simple-chico">
+                     <div v-on:click="deletServicio(servicio)" title="Eliminar esté servicio" class="boton-simple-chico">
                         <i class="fas fa-trash-alt"></i>
                      </div>
+                      <div v-on:click="editarServicio(servicio)" title="Editar esté servicio" class="boton-simple-chico">
+                        <i class="fas fa-edit"></i>
+                     </div>    
                    </div>
                  </div>
                </div>

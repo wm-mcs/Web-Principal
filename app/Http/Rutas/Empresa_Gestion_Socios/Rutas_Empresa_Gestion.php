@@ -117,5 +117,12 @@ Route::post('delet_servicio',
   'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@delet_servicio',
   'as'         => 'delet_servicio']);  
 
+Route::post('editar_servicio',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@editar_servicio',
+  'as'         => 'editar_servicio']);  
+
+
+
 
 

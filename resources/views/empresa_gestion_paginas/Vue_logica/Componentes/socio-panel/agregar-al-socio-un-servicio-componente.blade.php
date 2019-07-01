@@ -35,7 +35,7 @@ methods:{
 },
 template:'<span>
  <div id="boton-editar-socio" style="position:relative;" class="admin-user-boton-Crear" v-on:click="abrir_modal">
-        <i class="fas fa-user-edit"></i>
+        <i class="fas fa-plus"></i> Servicio
        
  </div>
 
