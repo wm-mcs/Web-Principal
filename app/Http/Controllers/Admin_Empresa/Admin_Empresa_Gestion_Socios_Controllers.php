@@ -384,7 +384,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        $Servicio    = $Request->get('servicio');
 
        
-       $Entidad     = $this->TipoDeServicioRepo->find( $Servicio['id']); 
+       $Entidad     = $this->TipoDeServicioRepo->find($Servicio['id']); 
 
 
        
@@ -393,7 +393,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        foreach($Propiedades as $Propiedad)
        {
-        $Entidad->$Propiedad = $Servicio->[$Propiedad];
+        $Entidad->$Propiedad = $Servicio[$Propiedad];
        }
 
        $Entidad->save();
