@@ -14,6 +14,10 @@
   @include justify-content(space-around);
 }
 
+.flex-justifice-space-between{
+  @include justify-content(space-between);
+}
+
 .flex-wrap{
   @include flex-wrap(wrap); 
 }

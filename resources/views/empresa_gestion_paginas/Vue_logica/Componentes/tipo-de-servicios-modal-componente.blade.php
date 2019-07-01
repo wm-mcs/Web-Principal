@@ -184,11 +184,13 @@ template:'
 
 
              <div v-if="servicios.length > 0">
-               <div v-for="servicio in servicios" class="empresa-gestion-listado-contenedor">
-                 <div class="get_width_30">
+               <div v-for="servicio in servicios" class="empresa-gestion-listado-contenedor flex-justifice-space-between">
+                 
+                <div class="get_width_70 flex-wrap flex-row-center">
+                 <div class="get_width_40">
                    <input type="text" class="form-control" v-model="servicio.name">
                  </div> 
-                 <div class="get_width_30">
+                 <div class="get_width_50">
                    <select v-model="servicio.tipo" class="form-control">
                         
                         <option>clase</option>
@@ -196,8 +198,21 @@ template:'
                         
                     </select>
                  </div>
+                 <div class="get_width_50">
+                   <input type="text" class="form-control" v-model="servicio.valor" step="any">
+                 </div>
+                 <div class="get_width_50">
+                   <select v-model="servicio.moneda" class="form-control">
+                        
+                        <option>$</option>
+                        <option>U$S</option>
+                        
+                    </select>
+                 </div>
+                </div>
+                
                  <div>
-                   <div class="get_width_30 flex-row-center flex-justifice-space-around">
+                   <div class="get_width_20 flex-row-center flex-justifice-space-around">
                      <div v-on:click="deletServicio(servicio)" title="Eliminar esté servicio" class="boton-simple-chico">
                         <i class="fas fa-trash-alt"></i>
                      </div>
