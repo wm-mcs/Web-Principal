@@ -24,7 +24,7 @@ methods:{
 
      agregarServicioShoww:function(){
 
-       this.servicios = this.getServicios();
+       
 
        $('#modal-agregar-servicio').appendTo("body").modal('show');
      },
