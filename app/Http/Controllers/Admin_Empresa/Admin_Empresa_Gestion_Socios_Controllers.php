@@ -381,7 +381,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      { 
 
        $Validacion  = true;
-       $Servicio    = $Request->get('servicio');
+       $Servicio    = $Request->get('servicio'); //me manda la data en array vue
 
        
        $Entidad     = $this->TipoDeServicioRepo->find($Servicio['id']); 
