@@ -187,7 +187,7 @@ template:'
                <div v-for="servicio in servicios" class="empresa-gestion-listado-contenedor flex-justifice-space-between">
                  
                 <div class="get_width_70 flex-wrap flex-row-center">
-                 <div class="get_width_40 formulario-label-fiel">
+                 <div class="formulario-label-fiel get_width_40">
                    <label class="formulario-label">Nombre</label>
                    <input type="text" class="form-control" v-model="servicio.name">
                  </div> 
