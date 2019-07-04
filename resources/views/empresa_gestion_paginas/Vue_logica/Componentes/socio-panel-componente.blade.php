@@ -1,11 +1,14 @@
 Vue.component('socio-panel-componente',
 {
 
+
+props:['servicios']  
+
 data:function(){
     return {
       socio:'hola',
       socio_id: 1,
-      servicios:[],
+      
       empresa_id: {{$Empresa_gestion->id}},
 
     }

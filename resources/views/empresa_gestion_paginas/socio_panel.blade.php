@@ -11,7 +11,7 @@
     
   
 
-<socio-panel-componente></socio-panel-componente>
+<socio-panel-componente :servicios="servicios"></socio-panel-componente>
 
    <div class="col-sm-10"> 
     <h1>JSON</h1>
