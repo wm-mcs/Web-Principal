@@ -5,7 +5,6 @@ props:['servicios'],
 
 data:function(){
     return {
-      servicios:[], 
       empresa_id: {{$Empresa_gestion->id}},
       crear_service_name:'',
       crear_service_tipo:''
