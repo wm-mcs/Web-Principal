@@ -13,7 +13,7 @@ data:function(){
 mounted: function mounted () {        
 
        this.getSocio();
-       this-getServicios();
+      
 
 
 },
