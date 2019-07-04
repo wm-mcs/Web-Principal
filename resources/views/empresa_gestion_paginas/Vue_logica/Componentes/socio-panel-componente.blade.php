@@ -2,7 +2,7 @@ Vue.component('socio-panel-componente',
 {
 
 
-props:['servicios']  
+props:['servicios'],
 
 data:function(){
     return {
