@@ -188,11 +188,11 @@ template:'
                  
                 <div class="get_width_70 flex-wrap flex-row-center">
                  <div class="get_width_40">
-                   <label>Nombre</label>
+                   <label class="formulario-label">Nombre</label>
                    <input type="text" class="form-control" v-model="servicio.name">
                  </div> 
                  <div class="get_width_50">
-                   <label>¿Por clase o mensual?</label>
+                   <label class="formulario-label">¿Por clase o mensual?</label>
                    <select v-model="servicio.tipo" class="form-control">
                         
                         <option>clase</option>
@@ -201,11 +201,11 @@ template:'
                     </select>
                  </div>
                  <div class="get_width_50">
-                   <label>¿Cuánto cuesta?</label>
+                   <label class="formulario-label">¿Cuánto cuesta?</label>
                    <input type="text" class="form-control" v-model="servicio.valor" step="any">
                  </div>
                  <div class="get_width_50">
-                   <label>¿Pesos o Dolares?</label>
+                   <label class="formulario-label">¿Pesos o Dolares?</label>
                    <select v-model="servicio.moneda" class="form-control">
                         
                         <option>$</option>
