@@ -17,7 +17,7 @@
     },
     mounted: function mounted () {        
 
-     $this.getServicios();
+     this.getServicios();
 
 
     },
