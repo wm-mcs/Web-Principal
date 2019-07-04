@@ -5,16 +5,47 @@ data:function(){
     return {
       socio:'hola',
       socio_id: 1,
+      servicios:[],
+      empresa_id: {{$Empresa_gestion->id}},
 
     }
 }, 
 mounted: function mounted () {        
 
        this.getSocio();
+       this-getServicios();
 
 
 },
 methods:{
+
+     getServicios:function(){
+
+
+       var url = '/get_tipo_servicios' + this.empresa_id;
+
+       var vue = this;
+
+       axios.get(url).then(function(response){  
+          
+          if(response.data.Validacion == true)
+          {
+            vue.servicios = response.data.servicios;
+          }
+          else
+          {
+            $.notify(response.data.Validacion_mensaje, "warn");
+          }    
+           
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+     
+
+     },
 
      getSocio:function()
      {
@@ -109,7 +140,7 @@ template:'<span>
     </div>
     <div class="panel-socio-contiene-acciones"> Acciones
       
-     <agregar-al-socio-un-servicio :socio="socio" ></agregar-al-socio-un-servicio>  
+     <agregar-al-socio-un-servicio :socio="socio"  :servicios="servicios"></agregar-al-socio-un-servicio>  
       
      
 

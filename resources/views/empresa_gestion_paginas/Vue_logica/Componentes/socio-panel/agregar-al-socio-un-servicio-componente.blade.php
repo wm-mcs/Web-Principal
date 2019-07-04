@@ -9,7 +9,7 @@ data:function(){
     }
 },
 
-props:['socio']
+props:['socio','servicios']
 ,
 
 
@@ -20,6 +20,8 @@ mounted: function mounted () {
 
 },
 methods:{
+
+ 
 
  abrir_modal:function(){
 
@@ -43,7 +45,7 @@ template:'<span>
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel"> Editar a @{{socio.name}}</h4>
+          <h4 class="modal-title" id="myModalLabel"> Agregar un servicio a @{{socio.name}}</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
           
         </div>
