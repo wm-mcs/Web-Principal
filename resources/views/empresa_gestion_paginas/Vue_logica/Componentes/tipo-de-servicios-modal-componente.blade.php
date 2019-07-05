@@ -50,7 +50,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 vue.servicios = response.data.servicios;
+                 
                  $.notify(response.data.Validacion_mensaje, "success");
 
                  vue.crear_service_name = '';
@@ -123,7 +123,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 vue.servicios = response.data.servicios;
+                 
                  $.notify(response.data.Validacion_mensaje, "warn");
                  
               }
