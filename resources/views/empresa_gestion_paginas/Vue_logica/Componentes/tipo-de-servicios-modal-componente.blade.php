@@ -90,7 +90,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 vue.servicios = response.data.servicios;
+                 
                  $.notify(response.data.Validacion_mensaje, "warn");
                  
               }
