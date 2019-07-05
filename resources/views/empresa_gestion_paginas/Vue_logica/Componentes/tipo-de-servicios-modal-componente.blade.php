@@ -6,6 +6,7 @@ props:['servicios'],
 data:function(){
     return {
       empresa_id: {{$Empresa_gestion->id}},
+      local_servicios:this.servicios,
       crear_service_name:'',
       crear_service_tipo:''
 
@@ -50,7 +51,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 
+                 this.local_servicios = response.data.servicios;
                  $.notify(response.data.Validacion_mensaje, "success");
 
                  vue.crear_service_name = '';
@@ -90,6 +91,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
+                 this.local_servicios = response.data.servicios;
                  
                  $.notify(response.data.Validacion_mensaje, "warn");
                  
@@ -119,11 +121,11 @@ methods:{
 
               axios.post(url,data).then(function (response){  
               
-              console.log(response.data);
+              
 
               if(response.data.Validacion == true)
               {
-                 
+                 this.local_servicios = response.data.servicios;
                  $.notify(response.data.Validacion_mensaje, "warn");
                  
               }
