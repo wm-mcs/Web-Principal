@@ -6,7 +6,7 @@ props:['servicios'],
 data:function(){
     return {
       empresa_id: {{$Empresa_gestion->id}},
-      local_servicios:this.servicios,
+      local_servicios:[],
       crear_service_name:'',
       crear_service_tipo:''
 
@@ -14,7 +14,7 @@ data:function(){
 },
 mounted: function mounted () {        
 
-     
+     this.local_servicios = this.servicios;
 
 
 },
