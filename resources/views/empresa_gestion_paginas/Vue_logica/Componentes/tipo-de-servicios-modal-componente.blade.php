@@ -5,8 +5,7 @@ props:['servicios'],
 
 data:function(){
     return {
-      empresa_id: {{$Empresa_gestion->id}},
-      local_servicios:[],
+      empresa_id: {{$Empresa_gestion->id}},      
       crear_service_name:'',
       crear_service_tipo:''
 
@@ -22,7 +21,7 @@ mounted: function mounted () {
 },
 computed: {
   listaDeServicios:function(){
-  
+    return this.servicios.sort();
   }
 
 },
@@ -53,7 +52,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 this.local_servicios = response.data.servicios;
+                 vue.servicios = response.data.servicios;
                  $.notify(response.data.Validacion_mensaje, "success");
 
                  vue.crear_service_name = '';
@@ -93,7 +92,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 this.local_servicios = response.data.servicios;
+                 vue.servicios = response.data.servicios;
                  
                  $.notify(response.data.Validacion_mensaje, "warn");
                  
@@ -127,7 +126,7 @@ methods:{
 
               if(response.data.Validacion == true)
               {
-                 this.local_servicios = response.data.servicios;
+                 vue.servicios = response.data.servicios;
                  $.notify(response.data.Validacion_mensaje, "warn");
                  
               }
@@ -167,7 +166,7 @@ template:'
 
 
              <div v-if="servicios.length > 0">
-               <div v-for="servicio in local_servicios" class="empresa-gestion-listado-contenedor flex-justifice-space-between">
+               <div v-for="servicio in listaDeServicios" class="empresa-gestion-listado-contenedor flex-justifice-space-between">
                  
                 <div class="get_width_70 flex-wrap flex-row-center">
                  <div class="get_width_40 formulario-label-fiel-sin-width">
