@@ -14,8 +14,9 @@ data:function(){
 },
 mounted: function mounted () {        
 
-    console.log(this.local_servicios);
+    
      this.local_servicios = this.servicios;
+     console.log(this.local_servicios);
 
 
 },
