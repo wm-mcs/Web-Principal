@@ -20,7 +20,7 @@ mounted: function mounted () {
 },
 computed: {
   listaDeServicios:function(){
-  return this.local_servicios.sort();
+  
   }
 
 },
