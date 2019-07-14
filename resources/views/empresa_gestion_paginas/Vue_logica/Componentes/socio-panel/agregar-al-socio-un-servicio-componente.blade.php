@@ -84,8 +84,8 @@ template:'<span>
               
 
                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Tipo de servicio <span class="formulario-label-aclaracion"> ¿por clase o mensual?</span></label>
-                     <select v-on:change="cambioTipoDeServicio()" class="form-control" v-model="tipo_servicio">
+                      <label class="formulario-label" >Tipo de servicio <span class="formulario-label-aclaracion"> ¿por clase o mensual?</span></label>
+                     <select v-on:change="cambioTipoDeServicio" class="form-control" v-model="tipo_servicio">
                         <option></option>
                         <option v-for="servicio in servicios">@{{servicio.name}}</option>
                        
@@ -94,17 +94,17 @@ template:'<span>
                   </div> 
 
                   <div v-if="servicio_data.name =!''" class="form-group">
-                      <label class="formulario-label" for="Nombre">Nombre</label>
-                      <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre" required  />
+                      <label class="formulario-label" >Nombre</label>
+                      <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre"   />
                   </div> 
 
                    <div v-if="servicio_data.tipo =!''" class="form-group">
-                      <label class="formulario-label" for="Nombre">Tipo</label>
-                      <input type="text" class="form-control"  v-model="servicio_data.tipo" required  />
+                      <label class="formulario-label" >Tipo</label>
+                      <input type="text" class="form-control"  v-model="servicio_data.tipo"   />
                    </div> 
 
                     <div v-if="servicio_data.moneda =!''" class="form-group">
-                      <label class="formulario-label" for="Nombre">Moneda</label>
+                      <label class="formulario-label" >Moneda</label>
                       <select v-model="servicio_data.moneda" class="form-control">
                         <option>$</option>
                         <option>U$S</option>
@@ -115,13 +115,13 @@ template:'<span>
                     </div> 
 
                      <div v-if="servicio_data.cantidad_de_servicios =!''" class="form-group">
-                      <label class="formulario-label" for="Nombre">Cantidad de clases</label>
-                      <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios" required  />
+                      <label class="formulario-label" >Cantidad de clases</label>
+                      <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios"   />
                      </div>
 
                      <div v-if="servicio_data.valor =!''" class="form-group">
-                      <label class="formulario-label" for="Nombre">Valor <span v-if="servicio.tipo != 'mensual'"> de todas las clases</span> </label>
-                      <input type="text" class="form-control"  v-model="servicio_data.valor" required  />
+                      <label class="formulario-label" >Valor <span v-if="servicio.tipo = !'mensual'"> de todas las clases</span> </label>
+                      <input type="text" class="form-control"  v-model="servicio_data.valor"   />
                      </div> 
 
 
