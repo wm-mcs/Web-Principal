@@ -54,7 +54,7 @@ methods:{
 
   if(servicio.tipo = !'mensual')
   {
-    this.cantidad_de_servicios = 1;
+    this.servicio_data.cantidad_de_servicios = 1;
   } 
 }, 
 seleccionarUnObjetoSegunAtributo:function(lista,atributo,valor){
