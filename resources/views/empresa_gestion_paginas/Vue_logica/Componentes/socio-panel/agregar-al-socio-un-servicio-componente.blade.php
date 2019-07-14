@@ -65,8 +65,8 @@ methods:{
         });
 },
 seleccionarUnObjetoSegunAtributo:function(lista,atributo,valor){
-        return lista.find(function(element,atributo) {
-        return element.atributo == valor;
+        return lista.find(function(element) {
+        return element.name == valor;
       });
 },
 
@@ -103,7 +103,7 @@ template:'<span>
                       </select>
                   </div> 
 
-                  <div  class="form-group">
+                  <div  class="form-group" v-if="servicio_data.name">
                       <label class="formulario-label" >Nombre</label>
                       <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre"   />
                   </div> 
