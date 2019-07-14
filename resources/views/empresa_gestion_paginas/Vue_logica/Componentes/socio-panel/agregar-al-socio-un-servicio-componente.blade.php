@@ -66,7 +66,7 @@ methods:{
 },
 seleccionarUnObjetoSegunAtributo:function(lista,atributo,valor){
         return lista.find(function(element) {
-        return element.atributo == valor;
+        return element.name == valor;
       });
 },
 
