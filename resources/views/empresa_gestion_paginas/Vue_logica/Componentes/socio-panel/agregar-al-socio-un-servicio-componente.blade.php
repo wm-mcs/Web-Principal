@@ -114,12 +114,12 @@ template:'<span>
                       </select>
                     </div> 
 
-                     <div v-if="servicio_data.cantidad_de_servicios != ''" class="form-group">
+                     <div v-if="servicio_data.cantidad_de_servicios !=''" class="form-group">
                       <label class="formulario-label" for="Nombre">Cantidad de clases</label>
                       <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios" required  />
                      </div>
 
-                     <div v-if="servicio_data.valor != ''" class="form-group">
+                     <div v-if="servicio_data.valor !=''" class="form-group">
                       <label class="formulario-label" for="Nombre">Valor <span v-if="servicio.tipo != 'mensual'"> de todas las clases</span> </label>
                       <input type="text" class="form-control"  v-model="servicio_data.valor" required  />
                      </div> 
