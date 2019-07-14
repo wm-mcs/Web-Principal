@@ -93,17 +93,17 @@ template:'<span>
                       </select>
                   </div> 
 
-                  <div v-if="servicio_data.name =!''" class="form-group">
+                  <div  class="form-group">
                       <label class="formulario-label" >Nombre</label>
                       <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre"   />
                   </div> 
 
-                   <div v-if="servicio_data.tipo =!''" class="form-group">
+                   <div  class="form-group">
                       <label class="formulario-label" >Tipo</label>
                       <input type="text" class="form-control"  v-model="servicio_data.tipo"   />
                    </div> 
 
-                    <div v-if="servicio_data.moneda =!''" class="form-group">
+                    <div  class="form-group">
                       <label class="formulario-label" >Moneda</label>
                       <select v-model="servicio_data.moneda" class="form-control">
                         <option>$</option>
@@ -114,13 +114,13 @@ template:'<span>
                       </select>
                     </div> 
 
-                     <div v-if="servicio_data.cantidad_de_servicios =!''" class="form-group">
+                     <div  class="form-group">
                       <label class="formulario-label" >Cantidad de clases</label>
                       <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios"   />
                      </div>
 
-                     <div v-if="servicio_data.valor =!''" class="form-group">
-                      <label class="formulario-label" >Valor <span v-if="servicio.tipo = !'mensual'"> de todas las clases</span> </label>
+                     <div  class="form-group">
+                      <label class="formulario-label" >Valor <span > de todas las clases</span> </label>
                       <input type="text" class="form-control"  v-model="servicio_data.valor"   />
                      </div> 
 
