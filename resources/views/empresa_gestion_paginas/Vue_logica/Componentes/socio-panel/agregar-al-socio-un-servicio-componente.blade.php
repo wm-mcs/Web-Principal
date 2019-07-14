@@ -52,7 +52,7 @@ methods:{
   this.servicio_data.moneda = servicio.moneda;
   this.servicio_data.valor  = servicio.valor;
 
-  if(servicio.tipo == 'clase')
+  if(servicio.tipo == 'Clase')
   {
     this.cantidad_de_servicios = 1;
   } 
