@@ -44,7 +44,7 @@ methods:{
  cambioTipoDeServicio:function(){
 
   
-  var servicio = this.filtrarValoresSegunAtributo( this.servicios, {name: this.tipo_servicio});
+  var servicio = this.seleccionarUnObjetoSegunAtributo( this.servicios,'name',this.tipo_servicio);
                   console.log(servicio);
 
   this.servicio_data.name   = servicio.name;
@@ -63,6 +63,11 @@ methods:{
             return obj[c] == criteria[c];
           });
         });
+},
+seleccionarUnObjetoSegunAtributo:function(lista,atributo,valor){
+        return lista.find(function(element) {
+        return element.id == valor;
+      });
 },
 
      
