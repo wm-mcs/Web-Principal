@@ -13,7 +13,8 @@ data:function(){
                         fecha_vencimiento:'',
                         cantidad_de_servicios:'',
 
-                    }
+                    },
+      tipo_servicio:'',              
 
     }
 },
@@ -40,7 +41,14 @@ methods:{
  crear_servicio_a_socio:function(){
 
  },
- cambioTipoDeServicio:function(servicio){
+ cambioTipoDeServicio:function(){
+
+  var servicio = this.servicios.filter(function (el) {
+                    return el.name == this.tipo_servicio
+                  });
+
+                  console.log(servicio);
+
   this.servicio_data.name   = servicio.name;
   this.servicio_data.tipo   = servicio.tipo;
   this.servicio_data.moneda = servicio.moneda;
@@ -77,9 +85,9 @@ template:'<span>
 
                  <div class="form-group">
                       <label class="formulario-label" for="Nombre">Tipo de servicio <span class="formulario-label-aclaracion"> ¿por clase o mensual?</span></label>
-                     <select v-on:change="cambioTipoDeServicio(servicio)" class="form-control">
+                     <select v-on:change="cambioTipoDeServicio()" class="form-control" v-model="tipo_servicio">
                         <option></option>
-                        <option v-for="servicio in servicios">@{{servicio.tipo}}</option>
+                        <option v-for="servicio in servicios">@{{servicio.name}}</option>
                        
                         
                       </select>
