@@ -108,12 +108,12 @@ template:'<span>
                       <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre"   />
                   </div> 
 
-                   <div  class="form-group">
+                   <div  class="form-group" v-if="servicio_data.tipo">
                       <label class="formulario-label" >Tipo</label>
                       <input type="text" class="form-control"  v-model="servicio_data.tipo"   />
                    </div> 
 
-                    <div  class="form-group">
+                    <div  class="form-group" v-if="servicio_data.moneda">
                       <label class="formulario-label" >Moneda</label>
                       <select v-model="servicio_data.moneda" class="form-control">
                         <option>$</option>
@@ -124,13 +124,13 @@ template:'<span>
                       </select>
                     </div> 
 
-                     <div  class="form-group">
+                     <div  class="form-group" v-if="servicio_data.cantidad_de_servicios">
                       <label class="formulario-label" >Cantidad de clases</label>
                       <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios"   />
                      </div>
 
-                     <div  class="form-group">
-                      <label class="formulario-label" >Valor <span > de todas las clases</span> </label>
+                     <div  class="form-group" v-if="servicio_data.valor">
+                      <label class="formulario-label" >Valor <span v-if="servicio_data.cantidad_de_servicios"> de todas las clases</span> </label>
                       <input type="text" class="form-control"  v-model="servicio_data.valor"   />
                      </div> 
 
