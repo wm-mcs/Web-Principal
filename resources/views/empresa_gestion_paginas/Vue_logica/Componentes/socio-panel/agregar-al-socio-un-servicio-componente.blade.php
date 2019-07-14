@@ -52,18 +52,11 @@ methods:{
   this.servicio_data.moneda = servicio.moneda;
   this.servicio_data.valor  = servicio.valor;
 
-  if(servicio.tipo == 'Clase')
+  if(servicio.tipo = !'mensual')
   {
     this.cantidad_de_servicios = 1;
   } 
- },
- filtrarValoresSegunAtributo:function(lista,criteria){
-        return lista.filter(function(obj) {
-          return Object.keys(criteria).every(function(c) {
-            return obj[c] == criteria[c];
-          });
-        });
-},
+}, 
 seleccionarUnObjetoSegunAtributo:function(lista,atributo,valor){
         return lista.find(function(element) {
         return element.name == valor;
