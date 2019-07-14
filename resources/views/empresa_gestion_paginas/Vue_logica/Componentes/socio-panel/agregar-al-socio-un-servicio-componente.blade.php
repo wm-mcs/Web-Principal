@@ -105,7 +105,7 @@ template:'<span>
 
                     <div v-if="servicio_data.moneda != ''" class="form-group">
                       <label class="formulario-label" for="Nombre">Moneda</label>
-                      <select v-model="servicios.moneda" class="form-control">
+                      <select v-model="servicio_data.moneda" class="form-control">
                         <option>$</option>
                         <option>U$S</option>
                         
