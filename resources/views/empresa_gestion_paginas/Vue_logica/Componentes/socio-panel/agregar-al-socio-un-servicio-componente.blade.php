@@ -52,7 +52,7 @@ methods:{
   this.servicio_data.moneda = servicio.moneda;
   this.servicio_data.valor  = servicio.valor;
 
-  if(servicio.tipo = !'mensual')
+  if(servicio.tipo != 'mensual')
   {
     this.servicio_data.cantidad_de_servicios = 1;
   } 
