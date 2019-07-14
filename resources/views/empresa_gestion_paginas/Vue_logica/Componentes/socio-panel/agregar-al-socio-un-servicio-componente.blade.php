@@ -4,7 +4,16 @@ Vue.component('agregar-al-socio-un-servicio' ,
 data:function(){
     return {
       
-      empresa_id: {{$Empresa_gestion->id}}
+      empresa_id: {{$Empresa_gestion->id}},
+      servicio_data:{
+                        name:'',
+                        tipo:'',
+                        moneda:'',
+                        valor:'',
+                        fecha_vencimiento:'',
+                        cantidad_de_servicios:'',
+
+                    }
 
     }
 },
@@ -30,7 +39,18 @@ methods:{
  },
  crear_servicio_a_socio:function(){
 
-}
+ },
+ cambioTipoDeServicio:function(servicio){
+  this.servicio_data.name   = servicio.name;
+  this.servicio_data.tipo   = servicio.tipo;
+  this.servicio_data.moneda = servicio.moneda;
+  this.servicio_data.valor  = servicio.valor;
+
+  if(servicio.tipo != 'mensual')
+  {
+    this.cantidad_de_servicios = 1;
+  } 
+ }
 
      
 
@@ -51,56 +71,54 @@ template:'<span>
         </div>
         <div class="modal-body text-center"> 
 
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Nombres  </label>
-                      <input type="text" class="form-control"  v-model="socio.name" placeholder="Nombre" required  />
-                  </div> 
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Cedula  <span class="formulario-label-aclaracion"> (sin puntos ni guiones)</span> </label>
-                      <input type="text" class="form-control"  v-model="socio.cedula" placeholder="Cedula" required  />
-                  </div> 
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Email</label>
-                      <input type="text" class="form-control"  v-model="socio.email" placeholder="Email" required  />
-                  </div> 
-                   <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Celular</label>
-                      <input type="text" class="form-control"  v-model="socio.celular" placeholder="Celular" required  />
-                  </div> 
+                
 
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Dirección</label>
-                      <input type="text" class="form-control"  v-model="socio.direccion" placeholder="Dirección" required  />
-                  </div> 
-
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Rut  <span class="formulario-label-aclaracion"> (solo si aplica)</span></label>
-                      <input type="text" class="form-control"  v-model="socio.rut" placeholder="Rut" required  />
-                  </div> 
-
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Razon social  <span class="formulario-label-aclaracion"> (solo si aplica)</span></label>
-                      <input type="text" class="form-control"  v-model="socio.razon_social" placeholder="Razon social" required  />
-                  </div> 
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Mutualista  <span class="formulario-label-aclaracion"> (solo si aplica)</span></label>
-                      <input type="text" class="form-control"  v-model="socio.mutualista" placeholder="Mutualista" required  />
-                  </div> 
-
-                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Notas <span class="formulario-label-aclaracion"> </span></label>
-                      <input type="text" class="form-control"  v-model="socio.nota" placeholder="Escribe algo para tener en cuenta con este socio" required  />
-                  </div> 
+              
 
                  <div class="form-group">
-                      <label class="formulario-label" for="Nombre">Estado <span class="formulario-label-aclaracion"> ¿está activo?</span></label>
-                     <select v-model="socio.estado" class="form-control">
-                        
-                        <option>si</option>
-                        <option>no</option>
+                      <label class="formulario-label" for="Nombre">Tipo de servicio <span class="formulario-label-aclaracion"> ¿por clase o mensual?</span></label>
+                     <select v-on:change="cambioTipoDeServicio(servicio)" class="form-control">
+                        <option></option>
+                        <option v-for="servicio in servicios">@{{servicio.tipo}}</option>
+                       
                         
                       </select>
                   </div> 
+
+                  <div v-if="servicio_data.name != ''" class="form-group">
+                      <label class="formulario-label" for="Nombre">Nombre</label>
+                      <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre" required  />
+                  </div> 
+
+                   <div v-if="servicio_data.tipo != ''" class="form-group">
+                      <label class="formulario-label" for="Nombre">Tipo</label>
+                      <input type="text" class="form-control"  v-model="servicio_data.tipo" required  />
+                   </div> 
+
+                    <div v-if="servicio_data.moneda != ''" class="form-group">
+                      <label class="formulario-label" for="Nombre">Moneda</label>
+                      <select v-model="servicios.moneda" class="form-control">
+                        <option>$</option>
+                        <option>U$S</option>
+                        
+                       
+                        
+                      </select>
+                    </div> 
+
+                     <div v-if="servicio_data.cantidad_de_servicios != ''" class="form-group">
+                      <label class="formulario-label" for="Nombre">Cantidad de clases</label>
+                      <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios" required  />
+                     </div>
+
+                     <div v-if="servicio_data.valor != ''" class="form-group">
+                      <label class="formulario-label" for="Nombre">Valor <span v-if="servicio.tipo != 'mensual'"> de todas las clases</span> </label>
+                      <input type="text" class="form-control"  v-model="servicio_data.valor" required  />
+                     </div> 
+
+
+
+                     
 
 
 
