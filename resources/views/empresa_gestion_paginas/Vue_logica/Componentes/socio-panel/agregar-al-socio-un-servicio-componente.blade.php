@@ -56,6 +56,10 @@ methods:{
   {
     this.servicio_data.cantidad_de_servicios = 1;
   } 
+  else
+  {
+    this.servicio_data.cantidad_de_servicios = 0;
+  }
 }, 
 seleccionarUnObjetoSegunAtributo:function(lista,atributo,valor){
         return lista.find(function(element) {
