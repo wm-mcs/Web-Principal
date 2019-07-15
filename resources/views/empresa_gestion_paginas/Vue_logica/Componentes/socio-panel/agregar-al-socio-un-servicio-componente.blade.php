@@ -4,7 +4,7 @@ Vue.component('agregar-al-socio-un-servicio' ,
 data:function(){
     return {
       
-      empresa_id: {{$Empresa_gestion->id}},
+      
       servicio_data:{
                         name:'',
                         tipo:'',
@@ -12,6 +12,8 @@ data:function(){
                         valor:'',
                         fecha_vencimiento:'',
                         cantidad_de_servicios:'',
+                        empresa_id: {{$Empresa_gestion->id}},
+                        socio_id:this.socio.id
 
                     },
       tipo_servicio:'',              
@@ -38,7 +40,33 @@ methods:{
    $('#modal-agregar-servicio-socio').appendTo("body").modal('show');  
 
  },
- crear_servicio_a_socio:function(){
+ crear_servicio_a_socio:function(){  
+
+     var url  = '/post_editar_socio_desde_modal';
+
+      var data = this.servicio_data;
+
+      var vue = this;
+
+      axios.post(url,data).then(function (response){  
+            var data = response.data;  
+            
+
+            if(data.Validacion == true)
+            {
+              $.notify(data.Validacion_mensaje, "success");              
+              vue.socio = response.data.Socio;              
+            }
+            else
+            {
+              $.notify(response.data.Validacion_mensaje, "warn");
+            }
+           
+      }).catch(function (error){});
+
+
+
+
 
  },
  cambioTipoDeServicio:function(){

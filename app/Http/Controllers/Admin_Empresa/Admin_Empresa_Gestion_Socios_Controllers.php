@@ -412,6 +412,47 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      } 
   }
 
+  //agrega servicio a socio
+  public function agregar_servicio_a_socio(Request $Request)
+  {
+     $Validacion  = false;
+     $User        = Auth::user(); 
+
+      if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
+     { 
+
+       $Validacion  = true;
+       $Servicio    = $Request->get('servicio'); //me manda la data en array vue
+
+       
+       $Entidad     = $this->TipoDeServicioRepo->find($Servicio['id']); 
+
+
+       
+       //las porpiedades que se van a editar
+       $Propiedades = ['name','tipo','valor','moneda'];
+
+       foreach($Propiedades as $Propiedad)
+       {
+        $Entidad->$Propiedad = $Servicio[$Propiedad];
+       }
+
+       $Entidad->save();
+
+       
+
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se editó correctamente ',
+               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($Request->get('empresa_id'))];
+
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'No se puede editar el tipo de servicio en este momento'];
+     } 
+  }
+
 
 
   
