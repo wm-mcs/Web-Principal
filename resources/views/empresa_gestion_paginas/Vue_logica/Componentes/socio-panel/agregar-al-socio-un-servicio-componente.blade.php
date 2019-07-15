@@ -97,14 +97,11 @@ template:'<span>
                   </div> 
 
                   <div  class="form-group" v-if="servicio_data.name">
-                      <label class="formulario-label" >Nombre</label>
+                      <label class="formulario-label" >Nombre <span class="formulario-label-aclaracion"> ¿por clase o mensual?</span></label>
                       <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre"   />
                   </div> 
 
-                   <div  class="form-group" v-if="servicio_data.tipo">
-                      <label class="formulario-label" >Tipo</label>
-                      <input type="text" class="form-control"  v-model="servicio_data.tipo"   />
-                   </div> 
+                  
 
                     <div  class="form-group" v-if="servicio_data.moneda">
                       <label class="formulario-label" >Moneda</label>
@@ -117,7 +114,7 @@ template:'<span>
                       </select>
                     </div> 
 
-                     <div  class="form-group" v-if="servicio_data.cantidad_de_servicios">
+                     <div  class="form-group" v-if="servicio_data.cantidad_de_servicios >= 1">
                       <label class="formulario-label" >Cantidad de clases</label>
                       <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios"   />
                      </div>
