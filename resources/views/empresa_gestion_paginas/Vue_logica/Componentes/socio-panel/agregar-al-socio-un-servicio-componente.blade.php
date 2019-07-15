@@ -120,7 +120,7 @@ template:'<span>
 
                      <div  class="form-group" v-if="servicio_data.cantidad_de_servicios >= 1">
                       <label class="formulario-label" >Cantidad de clases</label>
-                      <input type="text" class="form-control"  v-model="servicio_data.cantidad_de_servicios"   />
+                      <input type="number" class="form-control"  v-model="servicio_data.cantidad_de_servicios"   />
                      </div>
 
                      <div  class="form-group" v-if="servicio_data.valor">
