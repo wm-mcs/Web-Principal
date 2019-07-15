@@ -80,6 +80,8 @@ methods:{
   this.servicio_data.moneda = servicio.moneda;
   this.servicio_data.valor  = servicio.valor;
 
+  this.servicio_data.socio_id = this.socio.id;
+
   if(servicio.tipo != 'mensual')
   {
     this.servicio_data.cantidad_de_servicios = 1;
