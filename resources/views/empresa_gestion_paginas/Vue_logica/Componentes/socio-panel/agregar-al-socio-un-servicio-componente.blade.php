@@ -167,7 +167,7 @@ template:'<span>
 
 
                      <div  class="form-group" v-if="servicio_data.name">
-                      <label class="formulario-label" >Fecha de vencimiento</label>
+                      <label class="formulario-label" >Fecha de vencimiento <span class="formulario-label-aclaracion"> por defecto es a un més</span></label>
                       <input type="date" class="form-control"  v-model="servicio_data.fecha_vencimiento"    />
                      </div> 
 
