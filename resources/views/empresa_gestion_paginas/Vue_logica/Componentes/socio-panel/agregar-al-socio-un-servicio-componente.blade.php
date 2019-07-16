@@ -27,14 +27,17 @@ props:['socio','servicios']
 
 
 mounted: function mounted () {        
-      var fecha =  new Date();
-      this.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1).toISOString().slice(0,10);
-
+      
+    this.setFecha();
 
 },
 methods:{
 
- 
+ setFecha:function()
+ {
+    var fecha =  new Date();
+      this.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1).toISOString().slice(0,10);
+ },
 
  abrir_modal:function(){
 
