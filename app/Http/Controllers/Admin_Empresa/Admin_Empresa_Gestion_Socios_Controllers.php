@@ -13,6 +13,7 @@ use App\Guardianes\Guardian;
 use App\Repositorios\SocioRepo;
 use App\Managers\EmpresaGestion\CrearSocioModalManager;
 use App\Repositorios\TipoDeServicioRepo;
+use App\Repositorios\ServicioContratadoSocioRepo;
 
 
 
@@ -24,16 +25,19 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   protected $Guardian;
   protected $SocioRepo;
   protected $TipoDeServicioRepo;
+  protected $ServicioContratadoSocioRepo;
 
-  public function __construct(EmpresaConSociosoRepo $EmpresaConSociosoRepo, 
-                              Guardian              $Guardian,
-                              SocioRepo             $SocioRepo, 
-                              TipoDeServicioRepo    $TipoDeServicioRepo )
+  public function __construct(EmpresaConSociosoRepo        $EmpresaConSociosoRepo, 
+                              Guardian                     $Guardian,
+                              SocioRepo                    $SocioRepo, 
+                              TipoDeServicioRepo           $TipoDeServicioRepo,
+                              ServicioContratadoSocioRepo  $ServicioContratadoSocioRepo )
   {
-    $this->EmpresaConSociosoRepo = $EmpresaConSociosoRepo;
-    $this->Guardian              = $Guardian;
-    $this->SocioRepo             = $SocioRepo;
-    $this->TipoDeServicioRepo    = $TipoDeServicioRepo;
+    $this->EmpresaConSociosoRepo          = $EmpresaConSociosoRepo;
+    $this->Guardian                       = $Guardian;
+    $this->SocioRepo                      = $SocioRepo;
+    $this->TipoDeServicioRepo             = $TipoDeServicioRepo;
+    $this->ServicioContratadoSocioRepo    = $ServicioContratadoSocioRepo;
   }
 
   public function getPropiedades()
@@ -421,30 +425,64 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
       if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
      { 
 
-       $Validacion  = true;
-       $Servicio    = $Request->get('servicio'); //me manda la data en array vue
-
-       
-       $Entidad     = $this->TipoDeServicioRepo->find($Servicio['id']); 
-
+        //para saber que es de esa empresa y no de otra
+        if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('socio_empresa_id')) )
+        {
+          $Validacion  = true;
+        } 
+        else
+        {
+          $Validacion  = false;
+        }
 
        
        //las porpiedades que se van a editar
-       $Propiedades = ['name','tipo','valor','moneda'];
+       $Propiedades = ['name','tipo','moneda'];
 
-       foreach($Propiedades as $Propiedad)
+
+       //veo si son mas de uno
+       if($Request->get('cantidad_de_servicios') > 1)
        {
-        $Entidad->$Propiedad = $Servicio[$Propiedad];
-       }
+          $Cantidad = 0; 
 
-       $Entidad->save();
+          while($Cantidad <= (int)$Request->get('cantidad_de_servicios'))
+          {
+            $Cantidad          = $Cantidad + 1;
+            $Entidad           = $this->ServicioContratadoSocioRepo->getEntidad();
+            $Entidad->socio_id = $Request->get('socio_id');
+            $Entidad->estado   = 'si' ;
+            $Entidad->valor    = round($Request->get('valor')/$Request->get('cantidad_de_servicios'));
+            $this->ServicioContratadoSocioRepo->setEntidadDato($Entidad,$Request,$Propiedades);
+          }
+
+       }
+       else
+       {
+          $Entidad           = $this->ServicioContratadoSocioRepo->getEntidad();
+          $Entidad->socio_id = $Request->get('socio_id');
+          $Entidad->estado   = 'si' ;
+          $Entidad->valor    = round($Request->get('valor'));
+
+
+       
+       
+
+          $this->ServicioContratadoSocioRepo->setEntidadDato($Entidad,$Request,$Propiedades);
+
+       }
+       
+       
 
        
 
+     }
+
+
+     if($Validacion)
+     {
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se editó correctamente ',
                'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($Request->get('empresa_id'))];
-
      }
      else
      {

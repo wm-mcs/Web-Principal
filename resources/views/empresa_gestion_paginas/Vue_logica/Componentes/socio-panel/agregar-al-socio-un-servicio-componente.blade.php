@@ -13,7 +13,8 @@ data:function(){
                         fecha_vencimiento:'',
                         cantidad_de_servicios:'',
                         empresa_id: {{$Empresa_gestion->id}},
-                        socio_id:this.socio.id
+                        socio_id:'',
+                        socio_empresa_id:''
 
                     },
       tipo_servicio:'',              
@@ -26,8 +27,8 @@ props:['socio','servicios']
 
 
 mounted: function mounted () {        
-
-      
+      var fecha =  new Date();
+      this.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1);
 
 
 },
@@ -75,12 +76,13 @@ methods:{
   var servicio = this.seleccionarUnObjetoSegunAtributo( this.servicios,'name',this.tipo_servicio);
                   console.log(servicio);
 
-  this.servicio_data.name   = servicio.name;
-  this.servicio_data.tipo   = servicio.tipo;
-  this.servicio_data.moneda = servicio.moneda;
-  this.servicio_data.valor  = servicio.valor;
+  this.servicio_data.name             = servicio.name;
+  this.servicio_data.tipo             = servicio.tipo;
+  this.servicio_data.moneda           = servicio.moneda;
+  this.servicio_data.valor            = servicio.valor;
 
-  this.servicio_data.socio_id = this.socio.id;
+  this.servicio_data.socio_id         = this.socio.id;
+  this.servicio_data.socio_empresa_id = this.socio.empresa_id;
 
   if(servicio.tipo != 'mensual')
   {
@@ -156,6 +158,12 @@ template:'<span>
                      <div  class="form-group" v-if="servicio_data.valor">
                       <label class="formulario-label" >Valor <span v-if="servicio_data.cantidad_de_servicios"> de todas las clases</span> </label>
                       <input type="text" class="form-control"  v-model="servicio_data.valor"   />
+                     </div> 
+
+
+                     <div  class="form-group" v-if="servicio_data.name">
+                      <label class="formulario-label" >Fecha de vencimiento</label>
+                      <input type="date" class="form-control"  v-model="servicio_data.fecha_vencimiento"    />
                      </div> 
 
 
