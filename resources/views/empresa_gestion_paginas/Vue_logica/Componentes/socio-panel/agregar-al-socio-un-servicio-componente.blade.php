@@ -36,7 +36,7 @@ methods:{
  setFecha:function()
  {
     var fecha =  new Date();
-      this.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1).toISOString().slice(0,10);
+      this.servicio_data.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1).toISOString().slice(0,10);
  },
 
  abrir_modal:function(){
