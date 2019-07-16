@@ -28,7 +28,7 @@ props:['socio','servicios']
 
 mounted: function mounted () {        
       var fecha =  new Date();
-      this.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1);
+      this.fecha_vencimiento = fecha.setMonth(fecha.getMonth() + 1).toISOString().slice(0,10);
 
 
 },
