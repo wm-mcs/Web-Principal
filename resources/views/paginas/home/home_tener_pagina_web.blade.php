@@ -16,7 +16,7 @@
 
             <a class="get_width_100 js-scroll-trigger" href="#precios">
               <div class="get_width_100 flex-row-center flex-justifice-space-around mt-5">
-                  <span class="boton-simple-blanco  " > Ver precios </span>
+                  <span class="boton-simple" > Ver precios </span>
               </div>
             </a>
           </div>
