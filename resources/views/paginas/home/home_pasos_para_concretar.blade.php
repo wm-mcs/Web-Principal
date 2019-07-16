@@ -8,7 +8,7 @@
             </p>
 
             <div class="get_width_100 flex-row-center flex-justifice-space-around mt-5">
-                <a class="boton-simple-blanco js-scroll-trigger " href="#precios"> Ver precios </a>
+                <span class="boton-simple-blanco js-scroll-trigger " href="#precios"> Ver precios </span>
             </div>
 
 
