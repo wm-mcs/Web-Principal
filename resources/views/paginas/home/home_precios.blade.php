@@ -121,7 +121,7 @@
                      
                     
                       
-                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Hasta hasta 10 Emails corporativos (mi_email@midominio.com)</div>
+                      <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> Hasta 10 Emails corporativos (mi_email@midominio.com)</div>
                                            
                       <div class="Seccion_precio_lista_item"><i class="fa fa-check"></i> 
                         <span class=""></span>

@@ -3,5 +3,5 @@
 
               <span class="simula_link" data-toggle="modal" data-target="#modal-mantenimiento" title="clic para ver política">
                               <i class="fa fa-info-circle"></i>                              
-                            </span>  
+                            </span>  Los precios son + IVA .
 </div>
