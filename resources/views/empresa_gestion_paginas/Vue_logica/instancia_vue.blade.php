@@ -10,6 +10,7 @@
       socios:[],
       servicios:[],
       empresa_id: {{$Empresa_gestion->id}},
+      variable:'esta es la instancia',
 
 
       
