@@ -51,8 +51,9 @@ methods:{
 
      },
 
-     getServiciosDelSocio:function(){
+     getServiciosDelSocio:function(servicios){
 
+        this.servicios_del_socio = servicios;
         alert('funciona');
 
      },

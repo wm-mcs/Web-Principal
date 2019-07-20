@@ -44,7 +44,7 @@ methods:{
  abrir_modal:function(){
 
    $('#modal-agregar-servicio-socio').appendTo("body").modal('show');  
-   this.$emit('actualizar_servicios_de_socios');
+   
 
  },
  crear_servicio_a_socio:function(){  
@@ -62,7 +62,8 @@ methods:{
             if(data.Validacion == true)
             {
               $.notify(data.Validacion_mensaje, "success");              
-              vue.socio = response.data.Socio;              
+              
+              vue.$emit('actualizar_servicios_de_socios',response.data.servicios);             
             }
             else
             {

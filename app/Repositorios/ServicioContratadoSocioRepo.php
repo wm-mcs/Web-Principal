@@ -25,7 +25,14 @@ class ServicioContratadoSocioRepo extends BaseRepo
   //setters//////////////////////////////////////////////////////////////////////
 
  
-
+  public function getServiciosContratadosASocios($socio_id)
+  {
+    return $this->getEntidad()
+                ->where('socio_id',$socio_id)
+                ->where('estado','si')
+                ->orderBy('updated_at','desc')
+                ->get();
+  }
  
 
 

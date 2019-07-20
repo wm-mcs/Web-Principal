@@ -481,13 +481,13 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      if($Validacion)
      {
        return ['Validacion'          => $Validacion,
-               'Validacion_mensaje'  => 'Se editó correctamente ',
-               'servicios'           => $this->TipoDeServicioRepo->getServiciosActivosDeEmpresa($Request->get('empresa_id'))];
+               'Validacion_mensaje'  => 'Se creó correctamente ',
+               'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))];
      }
      else
      {
        return ['Validacion'          => $Validacion,
-               'Validacion_mensaje'  => 'No se puede editar el tipo de servicio en este momento'];
+               'Validacion_mensaje'  => 'Algo no está bien :( '];
      } 
   }
 
