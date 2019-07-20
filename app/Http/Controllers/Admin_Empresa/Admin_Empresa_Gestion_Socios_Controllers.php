@@ -510,7 +510,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
           $Validacion  = false;
         }
 
-    }  
+     }  
 
 
 
@@ -518,9 +518,9 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
     if($Validacion)
      {
-       return ['Validacion'          => $Validacion,
-               'Validacion_mensaje'  => 'Se cargó correctamente',
-               'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))];
+       return ['Validacion'          =>  $Validacion,
+               'Validacion_mensaje'  =>  'Se cargó correctamente',
+               'servicios'           =>  $Request->get('socio_id')/*$this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))*/];
      }
      else
      {
