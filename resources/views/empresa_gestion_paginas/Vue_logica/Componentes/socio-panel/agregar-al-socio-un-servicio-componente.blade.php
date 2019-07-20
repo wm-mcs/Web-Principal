@@ -49,7 +49,7 @@ methods:{
  },
  crear_servicio_a_socio:function(){  
 
-     var url  = '/post_editar_socio_desde_modal';
+     var url  = '/agregar_servicio_a_socio';
 
       var data = this.servicio_data;
 
