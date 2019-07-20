@@ -35,7 +35,7 @@ methods:{
           
           if(response.data.Validacion == true)
           {
-            vue.servicios_del_socio = response.data.servicios;
+            vue.servicios = response.data.servicios;
           }
           else
           {
@@ -79,7 +79,9 @@ methods:{
             {
               $.notify(data.Validacion_mensaje, "success");
               
+              console.log(data.servicios);
               vue.servicios_del_socio = data.servicios;
+
               
             }
             else
