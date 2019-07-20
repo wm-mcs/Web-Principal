@@ -520,7 +520,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        return ['Validacion'          =>  $Validacion,
                'Validacion_mensaje'  =>  'Se cargó correctamente',
-               'servicios'           =>  $Request->get('socio_id')/*$this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))*/];
+               'servicios'           =>  $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))];
      }
      else
      {
