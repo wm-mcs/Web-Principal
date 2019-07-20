@@ -8,6 +8,7 @@ data:function(){
     return {
       socio:'hola',
       socio_id: 1,
+      variable:'componente-socio-panel',
       
       empresa_id: {{$Empresa_gestion->id}},
 
