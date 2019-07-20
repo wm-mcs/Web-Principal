@@ -17,6 +17,7 @@ data:function(){
 mounted: function mounted () {        
 
        this.getSocio();
+       this.getServiciosDelSocio('mounted');
       
 
 
@@ -53,8 +54,52 @@ methods:{
 
      getServiciosDelSocio:function(servicios){
 
+      if(servicios == 'mounted')
+      {   
+
+         var url  = '/get_servicios_de_socio';
+
+          var data = {
+
+
+               socio_id: this.socio.id,
+             empresa_id: this.empresa_id,
+       socio_empresa_id: this.socio.empresa_id
+            
+
+          };
+
+      var vue = this;
+
+      axios.post(url,data).then(function (response){  
+            var data = response.data;  
+            
+
+            if(data.Validacion == true)
+            {
+              $.notify(data.Validacion_mensaje, "success");
+              
+              vue.servicios_del_socio = data.servicios;
+              
+            }
+            else
+            {
+              $.notify(response.data.Validacion_mensaje, "warn");
+            }
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+
+
+      }
+      else
+      {
         this.servicios_del_socio = servicios;
-        alert('funciona');
+      }
+        
 
      },
      getSocio:function()
@@ -158,6 +203,14 @@ template:'<span>
 
     </div>
 
+
+  </div>
+
+  <div class="">
+    
+      <div v-for="servicio in servicios_del_socio">
+        @{{servicio.name}}
+      </div>
 
   </div>
 

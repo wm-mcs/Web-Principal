@@ -127,6 +127,11 @@ Route::post('agregar_servicio_a_socio',
   'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@agregar_servicio_a_socio',
   'as'         => 'agregar_servicio_a_socio']);  
 
+Route::post('get_servicios_de_socio',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@get_servicios_de_socio',
+  'as'         => 'get_servicios_de_socio']);  
+
 
 
 
