@@ -501,7 +501,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      { 
 
         //para saber que es de esa empresa y no de otra
-        if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('socio_empresa_id')) )
+        if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('socio_empresa_id')) || $User->role == 'adminMcos522' )
         {
           $Validacion  = true;
         } 
