@@ -8,7 +8,7 @@ data:function(){
     return {
       socio:'hola',
       socio_id: 1,
-      variable:'componente-socio-panel',
+      servicios_del_socio:'',
       
       empresa_id: {{$Empresa_gestion->id}},
 
@@ -51,6 +51,11 @@ methods:{
 
      },
 
+     getServiciosDelSocio:function(){
+
+        alert('funciona');
+
+     },
      getSocio:function()
      {
        var url = '/get_socio' + this.socio_id;
@@ -144,7 +149,9 @@ template:'<span>
     </div>
     <div class="panel-socio-contiene-acciones"> Acciones
       
-     <agregar-al-socio-un-servicio :socio="socio"  :servicios="servicios"></agregar-al-socio-un-servicio>  
+     <agregar-al-socio-un-servicio :socio="socio"  
+                                   :servicios="servicios"
+                                   @actualizar_servicios_de_socios="getServiciosDelSocio" ></agregar-al-socio-un-servicio>  
       
      
 

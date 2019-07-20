@@ -44,7 +44,7 @@ methods:{
  abrir_modal:function(){
 
    $('#modal-agregar-servicio-socio').appendTo("body").modal('show');  
-   console.log(this.$emit.variable);
+   this.$emit('actualizar_servicios_de_socios');
 
  },
  crear_servicio_a_socio:function(){  
