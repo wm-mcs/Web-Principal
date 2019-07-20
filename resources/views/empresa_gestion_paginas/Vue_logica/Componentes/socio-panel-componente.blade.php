@@ -64,7 +64,8 @@ methods:{
 
                socio_id: this.socio_id,
              empresa_id: this.empresa_id,
-       socio_empresa_id: this.socio.empresa_id
+       socio_empresa_id: this.socio.empresa_id,
+       socio:this.socio
             
 
           };
@@ -79,7 +80,8 @@ methods:{
             {
               $.notify(data.Validacion_mensaje, "success");
               
-              console.log(data.servicios);
+              
+              console.log(data.socio);
               vue.servicios_del_socio = data.servicios;
 
               
