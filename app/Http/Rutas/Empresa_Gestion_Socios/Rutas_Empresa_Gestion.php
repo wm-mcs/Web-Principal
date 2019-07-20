@@ -122,6 +122,15 @@ Route::post('editar_servicio',
   'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@editar_servicio',
   'as'         => 'editar_servicio']);  
 
+Route::post('agregar_servicio_a_socio',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@agregar_servicio_a_socio',
+  'as'         => 'agregar_servicio_a_socio']);  
+
+
+
+
+
 
 
 
