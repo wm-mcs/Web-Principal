@@ -50,8 +50,31 @@ methods:{
            });
      
 
-     },
+     },     
+     getSocio:function()
+     {
+       var url = '/get_socio' + this.socio_id;
 
+       var vue = this;
+
+       axios.get(url).then(function(response){  
+          
+          if(response.data.Validacion == true)
+          {
+            vue.socio = response.data.Socio;
+          }
+          else
+          {
+            $.notify(response.data.Validacion_mensaje, "warn");
+          }    
+           
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+     },
      getServiciosDelSocio:function(servicios){
 
       if(servicios == 'mounted')
@@ -105,30 +128,6 @@ methods:{
       }
         
 
-     },
-     getSocio:function()
-     {
-       var url = '/get_socio' + this.socio_id;
-
-       var vue = this;
-
-       axios.get(url).then(function(response){  
-          
-          if(response.data.Validacion == true)
-          {
-            vue.socio = response.data.Socio;
-          }
-          else
-          {
-            $.notify(response.data.Validacion_mensaje, "warn");
-          }    
-           
-           
-           }).catch(function (error){
-
-                     
-            
-           });
      },
      editSocioShow:function()
      {
