@@ -35,7 +35,7 @@ methods:{
           
           if(response.data.Validacion == true)
           {
-            vue.servicios = response.data.servicios;
+            vue.servicios_del_socio = response.data.servicios;
           }
           else
           {
