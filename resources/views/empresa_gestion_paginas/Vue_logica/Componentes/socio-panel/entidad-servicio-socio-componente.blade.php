@@ -20,7 +20,7 @@ methods:{
 },
 template:'<span>
 
-  <div>
+  <div class="contiene-entidad-lista-servicio">
     @{{servicio.name}}
   </div>
 
