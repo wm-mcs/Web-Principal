@@ -86,9 +86,7 @@ methods:{
 
 
                socio_id: this.socio_id,
-             empresa_id: this.empresa_id,
-       socio_empresa_id: this.socio.empresa_id,
-       socio:this.socio
+             empresa_id: this.empresa_id
             
 
           };
