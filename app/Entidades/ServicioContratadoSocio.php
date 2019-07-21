@@ -56,7 +56,7 @@ class ServicioContratadoSocio extends Model
 
     public function getFechaVencimientoAttribute()
     {
-        return  Carbon::parse($this->fecha_vencimiento)->format('d/m/Y');
+        return Carbon::parse($this->fecha_vencimiento)->format('d/m/Y');
     }
 
 
