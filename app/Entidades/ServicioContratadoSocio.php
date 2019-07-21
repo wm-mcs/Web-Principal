@@ -20,7 +20,7 @@ class ServicioContratadoSocio extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends  = ['fecha_vencimiento'];
+    protected $appends  = ['fecha_vencimiento_formateada'];
 
 
 
@@ -54,7 +54,7 @@ class ServicioContratadoSocio extends Model
     }
 
 
-    public function getFechaVencimientoAttribute()
+    public function getFechaVencimientoFormateadaAttribute()
     {
         return Carbon::parse($this->fecha_vencimiento)->format('d/m/Y');
     }
