@@ -210,7 +210,10 @@ template:'<span>
   <div class="">
     
       <div v-for="servicio in servicios_del_socio">
-        @{{servicio.name}}
+
+
+        <servicio-socio-lista :servicio="servicio"> </servicio-socio-lista>
+        
       </div>
 
   </div>
