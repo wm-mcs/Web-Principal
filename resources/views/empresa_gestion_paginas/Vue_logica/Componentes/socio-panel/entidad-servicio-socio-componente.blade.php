@@ -21,7 +21,7 @@ methods:{
 template:'<span>
 
   <div class="contiene-entidad-lista-servicio">
-    @{{servicio.name}}
+    @{{servicio.name}}  | @{{servicio.fecha_vencimiento}} 
   </div>
 
 </span>'

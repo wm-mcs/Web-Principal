@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 
 
@@ -19,6 +20,7 @@ class ServicioContratadoSocio extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
+    protected $appends  = ['fecha_vencimiento'];
 
 
 
@@ -49,6 +51,12 @@ class ServicioContratadoSocio extends Model
                                
            $query->where('estado', "si"); 
                 
+    }
+
+
+    public function getFechaVencimientoAttribute()
+    {
+        return  Carbon::parse($this->fecha_vencimiento)->format('d/m/Y');
     }
 
 
