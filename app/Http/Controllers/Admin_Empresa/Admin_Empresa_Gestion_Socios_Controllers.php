@@ -491,12 +491,13 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      } 
   }
 
+  //obtengo servicios
   public function get_servicios_de_socio(Request $Request)
   {
 
-    $Validacion   = false;
-     $User        = Auth::user(); 
-     $Socio       = $this->SocioRepo->find($Request->get('socio_id'));
+     $Validacion   = false;
+     $User         = Auth::user(); 
+     $Socio        = $this->SocioRepo->find($Request->get('socio_id'));
 
       if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
      { 
@@ -522,6 +523,38 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        return ['Validacion'          =>  $Validacion,
                'Validacion_mensaje'  =>  'Se cargó correctamente',
                'servicios'           =>  $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))];
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Algo no está bien :( '];
+     } 
+  }
+
+  public function borrar_servicio_de_socio($id)
+  {
+     $Validacion   = false;
+     $User         = Auth::user(); 
+     $Servicio     = $this->ServicioContratadoSocioRepo->find($id);
+     $Socio        = $this->SocioRepo->find($Servicio->socio_id);
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id,$Socio->socio_empresa_id) || $User->role == 'adminMcos522' )
+     { 
+
+      $Validacion  = true;
+
+      $this->ServicioContratadoSocioRepo->destruir_esta_entidad($Servicio);
+
+       
+
+     }  
+
+
+     if($Validacion)
+     {
+       return ['Validacion'          =>  $Validacion,
+               'Validacion_mensaje'  =>  'Se eliminó correctamente',
+               'servicios'           =>  $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Socio->id)];
      }
      else
      {
