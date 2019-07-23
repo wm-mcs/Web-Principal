@@ -17,6 +17,14 @@ methods:{
 
     borrar_servicio:function(servicio){
 
+
+       var validation = confirm("¿Quieres eliminar el servicio?");
+
+       if(!validation)
+       {
+        return '';
+       }
+
        var url = '/borrar_servicio_de_socio' + servicio.id;
 
        var vue = this;
