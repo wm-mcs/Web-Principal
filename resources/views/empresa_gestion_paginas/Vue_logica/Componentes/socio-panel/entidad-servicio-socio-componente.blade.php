@@ -17,7 +17,27 @@ methods:{
 
     borrar_servicio:function(servicio){
 
+       var url = '/borrar_servicio_de_socio' + servicio.id;
 
+       var vue = this;
+
+       axios.get(url).then(function(response){  
+          
+          if(response.data.Validacion == true)
+          {
+            vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
+          }
+          else
+          {
+            $.notify(response.data.Validacion_mensaje, "warn");
+          }    
+           
+           
+           }).catch(function (error){
+
+                     
+            
+           });
 
 
     }

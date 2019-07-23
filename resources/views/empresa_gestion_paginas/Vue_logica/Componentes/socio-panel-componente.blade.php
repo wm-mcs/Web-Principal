@@ -212,7 +212,7 @@ template:'<span>
       <div v-for="servicio in servicios_del_socio">
 
 
-        <servicio-socio-lista :servicio="servicio"> </servicio-socio-lista>
+        <servicio-socio-lista :servicio="servicio" @actualizar_servicios_de_socios="getServiciosDelSocio"> </servicio-socio-lista>
         
       </div>
 
