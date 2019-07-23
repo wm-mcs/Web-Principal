@@ -60,8 +60,8 @@ template:'<span>
             @{{servicio.name}} 
         </div>
         <div>
-            <span>Contratado el @{{servicio.fecha_contratado_formateada}}</span>
-            <span>Se vence el @{{servicio.fecha_vencimiento_formateada}}</span>
+            <span class="entidad-lista-servicio-fecha">Contratado el @{{servicio.fecha_contratado_formateada}}</span>
+            <span class="entidad-lista-servicio-fecha">Se vence el @{{servicio.fecha_vencimiento_formateada}}</span>
         </div>
     </div>
        
