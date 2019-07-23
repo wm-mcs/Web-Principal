@@ -56,13 +56,13 @@ class ServicioContratadoSocio extends Model
 
     public function getFechaVencimientoFormateadaAttribute()
     {
-        return Carbon::parse($this->fecha_vencimiento)->format('d-m-Y');
+        return Carbon::parse($this->fecha_vencimiento)->format('Y-m-d');
     }
 
 
     public function getFechaContratadoFormateadaAttribute()
     {
-        return $this->created_at->format('d-m-Y'); 
+        return $this->created_at->format('Y-m-d'); 
     }
 
 
