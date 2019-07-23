@@ -437,7 +437,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
        
        //las porpiedades que se van a editar
-       $Propiedades = ['name','tipo','moneda'];
+       $Propiedades = ['name','tipo','moneda','fecha_vencimiento'];
 
 
        //veo si son mas de uno
