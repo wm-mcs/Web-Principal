@@ -54,7 +54,16 @@ methods:{
 template:'<span>
 
   <div class="contiene-entidad-lista-servicio">
-    @{{servicio.name}}  | @{{servicio.fecha_vencimiento_formateada}} 
+
+    <div class="flex-row-center get_width_100 flex-justifice-space-between">
+        <div>
+            @{{servicio.name}} 
+        </div>
+        <div>
+            <span>Contratado el @{{servicio.fecha_contratado_formateada}}</span>
+        </div>
+    </div>
+     | @{{servicio.fecha_vencimiento_formateada}} 
         <div  class="admin-user-boton-Crear" v-on:click="borrar_servicio(servicio)">
             <i class="fas fa-trash-alt"></i>
         </div>
