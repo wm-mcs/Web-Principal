@@ -62,7 +62,7 @@ template:'<span>
         <div>
             <div class="entidad-lista-servicio-contiene-fecha">
                 <span class="entidad-lista-servicio-fecha">Contratado el @{{servicio.fecha_contratado_formateada}}</span>
-                <input type="date" name="" v-model="servicio.fecha_vencimiento_formateada">
+                <input type="date" name="" v-model="servicio.fecha_vencimiento_formateada" class="entidad-lista-servicio-fecha-input">
                 <span class="entidad-lista-servicio-fecha">Se vence el @{{servicio.fecha_vencimiento_formateada}}</span>
             </div>
             
