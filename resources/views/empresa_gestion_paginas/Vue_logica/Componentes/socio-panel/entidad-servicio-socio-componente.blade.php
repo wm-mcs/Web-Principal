@@ -61,9 +61,10 @@ template:'<span>
         </div>
         <div>
             <span>Contratado el @{{servicio.fecha_contratado_formateada}}</span>
+            <span>Se vence el @{{servicio.fecha_vencimiento_formateada}}</span>
         </div>
     </div>
-     | @{{servicio.fecha_vencimiento_formateada}} 
+       
         <div  class="admin-user-boton-Crear" v-on:click="borrar_servicio(servicio)">
             <i class="fas fa-trash-alt"></i>
         </div>
