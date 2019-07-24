@@ -59,12 +59,12 @@ methods:{
 
        axios.post(url,data).then(function(response){ 
 
-       console.log(response.data); 
+
           
           if(response.data.Validacion == true)
           {
             
-
+            console.log(response.data); 
             vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
           }
           else
