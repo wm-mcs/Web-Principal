@@ -49,7 +49,7 @@ methods:{
 
 
     },
-    EditarServicio:function(servicio){
+    EditarServicio:_.debounce(function(servicio){
 
        var url = '/editar_servicio_a_socio';
 
@@ -59,7 +59,7 @@ methods:{
 
        axios.post(url,data).then(function(response){ 
 
-          console.log(response.data); 
+
           
           if(response.data.Validacion == true)
           {
@@ -79,7 +79,8 @@ methods:{
             
            });
 
-    }
+    },1000)
+    ,
 
 
 },
