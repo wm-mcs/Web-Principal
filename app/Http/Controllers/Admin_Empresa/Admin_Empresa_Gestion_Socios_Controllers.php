@@ -500,7 +500,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
      $Validacion        = false;
      $User              = Auth::user(); 
-     $Servicio_a_editar = json_encode($Request->get('servicio_a_editar'));
+     $Servicio_a_editar = json_decode($Request->get('servicio_a_editar'));
 
      return $Servicio_a_editar->id;
      $Socio             = $this->SocioRepo->find($Servicio_a_editar->socio_id);
