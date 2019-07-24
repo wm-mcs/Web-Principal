@@ -535,7 +535,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se editó correctamente ',
-               'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Servicio_a_editar->id)];
+               'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Socio->id)];
      }
      else
      {
