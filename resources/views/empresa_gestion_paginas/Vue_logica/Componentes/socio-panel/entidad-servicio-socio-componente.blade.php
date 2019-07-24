@@ -64,8 +64,9 @@ methods:{
           if(response.data.Validacion == true)
           {
             
-            console.log(response.data); 
+            
             vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
+             $.notify(response.data.Validacion_mensaje, "success");
           }
           else
           {
@@ -81,6 +82,12 @@ methods:{
 
     },1000)
     ,
+    abrir_modal_editar:function(){
+
+
+      $('#modal-editar-servicio-socio').appendTo("body").modal('show');  
+
+    }
 
 
 },
@@ -105,6 +112,71 @@ template:'<span>
         <div  class="admin-user-boton-Crear" v-on:click="borrar_servicio(servicio)">
             <i class="fas fa-trash-alt"></i>
         </div>
+
+         <div  class="admin-user-boton-Crear" v-on:click="abrir_modal_editar">
+            <i class="fas fa-edit"></i>
+        </div>
+
+
+         <div class="modal fade" id="modal-editar-servicio-socio" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel"> Editar @{{servicio.name}}</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+          
+        </div>
+        <div class="modal-body text-center"> 
+
+                  <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Nombres  </label>
+                      <input type="text" class="form-control"  v-model="servicio.name" placeholder="Nombre" required  />
+                  </div> 
+                  <div class="form-group">
+                      <label class="formulario-label" for="Nombre">Fecha de vencimiento  </label>
+                      <input type="date" class="form-control"  v-model="servicio.fecha_vencimiento"  required  />
+                  </div> 
+                
+                  
+
+                 
+               
+
+                
+
+
+               
+
+                  <div v-on:click="EditarServicio(servicio)" class="boton-simple">Editar</div>
+                  
+                 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
 </span>'

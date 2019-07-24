@@ -102,7 +102,7 @@ methods:{
               $.notify(data.Validacion_mensaje, "success");
               
               
-              console.log(data.socio);
+              
               vue.servicios_del_socio = data.servicios;
 
               

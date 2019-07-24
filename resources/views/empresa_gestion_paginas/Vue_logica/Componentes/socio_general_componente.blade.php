@@ -25,13 +25,11 @@ methods:{
 
        axios.get(url).then(function(response){  
           
-            console.log(vue);
-            console.log(vue.socios);
+            
 
            vue.socios = response.data.socios;
 
-            console.log(vue.socios);
-            console.log(vue.socios);
+            
 
            
            
