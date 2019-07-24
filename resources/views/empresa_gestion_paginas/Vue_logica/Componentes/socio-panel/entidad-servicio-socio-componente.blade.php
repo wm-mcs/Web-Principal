@@ -51,7 +51,7 @@ methods:{
     },
     EditarServicio:function(servicio){
 
-       var url = '/borrar_servicio_de_socio' + servicio.id;
+       var url = '/editar_servicio_a_socio';
 
        var vue = this;
 
