@@ -502,8 +502,8 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      $User              = Auth::user(); 
      $Servicio_a_editar = json_decode(json_encode($Request->get('servicio_a_editar')));
 
-     return $Request->get('servicio_a_editar');
      
+
      $Socio             = $this->SocioRepo->find($Servicio_a_editar->socio_id);
 
      if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->socio_empresa_id ) || $User->role == 'adminMcos522' )
@@ -526,6 +526,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
 
        $this->ServicioContratadoSocioRepo->setEntidadDatoObjeto($Servicio,$Servicio_a_editar,$Propiedades );
+       $this->ServicioContratadoSocioRepo->setAtributoEspecifico($Servicio,'fecha_vencimiento',$Servicio_a_editar->fecha_vencimiento_formateada );
      }  
 
 
