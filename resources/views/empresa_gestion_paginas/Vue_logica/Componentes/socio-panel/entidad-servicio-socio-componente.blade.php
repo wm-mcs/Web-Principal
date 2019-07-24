@@ -55,7 +55,7 @@ methods:{
 
        var vue = this;
 
-       var data = {servicio_a_editar:servicio};
+       var data = {servicio_a_editar:this.servicio};
 
        axios.post(url,data).then(function(response){ 
 
