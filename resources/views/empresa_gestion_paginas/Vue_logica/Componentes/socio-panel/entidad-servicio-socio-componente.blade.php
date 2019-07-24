@@ -59,7 +59,7 @@ methods:{
 
        axios.post(url,data).then(function(response){ 
 
-
+          console.log(response.data); 
           
           if(response.data.Validacion == true)
           {
