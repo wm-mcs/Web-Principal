@@ -61,6 +61,8 @@ methods:{
           
           if(response.data.Validacion == true)
           {
+            console.log(response.data);
+
             vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
           }
           else
