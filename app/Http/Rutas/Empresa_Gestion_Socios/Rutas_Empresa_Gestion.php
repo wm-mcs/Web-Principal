@@ -141,6 +141,19 @@ Route::get('borrar_servicio_de_socio{id}',
 
 
 
+Route::post('editar_servicio_a_socio',
+[
+  'uses'       => 'Admin_Empresa\Admin_Empresa_Gestion_Socios_Controllers@editar_servicio_a_socio',
+  'as'         => 'editar_servicio_a_socio']);  
+
+
+
+
+
+
+
+
+
 
 
 

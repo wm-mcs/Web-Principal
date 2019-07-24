@@ -200,6 +200,19 @@ abstract class BaseRepo
         return $Entidad;
     }
 
+    //setters recibe un objeto en lugar del reques
+    public function setEntidadDatoObjeto($Entidad,$objeto,$Propiedades)
+    {
+        foreach ($Propiedades as $Propiedad) 
+        {         
+           $Entidad->$Propiedad = $objeto->$Propiedad; 
+        } 
+
+        $Entidad->save();     
+
+        return $Entidad;
+    }
+
 
        public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null,$file = null)
     {

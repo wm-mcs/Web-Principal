@@ -491,6 +491,60 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      } 
   }
 
+
+  //editar servicio a socio
+  public function editar_servicio_a_socio(Request $Request)
+  { 
+
+
+
+     $Validacion        = false;
+     $User              = Auth::user(); 
+     $Servicio_a_editar = $Request->get('servicio_a_editar');
+     $Socio             = $this->SocioRepo->find($Servicio_a_editar->socio_id);
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->socio_empresa_id ) || $User->role == 'adminMcos522' )
+     { 
+
+        //para saber que es de esa empresa y no de otra
+        if($this->Guardian->son_iguales($Servicio_a_editar->socio_id,$Socio->id) )
+        {
+          $Validacion  = true;
+        } 
+        else
+        {
+          $Validacion  = false;
+        }
+
+       $Servicio = $this->ServicioContratadoSocioRepo->find($Servicio_a_editar->id);
+       
+       //las porpiedades que se van a editar
+       $Propiedades = ['name','tipo','moneda','fecha_vencimiento'];
+
+
+       $this->ServicioContratadoSocioRepo->setEntidadDatoObjeto($Servicio,$Servicio_a_editar,$Propiedades );
+     }  
+
+
+      
+
+
+     if($Validacion)
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Se editó correctamente ',
+               'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Servicio_a_editar->id)];
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Algo no está bien :( '];
+     } 
+
+
+
+  }
+
   //obtengo servicios
   public function get_servicios_de_socio(Request $Request)
   {

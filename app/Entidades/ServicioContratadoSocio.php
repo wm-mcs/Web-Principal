@@ -65,6 +65,20 @@ class ServicioContratadoSocio extends Model
         return $this->created_at->format('Y-m-d'); 
     }
 
+    public function getEstaVencidoAttribute()
+    {
+
+        if(Carbon::now() >= Carbon::parse($this->fecha_vencimiento))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 
 
     
