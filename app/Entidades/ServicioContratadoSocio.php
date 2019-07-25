@@ -20,7 +20,13 @@ class ServicioContratadoSocio extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends  = ['fecha_vencimiento_formateada','fecha_contratado_formateada'];
+    protected $appends  = [
+                           'fecha_vencimiento_formateada',
+                           'fecha_contratado_formateada',
+                           'fecha_contratado_formateada',
+                           'esta_vencido',
+                           'esta_consumido'
+                          ];
 
 
 
@@ -59,6 +65,13 @@ class ServicioContratadoSocio extends Model
         return Carbon::parse($this->fecha_vencimiento)->format('Y-m-d');
     }
 
+    public function getFechaConsumidoFormateadaAttribute()
+    {
+        return Carbon::parse($this->fecha_consumido)->format('Y-m-d');
+    }
+
+    
+
 
     public function getFechaContratadoFormateadaAttribute()
     {
@@ -68,7 +81,21 @@ class ServicioContratadoSocio extends Model
     public function getEstaVencidoAttribute()
     {
 
-        if(Carbon::now() >= Carbon::parse($this->fecha_vencimiento))
+        if(Carbon::now('America/Montevideo') >= Carbon::parse($this->fecha_vencimiento))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    public function getEstaConsumidoAttribute()
+    {
+
+        if(Carbon::now('America/Montevideo') >= Carbon::parse($this->fecha_consumido))
         {
             return true;
         }

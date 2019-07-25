@@ -91,6 +91,21 @@ methods:{
 
 
 },
+computed:{
+
+    esta_activo:function()
+    {
+        if(this.servicio.esta_vencido == true || this.servicio.esta_consumido == false)
+        {
+          return false ;
+        }
+        else
+        {
+          return true;
+        }
+    }
+  
+},
 template:'<span>
 
   <div class="contiene-entidad-lista-servicio">
@@ -101,8 +116,11 @@ template:'<span>
         </div>
         <div>
             <div class="entidad-lista-servicio-contiene-fecha">
-                <span class="entidad-lista-servicio-fecha">Contratado el @{{servicio.fecha_contratado_formateada}}</span>                
-                <span class="entidad-lista-servicio-fecha">Se vence el @{{servicio.fecha_vencimiento_formateada}}</span>
+                <span class="entidad-lista-servicio-fecha" >Contratado el @{{servicio.fecha_contratado_formateada}}</span>                
+                <span class="entidad-lista-servicio-fecha" >Se vence el @{{servicio.fecha_vencimiento_formateada}}</span> 
+
+
+                <div class="lista-estado-activo" :class="{'color-text-success': esta_activo}"> <i class="fas fa-check"></i> Disponible</div>
             </div>
             
         </div>
