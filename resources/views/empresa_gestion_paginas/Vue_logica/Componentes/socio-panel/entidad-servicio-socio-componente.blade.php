@@ -104,6 +104,8 @@ computed:{
           return true;
         }
     }
+
+
   
 },
 template:'<span>
@@ -120,7 +122,7 @@ template:'<span>
                 <span class="entidad-lista-servicio-fecha" >Se vence el @{{servicio.fecha_vencimiento_formateada}}</span> 
 
 
-                <div class="lista-estado-activo" v-bind:class="{color-text-success: esta_activo}"> <i class="fas fa-check"></i> Disponible</div>
+                <div v-if="esta_activo" class="lista-estado-activo" > <i class="fas fa-check"></i> Disponible</div>
             </div>
             
         </div>
