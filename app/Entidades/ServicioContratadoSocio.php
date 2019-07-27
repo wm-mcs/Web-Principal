@@ -23,7 +23,7 @@ class ServicioContratadoSocio extends Model
     protected $appends  = [
                            'fecha_vencimiento_formateada',
                            'fecha_contratado_formateada',
-                           'fecha_contratado_formateada',
+                           'fecha_consumido_formateada',
                            'esta_vencido',
                            'esta_consumido'
                           ];

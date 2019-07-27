@@ -522,11 +522,13 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        $Servicio = $this->ServicioContratadoSocioRepo->find($Servicio_a_editar->id);
        
        //las porpiedades que se van a editar
-       $Propiedades = ['name','tipo','moneda','fecha_vencimiento'];
+       $Propiedades = ['name','tipo','moneda','fecha_vencimiento','esta_consumido'];
 
 
        $this->ServicioContratadoSocioRepo->setEntidadDatoObjeto($Servicio,$Servicio_a_editar,$Propiedades );
        $this->ServicioContratadoSocioRepo->setAtributoEspecifico($Servicio,'fecha_vencimiento',$Servicio_a_editar->fecha_vencimiento_formateada );
+
+       $this->ServicioContratadoSocioRepo->setAtributoEspecifico($Servicio,'fecha_consumido',$Servicio_a_editar->fecha_consumido_formateada );
      }  
 
 
