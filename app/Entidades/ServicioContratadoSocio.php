@@ -25,7 +25,7 @@ class ServicioContratadoSocio extends Model
                            'fecha_contratado_formateada',
                            'fecha_consumido_formateada',
                            'esta_vencido',
-                           'esta_consumido'
+                           'se_consumio'
                           ];
 
 
@@ -92,8 +92,14 @@ class ServicioContratadoSocio extends Model
 
     }
 
-    public function getEstaConsumidoAttribute()
+    public function getSeConsumioAttribute()
     {
+
+        if($this->esta_consumido == 'no')
+        {
+          return false;
+        }
+        
 
         if(Carbon::now('America/Montevideo') >= Carbon::parse($this->fecha_consumido))
         {

@@ -97,6 +97,42 @@ methods:{
         return '';
        }
 
+
+       var url = '/indicar_que_se_uso_el_servicio_hoy';
+
+       var vue = this;
+
+       var data = {servicio_a_editar:this.servicio};
+
+       axios.post(url,data).then(function(response){ 
+
+
+          
+          if(response.data.Validacion == true)
+          {
+            
+            
+            vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
+             $.notify(response.data.Validacion_mensaje, "success");
+          }
+          else
+          {
+            $.notify(response.data.Validacion_mensaje, "warn");
+          }    
+           
+           
+           }).catch(function (error){
+
+                     
+            
+           });
+
+
+
+
+
+
+
     }
 
 
@@ -116,7 +152,7 @@ computed:{
     },
     se_consumio:function(){
 
-       if( this.servicio.esta_consumido == 'no'  )
+       if( this.servicio.se_consumio == true  )
         {
           return true ;
         }

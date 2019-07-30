@@ -14,6 +14,7 @@ use App\Repositorios\SocioRepo;
 use App\Managers\EmpresaGestion\CrearSocioModalManager;
 use App\Repositorios\TipoDeServicioRepo;
 use App\Repositorios\ServicioContratadoSocioRepo;
+use Carbon\Carbon;
 
 
 
@@ -555,9 +556,9 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   public function get_servicios_de_socio(Request $Request)
   {
 
-     $Validacion   = false;
-     $User         = Auth::user(); 
-     $Socio        = $this->SocioRepo->find($Request->get('socio_id'));
+     $Validacion        = false;
+     $User              = Auth::user(); 
+     $Servicio_a_editar = json_decode(json_encode($Request->get('servicio_a_editar')));
 
       if($this->Guardian->son_iguales($User->empresa_gestion_id,$Request->get('empresa_id')) || $User->role == 'adminMcos522' )
      { 
@@ -614,6 +615,53 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        return ['Validacion'          =>  $Validacion,
                'Validacion_mensaje'  =>  'Se eliminó correctamente',
+               'servicios'           =>  $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Socio->id)];
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Algo no está bien :( '];
+     } 
+  }
+
+
+  public function indicar_que_se_uso_el_servicio_hoy(Request $Request)
+  {
+
+     $Validacion   = false;
+     $User         = Auth::user(); 
+     $Servicio     = $this->ServicioContratadoSocioRepo->find($id);
+     $Socio        = $this->SocioRepo->find($Servicio_a_editar->socio_id);
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->socio_empresa_id ) || $User->role == 'adminMcos522' )
+     { 
+
+        //para saber que es de esa empresa y no de otra
+        if($this->Guardian->son_iguales($Servicio_a_editar->socio_id,$Socio->id) )
+        {
+          $Validacion  = true;
+        } 
+        else
+        {
+          $Validacion  = false;
+        }
+
+       $Servicio = $this->ServicioContratadoSocioRepo->find($Servicio_a_editar->id);
+       
+       //las porpiedades que se van a editar  
+       $this->ServicioContratadoSocioRepo->setAtributoEspecifico($Servicio,'fecha_consumido', Carbon::now('America/Montevideo') );
+
+       
+     }  
+
+
+
+
+
+    if($Validacion)
+     {
+       return ['Validacion'          =>  $Validacion,
+               'Validacion_mensaje'  =>  'Se consumió la clase correctamente',
                'servicios'           =>  $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Socio->id)];
      }
      else
