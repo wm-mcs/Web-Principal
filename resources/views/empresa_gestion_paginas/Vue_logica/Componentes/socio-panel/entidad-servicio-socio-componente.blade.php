@@ -87,6 +87,16 @@ methods:{
 
       $('#modal-editar-servicio-socio').appendTo("body").modal('show');  
 
+    },
+    indicar_que_se_uso_hoy:function(){
+
+       var validation = confirm("¿Quieres indicar que se usó este servicio?");
+
+       if(!validation)
+       {
+        return '';
+       }
+
     }
 
 
@@ -134,6 +144,10 @@ template:'<span>
 
          <div  class="admin-user-boton-Crear" v-on:click="abrir_modal_editar">
             <i class="fas fa-edit"></i>
+        </div>
+
+         <div  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+            <i class="far fa-check-square"></i>
         </div>
 
 
