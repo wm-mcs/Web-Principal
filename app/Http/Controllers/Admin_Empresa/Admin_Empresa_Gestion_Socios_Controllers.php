@@ -628,10 +628,10 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   public function indicar_que_se_uso_el_servicio_hoy(Request $Request)
   {
 
-     $Validacion   = false;
-     $User         = Auth::user(); 
-     $Servicio     = $this->ServicioContratadoSocioRepo->find($id);
-     $Socio        = $this->SocioRepo->find($Servicio_a_editar->socio_id);
+     $Validacion        = false;
+     $User              = Auth::user(); 
+     $Servicio_a_editar = json_decode(json_encode($Request->get('servicio_a_editar')));     
+     $Socio             = $this->SocioRepo->find($Servicio_a_editar->socio_id);
 
      if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->socio_empresa_id ) || $User->role == 'adminMcos522' )
      { 
