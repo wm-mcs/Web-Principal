@@ -92,9 +92,9 @@ methods:{
 
        var validation = confirm("¿Quieres indicar que se usó este servicio?");
 
-       if(!validation)
+       if(validation)
        {
-        return '';
+         alert('hola')
        }
 
     }
@@ -146,7 +146,9 @@ template:'<span>
             <i class="fas fa-edit"></i>
         </div>
 
-        
+         <div  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+            <i class="far fa-check-square"></i>
+        </div>
 
 
          <div class="modal fade" id="modal-editar-servicio-socio" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
