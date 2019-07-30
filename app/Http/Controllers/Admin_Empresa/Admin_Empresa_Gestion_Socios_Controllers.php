@@ -651,6 +651,8 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        //las porpiedades que se van a editar  
        $this->ServicioContratadoSocioRepo->setAtributoEspecifico($Servicio,'fecha_consumido', Carbon::now('America/Montevideo') );
 
+       $this->ServicioContratadoSocioRepo->setAtributoEspecifico($Servicio,'esta_consumido', 'si' );
+
        
      }  
 
