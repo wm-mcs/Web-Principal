@@ -177,12 +177,12 @@ template:'<span>
         <div>
             <div class="entidad-lista-servicio-contiene-fecha">
                 <span class="entidad-lista-servicio-fecha" >Contratado el @{{servicio.fecha_contratado_formateada}}</span>                
-                <span class="entidad-lista-servicio-fecha" >Se vence el @{{servicio.fecha_vencimiento_formateada}}</span> 
+                <span v-if="!servicio.esta_vencido" class="entidad-lista-servicio-fecha" >Se vence el @{{servicio.fecha_vencimiento_formateada}}</span> 
                
 
-
+                <div v-if="servicio.esta_vencido" class="lista-estado-consumido" > <i class="fas fa-exclamation-circle"></i> Se venció el @{{servicio.fecha_vencimiento_formateada}}</div>
                 <div v-if="esta_activo" class="lista-estado-activo" > <i class="fas fa-check"></i> Disponible</div>
-                <div v-if="servicio.se_consumio" class="lista-estado-consumido" > <i class="fas fa-exclamation-circle"></i> Consumido el @{{servicio.fecha_consumido_formateada}}</div>
+                <div v-if="servicio.se_consumio" class="lista-estado-consumido" > <i class="fas fa-exclamation-circle"></i> Se consumió el @{{servicio.fecha_consumido_formateada}}</div>
             </div>
             
         </div>
@@ -196,7 +196,7 @@ template:'<span>
             <i class="fas fa-edit"></i>
         </div>
 
-         <div v-if="se_consumio"  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+         <div v-if="!servicio.se_consumio"  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
             <i class="far fa-check-square"></i>
          </div>
 
