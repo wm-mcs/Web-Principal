@@ -88,16 +88,7 @@ methods:{
       $('#modal-editar-servicio-socio').appendTo("body").modal('show');  
 
     },
-    indicar_que_se_uso_hoy:function(){
-
-       var validation = confirm("¿Quieres indicar que se usó este servicio?");
-
-       if(validation)
-       {
-         alert('hola')
-       }
-
-    }
+    
 
 
 },
