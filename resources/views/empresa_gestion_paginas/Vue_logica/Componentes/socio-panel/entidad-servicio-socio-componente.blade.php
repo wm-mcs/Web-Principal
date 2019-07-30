@@ -141,7 +141,7 @@ computed:{
 
     esta_activo:function()
     {
-        if( this.servicio.esta_vencido == true || this.servicio.esta_consumido == false )
+        if( this.servicio.esta_vencido == true || this.servicio.se_consumio == true )
         {
           return false ;
         }
