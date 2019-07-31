@@ -179,6 +179,7 @@ computed:{
   
 },
 template:'
+<div>
 
   <div class="contiene-entidad-lista-servicio">
 
@@ -317,6 +318,7 @@ template:'
 
 
   </div>
+  
 
 '
 
