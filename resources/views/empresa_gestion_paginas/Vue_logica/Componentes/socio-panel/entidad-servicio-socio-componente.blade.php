@@ -183,8 +183,25 @@ template:'
   <div class="contiene-entidad-lista-servicio">
 
     <div class="flex-row-center get_width_100 flex-justifice-space-between">
-        <div class="entidad-lista-name simula_link" v-on:click="abrir_modal_editar">
-            @{{servicio.name}}  <i class="fas fa-edit"></i> 
+        <div class="entidad-lista-name simula_link" >
+            
+            @{{servicio.name}} 
+
+
+
+            <span v-on:click="abrir_modal_editar" class="boton-simple-chico margin-left-4px" title="Abrir cuadro de edición del socio">
+              <i class="fas fa-edit"></i> 
+            </span>  
+
+            <span  v-if="!servicio.se_consumio && es_clase"  class="boton-simple-chico margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+              
+              <i class="far fa-check-square"></i>
+            </span>
+
+            
+            
+         </div>
+
         </div>
         <div>
             <div class="entidad-lista-servicio-contiene-fecha">
@@ -204,9 +221,7 @@ template:'
 
         
 
-         <div v-if="!servicio.se_consumio && es_clase"  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
-            <i class="far fa-check-square"></i>
-         </div>
+         
 
 
          <div class="modal fade" id="modal-editar-servicio-socio" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
