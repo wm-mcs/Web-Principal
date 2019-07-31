@@ -255,7 +255,7 @@ template:'
                       <input type="date" class="form-control"  v-model="servicio.fecha_vencimiento_formateada"  required  />
                   </div> 
 
-                  <div v-if="se_consumio" class="form-group">
+                  <div v-show="se_consumio" class="form-group">
                       <label class="formulario-label" for="Nombre">¿ya se usó?  </label>
                       <select v-model="servicio.esta_consumido" class="form-control">
                         <option>si</option>
@@ -263,7 +263,7 @@ template:'
                       </select>
                   </div> 
 
-                  <div v-if="se_consumio" class="form-group">
+                  <div v-show="se_consumio" class="form-group">
                       <label class="formulario-label" for="Nombre">Fecha de cuando se usó  </label>
                       <input type="date" class="form-control"  v-model="servicio.fecha_consumido_formateada"  required  />
 
