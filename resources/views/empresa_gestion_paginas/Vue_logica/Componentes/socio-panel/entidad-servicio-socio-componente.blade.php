@@ -214,8 +214,8 @@ template:'
             
         </div>
 
-        <div v-on:click="abrir_modal_editar" >
-              <i class="fas fa-edit"></i> 
+           <div v-on:click="abrir_modal_editar">
+             editar
             </div>  
     </div>
        
