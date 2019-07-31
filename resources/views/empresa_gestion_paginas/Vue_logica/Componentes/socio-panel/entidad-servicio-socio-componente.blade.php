@@ -178,7 +178,7 @@ computed:{
 
   
 },
-template:'<div>
+template:'
 
   <div class="contiene-entidad-lista-servicio">
 
@@ -298,7 +298,7 @@ template:'<div>
 
   </div>
 
-</div>'
+'
 
 }
 
