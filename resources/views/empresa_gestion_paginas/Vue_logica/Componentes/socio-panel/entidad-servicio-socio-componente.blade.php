@@ -214,9 +214,9 @@ template:'
             
         </div>
 
-        <span class="margin-left-4px" v-on:click="abrir_modal_editar" title="Abrir cuadro de edición del socio">
+        <div v-on:click="abrir_modal_editar" >
               <i class="fas fa-edit"></i> 
-            </span>  
+            </div>  
     </div>
        
        
