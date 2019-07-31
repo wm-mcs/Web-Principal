@@ -211,12 +211,14 @@ template:'<span>
       <div class="panel-socio-titulo-seccion">Servicios que contrató el socio</div>
       <div class="panel-socio-contiene-servicios">
         
-          <div v-for="servicio in servicios_del_socio">
+          
 
 
-            <servicio-socio-lista :servicio="servicio" @actualizar_servicios_de_socios="getServiciosDelSocio"> </servicio-socio-lista>
+            <servicio-socio-lista :servicio="servicio" @actualizar_servicios_de_socios="getServiciosDelSocio" 
+                           v-for="servicio in servicios_del_socio"> 
+            </servicio-socio-lista>
             
-          </div>
+          
 
       </div>
   </div>
