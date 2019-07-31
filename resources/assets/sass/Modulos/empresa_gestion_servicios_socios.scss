@@ -11,19 +11,30 @@
 }
 
 
+.entidad-lista-name{
+  font-size: 18px;
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+
+}
+
+
 
 .entidad-lista-servicio-contiene-fecha{
   padding: 4px;
   border-radius:6px;
   @include flexbox;       
   @include flex-direction(column);
-  @include align-items(flex-start); 
+  @include align-items(flex-end); 
 
 }
    .entidad-lista-servicio-fecha{
     font-size: 10px;
-    margin-top: 1px;
+    margin-top: 2px;
     color: $color-gris-text;
+    letter-spacing: 2px;
+
    } 
 
    .entidad-lista-servicio-fecha-input{
@@ -33,5 +44,29 @@
     background-color:transparent;
     border-color:transparent;
    } 
+
+
+   .lista-estado-activo{
+    padding: 6px;
+    border-radius:8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: $Color-Gris-Claro;
+    font-weight: bold;
+    color: $color-verde-texto-success;
+    margin-top: 3px;
+   }
+
+
+   .lista-estado-consumido{
+    padding: 6px;
+    border-radius:8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: $Color-Amarill-warning;;
+    font-weight: bold;
+    color:  $Color-Texto-Warning;
+    margin-top: 3px;
+   }
 
 

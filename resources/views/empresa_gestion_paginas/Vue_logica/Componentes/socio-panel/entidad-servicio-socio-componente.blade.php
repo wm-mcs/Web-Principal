@@ -171,8 +171,12 @@ template:'<span>
   <div class="contiene-entidad-lista-servicio">
 
     <div class="flex-row-center get_width_100 flex-justifice-space-between">
-        <div>
-            @{{servicio.name}} 
+        <div class="entidad-lista-name">
+            @{{servicio.name}}   
+
+            <div  class="admin-user-boton-Crear" v-on:click="abrir_modal_editar">
+              <i class="fas fa-edit"></i>
+            </div>
         </div>
         <div>
             <div class="entidad-lista-servicio-contiene-fecha">
@@ -190,9 +194,7 @@ template:'<span>
        
        
 
-         <div  class="admin-user-boton-Crear" v-on:click="abrir_modal_editar">
-            <i class="fas fa-edit"></i>
-        </div>
+        
 
          <div v-if="!servicio.se_consumio"  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
             <i class="far fa-check-square"></i>
