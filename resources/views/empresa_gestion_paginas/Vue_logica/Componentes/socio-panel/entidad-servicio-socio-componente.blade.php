@@ -171,12 +171,8 @@ template:'<span>
   <div class="contiene-entidad-lista-servicio">
 
     <div class="flex-row-center get_width_100 flex-justifice-space-between">
-        <div class="entidad-lista-name">
-            @{{servicio.name}}   
-
-            <div  class="admin-user-boton-Crear" v-on:click="abrir_modal_editar">
-              <i class="fas fa-edit"></i>
-            </div>
+        <div class="entidad-lista-name simula_link" v-on:click="abrir_modal_editar">
+            @{{servicio.name}}  <i class="fas fa-edit"></i> 
         </div>
         <div>
             <div class="entidad-lista-servicio-contiene-fecha">
@@ -246,6 +242,9 @@ template:'<span>
 
                   <div v-on:click="EditarServicio(servicio)" class="boton-simple">Editar</div>
 
+
+                   <br>
+                   <br>
                    <div  class="simula_link" v-on:click="borrar_servicio(servicio)">
                      Eliminar el servicio <i class="fas fa-trash-alt"></i>
                    </div>

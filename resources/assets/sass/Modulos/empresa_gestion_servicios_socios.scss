@@ -16,6 +16,7 @@
   @include flexbox;       
   @include flex-direction(row);
   @include align-items(center); 
+  font-weight: bold;
 
 }
 
@@ -70,3 +71,24 @@
    }
 
 
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Primario){}
+@media (min-width: $BrackPoint-Secundario){
+
+
+.contiene-entidad-lista-servicio{   
+  width: 49%;
+}
+
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){}
