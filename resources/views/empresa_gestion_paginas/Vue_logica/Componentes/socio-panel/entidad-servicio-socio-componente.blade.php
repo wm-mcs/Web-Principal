@@ -182,18 +182,18 @@ template:'
 
   <div class="contiene-entidad-lista-servicio">
 
-    <div class="flex-row-center get_width_100 flex-justifice-space-between">
+       <div class="flex-row-center get_width_100 flex-justifice-space-between">
         <div class="entidad-lista-name simula_link" >
             
             @{{servicio.name}} 
 
 
 
-            <span v-on:click="abrir_modal_editar" class="boton-simple-chico margin-left-4px" title="Abrir cuadro de edición del socio">
+            <span class="margin-left-4px" v-on:click="abrir_modal_editar" title="Abrir cuadro de edición del socio">
               <i class="fas fa-edit"></i> 
             </span>  
 
-            <span  v-show="!servicio.se_consumio && es_clase"  class="boton-simple-chico margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+            <span  v-show="!servicio.se_consumio && es_clase"  class="margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
               
               <i class="far fa-check-square"></i>
             </span>
