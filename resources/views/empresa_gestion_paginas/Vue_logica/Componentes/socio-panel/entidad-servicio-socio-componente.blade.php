@@ -189,9 +189,7 @@ template:'
 
 
 
-            <span class="margin-left-4px" v-on:click="abrir_modal_editar" title="Abrir cuadro de edición del socio">
-              <i class="fas fa-edit"></i> 
-            </span>  
+            
 
             <span  v-show="!servicio.se_consumio && es_clase"  class="margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
               
@@ -215,6 +213,10 @@ template:'
             </div>
             
         </div>
+
+        <span class="margin-left-4px" v-on:click="abrir_modal_editar" title="Abrir cuadro de edición del socio">
+              <i class="fas fa-edit"></i> 
+            </span>  
     </div>
        
        
