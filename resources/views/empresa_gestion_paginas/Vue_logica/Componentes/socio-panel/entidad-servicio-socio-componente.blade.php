@@ -180,7 +180,7 @@ computed:{
 },
 template:'
 
-<span>
+
   <div class="contiene-entidad-lista-servicio">
 
        <div class="flex-row-center get_width_100 flex-justifice-space-between">
@@ -221,13 +221,8 @@ template:'
               
              editar
             </span>
-    </div>
-       
-       
 
-        
 
-         
 
 
          <div class="modal fade" id="modal-editar-servicio-socio" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
@@ -317,9 +312,49 @@ template:'
 
 
 
+
+
+
+
+
+
+
+
+
+            
+    </div>
+       
+       
+
+        
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
-</span>
+
 '
 
 }
