@@ -193,7 +193,7 @@ template:'
               <i class="fas fa-edit"></i> 
             </span>  
 
-            <span  v-if="!servicio.se_consumio && es_clase"  class="boton-simple-chico margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+            <span  v-show="!servicio.se_consumio && es_clase"  class="boton-simple-chico margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
               
               <i class="far fa-check-square"></i>
             </span>
