@@ -194,7 +194,7 @@ template:'<span>
     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel.modal-editar-socio')    
 
     </div>
-    <div class="panel-socio-contiene-acciones"> Acciones
+    <div class="panel-socio-contiene-acciones"> 
       
      <agregar-al-socio-un-servicio :socio="socio"  
                                    :servicios="servicios"
@@ -207,16 +207,20 @@ template:'<span>
 
   </div>
 
-  <div class="">
-    
-      <div v-for="servicio in servicios_del_socio">
-
-
-        <servicio-socio-lista :servicio="servicio" @actualizar_servicios_de_socios="getServiciosDelSocio"> </servicio-socio-lista>
+  <div class="panel-socio-contiene-seccion">
+      <div class="panel-socio-titulo-seccion">Servicios que contrató el socio</div>
+      <div class="panel-socio-contiene-servicios">
         
-      </div>
+          <div v-for="servicio in servicios_del_socio">
 
+
+            <servicio-socio-lista :servicio="servicio" @actualizar_servicios_de_socios="getServiciosDelSocio"> </servicio-socio-lista>
+            
+          </div>
+
+      </div>
   </div>
+ 
 
   
     

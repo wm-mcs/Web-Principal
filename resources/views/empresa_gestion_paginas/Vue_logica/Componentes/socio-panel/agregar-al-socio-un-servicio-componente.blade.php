@@ -140,7 +140,7 @@ template:'<span>
                   </div> 
 
                   <div  class="form-group" v-if="servicio_data.name">
-                      <label class="formulario-label" >Nombre <span class="formulario-label-aclaracion"> ¿por clase o mensual?</span></label>
+                      <label class="formulario-label" >Nombre <span class="formulario-label-aclaracion"> Puedes cambiar este nombre si quieres</span></label>
                       <input type="text" class="form-control"  v-model="servicio_data.name" placeholder="Nombre"   />
                   </div> 
 

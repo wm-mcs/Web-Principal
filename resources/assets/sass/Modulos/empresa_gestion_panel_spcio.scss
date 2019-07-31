@@ -26,6 +26,40 @@
 
 
 
+  .panel-socio-contiene-seccion{
+    padding:6px;
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(flex-start); 
+    margin-top: 20px;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.26);
+    background-color: #fff;
+  }
+
+    .panel-socio-titulo-seccion{
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .panel-socio-contiene-servicios{
+      padding:6px;
+      border-radius:8px;
+      border:solid 1px $Color-Gris-Claro;
+      @include flexbox;       
+      @include flex-direction(row);
+      @include align-items(center); 
+      @include flex-wrap(wrap); 
+      @include justify-content(space-around); 
+
+    }
+
+
+
+
 
 
 
