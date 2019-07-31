@@ -37,7 +37,7 @@ methods:{
           }
           else
           {
-            $.notify(response.data.Validacion_mensaje, "warn");
+            $.notify(response.data.Validacion_mensaje, "warn");  
           }    
            
            
@@ -188,9 +188,7 @@ template:'<span>
         </div>
     </div>
        
-        <div  class="admin-user-boton-Crear" v-on:click="borrar_servicio(servicio)">
-            <i class="fas fa-trash-alt"></i>
-        </div>
+       
 
          <div  class="admin-user-boton-Crear" v-on:click="abrir_modal_editar">
             <i class="fas fa-edit"></i>
@@ -245,6 +243,10 @@ template:'<span>
                
 
                   <div v-on:click="EditarServicio(servicio)" class="boton-simple">Editar</div>
+
+                   <div  class="simula_link" v-on:click="borrar_servicio(servicio)">
+                     Eliminar el servicio <i class="fas fa-trash-alt"></i>
+                   </div>
                   
                  
         </div>
