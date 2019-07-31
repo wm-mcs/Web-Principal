@@ -180,7 +180,7 @@ computed:{
 },
 template:'
 
-
+<span>
   <div class="contiene-entidad-lista-servicio">
 
        <div class="flex-row-center get_width_100 flex-justifice-space-between">
@@ -319,7 +319,7 @@ template:'
 
   
 
-
+</span>
 '
 
 }
