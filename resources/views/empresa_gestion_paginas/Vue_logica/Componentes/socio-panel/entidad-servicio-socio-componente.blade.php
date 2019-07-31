@@ -214,9 +214,12 @@ template:'
             
         </div>
 
-           <div v-on:click="abrir_modal_editar">
+        
+
+             <span   class="margin-left-4px" v-on:click="abrir_modal_editar" title="Marcar el servicio como ya usado">
+              
              editar
-            </div>  
+            </span>
     </div>
        
        
