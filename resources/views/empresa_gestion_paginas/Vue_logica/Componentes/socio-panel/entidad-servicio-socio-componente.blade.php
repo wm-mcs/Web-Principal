@@ -161,6 +161,18 @@ computed:{
           return false;
         }
 
+    },
+    es_clase:function(){
+
+        if( this.servicio.tipo == 'mensual'  )
+        {
+          return false ;
+        }
+        else
+        {
+          return true;
+        }
+
     }
 
 
@@ -192,7 +204,7 @@ template:'<span>
 
         
 
-         <div v-if="!servicio.se_consumio && servicio.tipo != mensual"  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+         <div v-if="!servicio.se_consumio && es_clase"  class="admin-user-boton-Crear" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
             <i class="far fa-check-square"></i>
          </div>
 
