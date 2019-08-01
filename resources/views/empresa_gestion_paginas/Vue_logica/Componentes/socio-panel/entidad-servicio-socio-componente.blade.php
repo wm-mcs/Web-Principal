@@ -84,8 +84,9 @@ methods:{
     ,
     abrir_modal_editar:function(){
 
+      var modal = '#modal-editar-servicio-socio'+ this.servicio.id
 
-      $('#modal-editar-servicio-socio').appendTo("body").modal('show');  
+      $(modal).appendTo("body").modal('show');  
 
     },
     indicar_que_se_uso_hoy:function(){
@@ -164,7 +165,7 @@ computed:{
     },
     es_clase:function(){
 
-    console.log(this.servicio.tipo);
+
 
         if( this.servicio.tipo === "mensual")
         {
@@ -234,7 +235,7 @@ template:'
 
 
 
-         <div class="modal fade" id="modal-editar-servicio-socio" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal fade" :id="'modal-editar-servicio-socio-'+ servicio.id " tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
