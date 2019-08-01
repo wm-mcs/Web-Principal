@@ -84,9 +84,9 @@ methods:{
     ,
     abrir_modal_editar:function(){
 
-      var modal = '#modal-editar-servicio-socio'+ this.servicio.id
+      
 
-      $(modal).appendTo("body").modal('show');  
+      $(this.open_modal).appendTo("body").modal('show');  
 
     },
     indicar_que_se_uso_hoy:function(){
@@ -176,6 +176,10 @@ computed:{
           return true;
         }
 
+    },
+    open_modal:function(){
+      
+      return   '#modal-editar-servicio-socio'+ String(this.servicio.id);
     }
 
 
@@ -235,7 +239,7 @@ template:'
 
 
 
-         <div class="modal fade" :id="'modal-editar-servicio-socio-'+ servicio.id " tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal fade" :id="open_modal" tabindex="+1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
