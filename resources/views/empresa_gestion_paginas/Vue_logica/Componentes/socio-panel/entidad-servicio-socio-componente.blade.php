@@ -204,6 +204,12 @@ template:'
             
             
          </div>
+         <div v-id="es_clase" class="lista-estado-por-clase">
+           <i class="fas fa-undo"></i> Tipo clase
+         </div>
+         <div v-else class="lista-estado-por-mensual">
+           <i class="fas fa-hourglass-start"></i> Tipo mensual
+         </div>
 
         </div>
         <div>

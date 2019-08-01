@@ -64,9 +64,33 @@
     border-radius:8px;
     font-size: 12px;
     text-align: center;
-    background-color: $Color-Amarill-warning;;
+    background-color: $Color-Amarill-warning;
     font-weight: bold;
     color:  $Color-Texto-Warning;
+    margin-top: 3px;
+   }
+
+
+   .lista-estado-por-clase{
+    padding: 6px;
+    border-radius:8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: $Color-info;
+    font-weight: bold;
+    color: $color-gris-text;
+    margin-top: 3px;
+
+   }
+
+   .lista-estado-por-mensual{
+    padding: 6px;
+    border-radius:8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: $Color-Gris-Claro;
+    font-weight: bold;
+    color:  $color-gris-text;
     margin-top: 3px;
    }
 
