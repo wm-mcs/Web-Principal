@@ -222,6 +222,20 @@ template:'<span>
 
       </div>
   </div>
+
+  <div class="panel-socio-contiene-seccion">
+      <div class="panel-socio-titulo-seccion">Estado de cuenta del socio</div>
+      <div class="panel-socio-contiene-servicios">
+        
+          
+
+
+           aqui el estado de cuenta 
+            
+          
+
+      </div>
+  </div>
  
 
   

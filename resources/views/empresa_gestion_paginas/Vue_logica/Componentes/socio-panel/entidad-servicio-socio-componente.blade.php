@@ -189,12 +189,12 @@ template:'
             @{{servicio.name}} 
 
 
-            <span class="margin-left-4px" v-on:click="abrir_modal_editar" title="Editar el servicio">              
+            <span class="margin-left-8px simula_link" v-on:click="abrir_modal_editar" title="Editar el servicio">              
              <i class="fas fa-pen"></i>
             </span>
             
 
-            <span  v-show="!servicio.se_consumio && es_clase"  class="margin-left-4px" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
+            <span  v-show="!servicio.se_consumio && es_clase"  class="margin-left-8px simula_link" v-on:click="indicar_que_se_uso_hoy" title="Marcar el servicio como ya usado">
               
               <i class="far fa-check-square"></i>
             </span>
