@@ -86,7 +86,7 @@ methods:{
 
       
 
-      $(this.open_modal).appendTo("body").modal('show');  
+      $(open_modal).appendTo("body").modal('show');  
 
     },
     indicar_que_se_uso_hoy:function(){
@@ -179,7 +179,7 @@ computed:{
     },
     open_modal:function(){
       
-      return   '#modal-editar-servicio-socio'+ String(this.servicio.id);
+      return   '#modal-editar-servicio-socio-'+ String(this.servicio.id);
     }
 
 
