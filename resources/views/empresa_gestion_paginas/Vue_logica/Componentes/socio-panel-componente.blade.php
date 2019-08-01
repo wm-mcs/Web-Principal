@@ -215,7 +215,7 @@ template:'<span>
 
 
             <servicio-socio-lista :servicio="servicio" @actualizar_servicios_de_socios="getServiciosDelSocio" 
-                           v-for="servicio in servicios_del_socio"> 
+                           v-for="servicio in servicios_del_socio" :key="servicio.id"> 
             </servicio-socio-lista>
             
           
