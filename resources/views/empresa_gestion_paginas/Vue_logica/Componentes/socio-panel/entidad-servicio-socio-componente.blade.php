@@ -205,10 +205,10 @@ template:'
             
          </div>
          <div v-if="es_clase" class="lista-estado-por-clase">
-           <i class="fas fa-undo"></i> Tipo clase
+           <i class="fas fa-undo"></i> Tipo @{{servicio.tipo}}
          </div>
          <div v-else class="lista-estado-por-mensual">
-           <i class="fas fa-hourglass-start"></i> Tipo mensual
+           <i class="fas fa-hourglass-start"></i> Tipo @{{servicio.tipo}}
          </div>
 
         </div>
