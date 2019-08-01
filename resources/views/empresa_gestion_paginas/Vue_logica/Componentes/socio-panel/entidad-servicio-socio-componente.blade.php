@@ -85,7 +85,7 @@ methods:{
     abrir_modal_editar:function(){
 
       
-      console.log(this.open_modal);
+      console.log('#'+ this.open_modal);
 
       $(this.open_modal).appendTo("body").modal('show');  
 
@@ -180,7 +180,7 @@ computed:{
     },
     open_modal:function(){
       
-      return   '#modal-editar-servicio-socio-'+ String(this.servicio.id);
+      return   'modal-editar-servicio-socio-'+ String(this.servicio.id);
     }
 
 
