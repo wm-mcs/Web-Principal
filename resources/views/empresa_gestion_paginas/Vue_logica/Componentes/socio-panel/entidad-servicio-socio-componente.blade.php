@@ -164,7 +164,9 @@ computed:{
     },
     es_clase:function(){
 
-        if( this.servicio.tipo == 'mensual'  )
+    console.log(this.servicio.tipo);
+
+        if( this.servicio.tipo === "mensual")
         {
           return false ;
         }
