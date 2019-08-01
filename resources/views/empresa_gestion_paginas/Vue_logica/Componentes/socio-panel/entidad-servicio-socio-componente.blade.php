@@ -84,10 +84,10 @@ methods:{
     ,
     abrir_modal_editar:function(){
 
-      console.log(open_modal);
+      
       console.log(this.open_modal);
 
-      $(open_modal).appendTo("body").modal('show');  
+      $(this.open_modal).appendTo("body").modal('show');  
 
     },
     indicar_que_se_uso_hoy:function(){
