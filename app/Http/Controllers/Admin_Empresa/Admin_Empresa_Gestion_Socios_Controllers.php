@@ -534,7 +534,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se creó correctamente ',
-               'Socio'               => $SocioRepo->find($Request->get('socio_id')),
+               'Socio'               => $this->SocioRepo->find($Request->get('socio_id')),
                'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))];
      }
      else
