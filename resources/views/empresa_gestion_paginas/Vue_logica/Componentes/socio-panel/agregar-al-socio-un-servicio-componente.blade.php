@@ -176,7 +176,7 @@ template:'<span>
 
                       <div  class="form-group" v-if="servicio_data.name">
                       <label class="formulario-label" >¿Lo paga ahora? <span class="formulario-label-aclaracion"> puede que quede debiendo</span></label>
-                      <div class="flex-row-center get_width_100">
+                      <div class="form-control">
                         <input type="radio" id="si" value="si" v-model="servicio_data.paga">
                         <label for="si">si</label>
 
