@@ -4,7 +4,7 @@ props:['servicio'],
 
 data:function(){
     return {
-
+      destroy_modal:false,
     }
 },
 mounted: function mounted () {        
@@ -257,7 +257,7 @@ template:'
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
           
         </div>
-        <div class="modal-body text-center"> 
+        <div v-if="!destroy_modal" class="modal-body text-center"> 
 
                   <div class="form-group">
                       <label class="formulario-label" for="Nombre">Nombres  </label>
@@ -309,6 +309,9 @@ template:'
                    </div>
                   
                  
+        </div>
+        <div v-else>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>           
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>        
