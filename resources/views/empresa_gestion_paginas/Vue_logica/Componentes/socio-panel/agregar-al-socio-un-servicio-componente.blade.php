@@ -176,12 +176,14 @@ template:'<span>
 
                       <div  class="form-group" v-if="servicio_data.name">
                       <label class="formulario-label" >¿Lo paga ahora? <span class="formulario-label-aclaracion"> puede que quede debiendo</span></label>
-                      
-                      <input type="radio" id="si" value="si" v-model="servicio_data.paga">
-                      <label for="si">si</label>
+                      <div class="flex-row-center get_width_100">
+                        <input type="radio" id="si" value="si" v-model="servicio_data.paga">
+                        <label for="si">si</label>
 
-                       <input type="radio" id="no" value="no" v-model="servicio_data.paga">
-                       <label for="no">no</label>
+                         <input type="radio" id="no" value="no" v-model="servicio_data.paga">
+                         <label for="no">no</label>
+                      </div>
+                      
                      </div> 
 
 
