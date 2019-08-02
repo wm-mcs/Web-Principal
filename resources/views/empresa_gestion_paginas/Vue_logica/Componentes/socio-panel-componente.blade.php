@@ -238,6 +238,10 @@ template:'<span>
 
 
            aqui el estado de cuenta 
+
+           <div v-for="estado_de_cuenta in socio.estado_de_cuenta_socio">
+             @{{estado_de_cuenta.detalle}}
+           </div>
             
           
 
