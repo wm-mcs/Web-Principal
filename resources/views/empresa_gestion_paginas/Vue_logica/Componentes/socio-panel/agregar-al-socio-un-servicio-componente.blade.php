@@ -180,8 +180,8 @@ template:'<span>
                       <input type="checkbox" id="si" value="si" v-model="servicio_data.paga">
                       <label for="si">si</label>
 
-                       <input type="checkbox" id="si" value="no" v-model="servicio_data.paga">
-                      <label for="no">no</label>
+                       <input type="checkbox" id="no" value="no" v-model="servicio_data.paga">
+                       <label for="no">no</label>
                      </div> 
 
 
