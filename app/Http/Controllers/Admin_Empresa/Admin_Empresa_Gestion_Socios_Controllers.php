@@ -659,7 +659,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
       $this->ServicioContratadoSocioRepo->destruir_esta_entidad($Servicio);
 
       //borrar los estados de cuenta
-      $Estados_de_cuenta = $this->MovimientoEstadoDeCuentaSocioRepo->getEstadoDeCuentasDelSocioDeUnServicioEnParticular($Socio->id,$Servicio->id);
+      $Estados_de_cuenta = $this->MovimientoEstadoDeCuentaSocioRepo->getEstadoDeCuentasDelSocioDeUnServicioEnParticular($Socio->id,$id);
 
       foreach ($Estados_de_cuenta as $Estado) {
         $this->MovimientoEstadoDeCuentaSocioRepo->destruir_esta_entidad($Estado);
