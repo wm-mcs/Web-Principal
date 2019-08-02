@@ -464,10 +464,22 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
                   ->setEstadoDeCuentaCuando($Entidad->socio_id, 
                                             $Entidad->moneda,
                                             $Entidad->valor,
-                                            'Compra de '.$Entidad->name,
+                                            'Compra de '.$Entidad->name . ' ' . $Entidad->id ,
                                             'acredor',
                                             Carbon::now('America/Montevideo'),
                                             $Entidad->id);
+            //si se paga ahora      
+            if($Request->get('paga') == 'si') 
+            {
+                $this->MovimientoEstadoDeCuentaSocioRepo
+                  ->setEstadoDeCuentaCuando($Entidad->socio_id, 
+                                            $Entidad->moneda,
+                                            $Entidad->valor,
+                                            'Pago de '.$Entidad->name . ' ' . $Entidad->id ,
+                                            'deudor',
+                                            Carbon::now('America/Montevideo'),
+                                            $Entidad->id);
+            }     
           }
 
        }
@@ -486,10 +498,24 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
                   ->setEstadoDeCuentaCuando($Entidad->socio_id, 
                                             $Entidad->moneda,
                                             $Entidad->valor,
-                                            'Compra de ' .$Entidad->name,
+                                            'Compra de '.$Entidad->name . ' ' . $Entidad->id ,
                                             'acredor',
                                             Carbon::now('America/Montevideo'),
                                             $Entidad->id);
+
+
+            //si se paga ahora      
+            if($Request->get('paga') == 'si') 
+            {
+                $this->MovimientoEstadoDeCuentaSocioRepo
+                  ->setEstadoDeCuentaCuando($Entidad->socio_id, 
+                                            $Entidad->moneda,
+                                            $Entidad->valor,
+                                            'Pago de '.$Entidad->name . ' ' . $Entidad->id ,
+                                            'deudor',
+                                            Carbon::now('America/Montevideo'),
+                                            $Entidad->id);
+            }           
 
        }
 
@@ -508,6 +534,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Se creó correctamente ',
+               'Socio'               => $SocioRepo->find($Request->get('socio_id')),
                'servicios'           => $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Request->get('socio_id'))];
      }
      else

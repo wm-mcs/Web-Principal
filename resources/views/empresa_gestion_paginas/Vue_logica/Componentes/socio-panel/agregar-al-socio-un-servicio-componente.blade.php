@@ -64,7 +64,8 @@ methods:{
             {
               $.notify(data.Validacion_mensaje, "success");              
               
-              vue.$emit('actualizar_servicios_de_socios',response.data.servicios);             
+              vue.$emit('actualizar_servicios_de_socios',response.data.servicios);   
+              vue.$emit('actualizar_socio',response.data.Socio);          
             }
             else
             {

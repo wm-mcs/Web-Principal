@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Repositorios\MovimientoEstadoDeCuentaSocioRepo;
 
 
 
@@ -22,7 +23,7 @@ class Socio extends Model
 
 
 
-    protected $appends = ['route'];
+    protected $appends = ['route', 'estado_de_cuenta_socio'];
     
 
     
@@ -56,6 +57,14 @@ class Socio extends Model
     public function getRouteAttribute()
     {
         return route('get_socio_panel',$this->id);
+    }
+
+
+    public function getEstadoDeCuentaSocioAttribute()
+    {
+        $EstadosRepo = new MovimientoEstadoDeCuentaSocio();
+
+        return $EstadosRepo->getEstadoDeCuentasDelSocio($this->id);
     }
 
 
