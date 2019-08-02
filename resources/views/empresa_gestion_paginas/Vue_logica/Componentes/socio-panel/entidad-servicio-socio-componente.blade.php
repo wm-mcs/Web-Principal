@@ -34,7 +34,7 @@ methods:{
           if(response.data.Validacion == true)
           {
 
-            
+            vue.destroy_modal = true;
             vue.$emit('actualizar_socio',response.data.Socio);    
             vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
 
