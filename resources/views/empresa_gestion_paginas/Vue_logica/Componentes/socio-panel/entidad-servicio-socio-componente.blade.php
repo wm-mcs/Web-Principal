@@ -33,10 +33,12 @@ methods:{
           
           if(response.data.Validacion == true)
           {
+
+            $('#'+ this.open_modal).modal('hide');
             vue.$emit('actualizar_socio',response.data.Socio);    
             vue.$emit('actualizar_servicios_de_socios',response.data.servicios); 
 
-            $('#'+ this.open_modal).modal('hide');
+            
 
             $.notify(response.data.Validacion_mensaje, "success");  
 
