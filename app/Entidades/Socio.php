@@ -62,7 +62,7 @@ class Socio extends Model
 
     public function getEstadoDeCuentaSocioAttribute()
     {
-        $EstadosRepo = new MovimientoEstadoDeCuentaSocio();
+        $EstadosRepo = new MovimientoEstadoDeCuentaSocioRepo();
 
         return $EstadosRepo->getEstadoDeCuentasDelSocio($this->id);
     }
