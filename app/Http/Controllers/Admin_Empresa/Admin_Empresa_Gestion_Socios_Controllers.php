@@ -464,7 +464,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
                   ->setEstadoDeCuentaCuando($Entidad->socio_id, 
                                             $Entidad->moneda,
                                             $Entidad->valor,
-                                            'Compra de '$Entidad->name,
+                                            'Compra de '.$Entidad->name,
                                             'acredor',
                                             Carbon::now('America/Montevideo'),
                                             $Entidad->id);
@@ -486,7 +486,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
                   ->setEstadoDeCuentaCuando($Entidad->socio_id, 
                                             $Entidad->moneda,
                                             $Entidad->valor,
-                                            'Compra de '$Entidad->name,
+                                            'Compra de ' .$Entidad->name,
                                             'acredor',
                                             Carbon::now('America/Montevideo'),
                                             $Entidad->id);
