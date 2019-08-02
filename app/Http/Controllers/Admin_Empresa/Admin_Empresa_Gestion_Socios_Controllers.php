@@ -658,6 +658,15 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
 
       $this->ServicioContratadoSocioRepo->destruir_esta_entidad($Servicio);
 
+      //borrar los estados de cuenta
+      $Estados_de_cuenta = $this->MovimientoEstadoDeCuentaSocioRepo->getEstadoDeCuentasDelSocioDeUnServicioEnParticular($Socio->id,$Servicio->id);
+
+      foreach ($Estados_de_cuenta as $Estado) {
+        $this->MovimientoEstadoDeCuentaSocioRepo->destruir_esta_entidad($Estado);
+      }
+
+      //borrar los moviemiento de caja si es que hubo
+
        
 
      }  
@@ -667,6 +676,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      {
        return ['Validacion'          =>  $Validacion,
                'Validacion_mensaje'  =>  'Se eliminó correctamente',
+               'Socio'               =>  $Socio,
                'servicios'           =>  $this->ServicioContratadoSocioRepo->getServiciosContratadosASocios($Socio->id)];
      }
      else

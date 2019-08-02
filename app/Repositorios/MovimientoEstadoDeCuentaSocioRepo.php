@@ -28,6 +28,14 @@ class MovimientoEstadoDeCuentaSocioRepo extends BaseRepo
                 ->get();
   }
 
+  public function getEstadoDeCuentasDelSocioDeUnServicioEnParticular($socio_id,$servicio_id)
+  {
+    return $this->getEntidad()
+                ->where('socio_id',$socio_id)
+                ->where('servicio_id',$socio_id)                
+                ->get();
+  }
+
   
   //Cuando agrego un servicio nuevo creo estado de cuenta
   public function setEstadoDeCuentaCuando($Socio_id,$Moneda,$Valor,$Detalle,$Tipo_saldo,$Fecha,$Servicio_id)
