@@ -14,7 +14,8 @@ data:function(){
                         cantidad_de_servicios:'',
                         empresa_id: {{$Empresa_gestion->id}},
                         socio_id:'',
-                        socio_empresa_id:''
+                        socio_empresa_id:'',
+                        paga:'si'
 
                     },
       tipo_servicio:'',              
@@ -171,6 +172,16 @@ template:'<span>
                      <div  class="form-group" v-if="servicio_data.name">
                       <label class="formulario-label" >Fecha de vencimiento <span class="formulario-label-aclaracion"> por defecto es a un més</span></label>
                       <input type="date" class="form-control"  v-model="servicio_data.fecha_vencimiento"    />
+                     </div> 
+
+                      <div  class="form-group" v-if="servicio_data.name">
+                      <label class="formulario-label" >¿Lo paga ahora? <span class="formulario-label-aclaracion"> puede que quede debiendo</span></label>
+                      
+                      <input type="checkbox" id="si" value="si" v-model="servicio_data.paga">
+                      <label for="si">si</label>
+
+                       <input type="checkbox" id="si" value="no" v-model="servicio_data.paga">
+                      <label for="no">no</label>
                      </div> 
 
 

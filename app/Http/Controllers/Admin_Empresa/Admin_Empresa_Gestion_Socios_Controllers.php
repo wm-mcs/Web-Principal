@@ -15,6 +15,7 @@ use App\Managers\EmpresaGestion\CrearSocioModalManager;
 use App\Repositorios\TipoDeServicioRepo;
 use App\Repositorios\ServicioContratadoSocioRepo;
 use Carbon\Carbon;
+use App\Repositorios\MovimientoEstadoDeCuentaSocioRepo;
 
 
 
@@ -27,18 +28,21 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
   protected $SocioRepo;
   protected $TipoDeServicioRepo;
   protected $ServicioContratadoSocioRepo;
+  protected $MovimientoEstadoDeCuentaSocioRepo;
 
-  public function __construct(EmpresaConSociosoRepo        $EmpresaConSociosoRepo, 
-                              Guardian                     $Guardian,
-                              SocioRepo                    $SocioRepo, 
-                              TipoDeServicioRepo           $TipoDeServicioRepo,
-                              ServicioContratadoSocioRepo  $ServicioContratadoSocioRepo )
+  public function __construct(EmpresaConSociosoRepo             $EmpresaConSociosoRepo, 
+                              Guardian                          $Guardian,
+                              SocioRepo                         $SocioRepo, 
+                              TipoDeServicioRepo                $TipoDeServicioRepo,
+                              ServicioContratadoSocioRepo       $ServicioContratadoSocioRepo,
+                              MovimientoEstadoDeCuentaSocioRepo $MovimientoEstadoDeCuentaSocioRepo )
   {
-    $this->EmpresaConSociosoRepo          = $EmpresaConSociosoRepo;
-    $this->Guardian                       = $Guardian;
-    $this->SocioRepo                      = $SocioRepo;
-    $this->TipoDeServicioRepo             = $TipoDeServicioRepo;
-    $this->ServicioContratadoSocioRepo    = $ServicioContratadoSocioRepo;
+    $this->EmpresaConSociosoRepo             = $EmpresaConSociosoRepo;
+    $this->Guardian                          = $Guardian;
+    $this->SocioRepo                         = $SocioRepo;
+    $this->TipoDeServicioRepo                = $TipoDeServicioRepo;
+    $this->ServicioContratadoSocioRepo       = $ServicioContratadoSocioRepo;
+    $this->MovimientoEstadoDeCuentaSocioRepo = $MovimientoEstadoDeCuentaSocioRepo;
   }
 
   public function getPropiedades()
@@ -454,6 +458,16 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
             $Entidad->estado   = 'si' ;
             $Entidad->valor    = round($Request->get('valor')/$Request->get('cantidad_de_servicios'));
             $this->ServicioContratadoSocioRepo->setEntidadDato($Entidad,$Request,$Propiedades);
+
+             //Logica de estado de cuenta cuando compra
+             $this->MovimientoEstadoDeCuentaSocioRepo
+                  ->setEstadoDeCuentaCuando($Entidad->socio_id, 
+                                            $Entidad->moneda,
+                                            $Entidad->valor,
+                                            'Compra de '$Entidad->name,
+                                            'acredor',
+                                            Carbon::now('America/Montevideo'),
+                                            $Entidad->id);
           }
 
        }
@@ -462,15 +476,26 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
           $Entidad           = $this->ServicioContratadoSocioRepo->getEntidad();
           $Entidad->socio_id = $Request->get('socio_id');
           $Entidad->estado   = 'si' ;
-          $Entidad->valor    = round($Request->get('valor'));
-
-
-       
-       
+          $Entidad->valor    = round($Request->get('valor'));      
 
           $this->ServicioContratadoSocioRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
+
+             //Logica de estado de cuenta cuando compra
+             $this->MovimientoEstadoDeCuentaSocioRepo
+                  ->setEstadoDeCuentaCuando($Entidad->socio_id, 
+                                            $Entidad->moneda,
+                                            $Entidad->valor,
+                                            'Compra de '$Entidad->name,
+                                            'acredor',
+                                            Carbon::now('America/Montevideo'),
+                                            $Entidad->id);
+
        }
+
+       
+
+       //Logica d emoviemiento de caja
        
        
 
