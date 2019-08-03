@@ -59,6 +59,20 @@ methods:{
      
 
 },
+computed:{
+   paga:function()
+   {
+    if(this.estado_de_cuenta.tipo_saldo == 'deudor')
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+   }
+
+},
 template:'
            <div class="contiene-entidad-lista-servicio">
              @{{estado_de_cuenta.detalle}} 
@@ -66,6 +80,13 @@ template:'
 
                <i class="fas fa-trash-alt"></i>
 
+             </span>
+
+             <span v-if="paga" class="estado-pago-indication" title="Un pago de un servicio o un crédito a su favor">
+               <i class="fas fa-money-bill-wave-alt"></i>
+             </span>
+             <span v-else class="estado-debe-indication" title="Un crédito en su contra o un servicio contratado">
+               <i class="fas fa-money-bill-wave-alt"></i>
              </span>
            </div>
   
