@@ -754,7 +754,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
           $Entidad = $this->MovimientoEstadoDeCuentaSocioRepo->find($estado_de_cuenta->id);
 
 
-          $this->MovimientoEstadoDeCuentaSocioRepo->destroy_entidad($Entidad);
+          $this->MovimientoEstadoDeCuentaSocioRepo->destruir_esta_entidad($Entidad);
 
           $Socio = $this->SocioRepo->find($estado_de_cuenta->socio_id);
 
