@@ -749,9 +749,11 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
           $Validacion  = true;
 
 
-          dd($estado_de_cuenta);
+
           //elimino a la entidad
           $Entidad = $this->MovimientoEstadoDeCuentaSocioRepo->find($estado_de_cuenta->id);
+
+          dd($estado_de_cuenta->id,$Entidad);
           $this->MovimientoEstadoDeCuentaSocioRepo->destroy_entidad($Entidad);
           $Socio = $this->SocioRepo->find($estado_de_cuenta->socio_id);
 
