@@ -9,7 +9,7 @@ data:function(){
     }
 },
 
-props:['estado_de_cuenta','socio']
+props:['estado_de_cuenta']
 ,
 
 
