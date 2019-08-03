@@ -644,6 +644,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      } 
   }
 
+  //borra el servicio del socio
   public function borrar_servicio_de_socio($id)
   {
      $Validacion   = false;
@@ -686,7 +687,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
      } 
   }
 
-
+  //indica que el servicio tipo calse ya fué usado
   public function indicar_que_se_uso_el_servicio_hoy(Request $Request)
   {
 
@@ -733,6 +734,42 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
        return ['Validacion'          => $Validacion,
                'Validacion_mensaje'  => 'Algo no está bien :( '];
      } 
+  }
+
+  //elimina el estado de cuenta
+  public function eliminar_estado_de_cuenta(Request $Request)
+  {
+     $Validacion        = false;
+     $User              = Auth::user(); 
+     $estado_de_cuenta  = json_decode(json_encode($Request->get('estado_de_cuenta')));     
+     $Socio             = $this->SocioRepo->find($estado_de_cuenta->socio_id);
+
+     if($this->Guardian->son_iguales($User->empresa_gestion_id, $Socio->socio_empresa_id ) || $User->role == 'adminMcos522' )
+     { 
+          $Validacion  = true;
+
+
+
+          //elimino a la entidad
+          $Entidad = $this->MovimientoEstadoDeCuentaSocioRepo->find($estado_de_cuenta->id);
+          $this->MovimientoEstadoDeCuentaSocioRepo->destroy_entidad($Entidad);
+          $Socio = $this->SocioRepo->find($estado_de_cuenta->socio_id);
+
+     }
+
+
+     if($Validacion)
+     {
+       return ['Validacion'          =>  $Validacion,
+               'Validacion_mensaje'  =>  'Se eliminó el estado de cuentacorrectamente',
+               'Socio'               =>  $Socio;
+     }
+     else
+     {
+       return ['Validacion'          => $Validacion,
+               'Validacion_mensaje'  => 'Algo no está bien :( '];
+     } 
+       
   }
 
 

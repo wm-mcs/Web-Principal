@@ -239,9 +239,10 @@ template:'<span>
 
            aqui el estado de cuenta 
 
-           <div v-for="estado_de_cuenta in socio.estado_de_cuenta_socio">
-             @{{estado_de_cuenta.detalle}}
-           </div>
+
+           <estado-de-cuenta-socio v-for="estado_de_cuenta in socio.estado_de_cuenta_socio" :estado_de_cuenta="estado_de_cuenta" ></estado-de-cuenta-socio>
+
+          
             
           
 
