@@ -1,19 +1,30 @@
-.estado-pago-indication{
+.estado-de-cuenta-saldo{
   padding: 6px;
   border-radius: 8px;
   font-size: 18px;
+
+}
+
+.estado-pago-indication{
+  
   color:$color-verde-texto-success;
   background-color: $Color-Verde-Super-Claro;
 }
 
-.estado-debe-indication{
-  padding: 6px;
-  border-radius: 8px;
-  font-size: 18px;
+.estado-debe-indication{  
   color:$Color-Rojo-Texto-Error;
   background-color: $Color-Errors-BG;
 }
 
+
+.contiene-estados-de-cuenta-lista{
+    width: 100%;
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(center); 
+    @include flex-wrap(wrap); 
+    @include justify-content(space-around); 
+}
 
 .contiene-estado-de-cuenta{
   border-radius:6px;
@@ -26,10 +37,11 @@
 
    .estado-detalle{
 
-    font-size: 14px;
-    color: $color-gris-text;
+    font-size: 14px;    
     font-weight: bold;
     margin-bottom: 4px;
+    padding:4px;
+    border-radius:6px;
 
    }
 

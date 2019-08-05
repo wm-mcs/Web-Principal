@@ -232,12 +232,12 @@ template:'<span>
 
   <div class="panel-socio-contiene-seccion">
       <div class="panel-socio-titulo-seccion">Estado de cuenta del socio</div>
-      <div class="panel-socio-contiene-servicios">
+      <div class="contiene-estados-de-cuenta-lista">
         
           
 
 
-           aqui el estado de cuenta 
+          
 
 
            <estado-de-cuenta-socio v-for="estado in socio.estado_de_cuenta_socio" 

@@ -70,6 +70,12 @@ computed:{
     {
       return false;
     }
+   },
+   tipoSaldoclassObject: function () {
+    return {
+      'estado-pago-indication': this.paga,
+      'estado-debe-indication': !this.paga
+    }
    }
 
 },
@@ -78,16 +84,16 @@ template:'
 
             <div class="get_width_100 flex-row-center flex-justifice-space-between">
               <div class="get_width_70 ">
-                <div class="estado-detalle"> @{{estado_de_cuenta.detalle}}</div>
+                <div class="estado-detalle" :class="tipoSaldoclassObject"> @{{estado_de_cuenta.detalle}}</div>
                 <div class="entidad-lista-servicio-fecha"> Por valor de  @{{estado_de_cuenta.moneda}} @{{estado_de_cuenta.valor}}</div>
-                <div class="entidad-lista-servicio-fecha"> @{{estado_de_cuenta.detalle}} </div>
+                <div class="entidad-lista-servicio-fecha">Registrado el @{{estado_de_cuenta.fecha_formateada}} </div>
               </div>
               <div class="get_width_10 flex-row-column">
 
-                   <span v-if="paga" class="estado-pago-indication" title="Un pago de un servicio o un crédito a su favor">
+                   <span v-if="paga" class="estado-de-cuenta-saldo estado-pago-indication" title="Un pago de un servicio o un crédito a su favor">
                      <i class="fas fa-money-bill-wave-alt"></i>
                    </span>
-                   <span v-else class="estado-debe-indication" title="Un crédito en su contra o un servicio contratado">
+                   <span v-else class="estado-de-cuenta-saldo estado-debe-indication" title="Un crédito en su contra o un servicio contratado">
                      <i class="fas fa-money-bill-wave-alt"></i>
                    </span>
                 
@@ -95,7 +101,7 @@ template:'
 
               <div class="get_width_10 flex-row-column">
 
-                 <span class="simula_link" v-on:click="eliminar_estado_de_cuenta">
+                 <span class="simula_link" v-on:click="eliminar_estado_de_cuenta" title="Eliminar esté estado de cuenta">
 
                    <i class="fas fa-trash-alt"></i>
 
