@@ -15,5 +15,41 @@
 }
 
 
+.contiene-estado-de-cuenta{
+  border-radius:6px;
+  padding: 8px;
+  margin-top: 3px;
+  background-color: $Color-Gris-Claro;  
+  width: 98%;
+}
 
 
+   .estado-detalle{
+
+    font-size: 14px;
+    color: $color-gris-text;
+    font-weight: bold;
+    margin-bottom: 4px;
+
+   }
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Primario){}
+@media (min-width: $BrackPoint-Secundario){
+
+
+.contiene-estado-de-cuenta{   
+  width: 49%;
+}
+
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){}

@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 
 
@@ -19,6 +20,8 @@ class MovimientoEstadoDeCuentaSocio extends Model
      * @var array
      */
     protected $fillable = ['name'];
+
+    protected $appends  = ['fecha_formateada'];
 
 
 
@@ -49,6 +52,13 @@ class MovimientoEstadoDeCuentaSocio extends Model
                                
            $query->where('estado', "si"); 
                 
+    }
+
+    public function getFechaFormateadaAttribute()
+    {
+        
+
+        return Carbon::parse($this->fecha_ingreso)->format('Y-m-d');
     }
 
 

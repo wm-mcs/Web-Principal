@@ -74,20 +74,44 @@ computed:{
 
 },
 template:'
-           <div class="contiene-entidad-lista-servicio">
-             @{{estado_de_cuenta.detalle}} 
-             <span class="simula_link" v-on:click="eliminar_estado_de_cuenta">
+           <div class="contiene-estado-de-cuenta">
 
-               <i class="fas fa-trash-alt"></i>
+            <div class="get_width_100 flex-row-center flex-justifice-space-between">
+              <div class="get_width_70 ">
+                <div class="estado-detalle"> @{{estado_de_cuenta.detalle}}</div>
+                <div class="entidad-lista-servicio-fecha"> Por valor de  @{{estado_de_cuenta.moneda}} @{{estado_de_cuenta.valor}}</div>
+                <div class="entidad-lista-servicio-fecha"> @{{estado_de_cuenta.detalle}} </div>
+              </div>
+              <div class="get_width_10 flex-row-column">
 
-             </span>
+                   <span v-if="paga" class="estado-pago-indication" title="Un pago de un servicio o un crédito a su favor">
+                     <i class="fas fa-money-bill-wave-alt"></i>
+                   </span>
+                   <span v-else class="estado-debe-indication" title="Un crédito en su contra o un servicio contratado">
+                     <i class="fas fa-money-bill-wave-alt"></i>
+                   </span>
+                
+              </div>
 
-             <span v-if="paga" class="estado-pago-indication" title="Un pago de un servicio o un crédito a su favor">
-               <i class="fas fa-money-bill-wave-alt"></i>
-             </span>
-             <span v-else class="estado-debe-indication" title="Un crédito en su contra o un servicio contratado">
-               <i class="fas fa-money-bill-wave-alt"></i>
-             </span>
+              <div class="get_width_10 flex-row-column">
+
+                 <span class="simula_link" v-on:click="eliminar_estado_de_cuenta">
+
+                   <i class="fas fa-trash-alt"></i>
+
+                 </span>
+                
+              </div>
+
+
+              
+            </div>
+
+
+             
+             
+
+            
            </div>
   
 
