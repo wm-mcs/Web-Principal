@@ -280,12 +280,6 @@ template:'<span>
                                
                 
            </div>
-             
-      
-
-
-
-          
       </div>
       <div class="contiene-estados-de-cuenta-lista">
         
