@@ -67,11 +67,12 @@
                     
 
                     
-                    <div v-if="mensajes_enviados.includes('básico') != true" class="boton-simple" v-on:click.prevent="abrir_modal_para_contacto('Consultar sobre plan básico','contacto')">Contactar
+                   {{--  <div v-if="mensajes_enviados.includes('básico') != true" class="boton-simple" v-on:click.prevent="abrir_modal_para_contacto('Consultar sobre plan básico','contacto')">Contactar
                     </div>
                     <div v-else class="mensaje-luego-de-envio">
                                   'Mensaje enviado correctamente.'
-                    </div>
+                    </div> --}}
+                    @include('paginas.home.home_whatsapp_contacto')
                   </div>                  
                 </div>
                 <div class="flex-row-center flex-justifice-space-around Seccion_precio_plan_ajuste_ancho">
