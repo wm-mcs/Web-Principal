@@ -13,7 +13,7 @@
                     Escríbeme ahora mismo por Whatsapp 
                   </div>  
 
-                  <span class="contacto-whatsapp-icono" > 
+                  <span class="contacto-whatsapp-icono footer-icono-social" > 
                     <i class="fab fa-whatsapp"></i>
                   </span>
                 </a>
@@ -23,9 +23,9 @@
        
          {{-- formulario de contacto --}}
          
-         <div class="flex-row-column" style="max-width: 850px;">
+        {{--  <div class="flex-row-column" style="max-width: 850px;">
             @include('paginas.home.home_contacto_formulario')
-         </div>
+         </div> --}}
           
          
        
