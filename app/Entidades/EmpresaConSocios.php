@@ -54,7 +54,7 @@ class EmpresaConSocios extends Model
     public function getUrlImgAttribute()
     {
         
-        return url().'/imagenes/Empresa/'.$this->id.'-logo_empresa_socios'.'.jpg';
+        return url().'/imagenes/Empresa/'.$this->id.'-logo_empresa_socios'.'.png';
     }
 
 
