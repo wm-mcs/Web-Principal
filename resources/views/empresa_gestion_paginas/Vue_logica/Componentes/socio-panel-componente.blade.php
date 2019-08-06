@@ -245,7 +245,7 @@ template:'<span>
 
           <span class="panel-socio-titulo-seccion">Estado de cuenta del socio</span>
 
-          <div v-if="!socio.saldo_de_estado_de_cuenta_pesos == 0 || !socio.saldo_de_estado_de_cuenta_dolares == 0">
+          <div v-if="!socio.saldo_de_estado_de_cuenta_pesos == 0 || !socio.saldo_de_estado_de_cuenta_dolares == 0" class="flex-row-center">
             
          
               <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_pesos)" class="estado-de-cuenta-saldo estado-pago-indication">

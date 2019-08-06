@@ -16,8 +16,8 @@
   
   
   <div class="admin-content-background-color"></div>
-  
-   <div class="admin-contiene-columna-y-content">
+   
+   <div id="app" class="admin-contiene-columna-y-content">
       @include('layouts.gestion_socios_layout.columna_derecha.columna')
       <div class="get_width_20"></div>
       <div class="admin-contiene-content">

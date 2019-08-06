@@ -7,7 +7,7 @@
 
 @section('content')
   
- <span id="app">
+
     
   
 
@@ -15,7 +15,7 @@
 
    
 
-</span>
+
 @stop
 
 @section('vue-logica')

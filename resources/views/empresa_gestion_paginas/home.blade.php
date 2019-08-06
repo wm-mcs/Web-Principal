@@ -7,7 +7,7 @@
 
 @section('content')
   
- <span id="app">
+
     
   
   {{-- Buscar Socio --}}
@@ -36,7 +36,7 @@
 
 
 
-</span>
+
 @stop
 
 @section('vue-logica')
