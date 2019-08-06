@@ -241,7 +241,9 @@ template:'<span>
   </div>
 
   <div class="panel-socio-contiene-seccion">
-      <div class="panel-socio-titulo-seccion">Estado de cuenta del socio
+      <div class="estado-de-cuenta-titulo-saldo-contenedor ">
+
+          <span class="panel-socio-titulo-seccion">Estado de cuenta del socio</span>
 
           <div v-if="!socio.saldo_de_estado_de_cuenta_pesos == 0 || !socio.saldo_de_estado_de_cuenta_dolares == 0">
             
@@ -274,11 +276,7 @@ template:'<span>
 
            </div>   
            <div v-else class="estado-de-cuenta-saldo estado-pago-indication"">
-
-             
-                  Esta al día <i class="far fa-grin"></i> 
-                               
-                
+                  Está al día <i class="far fa-grin"></i> 
            </div>
       </div>
       <div class="contiene-estados-de-cuenta-lista">

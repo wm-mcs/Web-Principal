@@ -16,6 +16,16 @@
   background-color: $Color-Errors-BG;
 }
 
+.estado-de-cuenta-titulo-saldo-contenedor{
+    width: 100%;
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(center); 
+    @include justify-content(space-between);
+    @include flex-wrap(wrap); 
+    padding:2px 0;
+}
+
 
 .contiene-estados-de-cuenta-lista{
     width: 100%;
