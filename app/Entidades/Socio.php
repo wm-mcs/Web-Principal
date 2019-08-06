@@ -73,13 +73,11 @@ class Socio extends Model
         $EstadosRepo = new MovimientoEstadoDeCuentaSocioRepo();
 
         $Debe    = $this->estado_de_cuenta_socio->where('tipo_saldo','deudor')
-                                                ->where('moneda','$')
-                                                ->get()
+                                                ->where('moneda','$')                                                
                                                 ->sum('valor');
 
-        $Acredor = $this->estado_de_cuenta_socio->where('tipo_saldo','acredor')
+        $Acredor = $this->estado_de_cuenta_socio->where('tipo_saldo','acredor')                                  
                                                 ->where('moneda','$')
-                                                ->get()
                                                 ->sum('valor');
 
 
