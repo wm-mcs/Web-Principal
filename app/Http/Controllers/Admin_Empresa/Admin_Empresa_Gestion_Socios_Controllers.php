@@ -80,7 +80,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
       $this->EmpresaConSociosoRepo->setEntidadDato($Entidad,$Request,$Propiedades);     
 
       //para la imagen
-      $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Entidad->id.'-logo_empresa_socios'   ,'.jpg',250);
+      $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Entidad->id.'-logo_empresa_socios'   ,'.png',250);
 
      return redirect()->route('get_admin_empresas_gestion_socios')->with('alert', 'Creado Correctamente');
     
@@ -106,7 +106,7 @@ class Admin_Empresa_Gestion_Socios_Controllers extends Controller
     $this->EmpresaConSociosoRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
     //para la imagen
-    $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Entidad->id.'-logo_empresa_socios'   ,'.jpg',250);
+    $this->EmpresaConSociosoRepo->setImagen( null ,$Request , 'img', 'Empresa/',  $Entidad->id.'-logo_empresa_socios'   ,'.png',250);
 
     return redirect()->route('get_admin_empresas_gestion_socios')->with('alert', 'Editado Correctamente');  
   }
