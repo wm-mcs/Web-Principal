@@ -256,7 +256,7 @@ template:'<span>
                 
               </div>
               <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
-                Debe: $ @{{socio.saldo_de_estado_de_cuenta_pesos}}  <i class="far fa-frown-open"></i>
+                Debe: $ @{{ Math.abs(socio.saldo_de_estado_de_cuenta_pesos)}}  <i class="far fa-frown-open"></i>
               </div>
 
               <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_dolares)" class="estado-de-cuenta-saldo estado-pago-indication">
@@ -269,7 +269,7 @@ template:'<span>
                 
               </div>
               <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
-                Debe: U$S @{{socio.saldo_de_estado_de_cuenta_dolares}}  <i class="far fa-frown-open"></i>
+                Debe: U$S @{{Math.abs(socio.saldo_de_estado_de_cuenta_dolares)}}  <i class="far fa-frown-open"></i>
               </div>
 
            </div>   
