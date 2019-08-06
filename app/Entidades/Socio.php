@@ -23,7 +23,7 @@ class Socio extends Model
 
 
 
-    protected $appends = ['route', 'estado_de_cuenta_socio','saldo_de_estado_de_cuenta_pesos'];
+    protected $appends = ['route', 'estado_de_cuenta_socio','saldo_de_estado_de_cuenta_pesos','saldo_de_estado_de_cuenta_dolares'];
     
 
     
@@ -78,6 +78,22 @@ class Socio extends Model
 
         $Acredor = $this->estado_de_cuenta_socio->where('tipo_saldo','acredor')                                  
                                                 ->where('moneda','$')
+                                                ->sum('valor');
+
+
+        return round($Debe - $Acredor) ;                                    
+    }
+
+     public function getSaldoDeEstadoDeCuentaDolaresAttribute()
+    {
+        $EstadosRepo = new MovimientoEstadoDeCuentaSocioRepo();
+
+        $Debe    = $this->estado_de_cuenta_socio->where('tipo_saldo','deudor')
+                                                ->where('moneda','U$S')                                                
+                                                ->sum('valor');
+
+        $Acredor = $this->estado_de_cuenta_socio->where('tipo_saldo','acredor')                                  
+                                                ->where('moneda','U$S')
                                                 ->sum('valor');
 
 
