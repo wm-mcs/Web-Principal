@@ -251,12 +251,12 @@ template:'<span>
                   Esta al día <i class="far fa-grin"></i> (en pesos)
                 </span>
                 <span v-else>
-                  Tiene a favor $ <i class="far fa-grin"></i>
+                  Tiene a favor $ @{{ Math.abs(socio.saldo_de_estado_de_cuenta_pesos)}} <i class="far fa-grin"></i>
                 </span>
                 
               </div>
               <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
-                Debe: $ @{{ Math.abs(socio.saldo_de_estado_de_cuenta_pesos)}}  <i class="far fa-frown-open"></i>
+                Debe pesos: $ @{{ Math.abs(socio.saldo_de_estado_de_cuenta_pesos)}}  <i class="far fa-frown-open"></i>
               </div>
 
               <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_dolares)" class="estado-de-cuenta-saldo estado-pago-indication">
@@ -264,12 +264,12 @@ template:'<span>
                   Esta al día <i class="far fa-grin"></i> (en dolares)
                 </span>
                 <span v-else>
-                  Tiene a favor U$S <i class="far fa-grin"></i>
+                  Tiene a favor U$S @{{Math.abs(socio.saldo_de_estado_de_cuenta_dolares)}} <i class="far fa-grin"></i>
                 </span>
                 
               </div>
               <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
-                Debe: U$S @{{Math.abs(socio.saldo_de_estado_de_cuenta_dolares)}}  <i class="far fa-frown-open"></i>
+                Debe pesos: U$S @{{Math.abs(socio.saldo_de_estado_de_cuenta_dolares)}}  <i class="far fa-frown-open"></i>
               </div>
 
            </div>   
