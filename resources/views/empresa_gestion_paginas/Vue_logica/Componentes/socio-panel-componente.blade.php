@@ -192,7 +192,7 @@ template:'<span>
 
 
   <div class="panel-socio-header-contenedor">
-    <div class="panel-socio-name"> @{{socio.name}} 
+    <div class="panel-socio-name">
 
     @include('empresa_gestion_paginas.Vue_logica.Componentes.socio-panel.modal-editar-socio')    
 
@@ -231,7 +231,9 @@ template:'<span>
   </div>
 
   <div class="panel-socio-contiene-seccion">
-      <div class="panel-socio-titulo-seccion">Estado de cuenta del socio</div>
+      <div class="panel-socio-titulo-seccion">Estado de cuenta del socio
+          @{{socio.saldo_de_estado_de_cuenta}}  
+      </div>
       <div class="contiene-estados-de-cuenta-lista">
         
           

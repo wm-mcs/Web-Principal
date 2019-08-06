@@ -195,7 +195,7 @@ template:'<span>
 
                
 
-                  <div v-on:click="crear_servicio_a_socio" class="boton-simple">Editar</div>
+                  <div v-on:click="crear_servicio_a_socio" class="boton-simple">Agregar</div>
                   
                  
         </div>
