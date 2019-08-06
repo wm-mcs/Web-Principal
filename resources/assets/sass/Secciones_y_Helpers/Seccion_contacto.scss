@@ -20,16 +20,17 @@
 
 .contacto_name{
   font-size: 28px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   padding:8px;
-  border-radius:4px;
+  border-radius:4px;  
   
-  border-bottom:solid 4px $color-3;
 }
 
 .contacto_aclaracion{
   font-size: 14px;
-  margin-bottom: 5px;
+  letter-spacing:1.5px;
+  margin-bottom: 15px;
+  border-bottom:solid 4px $color-3;
 }
 
 
@@ -41,8 +42,14 @@
   padding:8px;
   border-radius:8px;
   background-color: white;
+  border:solid 4px transparent;
 
 }
+.contacto-whatsapp-contenedor:hover{
+  border-color: $color-3;
+}
+
+
 .contacto-whatsapp-img{
   width: 70px;
   height: auto;
