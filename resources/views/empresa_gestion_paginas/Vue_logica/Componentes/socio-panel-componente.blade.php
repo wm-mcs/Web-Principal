@@ -182,6 +182,16 @@ methods:{
      },
      actualizar_socio:function(socio){
       this.socio = socio;
+     },
+     es_mayor_que_sero:function(valor){
+        if(valor >= 0)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
      }
     
 
@@ -232,7 +242,15 @@ template:'<span>
 
   <div class="panel-socio-contiene-seccion">
       <div class="panel-socio-titulo-seccion">Estado de cuenta del socio
-          @{{socio.saldo_de_estado_de_cuenta}}  
+
+          <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_pesos)" class="estado-de-cuenta-saldo estado-pago-indication">
+            Saldo: $ @{{socio.saldo_de_estado_de_cuenta_pesos}}  <i class="far fa-grin"></i>
+          </div>
+          <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
+            Saldo: $ @{{socio.saldo_de_estado_de_cuenta_pesos}}  <i class="far fa-frown-open"></i>
+          </div>
+
+          
       </div>
       <div class="contiene-estados-de-cuenta-lista">
         
