@@ -129,10 +129,12 @@
                       Estadísticas del sitio web. Podras analaizar muchas cosas de los usuarios que entran a tu web.</div>
                       
                     </div> 
-                    <div v-if="mensajes_enviados.includes('estándar') != true" class="boton-simple" v-on:click.prevent="abrir_modal_para_contacto('Consultar sobre plan estándar','contacto')">Contactar</div>
+                    {{-- <div v-if="mensajes_enviados.includes('estándar') != true" class="boton-simple" v-on:click.prevent="abrir_modal_para_contacto('Consultar sobre plan estándar','contacto')">Contactar</div>
                     <div v-else class="mensaje-luego-de-envio">
                                   'Mensaje enviado correctamente.'
-                                </div>
+                                </div> --}}
+
+                     @include('paginas.home.home_whatsapp_contacto')           
                   </div>                  
                 </div>
                 {{-- <div class="flex-row-center flex-justifice-space-around Seccion_precio_plan_ajuste_ancho">
