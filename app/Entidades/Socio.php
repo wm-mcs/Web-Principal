@@ -23,7 +23,7 @@ class Socio extends Model
 
 
 
-    protected $appends = ['route', 'estado_de_cuenta_socio','saldo_de_estado_de_cuenta'];
+    protected $appends = ['route', 'estado_de_cuenta_socio','saldo_de_estado_de_cuenta_pesos'];
     
 
     
