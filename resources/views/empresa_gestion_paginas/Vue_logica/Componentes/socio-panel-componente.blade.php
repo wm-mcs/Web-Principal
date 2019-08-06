@@ -243,31 +243,47 @@ template:'<span>
   <div class="panel-socio-contiene-seccion">
       <div class="panel-socio-titulo-seccion">Estado de cuenta del socio
 
-          <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_pesos)" class="estado-de-cuenta-saldo estado-pago-indication">
-            <span v-if="socio.saldo_de_estado_de_cuenta_pesos == 0">
-              Esta al día <i class="far fa-grin"></i> (en pesos)
-            </span>
-            <span v-else>
-              Tiene a favor $ <i class="far fa-grin"></i>
-            </span>
+          <div v-if="!socio.saldo_de_estado_de_cuenta_pesos == 0 || !socio.saldo_de_estado_de_cuenta_dolares == 0">
             
-          </div>
-          <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
-            Debe: $ @{{socio.saldo_de_estado_de_cuenta_pesos}}  <i class="far fa-frown-open"></i>
-          </div>
+         
+              <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_pesos)" class="estado-de-cuenta-saldo estado-pago-indication">
+                <span v-if="socio.saldo_de_estado_de_cuenta_pesos == 0">
+                  Esta al día <i class="far fa-grin"></i> (en pesos)
+                </span>
+                <span v-else>
+                  Tiene a favor $ <i class="far fa-grin"></i>
+                </span>
+                
+              </div>
+              <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
+                Debe: $ @{{socio.saldo_de_estado_de_cuenta_pesos}}  <i class="far fa-frown-open"></i>
+              </div>
 
-          <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_dolares)" class="estado-de-cuenta-saldo estado-pago-indication">
-            <span v-if="socio.saldo_de_estado_de_cuenta_dolares == 0">
-              Esta al día <i class="far fa-grin"></i> (en dolares)
-            </span>
-            <span v-else>
-              Tiene a favor U$S <i class="far fa-grin"></i>
-            </span>
-            
-          </div>
-          <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
-            Debe: U$S @{{socio.saldo_de_estado_de_cuenta_dolares}}  <i class="far fa-frown-open"></i>
-          </div>
+              <div v-if="es_mayor_que_sero(socio.saldo_de_estado_de_cuenta_dolares)" class="estado-de-cuenta-saldo estado-pago-indication">
+                <span v-if="socio.saldo_de_estado_de_cuenta_dolares == 0">
+                  Esta al día <i class="far fa-grin"></i> (en dolares)
+                </span>
+                <span v-else>
+                  Tiene a favor U$S <i class="far fa-grin"></i>
+                </span>
+                
+              </div>
+              <div v-else class="estado-de-cuenta-saldo estado-debe-indication">
+                Debe: U$S @{{socio.saldo_de_estado_de_cuenta_dolares}}  <i class="far fa-frown-open"></i>
+              </div>
+
+           </div>   
+           <div v-else class="class="estado-de-cuenta-saldo estado-pago-indication"">
+
+             
+                  Esta al día <i class="far fa-grin"></i> 
+                               
+                
+           </div>
+             
+      </div>
+
+
 
           
       </div>
