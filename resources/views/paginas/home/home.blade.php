@@ -16,8 +16,8 @@
 <meta property="og:description"        content="{{$Empresa->descripcion_empresa}}" />
 <meta property="og:image"              content="{{$Empresa->img_logo_cuadrado}}" />
 <meta property="og:image:secure_url"   content="{{$Empresa->img_logo_cuadrado}}" /> 
-<meta property="og:image:width"        content="50">
-<meta property="og:image:height"       content="150">
+<meta property="og:image:width"        content="250">
+<meta property="og:image:height"       content="250">
 <meta property="og:image:alt"          content="{{ $Empresa->name}}  Uruguay" /> 
 
 
