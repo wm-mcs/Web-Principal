@@ -13,6 +13,8 @@
     <meta name="robots" content="@yield('robot')">
     <meta name="keywords" content="@yield('palabras_claves')">
 
+    @yield('og-propiedades')
+
     {{-- css --}}   
     @include('layouts.user_layout.css_fonts')
 

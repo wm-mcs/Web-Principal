@@ -6,7 +6,26 @@
 
 @section('robot') index, follow @stop
 
-@section('palabras_claves') {{$Empresa->palabras_claves_empresa}} @stop
+@section('palabras_claves') {{$Empresa->palabras_claves_empresa}} @stop 
+
+@section('og-propiedades') 
+
+<meta property="og:url"                content="{{url()}}" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="{{$Empresa->name}} | Creamos Paginas Webs" />
+<meta property="og:description"        content="{{$Empresa->descripcion_empresa}}" />
+<meta property="og:image"              content="{{$Empresa->img_logo_cuadrado}}" />
+<meta property="og:image:secure_url"   content="{{$Empresa->img_logo_cuadrado}}" /> 
+<meta property="og:image:width"        content="250">
+<meta property="og:image:height"       content="250">
+<meta property="og:image:alt"          content="{{ $Empresa->name}}  Uruguay" /> 
+
+
+
+
+@stop 
+
+
 
 
 
