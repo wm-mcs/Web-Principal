@@ -38,6 +38,7 @@
       @include('paginas.home.home_tener_pagina_web')
     
       @include('paginas.home.home_pasos_para_concretar')  
+      @include('paginas.home.cualidades_de_las_webs')  
       @include('paginas.home.home_precios')
       @include('paginas.home.home_garantia')
 @stop      
