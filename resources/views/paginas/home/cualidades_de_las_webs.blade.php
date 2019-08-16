@@ -10,14 +10,14 @@
             <i class="fas fa-2x fa-desktop text-primary mb-4"></i> 
             <i class="fas fa-2x fa-mobile-alt text-primary mb-4"></i> 
             <h3 class="h4 mb-2">Multi dispositivos</h3>
-            <p class="text-muted mb-0">Se ven bien en pc, tablets y celulares.</p>
+            <p class="text-muted mb-0">Se ven lindas en pc, tablets y celulares</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-tachometer-alt text-primary mb-4"></i>
             <h3 class="h4 mb-2">Son rápidas</h3>
-            <p class="text-muted mb-0">Se cargan rápido.</p>
+            <p class="text-muted mb-0">Se cargan rápido</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
@@ -31,7 +31,7 @@
           <div class="mt-5">
             <i class="fas fa-4x fa-heart text-primary mb-4"></i>
             <h3 class="h4 mb-2">Amor</h3>
-            <p class="text-muted mb-0"> Le daremos mucho amor. </p>
+            <p class="text-muted mb-0"> Hechas con amor </p>
           </div>
         </div>
       </div>
