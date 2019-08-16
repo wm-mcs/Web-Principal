@@ -15,7 +15,7 @@
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x tachometer-alt text-primary mb-4"></i>
+            <i class="fas fa-4x fa-tachometer-alt text-primary mb-4"></i>
             <h3 class="h4 mb-2">Son rápidas</h3>
             <p class="text-muted mb-0">Se cargan rápido.</p>
           </div>
