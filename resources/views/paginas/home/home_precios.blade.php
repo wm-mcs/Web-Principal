@@ -106,7 +106,7 @@
 
                       <div class="Seccion_precio_lista_item">
                          <span class="text-color-primary text-bold helper-aumenta-texto">                          
-                          incluye todo lo que tra el plan basico y ademas....
+                          incluye todo lo que trae el plan basico y además....
                         </span>
                       </div>
                       
